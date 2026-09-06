@@ -33,3 +33,9 @@ The cart marker is updated whenever the local cart changes. It exposes comma-sep
 ## Optional Clerk configuration
 
 Copy `.env.example` to `.env` and set `PUBLIC_CLERK_API_KEY` to enable Clerk.js in the browser. Set `PUBLIC_SITE_URL` to the deployed site origin when the feeds need to be imported from a hosted URL.
+
+## GitHub Pages
+
+The repository includes a GitHub Actions workflow for GitHub Pages. It deploys `main` to [https://olzen90.github.io/awesomestoredemo/](https://olzen90.github.io/awesomestoredemo/) and builds the feeds with the correct project path. In the repository settings, set Pages → Build and deployment → Source to GitHub Actions.
+
+The workflow sets `PUBLIC_SITE_URL` to the deployed site URL and `PUBLIC_BASE_PATH` to `/awesomestoredemo`. Local development keeps the default root path, so `npm run dev` continues to use `http://localhost:4321/`.

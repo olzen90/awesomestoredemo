@@ -61,7 +61,8 @@ if (products) {
 		for (const [key, value] of Object.entries(product)) if (value === null) errors.push(`Product ${product.id} has null attribute ${key}`);
 		try {
 			const imagePath = new URL(product.image).pathname;
-			if (!fs.existsSync(path.join(publicDir, imagePath.replace(/^\//, "")))) errors.push(`Missing image for product ${product.id}: ${imagePath}`);
+			const publicImagePath = imagePath.match(/(images\/.*)$/)?.[1] || imagePath.replace(/^\//, "");
+			if (!fs.existsSync(path.join(publicDir, publicImagePath))) errors.push(`Missing image for product ${product.id}: ${imagePath}`);
 		} catch {
 			errors.push(`Product ${product.id} has an invalid image URL`);
 		}

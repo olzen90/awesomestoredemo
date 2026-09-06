@@ -1,7 +1,7 @@
 import type { BlogPage, Category, Product } from "./catalog";
 
 export function absoluteUrl(baseUrl: string, path: string) {
-	return new URL(path, `${baseUrl.replace(/\/$/, "")}/`).toString();
+	return new URL(path.replace(/^\/+/, ""), `${baseUrl.replace(/\/$/, "")}/`).toString();
 }
 
 export function productToFeed(product: Product, baseUrl: string) {

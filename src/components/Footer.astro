@@ -1,19 +1,20 @@
 ---
 import { storeName } from "../lib/catalog";
+import { sitePath } from "../lib/site";
 ---
 
 <footer class="site-footer">
 	<div class="shell footer-grid">
 		<div>
-			<a class="wordmark footer-wordmark" href="/">
+			<a class="wordmark footer-wordmark" href={sitePath("/")}>
 				<span class="wordmark-mark">A</span>
 				<span>{storeName}</span>
 			</a>
 			<p class="footer-note">Useful things for everyday living, chosen with a little more care.</p>
 		</div>
 		<div class="footer-links">
-			<div><span class="footer-label">Explore</span><a href="/">New in</a><a href="/category/home">Home</a><a href="/category/outdoor">Outdoor</a></div>
-			<div><span class="footer-label">About</span><a href="/blog">Journal</a><a href="/cart">Cart</a><a href="/search">Search</a></div>
+			<div><span class="footer-label">Explore</span><a href={sitePath("/")}>New in</a><a href={sitePath("/category/home")}>Home</a><a href={sitePath("/category/outdoor")}>Outdoor</a></div>
+			<div><span class="footer-label">About</span><a href={sitePath("/blog")}>Journal</a><a href={sitePath("/cart")}>Cart</a><a href={sitePath("/search")}>Search</a></div>
 		</div>
 		<div class="footer-signoff">Made for the demo<br /><span>© 2026 Awesome Store</span></div>
 	</div>

@@ -1,11 +1,12 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { blogPages } from "../../lib/catalog";
+import { sitePath } from "../../lib/site";
 ---
 
 <BaseLayout title="Journal — Awesome Store" description="Notes on living well from Awesome Store.">
 	<section class="shell blog-page">
 		<div class="page-intro"><p class="eyebrow">From Awesome Store</p><h1>The journal.</h1><p>Notes on useful things, slower rituals, and the small decisions that make daily life feel better.</p></div>
-		<div class="blog-grid">{blogPages.map((page) => <a class="blog-card" href={page.url}><img class="blog-card-image" src={page.image} alt="" width="720" height="380" /><p class="banner-kicker">{page.date}</p><h2>{page.title}</h2><p>{page.text.slice(0, 145)}…</p><span class="text-link">Read story <span aria-hidden="true">→</span></span></a>)}</div>
+		<div class="blog-grid">{blogPages.map((page) => <a class="blog-card" href={sitePath(page.url)}><img class="blog-card-image" src={sitePath(page.image)} alt="" width="720" height="380" /><p class="banner-kicker">{page.date}</p><h2>{page.title}</h2><p>{page.text.slice(0, 145)}…</p><span class="text-link">Read story <span aria-hidden="true">→</span></span></a>)}</div>
 	</section>
 </BaseLayout>

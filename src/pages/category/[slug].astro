@@ -2,6 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ProductGrid from "../../components/ProductGrid.astro";
 import { categories, productsForCategory } from "../../lib/catalog";
+import { sitePath } from "../../lib/site";
 
 export function getStaticPaths() {
 	return categories.map((category) => ({ params: { slug: category.slug }, props: { category } }));
@@ -16,11 +17,11 @@ const leafCategories = category.subcategories.map((id: number) => categories.fin
 	<section class="shell category-header">
 		<!-- Existing webshop context: an injection can read the current category ID from this ordinary HTML element. -->
 		<div id="category-context" class="sr-only" data-context="category" data-id={category.id} data-category-id={category.id}></div>
-		<div><div class="breadcrumbs"><a href="/">Home</a><span>/</span><span>{category.name}</span></div><p class="eyebrow">Awesome Store / Collection</p><h1>{category.name}</h1></div>
+		<div><div class="breadcrumbs"><a href={sitePath("/")}>Home</a><span>/</span><span>{category.name}</span></div><p class="eyebrow">Awesome Store / Collection</p><h1>{category.name}</h1></div>
 		<p>{category.description}</p>
 	</section>
 	<section class="shell product-section">
-		{leafCategories.length > 0 && <div class="facet-pills">{leafCategories.map((child) => <a class="facet-pill" href={child?.url}>{child?.name}</a>)}</div>}
+		{leafCategories.length > 0 && <div class="facet-pills">{leafCategories.map((child) => <a class="facet-pill" href={child ? sitePath(child.url) : undefined}>{child?.name}</a>)}</div>}
 		<div class="category-tools"><span class="result-count">{products.length} pieces in this collection</span><label class="sort-control">Sort by <select data-sort-products><option value="recommended">Recommended</option><option value="newest">Newest</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option></select></label></div>
 		{products.length ? <ProductGrid products={products} label={`Category - ${category.name}`} /> : <div class="cart-empty"><h2>This shelf is still being arranged.</h2><p>Try another collection.</p></div>}
 	</section>

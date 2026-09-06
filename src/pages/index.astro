@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ProductGrid from "../components/ProductGrid.astro";
 import { blogPages, featuredProducts, products, storeName, topLevelCategories } from "../lib/catalog";
+import { sitePath } from "../lib/site";
 ---
 
 <BaseLayout title={`${storeName} — Useful things, chosen with care`} description="A considered collection of everyday objects, clothing, and tools from Awesome Store.">
@@ -13,13 +14,13 @@ import { blogPages, featuredProducts, products, storeName, topLevelCategories } 
 				<p>A considered collection of clothing, objects, and tools for the way you actually live. Start with something useful.</p>
 				<div class="hero-actions">
 					<a class="button" href="#featured">Shop the collection <span aria-hidden="true">↗</span></a>
-					<a class="text-link" href="/blog">Read the journal <span aria-hidden="true">→</span></a>
+					<a class="text-link" href={sitePath("/blog")}>Read the journal <span aria-hidden="true">→</span></a>
 				</div>
 			</div>
 			<div class="hero-collage" aria-label="A selection from the Awesome Store collection">
 				{products.slice(0, 4).map((product) => (
-					<a class="collage-tile" href={product.url}>
-						<img src={product.image} alt={product.name} width="720" height="720" />
+					<a class="collage-tile" href={sitePath(product.url)}>
+						<img src={sitePath(product.image)} alt={product.name} width="720" height="720" />
 						<figcaption><span>{product.department}</span><span>↗</span></figcaption>
 					</a>
 				))}
@@ -31,7 +32,7 @@ import { blogPages, featuredProducts, products, storeName, topLevelCategories } 
 		<div class="section-top"><div><p class="eyebrow">Browse by mood</p><h2>Find your next favorite.</h2></div><p>Eight departments, one relaxed point of view.</p></div>
 		<div class="category-cards">
 			{topLevelCategories.map((category) => (
-				<a class="category-card" href={category.url}>
+				<a class="category-card" href={sitePath(category.url)}>
 					<span class="category-dot" aria-hidden="true"></span>
 					<h3>{category.name}</h3>
 					<p>{category.description}</p>
@@ -41,21 +42,21 @@ import { blogPages, featuredProducts, products, storeName, topLevelCategories } 
 	</section>
 
 	<section class="product-section shell" id="featured">
-		<div class="section-top"><div><p class="eyebrow">Selected for you</p><h2>Good things, right now.</h2></div><a class="text-link" href="/search">View everything <span aria-hidden="true">→</span></a></div>
+		<div class="section-top"><div><p class="eyebrow">Selected for you</p><h2>Good things, right now.</h2></div><a class="text-link" href={sitePath("/search")}>View everything <span aria-hidden="true">→</span></a></div>
 		<ProductGrid products={featuredProducts} label="Homepage - Featured" />
 	</section>
 
 	<section class="split-banner shell">
-		<div><p class="banner-kicker">The Awesome Store edit</p><h2>More considered. Less complicated.</h2><p>We look for the small decisions that make a product feel right: the weight, the texture, the way it holds up.</p><a class="text-link" href="/blog/the-case-for-fewer-better-things">Why we choose this way <span aria-hidden="true">→</span></a></div>
-		<div><p class="banner-kicker">The home edit</p><h2>Good materials, easy mornings.</h2><p>From the first coffee to the last light, these are the pieces that make everyday rituals feel a little more settled.</p><a class="text-link" href="/category/home">Shop home objects <span aria-hidden="true">→</span></a></div>
+	<div><p class="banner-kicker">The Awesome Store edit</p><h2>More considered. Less complicated.</h2><p>We look for the small decisions that make a product feel right: the weight, the texture, the way it holds up.</p><a class="text-link" href={sitePath("/blog/the-case-for-fewer-better-things")}>Why we choose this way <span aria-hidden="true">→</span></a></div>
+		<div><p class="banner-kicker">The home edit</p><h2>Good materials, easy mornings.</h2><p>From the first coffee to the last light, these are the pieces that make everyday rituals feel a little more settled.</p><a class="text-link" href={sitePath("/category/home")}>Shop home objects <span aria-hidden="true">→</span></a></div>
 	</section>
 
 	<section class="product-section shell">
-		<div class="section-top"><div><p class="eyebrow">From the journal</p><h2>Notes on living well.</h2></div><a class="text-link" href="/blog">All stories <span aria-hidden="true">→</span></a></div>
+		<div class="section-top"><div><p class="eyebrow">From the journal</p><h2>Notes on living well.</h2></div><a class="text-link" href={sitePath("/blog")}>All stories <span aria-hidden="true">→</span></a></div>
 		<div class="blog-grid">
 			{blogPages.map((page) => (
-				<a class="blog-card" href={page.url}>
-					<img class="blog-card-image" src={page.image} alt="" width="720" height="380" />
+				<a class="blog-card" href={sitePath(page.url)}>
+					<img class="blog-card-image" src={sitePath(page.image)} alt="" width="720" height="380" />
 					<p class="banner-kicker">{page.date}</p>
 					<h2>{page.title}</h2>
 					<p>{page.text.slice(0, 135)}…</p>

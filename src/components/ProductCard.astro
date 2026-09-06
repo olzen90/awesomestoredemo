@@ -1,5 +1,6 @@
 ---
 import type { Product } from "../lib/catalog";
+import { sitePath } from "../lib/site";
 
 type Props = {
 	product: Product;
@@ -13,10 +14,10 @@ const listPrice = new Intl.NumberFormat("en-IE", { style: "currency", currency: 
 ---
 
 <article class:list-product-card={compact} class="product-card" data-product-card data-price={product.price} data-created-at={product.created_at}>
-	<a class="product-image-wrap" href={product.url} aria-label={`View ${product.name}`}>
+	<a class="product-image-wrap" href={sitePath(product.url)} aria-label={`View ${product.name}`}>
 		{product.on_sale && <span class="product-badge sale-badge">Sale</span>}
 		{product.is_new && !product.on_sale && <span class="product-badge new-badge">New</span>}
-		<img src={product.image} alt={product.name} loading="lazy" width="720" height="720" />
+		<img src={sitePath(product.image)} alt={product.name} loading="lazy" width="720" height="720" />
 		<span class="image-arrow" aria-hidden="true">↗</span>
 	</a>
 	<div class="product-card-copy">
@@ -24,7 +25,7 @@ const listPrice = new Intl.NumberFormat("en-IE", { style: "currency", currency: 
 			<span>{product.brand}</span>
 			<span>{product.color.name}</span>
 		</div>
-		<h3><a href={product.url}>{product.name}</a></h3>
+		<h3><a href={sitePath(product.url)}>{product.name}</a></h3>
 		<div class="product-price-row">
 			<strong>{price}</strong>
 			{product.on_sale && <del>{listPrice}</del>}
@@ -36,8 +37,8 @@ const listPrice = new Intl.NumberFormat("en-IE", { style: "currency", currency: 
 			data-product-id={product.id}
 			data-product-name={product.name}
 			data-product-price={product.price}
-			data-product-image={product.image}
-			data-product-url={product.url}
+			data-product-image={sitePath(product.image)}
+			data-product-url={sitePath(product.url)}
 			data-product-label={label}
 		>
 			Add to cart <span aria-hidden="true">+</span>

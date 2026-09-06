@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { products, categories } from "../../lib/catalog";
+import { sitePath } from "../../lib/site";
 
 export function getStaticPaths() {
 	return products.map((product) => ({ params: { slug: product.slug }, props: { product } }));
@@ -16,9 +17,9 @@ const listPrice = new Intl.NumberFormat("en-IE", { style: "currency", currency: 
 	<section class="shell product-detail">
 		<!-- Existing webshop context: an injection can read the current product ID from this ordinary HTML element. -->
 		<div id="product-context" class="sr-only" data-context="product" data-id={product.id} data-product-id={product.id}></div>
-		<div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href={productCategory?.url || "/"}>{productCategory?.name || product.department}</a><span>/</span><span>{product.name}</span></div>
+		<div class="breadcrumbs"><a href={sitePath("/")}>Home</a><span>/</span><a href={sitePath(productCategory?.url || "/")}>{productCategory?.name || product.department}</a><span>/</span><span>{product.name}</span></div>
 		<div class="product-detail-grid">
-			<div class="product-detail-image"><img src={product.image} alt={product.name} width="900" height="900" /></div>
+			<div class="product-detail-image"><img src={sitePath(product.image)} alt={product.name} width="900" height="900" /></div>
 			<div class="product-detail-copy">
 				<div class="product-meta-row"><span>{product.brand}</span><span>{product.collection}</span></div>
 				<h1>{product.name}</h1>
@@ -27,7 +28,7 @@ const listPrice = new Intl.NumberFormat("en-IE", { style: "currency", currency: 
 				<div class="color-chip" style={`--swatch: ${product.color.color_code}`}>{product.color.name}</div>
 				<span class="detail-label">Choose a size</span>
 				<div class="size-options">{product.size_options.map((size) => <button class="size-option" type="button">{size}</button>)}</div>
-				<div class="detail-actions"><button class="button" type="button" data-add-to-basket data-product-id={product.id} data-product-name={product.name} data-product-price={product.price} data-product-image={product.image} data-product-url={product.url}>Add to cart <span aria-hidden="true">+</span></button></div>
+				<div class="detail-actions"><button class="button" type="button" data-add-to-basket data-product-id={product.id} data-product-name={product.name} data-product-price={product.price} data-product-image={sitePath(product.image)} data-product-url={sitePath(product.url)}>Add to cart <span aria-hidden="true">+</span></button></div>
 				<p class="availability">{product.stock_status === "low_stock" ? "Low stock — ready to ship" : "In stock — ready to ship"}</p>
 				<div class="product-notes"><p><strong>Made for regular use.</strong> Thoughtful materials, easy proportions, and details that get better with time.</p><p><strong>Shipping included.</strong> Orders leave our studio within 1–2 working days.</p></div>
 			</div>

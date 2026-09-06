@@ -1,16 +1,17 @@
 ---
 import { storeName, topLevelCategories } from "../lib/catalog";
+import { sitePath } from "../lib/site";
 ---
 
 <header class="site-header">
 	<div class="announcement">Free delivery on orders over €75 <span>↗</span></div>
 	<div class="header-main shell">
-		<a class="wordmark" href="/" aria-label={`${storeName} home`}>
+		<a class="wordmark" href={sitePath("/")} aria-label={`${storeName} home`}>
 			<span class="wordmark-mark">A</span>
 			<span>{storeName}</span>
 		</a>
 
-		<form class="site-search" action="/search" method="get" data-search-form>
+		<form class="site-search" action={sitePath("/search")} method="get" data-search-form>
 			<label class="sr-only" for="site-search">Search products</label>
 			<span class="search-icon">⌕</span>
 			<input id="site-search" name="q" type="search" placeholder="Search the collection" autocomplete="off" />
@@ -18,15 +19,15 @@ import { storeName, topLevelCategories } from "../lib/catalog";
 		</form>
 
 		<nav class="header-actions" aria-label="Utility navigation">
-			<a href="/blog">Journal</a>
-			<a href="/cart" class="cart-link">Cart <span data-cart-count>0</span></a>
+			<a href={sitePath("/blog")}>Journal</a>
+			<a href={sitePath("/cart")} class="cart-link">Cart <span data-cart-count>0</span></a>
 		</nav>
 	</div>
 
 	<div class="category-nav shell">
 		<nav aria-label="Product categories">
-			<a href="/">New in</a>
-			{topLevelCategories.map((category) => <a href={category.url}>{category.name}</a>)}
+			<a href={sitePath("/")}>New in</a>
+			{topLevelCategories.map((category) => <a href={sitePath(category.url)}>{category.name}</a>)}
 		</nav>
 	</div>
 </header>

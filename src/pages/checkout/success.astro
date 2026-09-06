@@ -1,9 +1,10 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { sitePath } from "../../lib/site";
 ---
 
 <BaseLayout title="Order confirmed — Awesome Store" description="A checkout confirmation from Awesome Store.">
 	<section class="shell success-page">
-		<div class="success-card"><p class="banner-kicker">Order confirmed</p><h1>That’s a wrap.</h1><p>Thanks for your order. We’ll send a dispatch note as soon as your pieces leave the studio.</p><a class="button" href="/">Back to Awesome Store <span aria-hidden="true">↗</span></a></div>
+		<div class="success-card"><p class="banner-kicker">Order confirmed</p><h1>That’s a wrap.</h1><p>Thanks for your order. We’ll send a dispatch note as soon as your pieces leave the studio.</p><a class="button" href={sitePath("/")}>Back to Awesome Store <span aria-hidden="true">↗</span></a></div>
 	</section>
 </BaseLayout>

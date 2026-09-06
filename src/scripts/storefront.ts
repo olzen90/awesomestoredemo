@@ -1,3 +1,5 @@
+import { sitePath } from "../lib/site";
+
 type CartItem = {
 	id: number;
 	name: string;
@@ -96,9 +98,9 @@ function renderCart(cart = readCart()) {
 	empty?.setAttribute("hidden", "true");
 	container.innerHTML = cart.map((item) => `
 		<article class="cart-item" data-cart-item data-id="${item.id}">
-			<img src="${item.image}" alt="${item.name}" width="96" height="96" />
+			<img src="${sitePath(item.image)}" alt="${item.name}" width="96" height="96" />
 			<div>
-				<h2><a href="${item.url}">${item.name}</a></h2>
+				<h2><a href="${sitePath(item.url)}">${item.name}</a></h2>
 				<p>Ready to ship from Awesome Store</p>
 				<div class="quantity-control" aria-label="Quantity for ${item.name}">
 					<button type="button" data-change-quantity="-1" data-id="${item.id}" aria-label="Decrease quantity">−</button>
@@ -156,13 +158,13 @@ function setupSearchFallback() {
 	if (summary) summary.textContent = query ? `${matches.length} result${matches.length === 1 ? "" : "s"} for “${query}”` : "A few places to start";
 	results.innerHTML = matches.length ? matches.map((product) => `
 		<article class="product-card">
-			<a class="product-image-wrap" href="/product/${product.slug}" aria-label="View ${escapeHtml(product.name)}">
-				<img src="${product.image}" alt="${escapeHtml(product.name)}" width="720" height="720" />
+			<a class="product-image-wrap" href="${sitePath(`/product/${product.slug}`)}" aria-label="View ${escapeHtml(product.name)}">
+				<img src="${sitePath(product.image)}" alt="${escapeHtml(product.name)}" width="720" height="720" />
 				<span class="image-arrow" aria-hidden="true">↗</span>
 			</a>
 			<div class="product-card-copy">
 				<div class="product-meta-row"><span>${escapeHtml(product.brand)}</span><span>${escapeHtml(product.color)}</span></div>
-				<h3><a href="/product/${product.slug}">${escapeHtml(product.name)}</a></h3>
+				<h3><a href="${sitePath(`/product/${product.slug}`)}">${escapeHtml(product.name)}</a></h3>
 				<div class="product-price-row"><strong>${formatPrice(product.price)}</strong></div>
 			</div>
 		</article>

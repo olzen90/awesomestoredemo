@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { blogPages } from "../../lib/catalog";
+import { sitePath } from "../../lib/site";
 
 export function getStaticPaths() {
 	return blogPages.map((page) => ({ params: { slug: page.slug }, props: { page } }));
@@ -13,11 +14,11 @@ const { page } = Astro.props;
 	<article class="shell article">
 		<!-- Existing webshop context: an injection can read the current page ID from this ordinary HTML element. -->
 		<div id="page-context" class="sr-only" data-context="page" data-id={page.id} data-page-id={page.id} data-page-type={page.type}></div>
-		<div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/blog">Journal</a><span>/</span><span>{page.title}</span></div>
+		<div class="breadcrumbs"><a href={sitePath("/")}>Home</a><span>/</span><a href={sitePath("/blog")}>Journal</a><span>/</span><span>{page.title}</span></div>
 		<p class="eyebrow">{page.date} · Awesome Store Journal</p>
 		<h1>{page.title}</h1>
 		<p class="article-meta">A short note from the people behind the collection.</p>
-		<img class="article-image" src={page.image} alt="" width="900" height="520" />
+		<img class="article-image" src={sitePath(page.image)} alt="" width="900" height="520" />
 		<div class="article-body"><p>{page.text}</p><p>There is no perfect way to build a collection. There is only the patient work of noticing what gets used, what gets kept, and what makes the ordinary parts of a day feel a little more intentional.</p></div>
 	</article>
 </BaseLayout>
