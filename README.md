@@ -9,7 +9,9 @@ npm run dev
 npm run build:verify
 ```
 
-The build emits the Clerk-ready feeds at `/feeds/products.json`, `/feeds/categories.json`, `/feeds/pages.json`, and `/feeds/clerk.json`.
+The build emits the Clerk-ready feeds at `/feeds/products.json`, `/feeds/categories.json`, `/feeds/pages.json`, `/feeds/orders.json`, and `/feeds/clerk.json`.
+
+The order feed contains 5,000 deterministic sample orders drawn from the current product catalog. Orders include realistic single-product and complementary multi-product baskets, fictional pop-culture customer emails, and Clerk-compatible parcel tracking data. Rebuilding the site regenerates the feed from the current catalog.
 
 ## Optional Clerk configuration
 
