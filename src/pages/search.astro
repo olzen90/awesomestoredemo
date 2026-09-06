@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import ClerkSlot from "../components/ClerkSlot.astro";
 import { products } from "../lib/catalog";
 
 const searchIndex = products.map(({ id, name, slug, image, price, brand, color }) => ({ id, name, slug, image, price, brand, color: color.name }));
@@ -10,7 +9,6 @@ const searchIndex = products.map(({ id, name, slug, image, price, brand, color }
 	<section class="shell search-page">
 		<div class="search-heading"><div><p class="eyebrow">Find something useful</p><h1>Search the collection.</h1></div><p>Try a product type, color, material, or brand.</p></div>
 		<form class="search-form-large" action="/search" method="get"><label class="sr-only" for="search-page-input">Search the collection</label><input id="search-page-input" name="q" type="search" data-search-input placeholder="What are you looking for?" autocomplete="off" /><button type="submit">Search ↗</button></form>
-		<ClerkSlot template="@search-page" api="search/search" label="Search - Results" limit={40}><div class="clerk-demo-note">Clerk search results will appear here when enabled.</div></ClerkSlot>
 		<p class="search-results-summary" data-search-summary>A few places to start</p>
 		<div class="product-grid" data-search-results></div>
 		<script type="application/json" id="search-catalog" set:html={JSON.stringify(searchIndex)}></script>

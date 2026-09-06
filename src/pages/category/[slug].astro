@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import ClerkSlot from "../../components/ClerkSlot.astro";
 import ProductGrid from "../../components/ProductGrid.astro";
 import { categories, productsForCategory } from "../../lib/catalog";
 
@@ -23,7 +22,6 @@ const leafCategories = category.subcategories.map((id: number) => categories.fin
 	<section class="shell product-section">
 		{leafCategories.length > 0 && <div class="facet-pills">{leafCategories.map((child) => <a class="facet-pill" href={child?.url}>{child?.name}</a>)}</div>}
 		<div class="category-tools"><span class="result-count">{products.length} pieces in this collection</span><label class="sort-control">Sort by <select data-sort-products><option value="recommended">Recommended</option><option value="newest">Newest</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option></select></label></div>
-		<div class="facets-panel"><ClerkSlot template="@category-page" api="recommendations/category/popular" category={category.id} label={`Category - ${category.name}`} limit={40}><div class="clerk-demo-note">Clerk category recommendations and facets appear here when enabled.</div></ClerkSlot><div class="facet-pills"><span class="facet-pill">Color</span><span class="facet-pill">Brand</span><span class="facet-pill">Material</span><span class="facet-pill">Price</span><span class="facet-pill">Collection</span></div></div>
 		{products.length ? <ProductGrid products={products} label={`Category - ${category.name}`} /> : <div class="cart-empty"><h2>This shelf is still being arranged.</h2><p>Try another collection.</p></div>}
 	</section>
 </BaseLayout>

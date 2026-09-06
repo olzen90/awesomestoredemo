@@ -1,6 +1,5 @@
 ---
 import { storeName, topLevelCategories } from "../lib/catalog";
-import ClerkSlot from "./ClerkSlot.astro";
 ---
 
 <header class="site-header">
@@ -29,6 +28,5 @@ import ClerkSlot from "./ClerkSlot.astro";
 			<a href="/">New in</a>
 			{topLevelCategories.map((category) => <a href={category.url}>{category.name}</a>)}
 		</nav>
-		<ClerkSlot label="Header - Instant Search" template="@live-search" limit={6} instantSearch="#site-search" />
 	</div>
 </header>

@@ -1,8 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import ClerkSlot from "../components/ClerkSlot.astro";
 import ProductGrid from "../components/ProductGrid.astro";
-import { blogPages, featuredProducts, newProducts, products, storeName, topLevelCategories } from "../lib/catalog";
+import { blogPages, featuredProducts, products, storeName, topLevelCategories } from "../lib/catalog";
 ---
 
 <BaseLayout title={`${storeName} — Useful things, chosen with care`} description="A considered collection of everyday objects, clothing, and tools from Awesome Store.">
@@ -48,7 +47,7 @@ import { blogPages, featuredProducts, newProducts, products, storeName, topLevel
 
 	<section class="split-banner shell">
 		<div><p class="banner-kicker">The Awesome Store edit</p><h2>More considered. Less complicated.</h2><p>We look for the small decisions that make a product feel right: the weight, the texture, the way it holds up.</p><a class="text-link" href="/blog/the-case-for-fewer-better-things">Why we choose this way <span aria-hidden="true">→</span></a></div>
-		<div><p class="banner-kicker">Clerk-ready module</p><h2>Recommendations that feel personal.</h2><p>The fallback below is ready to be replaced by a Clerk Element when your public key is configured.</p><ClerkSlot api="recommendations/visitor/popular" label="Homepage - Recommendations" limit={4}><ProductGrid products={newProducts.slice(0, 4)} compact label="Homepage - Recommendations" /></ClerkSlot></div>
+		<div><p class="banner-kicker">The home edit</p><h2>Good materials, easy mornings.</h2><p>From the first coffee to the last light, these are the pieces that make everyday rituals feel a little more settled.</p><a class="text-link" href="/category/home">Shop home objects <span aria-hidden="true">→</span></a></div>
 	</section>
 
 	<section class="product-section shell">
