@@ -42,6 +42,7 @@ export type Product = {
 	is_new: boolean;
 	department: string;
 	sku: string;
+	margin_group: number;
 	[key: string]: unknown;
 };
 
@@ -683,6 +684,7 @@ export const products: Product[] = groups.flatMap((group, groupIndex) => {
 		const listPrice = money(group.basePrice + (localIndex % 5) * 9 + groupIndex * 3);
 		const onSale = (localIndex + groupIndex) % 7 === 0;
 		const price = onSale ? money(listPrice * 0.8) : listPrice;
+		const marginGroup = ((productIndex * 3 + groupIndex) % 5) + 1;
 		const image = `${BASE_IMAGE}/product-${productNumber}.jpg`;
 
 		return {
@@ -712,6 +714,7 @@ export const products: Product[] = groups.flatMap((group, groupIndex) => {
 			is_new: localIndex < 3,
 			department: group.department,
 			sku: `AWS-${String(id).padStart(5, "0")}`,
+			margin_group: marginGroup,
 		};
 	});
 });

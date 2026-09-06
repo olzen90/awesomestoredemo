@@ -13,6 +13,8 @@ The build emits the Clerk-ready feeds at `/feeds/products.json`, `/feeds/categor
 
 The order feed contains 5,000 deterministic sample orders drawn from the current product catalog. Orders include realistic single-product and complementary multi-product baskets, fictional pop-culture customer emails, and Clerk-compatible parcel tracking data. Rebuilding the site regenerates the feed from the current catalog.
 
+Each product includes the existing structured `color` attribute plus a deterministic `margin_group` integer from 1 (lowest margin) to 5 (highest margin), which can be used for merchandising demonstrations.
+
 ## Clerk.js and injection context
 
 The shared layout adds the Clerk.js loader immediately before the closing `</head>` tag. It uses `PUBLIC_CLERK_API_KEY` when provided and falls back to the demo publishable key used for this example.
