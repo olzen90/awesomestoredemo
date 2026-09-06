@@ -130,6 +130,8 @@ const routeCounts = {
 	category: collectHtmlFiles(path.join(dist, "category")).length,
 	blog: collectHtmlFiles(path.join(dist, "blog")).length,
 };
+if (!fs.existsSync(path.join(dist, "cart", "index.html"))) errors.push("Missing /cart route");
+if (fs.existsSync(path.join(dist, "basket", "index.html"))) errors.push("Legacy /basket route should not be generated");
 if (routeCounts.product !== 200) errors.push(`Expected 200 product routes, found ${routeCounts.product}`);
 if (routeCounts.category !== 26) errors.push(`Expected 26 category routes, found ${routeCounts.category}`);
 if (routeCounts.blog !== 4) errors.push(`Expected 4 blog routes, found ${routeCounts.blog}`);

@@ -26,7 +26,7 @@ document.querySelector("[data-page-id]")?.dataset.pageId;
 document.querySelector("[data-cart-product-ids]")?.dataset.cartProductIds;
 ```
 
-The cart marker is updated whenever the local basket changes. It exposes comma-separated product IDs in `data-cart-product-ids` and the current `{ id, quantity, price }` lines as JSON in `data-cart-items`.
+The cart marker is updated whenever the local cart changes. It exposes comma-separated product IDs in `data-cart-product-ids` and the current `{ id, quantity, price }` lines as JSON in `data-cart-items`.
 
 ## Optional Clerk configuration
 

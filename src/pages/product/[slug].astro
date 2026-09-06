@@ -27,7 +27,7 @@ const listPrice = new Intl.NumberFormat("en-IE", { style: "currency", currency: 
 				<div class="color-chip" style={`--swatch: ${product.color.color_code}`}>{product.color.name}</div>
 				<span class="detail-label">Choose a size</span>
 				<div class="size-options">{product.size_options.map((size) => <button class="size-option" type="button">{size}</button>)}</div>
-				<div class="detail-actions"><button class="button" type="button" data-add-to-basket data-product-id={product.id} data-product-name={product.name} data-product-price={product.price} data-product-image={product.image} data-product-url={product.url}>Add to bag <span aria-hidden="true">+</span></button></div>
+				<div class="detail-actions"><button class="button" type="button" data-add-to-basket data-product-id={product.id} data-product-name={product.name} data-product-price={product.price} data-product-image={product.image} data-product-url={product.url}>Add to cart <span aria-hidden="true">+</span></button></div>
 				<p class="availability">{product.stock_status === "low_stock" ? "Low stock — ready to ship" : "In stock — ready to ship"}</p>
 				<div class="product-notes"><p><strong>Made for regular use.</strong> Thoughtful materials, easy proportions, and details that get better with time.</p><p><strong>Shipping included.</strong> Orders leave our studio within 1–2 working days.</p></div>
 			</div>

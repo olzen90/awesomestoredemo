@@ -71,7 +71,7 @@ function addToCart(button: HTMLElement) {
 		});
 	}
 	saveCart(cart);
-	showToast(`${button.dataset.productName || "Product"} added to your bag`);
+	showToast(`${button.dataset.productName || "Product"} added to your cart`);
 }
 
 function renderCart(cart = readCart()) {
@@ -127,7 +127,7 @@ function changeQuantity(id: number, delta: number) {
 
 function removeItem(id: number) {
 	saveCart(readCart().filter((item) => item.id !== id));
-	showToast("Item removed from your bag");
+	showToast("Item removed from your cart");
 }
 
 function escapeHtml(value: string) {
