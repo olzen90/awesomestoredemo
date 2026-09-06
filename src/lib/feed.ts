@@ -9,10 +9,7 @@ export function productToFeed(product: Product, baseUrl: string) {
 		...product,
 		image: absoluteUrl(baseUrl, product.image),
 		url: absoluteUrl(baseUrl, product.url),
-		color: {
-			...product.color,
-			image: absoluteUrl(baseUrl, product.color.image),
-		},
+		color: [product.color.name],
 	};
 }
 

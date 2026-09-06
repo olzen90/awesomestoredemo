@@ -15,6 +15,8 @@ The order feed contains 5,000 deterministic sample orders drawn from the current
 
 Each product includes the existing structured `color` attribute plus a deterministic `margin_group` integer from 1 (lowest margin) to 5 (highest margin), which can be used for merchandising demonstrations.
 
+In the Clerk feeds, `color` is normalized to a list of simple color names, such as `["Sage"]`. The storefront keeps the richer color metadata internally for displaying swatches and product imagery.
+
 ## Clerk.js and injection context
 
 The shared layout adds the Clerk.js loader immediately before the closing `</head>` tag. It uses `PUBLIC_CLERK_API_KEY` when provided and falls back to the demo publishable key used for this example.

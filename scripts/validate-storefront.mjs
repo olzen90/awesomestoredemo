@@ -53,7 +53,7 @@ if (products) {
 		urls.add(product.url);
 		if (typeof product.id !== "number") errors.push(`Product ${product.id} does not use an integer ID`);
 		if (!Array.isArray(product.categories) || product.categories.length === 0) errors.push(`Product ${product.id} has no categories`);
-		if (!product.color || typeof product.color !== "object" || !product.color.name || !product.color.converted_name || !product.color.color_code) errors.push(`Product ${product.id} has an invalid color attribute`);
+		if (!Array.isArray(product.color) || product.color.length === 0 || product.color.some((color) => typeof color !== "string" || !color.trim())) errors.push(`Product ${product.id} has an invalid color attribute; expected a non-empty list of simple color names`);
 		if (!Number.isInteger(product.margin_group) || product.margin_group < 1 || product.margin_group > 5) errors.push(`Product ${product.id} has an invalid margin_group; expected an integer from 1 to 5`);
 		if (product.price < 0 || product.list_price < 0) errors.push(`Product ${product.id} has a negative price`);
 		if (!Number.isInteger(product.created_at)) errors.push(`Product ${product.id} has an invalid created_at timestamp`);
