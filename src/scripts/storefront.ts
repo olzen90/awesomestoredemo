@@ -75,7 +75,9 @@ function addToCart(button: HTMLElement) {
 }
 
 function renderCart(cart = readCart()) {
-	const container = document.querySelector<HTMLElement>("[data-cart-items]");
+	// The neutral cart context also exposes data-cart-items for injection. Target
+	// the visible list explicitly so products are not rendered into that marker.
+	const container = document.querySelector<HTMLElement>(".cart-items[data-cart-items]");
 	if (!container) return;
 	const empty = document.querySelector<HTMLElement>("[data-cart-empty]");
 	const totalElement = document.querySelector<HTMLElement>("[data-cart-total]");
