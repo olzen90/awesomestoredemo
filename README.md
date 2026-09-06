@@ -13,6 +13,21 @@ The build emits the Clerk-ready feeds at `/feeds/products.json`, `/feeds/categor
 
 The order feed contains 5,000 deterministic sample orders drawn from the current product catalog. Orders include realistic single-product and complementary multi-product baskets, fictional pop-culture customer emails, and Clerk-compatible parcel tracking data. Rebuilding the site regenerates the feed from the current catalog.
 
+## Clerk.js and injection context
+
+The shared layout adds the Clerk.js loader immediately before the closing `</head>` tag. It uses `PUBLIC_CLERK_API_KEY` when provided and falls back to the demo publishable key used for this example.
+
+The pages include simple context markers for injection demos:
+
+```js
+document.querySelector("[data-clerk-category-id]")?.dataset.clerkCategoryId;
+document.querySelector("[data-clerk-product-id]")?.dataset.clerkProductId;
+document.querySelector("[data-clerk-page-id]")?.dataset.clerkPageId;
+document.querySelector("[data-clerk-cart-product-ids]")?.dataset.clerkCartProductIds;
+```
+
+The cart marker is updated whenever the local basket changes. It exposes comma-separated product IDs in `data-clerk-cart-product-ids` and the current `{ id, quantity, price }` lines as JSON in `data-clerk-cart-items`.
+
 ## Optional Clerk configuration
 
 Copy `.env.example` to `.env` and set `PUBLIC_CLERK_API_KEY` to enable Clerk.js in the browser. Set `PUBLIC_SITE_URL` to the deployed site origin when the feeds need to be imported from a hosted URL.

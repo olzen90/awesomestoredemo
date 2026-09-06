@@ -4,6 +4,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 <BaseLayout title="Your bag — Awesome Store" description="Review the products in your Awesome Store bag.">
 	<section class="shell basket-page">
+		<!-- Clerk injection context: data-clerk-cart-product-ids is updated from the local basket. -->
+		<div id="clerk-cart-context" class="sr-only" data-clerk-context="cart" data-clerk-cart-ids="" data-cart-product-ids="" data-clerk-cart-product-ids="" data-clerk-cart-items="[]"></div>
 		<div class="breadcrumbs"><a href="/">Home</a><span>/</span><span>Your bag</span></div>
 		<h1>Your bag.</h1>
 		<div class="basket-layout">

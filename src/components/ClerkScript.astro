@@ -1,21 +1,18 @@
 ---
-const publicKey = import.meta.env.PUBLIC_CLERK_API_KEY as string | undefined;
+const publicKey = (import.meta.env.PUBLIC_CLERK_API_KEY as string | undefined) || "xava4qIT1TX7fkPppSURRBJJ4h75youV";
 ---
 
-{publicKey && (
-	<script is:inline define:vars={{ publicKey }}>
-		(function (w, d) {
-			const e = d.createElement("script");
-			e.type = "text/javascript";
-			e.async = true;
-			e.src = "https://cdn.clerk.io/clerk.js";
-			const s = d.getElementsByTagName("script")[0];
-			s.parentNode?.insertBefore(e, s);
-			w.__clerk_q = w.__clerk_q || [];
-			w.Clerk = w.Clerk || function (...args) {
-				w.__clerk_q.push(args);
-			};
-			w.Clerk("config", { key: publicKey });
-		})(window, document);
-	</script>
-)}
+<!-- Start of Clerk.io E-commerce Personalisation tool - www.clerk.io -->
+<script is:inline define:vars={{ publicKey }} type="text/javascript">
+	(function(w, d){
+		var e=d.createElement('script');e.type='text/javascript';e.async=true;
+		e.src='https://cdn.clerk.io/clerk.js';
+		var s=d.getElementsByTagName('script')[0];s.parentNode.insertBefore(e,s);
+		w.__clerk_q=w.__clerk_q||[];w.Clerk=w.Clerk||function(){ w.__clerk_q.push(arguments) };
+	})(window,document);
+
+	Clerk('config', {
+		key: publicKey
+	});
+</script>
+<!-- End of Clerk.io E-commerce Personalisation tool - www.clerk.io -->

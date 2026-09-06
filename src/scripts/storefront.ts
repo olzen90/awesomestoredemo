@@ -24,8 +24,20 @@ function saveCart(cart: CartItem[]) {
 	renderCart(cart);
 }
 
+function updateClerkCartContext(cart: CartItem[]) {
+	const context = document.querySelector<HTMLElement>("#clerk-cart-context");
+	if (!context) return;
+	const productIds = cart.map((item) => item.id).join(",");
+	const items = cart.map((item) => ({ id: item.id, quantity: item.quantity, price: item.price }));
+	context.dataset.clerkCartIds = productIds;
+	context.dataset.cartProductIds = productIds;
+	context.dataset.clerkCartProductIds = productIds;
+	context.dataset.clerkCartItems = JSON.stringify(items);
+}
+
 function updateCartCount(cart = readCart()) {
 	const count = cart.reduce((total, item) => total + item.quantity, 0);
+	updateClerkCartContext(cart);
 	document.querySelectorAll<HTMLElement>("[data-cart-count]").forEach((element) => {
 		element.textContent = String(count);
 	});

@@ -11,6 +11,8 @@ const { page } = Astro.props;
 
 <BaseLayout title={`${page.title} — Awesome Store`} description={page.text.slice(0, 150)}>
 	<article class="shell article">
+		<!-- Clerk injection context: use data-clerk-page-id for the current blog page. -->
+		<div id="clerk-page-context" class="sr-only" data-clerk-context="page" data-clerk-id={page.id} data-page-id={page.id} data-clerk-page-id={page.id} data-clerk-page-type={page.type}></div>
 		<div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/blog">Journal</a><span>/</span><span>{page.title}</span></div>
 		<p class="eyebrow">{page.date} · Awesome Store Journal</p>
 		<h1>{page.title}</h1>
