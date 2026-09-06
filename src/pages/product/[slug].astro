@@ -1,0 +1,38 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ClerkSlot from "../../components/ClerkSlot.astro";
+import ProductGrid from "../../components/ProductGrid.astro";
+import { products, categories } from "../../lib/catalog";
+
+export function getStaticPaths() {
+	return products.map((product) => ({ params: { slug: product.slug }, props: { product } }));
+}
+
+const { product } = Astro.props;
+const productCategory = categories.find((category) => category.id === product.categories[0]);
+const price = new Intl.NumberFormat("en-IE", { style: "currency", currency: "EUR" }).format(product.price);
+const listPrice = new Intl.NumberFormat("en-IE", { style: "currency", currency: "EUR" }).format(product.list_price);
+const relatedProducts = products.filter((candidate) => candidate.id !== product.id && candidate.categories.some((id) => product.categories.includes(id))).slice(0, 4);
+---
+
+<BaseLayout title={`${product.name} — Awesome Store`} description={product.description}>
+	<section class="shell product-detail">
+		<div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href={productCategory?.url || "/"}>{productCategory?.name || product.department}</a><span>/</span><span>{product.name}</span></div>
+		<div class="product-detail-grid">
+			<div class="product-detail-image"><img src={product.image} alt={product.name} width="900" height="900" /></div>
+			<div class="product-detail-copy">
+				<div class="product-meta-row"><span>{product.brand}</span><span>{product.collection}</span></div>
+				<h1>{product.name}</h1>
+				<p class="detail-description">{product.description}</p>
+				<div class="detail-price"><strong>{price}</strong>{product.on_sale && <del>{listPrice}</del>}</div>
+				<div class="color-chip" style={`--swatch: ${product.color.color_code}`}>{product.color.name}</div>
+				<span class="detail-label">Choose a size</span>
+				<div class="size-options">{product.size_options.map((size) => <button class="size-option" type="button">{size}</button>)}</div>
+				<div class="detail-actions"><button class="button" type="button" data-add-to-basket data-product-id={product.id} data-product-name={product.name} data-product-price={product.price} data-product-image={product.image} data-product-url={product.url}>Add to bag <span aria-hidden="true">+</span></button></div>
+				<p class="availability">{product.stock_status === "low_stock" ? "Low stock — ready to ship" : "In stock — ready to ship"}</p>
+				<div class="detail-clerk"><ClerkSlot template="@product-page-alternatives" api="recommendations/product/alternatives" products={[product.id]} label="Product - Alternatives" limit={4}><h2>You may also like</h2><ProductGrid products={relatedProducts} compact label="Product - Alternatives" /></ClerkSlot></div>
+			</div>
+		</div>
+		<span class="clerk" data-api="log/product" data-product={product.id} aria-hidden="true"></span>
+	</section>
+</BaseLayout>

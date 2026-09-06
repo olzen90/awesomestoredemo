@@ -1,0 +1,27 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ClerkSlot from "../../components/ClerkSlot.astro";
+import ProductGrid from "../../components/ProductGrid.astro";
+import { categories, productsForCategory } from "../../lib/catalog";
+
+export function getStaticPaths() {
+	return categories.map((category) => ({ params: { slug: category.slug }, props: { category } }));
+}
+
+const { category } = Astro.props;
+const products = productsForCategory(category.id);
+const leafCategories = category.subcategories.map((id: number) => categories.find((candidate) => candidate.id === id)).filter(Boolean);
+---
+
+<BaseLayout title={`${category.name} — Awesome Store`} description={category.description}>
+	<section class="shell category-header">
+		<div><div class="breadcrumbs"><a href="/">Home</a><span>/</span><span>{category.name}</span></div><p class="eyebrow">Awesome Store / Collection</p><h1>{category.name}</h1></div>
+		<p>{category.description}</p>
+	</section>
+	<section class="shell product-section">
+		{leafCategories.length > 0 && <div class="facet-pills">{leafCategories.map((child) => <a class="facet-pill" href={child?.url}>{child?.name}</a>)}</div>}
+		<div class="category-tools"><span class="result-count">{products.length} pieces in this collection</span><label class="sort-control">Sort by <select data-sort-products><option value="recommended">Recommended</option><option value="newest">Newest</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option></select></label></div>
+		<div class="facets-panel"><ClerkSlot template="@category-page" api="recommendations/category/popular" category={category.id} label={`Category - ${category.name}`} limit={40}><div class="clerk-demo-note">Clerk category recommendations and facets appear here when enabled.</div></ClerkSlot><div class="facet-pills"><span class="facet-pill">Color</span><span class="facet-pill">Brand</span><span class="facet-pill">Material</span><span class="facet-pill">Price</span><span class="facet-pill">Collection</span></div></div>
+		{products.length ? <ProductGrid products={products} label={`Category - ${category.name}`} /> : <div class="cart-empty"><h2>This shelf is still being arranged.</h2><p>Try another collection.</p></div>}
+	</section>
+</BaseLayout>

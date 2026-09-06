@@ -8,7 +8,9 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "build:verify": "npm run build && npm run validate",
     "preview": "astro preview",
+    "validate": "node scripts/validate-storefront.mjs",
     "astro": "astro"
   },
   "dependencies": {

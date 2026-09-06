@@ -1,0 +1,16 @@
+---
+import type { Product } from "../lib/catalog";
+import ProductCard from "./ProductCard.astro";
+
+type Props = {
+	products: Product[];
+	label?: string;
+	compact?: boolean;
+};
+
+const { products, label = "Product Grid", compact = false } = Astro.props;
+---
+
+<div class:list-compact={compact} class="product-grid" data-product-grid>
+	{products.map((product) => <ProductCard product={product} compact={compact} label={label} />)}
+</div>

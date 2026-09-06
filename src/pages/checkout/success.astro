@@ -1,0 +1,16 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Demo checkout complete — Awesome Store" description="A visual checkout confirmation for the Awesome Store Clerk demo.">
+	<section class="shell success-page">
+		<div class="success-card"><p class="banner-kicker">Demo confirmation</p><h1>That’s a wrap.</h1><p>This screen is intentionally visual only. It gives you a safe place to wire Clerk’s sale tracking once a real order-confirmation flow exists.</p><a class="button" href="/">Back to Awesome Store <span aria-hidden="true">↗</span></a></div>
+		<pre class="integration-code" aria-label="Example Clerk sale tracking snippet">{`<!-- Add this to a real order-success page -->
+<span
+  class="clerk"
+  data-api="log/sale"
+  data-sale="YOUR_ORDER_ID"
+  data-products='[{"id": 10001, "quantity": 1, "price": 88}]'>
+</span>`}</pre>
+	</section>
+</BaseLayout>

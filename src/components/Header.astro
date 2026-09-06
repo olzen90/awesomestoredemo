@@ -1,0 +1,34 @@
+---
+import { storeName, topLevelCategories } from "../lib/catalog";
+import ClerkSlot from "./ClerkSlot.astro";
+---
+
+<header class="site-header">
+	<div class="announcement">Free delivery on orders over €75 <span>↗</span></div>
+	<div class="header-main shell">
+		<a class="wordmark" href="/" aria-label={`${storeName} home`}>
+			<span class="wordmark-mark">A</span>
+			<span>{storeName}</span>
+		</a>
+
+		<form class="site-search" action="/search" method="get" data-search-form>
+			<label class="sr-only" for="site-search">Search products</label>
+			<span class="search-icon">⌕</span>
+			<input id="site-search" name="q" type="search" placeholder="Search the collection" autocomplete="off" />
+			<button type="submit">Search</button>
+		</form>
+
+		<nav class="header-actions" aria-label="Utility navigation">
+			<a href="/blog">Journal</a>
+			<a href="/basket" class="bag-link">Bag <span data-cart-count>0</span></a>
+		</nav>
+	</div>
+
+	<div class="category-nav shell">
+		<nav aria-label="Product categories">
+			<a href="/">New in</a>
+			{topLevelCategories.map((category) => <a href={category.url}>{category.name}</a>)}
+		</nav>
+		<ClerkSlot label="Header - Instant Search" template="@live-search" limit={6} instantSearch="#site-search" />
+	</div>
+</header>

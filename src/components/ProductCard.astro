@@ -1,0 +1,46 @@
+---
+import type { Product } from "../lib/catalog";
+
+type Props = {
+	product: Product;
+	compact?: boolean;
+	label?: string;
+};
+
+const { product, compact = false, label = "Product Grid" } = Astro.props;
+const price = new Intl.NumberFormat("en-IE", { style: "currency", currency: "EUR" }).format(product.price);
+const listPrice = new Intl.NumberFormat("en-IE", { style: "currency", currency: "EUR" }).format(product.list_price);
+---
+
+<article class:list-product-card={compact} class="product-card" data-product-card data-price={product.price} data-created-at={product.created_at}>
+	<a class="product-image-wrap" href={product.url} aria-label={`View ${product.name}`}>
+		{product.on_sale && <span class="product-badge sale-badge">Sale</span>}
+		{product.is_new && !product.on_sale && <span class="product-badge new-badge">New</span>}
+		<img src={product.image} alt={product.name} loading="lazy" width="720" height="720" />
+		<span class="image-arrow" aria-hidden="true">↗</span>
+	</a>
+	<div class="product-card-copy">
+		<div class="product-meta-row">
+			<span>{product.brand}</span>
+			<span>{product.color.name}</span>
+		</div>
+		<h3><a href={product.url}>{product.name}</a></h3>
+		<div class="product-price-row">
+			<strong>{price}</strong>
+			{product.on_sale && <del>{listPrice}</del>}
+		</div>
+		<button
+			class="text-button add-button"
+			type="button"
+			data-add-to-basket
+			data-product-id={product.id}
+			data-product-name={product.name}
+			data-product-price={product.price}
+			data-product-image={product.image}
+			data-product-url={product.url}
+			data-product-label={label}
+		>
+			Add to bag <span aria-hidden="true">+</span>
+		</button>
+	</div>
+</article>
