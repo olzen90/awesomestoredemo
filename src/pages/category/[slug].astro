@@ -15,8 +15,8 @@ const leafCategories = category.subcategories.map((id: number) => categories.fin
 
 <BaseLayout title={`${category.name} — Awesome Store`} description={category.description}>
 	<section class="shell category-header">
-		<!-- Clerk injection context: use data-clerk-category-id for the current category. -->
-		<div id="clerk-category-context" class="sr-only" data-clerk-context="category" data-clerk-id={category.id} data-category-id={category.id} data-clerk-category-id={category.id}></div>
+		<!-- Existing webshop context: an injection can read the current category ID from this ordinary HTML element. -->
+		<div id="category-context" class="sr-only" data-context="category" data-id={category.id} data-category-id={category.id}></div>
 		<div><div class="breadcrumbs"><a href="/">Home</a><span>/</span><span>{category.name}</span></div><p class="eyebrow">Awesome Store / Collection</p><h1>{category.name}</h1></div>
 		<p>{category.description}</p>
 	</section>

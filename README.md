@@ -17,16 +17,16 @@ The order feed contains 5,000 deterministic sample orders drawn from the current
 
 The shared layout adds the Clerk.js loader immediately before the closing `</head>` tag. It uses `PUBLIC_CLERK_API_KEY` when provided and falls back to the demo publishable key used for this example.
 
-The pages include simple context markers for injection demos:
+The pages include simple, neutral context markers that represent ordinary webshop HTML. They are intentionally not named after any integration:
 
 ```js
-document.querySelector("[data-clerk-category-id]")?.dataset.clerkCategoryId;
-document.querySelector("[data-clerk-product-id]")?.dataset.clerkProductId;
-document.querySelector("[data-clerk-page-id]")?.dataset.clerkPageId;
-document.querySelector("[data-clerk-cart-product-ids]")?.dataset.clerkCartProductIds;
+document.querySelector("[data-category-id]")?.dataset.categoryId;
+document.querySelector("[data-product-id]")?.dataset.productId;
+document.querySelector("[data-page-id]")?.dataset.pageId;
+document.querySelector("[data-cart-product-ids]")?.dataset.cartProductIds;
 ```
 
-The cart marker is updated whenever the local basket changes. It exposes comma-separated product IDs in `data-clerk-cart-product-ids` and the current `{ id, quantity, price }` lines as JSON in `data-clerk-cart-items`.
+The cart marker is updated whenever the local basket changes. It exposes comma-separated product IDs in `data-cart-product-ids` and the current `{ id, quantity, price }` lines as JSON in `data-cart-items`.
 
 ## Optional Clerk configuration
 

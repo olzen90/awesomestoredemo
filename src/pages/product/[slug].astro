@@ -17,8 +17,8 @@ const relatedProducts = products.filter((candidate) => candidate.id !== product.
 
 <BaseLayout title={`${product.name} — Awesome Store`} description={product.description}>
 	<section class="shell product-detail">
-		<!-- Clerk injection context: use data-clerk-product-id for the current product. -->
-		<div id="clerk-product-context" class="sr-only" data-clerk-context="product" data-clerk-id={product.id} data-product-id={product.id} data-clerk-product-id={product.id}></div>
+		<!-- Existing webshop context: an injection can read the current product ID from this ordinary HTML element. -->
+		<div id="product-context" class="sr-only" data-context="product" data-id={product.id} data-product-id={product.id}></div>
 		<div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href={productCategory?.url || "/"}>{productCategory?.name || product.department}</a><span>/</span><span>{product.name}</span></div>
 		<div class="product-detail-grid">
 			<div class="product-detail-image"><img src={product.image} alt={product.name} width="900" height="900" /></div>
