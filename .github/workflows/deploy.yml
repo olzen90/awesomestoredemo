@@ -1,42 +1,42 @@
 name: Deploy Awesome Store to GitHub Pages
 
 on:
-	push:
-		branches: [main]
-	workflow_dispatch:
+  push:
+    branches: [main]
+  workflow_dispatch:
 
 permissions:
-	contents: read
-	pages: write
-	id-token: write
+  contents: read
+  pages: write
+  id-token: write
 
 concurrency:
-	group: github-pages
-	cancel-in-progress: true
+  group: github-pages
+  cancel-in-progress: true
 
 jobs:
-	build:
-		runs-on: ubuntu-latest
-		steps:
-			- name: Check out the repository
-				uses: actions/checkout@v7
-			- name: Build and upload the Astro site
-				uses: withastro/action@v6
-				with:
-					node-version: 22.23.2
-					build-cmd: npm run build:verify
-				env:
-					PUBLIC_SITE_URL: https://olzen90.github.io/awesomestoredemo
-					PUBLIC_BASE_PATH: /awesomestoredemo
-					PUBLIC_CLERK_API_KEY: ${{ vars.PUBLIC_CLERK_API_KEY }}
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v7
+      - name: Build and upload the Astro site
+        uses: withastro/action@v6
+        with:
+          node-version: 22.23.2
+          build-cmd: npm run build:verify
+        env:
+          PUBLIC_SITE_URL: https://olzen90.github.io/awesomestoredemo
+          PUBLIC_BASE_PATH: /awesomestoredemo
+          PUBLIC_CLERK_API_KEY: ${{ vars.PUBLIC_CLERK_API_KEY }}
 
-	deploy:
-		needs: build
-		runs-on: ubuntu-latest
-		environment:
-			name: github-pages
-			url: ${{ steps.deployment.outputs.page_url }}
-		steps:
-			- name: Deploy to GitHub Pages
-				id: deployment
-				uses: actions/deploy-pages@v5
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
