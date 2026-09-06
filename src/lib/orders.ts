@@ -1,5 +1,6 @@
 import type { Product } from "./catalog";
 import { products } from "./catalog";
+import ordersArchive from "../data/orders-archive.json";
 
 export type OrderProduct = {
 	id: number;
@@ -55,9 +56,10 @@ type Carrier = {
 	host: string;
 };
 
-const ORDER_COUNT = 5_000;
-const FIRST_ORDER_ID = 7_000_001;
-const FIRST_CUSTOMER_ID = 8_000;
+const ARCHIVED_ORDER_COUNT = 10_000;
+const ARCHIVED_CATALOG_MAX_PRODUCT_ID = 10_512;
+const FUTURE_ORDER_SLOTS_PER_PRODUCT = 8;
+const FIRST_FUTURE_ORDER_ID = 7_010_001;
 const DAY = 86_400;
 const HOUR = 3_600;
 const ORDER_LATEST_TIME = 1_788_134_400;
@@ -156,16 +158,6 @@ for (const categoryId of leafCategoryIds) {
 	productsByCategory.set(categoryId, products.filter((product) => product.categories.includes(categoryId)));
 }
 
-function chooseProduct(categoryId: number, rng: () => number, usedIds: Set<number>) {
-	const available = productsByCategory.get(categoryId) ?? products;
-	const start = Math.floor(rng() * available.length);
-	for (let offset = 0; offset < available.length; offset += 1) {
-		const candidate = available[(start + offset) % available.length];
-		if (candidate && !usedIds.has(candidate.id)) return candidate;
-	}
-	return available[start] ?? products[0];
-}
-
 function chooseItemCount(rng: () => number) {
 	const roll = rng();
 	if (roll < 0.35) return 1;
@@ -247,31 +239,35 @@ function createTracking(orderId: number, orderTime: number, status: string, parc
 	};
 }
 
-function createOrder(orderIndex: number): Order {
-	const rng = createRng(0xA5E50 + orderIndex * 9_973);
-	const orderId = FIRST_ORDER_ID + orderIndex;
-	const customer = customers[(orderIndex * 7 + Math.floor(rng() * customers.length)) % customers.length] ?? customers[0];
+function createFutureOrder(focalProduct: Product, slot: number): Order {
+	const productOffset = focalProduct.id - ARCHIVED_CATALOG_MAX_PRODUCT_ID - 1;
+	const orderId = FIRST_FUTURE_ORDER_ID + productOffset * FUTURE_ORDER_SLOTS_PER_PRODUCT + slot;
+	const rng = createRng(0xF00D00 + focalProduct.id * 97 + slot * 1_009);
+	const customer = customers[(orderId * 7 + Math.floor(rng() * customers.length)) % customers.length] ?? customers[0];
 	const orderTime = ORDER_LATEST_TIME - Math.floor(rng() * ORDER_HISTORY_DAYS * DAY);
 	const ageDays = (ORDER_LATEST_TIME - orderTime) / DAY;
 	const itemCount = chooseItemCount(rng);
-	const recipe = pick(recipes, rng);
-	const categoryChoices = itemCount === 1 ? [pick(leafCategoryIds, rng)] : [pick(recipe.anchors, rng)];
+	const focalCategoryId = focalProduct.categories[0] ?? leafCategoryIds[0];
+	const recipe = recipes.find((candidate) => candidate.anchors.includes(focalCategoryId)) ?? recipes[0];
+	const categoryChoices = [focalCategoryId];
 	while (categoryChoices.length < itemCount) {
 		const pool = rng() < 0.72 ? recipe.companions : [...recipe.anchors, ...recipe.companions];
 		categoryChoices.push(pick(pool, rng));
 	}
 
-	const usedIds = new Set<number>();
-	const orderProducts: OrderProduct[] = [];
-	for (const categoryId of categoryChoices) {
-		const product = chooseProduct(categoryId, rng, usedIds);
+	// A future product is always the focal item. Companion selection is capped
+	// at its ID, so adding later products cannot change this order's output.
+	const usedIds = new Set<number>([focalProduct.id]);
+	const orderProducts: OrderProduct[] = [{ id: focalProduct.id, quantity: rng() < 0.08 ? 2 : 1, price: focalProduct.price }];
+	for (const categoryId of categoryChoices.slice(1)) {
+		const available = (productsByCategory.get(categoryId) ?? products).filter(
+			(product) => product.id <= focalProduct.id && !usedIds.has(product.id),
+		);
+		if (!available.length) continue;
+		const product = available[Math.floor(rng() * available.length)];
 		if (!product) continue;
 		usedIds.add(product.id);
-		orderProducts.push({
-			id: product.id,
-			quantity: rng() < 0.08 ? 2 : 1,
-			price: product.price,
-		});
+		orderProducts.push({ id: product.id, quantity: rng() < 0.08 ? 2 : 1, price: product.price });
 	}
 
 	const orderStatus = chooseOrderStatus(ageDays, rng);
@@ -296,8 +292,20 @@ function createOrder(orderIndex: number): Order {
 	};
 }
 
-export const orders: Order[] = Array.from({ length: ORDER_COUNT }, (_, orderIndex) => createOrder(orderIndex));
+const archivedOrders = ordersArchive as Order[];
+if (archivedOrders.length !== ARCHIVED_ORDER_COUNT) {
+	throw new Error(`Awesome Store order archive expected ${ARCHIVED_ORDER_COUNT} orders, found ${archivedOrders.length}`);
+}
 
-if (orders.length !== ORDER_COUNT) {
-	throw new Error(`Awesome Store order generator expected ${ORDER_COUNT} orders, found ${orders.length}`);
+const futureProducts = products
+	.filter((product) => product.id > ARCHIVED_CATALOG_MAX_PRODUCT_ID)
+	.sort((left, right) => left.id - right.id);
+const futureOrders = futureProducts.flatMap((product) =>
+	Array.from({ length: FUTURE_ORDER_SLOTS_PER_PRODUCT }, (_, slot) => createFutureOrder(product, slot)),
+);
+
+export const orders: Order[] = [...archivedOrders, ...futureOrders];
+
+if (new Set(orders.map((order) => order.id)).size !== orders.length) {
+	throw new Error("Awesome Store order archive and append-only orders contain duplicate IDs");
 }

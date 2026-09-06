@@ -11,7 +11,9 @@ npm run build:verify
 
 The build emits the Clerk-ready feeds at `/feeds/products.json`, `/feeds/categories.json`, `/feeds/pages.json`, `/feeds/orders.json`, and `/feeds/clerk.json`.
 
-The order feed contains 5,000 deterministic sample orders drawn from the current product catalog. Orders include realistic single-product and complementary multi-product baskets, fictional pop-culture customer emails, and Clerk-compatible parcel tracking data. Rebuilding the site regenerates the feed from the current catalog.
+The order feed contains 10,000 deterministic sample orders drawn from the current product catalog. Orders include realistic single-product and complementary multi-product baskets, fictional pop-culture customer emails, and Clerk-compatible parcel tracking data. The generated history intentionally covers roughly 70% of the catalog so some products remain unseen for merchandising demonstrations. The existing history is frozen in `src/data/orders-archive.json`, so adding products later only appends new orders; it does not rewrite existing order records.
+
+The catalog currently contains 512 products distributed across all existing leaf categories. Product IDs and image filenames remain stable across builds and catalog growth. New product records are appended after the current ID watermark (`10512`), and each new product receives eight deterministic orders in the generated feed. Existing order data is always emitted first and is checked against the archive during validation.
 
 Each product includes the existing structured `color` attribute plus a deterministic `margin_group` integer from 1 (lowest margin) to 5 (highest margin), which can be used for merchandising demonstrations.
 

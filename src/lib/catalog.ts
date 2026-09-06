@@ -668,56 +668,78 @@ function money(value: number) {
 	return Math.round(value * 100) / 100;
 }
 
-export const products: Product[] = groups.flatMap((group, groupIndex) => {
-	const groupProductCount = groupIndex < 2 ? 12 : 11;
-	const groupOffset = groups.slice(0, groupIndex).reduce((total, _group, index) => total + (index < 2 ? 12 : 11), 0);
-	return Array.from({ length: groupProductCount }, (_, localIndex) => {
-		const type = group.types[Math.floor(localIndex / 10)];
-		const descriptor = group.descriptors[localIndex % group.descriptors.length];
-		const color = group.colors[(localIndex + groupIndex) % group.colors.length];
-		const brand = group.brands[(localIndex + groupIndex) % group.brands.length];
-		const material = group.materials[(localIndex + groupIndex) % group.materials.length];
-		const productIndex = groupOffset + localIndex;
-		const id = 10_001 + productIndex;
-		const productNumber = String(productIndex + 1).padStart(4, "0");
-		const name = `${descriptor} ${color.name} ${type}`;
-		const listPrice = money(group.basePrice + (localIndex % 5) * 9 + groupIndex * 3);
-		const onSale = (localIndex + groupIndex) % 7 === 0;
-		const price = onSale ? money(listPrice * 0.8) : listPrice;
-		const marginGroup = ((productIndex * 3 + groupIndex) % 5) + 1;
-		const image = `${BASE_IMAGE}/product-${productNumber}.jpg`;
+// The first 512 products are the catalog represented by the frozen order
+// archive. New products are appended after that watermark so existing product
+// IDs, URLs, images, and order references remain stable as the catalog grows.
+const ARCHIVED_PRODUCT_COUNT = 512;
+const TOTAL_PRODUCT_COUNT = 512;
+const INITIAL_GROUP_PRODUCT_COUNTS = groups.map((_group, groupIndex) => (groupIndex < 8 ? 29 : 28));
 
-		return {
-			id,
-			name,
-			slug: `${slugify(name)}-${id}`,
-			description: `${name} by ${brand}, made from ${material} for the ${group.collection.toLowerCase()} collection. Designed to be used often, kept for a long time, and styled without much effort.`,
-			price,
-			list_price: listPrice,
-			on_sale: onSale,
-			image,
-			url: `/product/${slugify(name)}-${id}`,
-			categories: [group.categoryId],
-			created_at: CREATED_AT - (200 - productIndex) * DAY,
-			brand,
-			color: { ...color, image },
-			reviews_amount: 18 + ((localIndex * 17 + groupIndex * 13) % 183),
-			reviews_avg: money(4 + ((localIndex + groupIndex) % 10) / 10),
-			material,
-			size_options: group.sizes,
-			collection: group.collection,
-			season: ["Spring", "Summer", "Autumn", "Winter"][(localIndex + groupIndex) % 4],
-			tags: [...group.tags.slice(0, 3), color.converted_name.toLowerCase()],
-			stock_status: localIndex % 11 === 0 ? "low_stock" : "in_stock",
-			inventory: 4 + ((localIndex * 29 + groupIndex * 11) % 96),
-			is_featured: (localIndex + groupIndex) % 4 === 0,
-			is_new: localIndex < 3,
-			department: group.department,
-			sku: `AWS-${String(id).padStart(5, "0")}`,
-			margin_group: marginGroup,
-		};
-	});
+function createProduct(group: ProductGroup, groupIndex: number, localIndex: number, productIndex: number): Product {
+	const edition = Math.floor(localIndex / (group.descriptors.length * group.types.length));
+	const type = group.types[Math.floor(localIndex / group.descriptors.length) % group.types.length] ?? group.types[0];
+	const descriptor = group.descriptors[localIndex % group.descriptors.length];
+	const color = group.colors[(localIndex + groupIndex) % group.colors.length];
+	const brand = group.brands[(localIndex + groupIndex) % group.brands.length];
+	const material = group.materials[(localIndex + groupIndex) % group.materials.length];
+	const id = 10_001 + productIndex;
+	const productNumber = String(productIndex + 1).padStart(4, "0");
+	const name = `${descriptor} ${color.name} ${type}${edition ? ` Edition ${edition + 1}` : ""}`;
+	const listPrice = money(group.basePrice + (localIndex % 5) * 9 + groupIndex * 3);
+	const onSale = (localIndex + groupIndex) % 7 === 0;
+	const price = onSale ? money(listPrice * 0.8) : listPrice;
+	const marginGroup = ((productIndex * 3 + groupIndex) % 5) + 1;
+	const image = `${BASE_IMAGE}/product-${productNumber}.jpg`;
+	const createdAt = productIndex < ARCHIVED_PRODUCT_COUNT
+		? CREATED_AT - (ARCHIVED_PRODUCT_COUNT - productIndex) * DAY
+		: CREATED_AT + (productIndex - ARCHIVED_PRODUCT_COUNT + 1) * DAY;
+
+	return {
+		id,
+		name,
+		slug: `${slugify(name)}-${id}`,
+		description: `${name} by ${brand}, made from ${material} for the ${group.collection.toLowerCase()} collection. Designed to be used often, kept for a long time, and styled without much effort.`,
+		price,
+		list_price: listPrice,
+		on_sale: onSale,
+		image,
+		url: `/product/${slugify(name)}-${id}`,
+		categories: [group.categoryId],
+		created_at: createdAt,
+		brand,
+		color: { ...color, image },
+		reviews_amount: 18 + ((localIndex * 17 + groupIndex * 13) % 183),
+		reviews_avg: money(4 + ((localIndex + groupIndex) % 10) / 10),
+		material,
+		size_options: group.sizes,
+		collection: group.collection,
+		season: ["Spring", "Summer", "Autumn", "Winter"][(localIndex + groupIndex) % 4],
+		tags: [...group.tags.slice(0, 3), color.converted_name.toLowerCase()],
+		stock_status: localIndex % 11 === 0 ? "low_stock" : "in_stock",
+		inventory: 4 + ((localIndex * 29 + groupIndex * 11) % 96),
+		is_featured: (localIndex + groupIndex) % 4 === 0,
+		is_new: localIndex < 3,
+		department: group.department,
+		sku: `AWS-${String(id).padStart(5, "0")}`,
+		margin_group: marginGroup,
+	};
+}
+
+const archivedProducts = groups.flatMap((group, groupIndex) => {
+	const groupProductCount = INITIAL_GROUP_PRODUCT_COUNTS[groupIndex] ?? 0;
+	const groupOffset = INITIAL_GROUP_PRODUCT_COUNTS.slice(0, groupIndex).reduce((total, count) => total + count, 0);
+	return Array.from({ length: groupProductCount }, (_, localIndex) => createProduct(group, groupIndex, localIndex, groupOffset + localIndex));
 });
+
+const additionalProductCount = Math.max(0, TOTAL_PRODUCT_COUNT - ARCHIVED_PRODUCT_COUNT);
+const additionalProducts = Array.from({ length: additionalProductCount }, (_, extraIndex) => {
+	const groupIndex = extraIndex % groups.length;
+	const group = groups[groupIndex] ?? groups[0];
+	const localIndex = (INITIAL_GROUP_PRODUCT_COUNTS[groupIndex] ?? 0) + Math.floor(extraIndex / groups.length);
+	return createProduct(group, groupIndex, localIndex, ARCHIVED_PRODUCT_COUNT + extraIndex);
+});
+
+export const products: Product[] = [...archivedProducts, ...additionalProducts];
 
 export const blogPages: BlogPage[] = [
 	{

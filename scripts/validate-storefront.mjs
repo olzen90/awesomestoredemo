@@ -34,6 +34,12 @@ const categories = readJson("feeds/categories.json");
 const pages = readJson("feeds/pages.json");
 const orders = readJson("feeds/orders.json");
 const combined = readJson("feeds/clerk.json");
+let orderArchive = null;
+try {
+	orderArchive = JSON.parse(fs.readFileSync(path.join(root, "src/data/orders-archive.json"), "utf8"));
+} catch (error) {
+	errors.push(`Invalid or missing order archive: ${error.message}`);
+}
 const requiredProductFields = ["id", "name", "description", "price", "image", "url", "categories", "created_at", "color", "margin_group"];
 const requiredOrderFields = ["id", "products", "time", "tracking"];
 const validKey = /^[A-Za-z0-9_]+$/;
@@ -41,7 +47,7 @@ const validOrderStatuses = new Set(["PROCESSING", "SENT", "IN_TRANSIT", "OUT_FOR
 const validCarriers = new Set(["GLS", "UPS", "FedEx"]);
 const productIds = new Set((products || []).map((product) => product.id));
 
-if (products && products.length !== 200) errors.push(`Expected 200 products, found ${products.length}`);
+if (products && products.length < 512) errors.push(`Expected at least 512 products, found ${products.length}`);
 if (products) {
 	const ids = new Set();
 	const urls = new Set();
@@ -77,13 +83,18 @@ if (categories) {
 }
 
 if (pages && pages.length !== 3) errors.push(`Expected 3 blog pages, found ${pages.length}`);
-if (orders && orders.length !== 5_000) errors.push(`Expected 5000 orders, found ${orders.length}`);
+if (orderArchive && orderArchive.length !== 10_000) errors.push(`Expected 10000 archived orders, found ${orderArchive.length}`);
+if (orders && orders.length < 10_000) errors.push(`Expected at least 10000 orders, found ${orders.length}`);
+if (orders && orderArchive && orders.length >= orderArchive.length && JSON.stringify(orders.slice(0, orderArchive.length)) !== JSON.stringify(orderArchive)) {
+	errors.push("The generated order feed changed one or more archived orders");
+}
 if (orders) {
 	const orderIds = new Set();
 	const trackingCodes = new Set();
 	const carriers = new Set();
 	const statuses = new Set();
 	let singleProductOrders = 0;
+	const orderedProductIds = new Set();
 	for (const order of orders) {
 		for (const field of requiredOrderFields) if (!(field in order)) errors.push(`Order ${order.id ?? "unknown"} is missing ${field}`);
 		if (orderIds.has(order.id)) errors.push(`Duplicate order ID: ${order.id}`);
@@ -94,6 +105,7 @@ if (orders) {
 		if (order.products?.length === 1) singleProductOrders += 1;
 		for (const item of order.products || []) {
 			if (!productIds.has(item.id)) errors.push(`Order ${order.id} references missing product ${item.id}`);
+			orderedProductIds.add(item.id);
 			if (!Number.isInteger(item.quantity) || item.quantity < 1) errors.push(`Order ${order.id} has an invalid quantity for product ${item.id}`);
 			if (typeof item.price !== "number" || item.price < 0) errors.push(`Order ${order.id} has an invalid price for product ${item.id}`);
 		}
@@ -120,10 +132,16 @@ if (orders) {
 	if (singleProductOrders === 0) errors.push("Orders do not contain any single-product purchases");
 	if (carriers.size !== 3) errors.push(`Expected all 3 fictional carriers, found ${carriers.size}`);
 	if (statuses.size < 5) errors.push(`Expected at least 5 tracking statuses, found ${statuses.size}`);
+	const archivedProductIds = new Set((products || []).filter((product) => product.id <= 10_512).map((product) => product.id));
+	const archivedOrderedProductIds = new Set([...orderedProductIds].filter((productId) => archivedProductIds.has(productId)));
+	const archivedCoverage = archivedProductIds.size ? archivedOrderedProductIds.size / archivedProductIds.size : 0;
+	if (archivedCoverage < 0.65 || archivedCoverage > 0.75) errors.push(`Expected archived order history to cover roughly 70% of the original catalog, found ${(archivedCoverage * 100).toFixed(1)}%`);
+	const futureProducts = (products || []).filter((product) => product.id > 10_512);
+	for (const product of futureProducts) if (!orderedProductIds.has(product.id)) errors.push(`Future product ${product.id} is missing from append-only order data`);
 }
 if (combined) {
-	if (combined.products?.length !== 200) errors.push("Combined feed does not contain 200 products");
-	if (combined.orders?.length !== 5_000) errors.push("Combined feed does not contain 5000 orders");
+	if (combined.products?.length < 512) errors.push("Combined feed does not contain at least 512 products");
+	if (combined.orders?.length < 10_000) errors.push("Combined feed does not contain at least 10000 orders");
 	if (combined.config?.strict !== false) errors.push("Combined feed config.strict must be false");
 	if (!Number.isInteger(combined.config?.created)) errors.push("Combined feed config.created must be a Unix timestamp");
 }
@@ -135,7 +153,7 @@ const routeCounts = {
 };
 if (!fs.existsSync(path.join(dist, "cart", "index.html"))) errors.push("Missing /cart route");
 if (fs.existsSync(path.join(dist, "basket", "index.html"))) errors.push("Legacy /basket route should not be generated");
-if (routeCounts.product !== 200) errors.push(`Expected 200 product routes, found ${routeCounts.product}`);
+if (routeCounts.product < 512) errors.push(`Expected at least 512 product routes, found ${routeCounts.product}`);
 if (routeCounts.category !== 26) errors.push(`Expected 26 category routes, found ${routeCounts.category}`);
 if (routeCounts.blog !== 4) errors.push(`Expected 4 blog routes, found ${routeCounts.blog}`);
 
@@ -145,4 +163,4 @@ if (errors.length) {
 	process.exit(1);
 }
 
-console.log("Awesome Store validation passed: 200 products, 26 categories, 3 blog pages, 5000 orders, all feeds, routes, and images verified.");
+console.log(`Awesome Store validation passed: ${products?.length ?? 0} products, 26 categories, 3 blog pages, ${orders?.length ?? 0} orders, archived coverage ~70%, all feeds, routes, and images verified.`);
