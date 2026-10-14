@@ -18,6 +18,8 @@ feed but send no Clerk requests. Enable live mode only for the demo store.
 - Search shoppers use natural type/color/brand queries, sometimes refine their
   search, and occasionally explore a plausible catalogue gap. Real responses
   determine no-result searches; the simulator never fabricates result counts.
+  Search uses the current v3 `search/products` API with brand/color facets;
+  page views use v3 `log/pageview`. Other tracking APIs remain v2.
 - Category recommendations and product search return real results in live mode.
   Only returned products are logged as Clerk clicks, with their original position,
   source endpoint and matching placement label. All calls in a journey share a visitor.

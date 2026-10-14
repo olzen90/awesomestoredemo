@@ -161,7 +161,7 @@ class ClerkClient:
 
     def request(self, endpoint, payload):
         if not self.live:
-            if endpoint.startswith("recommendations/") or endpoint == "search/search":
+            if endpoint.startswith("recommendations/") or endpoint == "search/products":
                 category = payload.get("category")
                 query = payload.get("query", "").lower()
                 matches = [p['id'] for p in self.catalog.values()
@@ -171,7 +171,7 @@ class ClerkClient:
                 return {"result": matches[:payload.get("limit", 12)]}
             return {"status": "ok"}
         body = json.dumps({**payload, "key": self.key}).encode()
-        base = "https://api.clerk.io/v3/" if endpoint == 'log/pageview' else API_URL
+        base = "https://api.clerk.io/v3/" if endpoint in ('log/pageview', 'search/products') else API_URL
         request = Request(base + endpoint, data=body, method="POST",
                           headers={"Content-Type": "application/json", "User-Agent": "AwesomeStoreSimulator/1.0"})
         try:
@@ -342,7 +342,7 @@ def run_journey(session, catalog, client):
         elif channel == 'chat':
             source, params, label = 'assistant/search/products', {}, None
         elif channel == 'search':
-            source, params, label = 'search/search', {}, 'Search - Results'
+            source, params, label = 'search/products', {'facets': ['brand', 'color']}, 'Search - Results'
         else:
             source, params, label = 'recommendations/category/popular', {'category': category}, 'Category - Popular'
         payload = {**params, "visitor": session['visitor'], "limit": 12}
@@ -450,6 +450,7 @@ def run_journey(session, catalog, client):
         spend = sum(p['price'] for p in basket)
         companions = [p for p in candidates if p['id'] not in [x['id'] for x in basket]
                       and p['price'] + spend <= budget]
+        companions.sort(key=lambda p: p['categories'][0] in {x['categories'][0] for x in basket})
         if not companions and mode == "mixed":
             raise ApiError("Mixed basket has no affordable organic companion; no sale sent")
         if companions:
