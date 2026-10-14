@@ -103,8 +103,10 @@ search`, so they cannot send sales, Email clicks or Chat conversations.
 `SIMULATION_ENABLED=true` enables the full shopping simulator instead, including
 the same Search floor. Set both enable variables to `false` to pause all live calls.
 Explicit manual dry runs remain dry even when scheduled Search activity is enabled.
-Search-only scheduling was enabled for this demo on 14 October 2026;
-automatic purchases remain paused.
+Full scheduled simulation was enabled for this demo on 14 October 2026:
+`SIMULATION_ENABLED=true`, with all four channels configured. Search-only mode
+remains available as a fallback if automatic purchases are paused. Newsletters
+and Email flows stay inactive; the simulator does not send marketing emails.
 
 For a manual live Search-only batch, uncheck `dry_run`, set `channel: search`,
 check `browse_only`, leave `purchase_only` unchecked and choose `max_sessions`.
