@@ -12,6 +12,12 @@ feed but send no Clerk requests. Enable live mode only for the demo store.
 - Assisted purchases in new daily plans alternate between Search and
   Recommendations. Browsing journeys use both, and summaries show orders by channel.
 - Four additional browsing sessions per planned order; these never buy.
+- Every journey logs page views and identifies its dummy email. Buyers track
+  cart additions, the cart page, a sale, the cleared cart, and checkout success.
+  Some non-buyers leave a tracked abandoned cart. No dummy address is subscribed.
+- Search shoppers use natural type/color/brand queries, sometimes refine their
+  search, and occasionally explore a plausible catalogue gap. Real responses
+  determine no-result searches; the simulator never fabricates result counts.
 - Category recommendations and product search return real results in live mode.
   Only returned products are logged as Clerk clicks, with their original position,
   source endpoint and matching placement label. All calls in a journey share a visitor.
@@ -68,6 +74,36 @@ To pause live activity, set `SIMULATION_ENABLED` to `false`. To stop all runs,
 disable the workflow in GitHub Actions. The default `GITHUB_TOKEN` requires
 permission to write repository contents; branch rules must allow writes to
 `simulator-state`. A secret is never written into the JSON activity records.
+
+## Email and Chat
+
+Manual tests can select `email` or `chat` with `max_sessions: 1` and
+`purchase_only: true`. If today's saved plan has no pending journey in that
+channel, one **unprocessed** assisted journey is assigned to it before claiming.
+Completed orders are never changed. For future daily plans, set repository
+variable `SIMULATION_CHANNELS` to `search,recommendations,email,chat` to spread
+assisted journeys across all four. The default remains Search/Recommendations.
+
+Email uses the real configured `automated-popular` embed (override with repository
+variable `SIMULATION_EMAIL_EMBED`). It requests `campaigns/click`, checks the
+redirect without following it, and logs the returned product, original source,
+position and labels with `external: 1`. A dynamic product filter keeps the
+selection in the profile/budget/purchasing cohort. This tests **embedded Email
+attribution**, not newsletter delivery or flow-open statistics. It does not send
+emails, create subscribers, or pretend that a newsletter/flow was delivered.
+
+Chat opens a genuine conversation and asks the store assistant for suitable
+products. Only products in the assistant's response can be clicked/bought, using
+the same `assistant/search/products` source as Chat.js. No extra LLM provider,
+agent subscription or continuously running computer is needed. This isolated
+adapter mirrors the current public Chat.js transport (`chat/data` and `chat`),
+which is **not a versioned public API**; contract changes fail closed. Returned
+client-tool hooks are not executed: they stop the journey for manual review.
+This does not yet simulate the Chat add-to-cart tool itself.
+
+Keep flows disabled while testing synthetic tracking. Actual newsletter/flow
+delivery needs a verified sender domain and deliberately opted-in controlled
+test inboxes; `example.com` addresses must never receive marketing emails.
 
 ## State and failure handling
 

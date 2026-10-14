@@ -18,13 +18,15 @@ on:
         type: number
         default: 100
       channel:
-        description: Restrict this test to a channel (auto includes both)
+        description: Restrict this test to a channel
         type: choice
         default: auto
         options:
           - auto
           - search
           - recommendations
+          - email
+          - chat
       purchase_only:
         description: Test only - process planned purchasing journeys, skipping browsers
         type: boolean
@@ -51,6 +53,8 @@ jobs:
       PREVIEW_FULL_DAY: ${{ inputs.preview_full_day }}
       MAX_SESSIONS: ${{ inputs.max_sessions || '100' }}
       TEST_CHANNEL: ${{ inputs.channel || 'auto' }}
+      SIMULATION_CHANNELS: ${{ vars.SIMULATION_CHANNELS || 'search,recommendations' }}
+      EMAIL_EMBED: ${{ vars.SIMULATION_EMAIL_EMBED || 'automated-popular' }}
       PURCHASE_ONLY: ${{ inputs.purchase_only }}
     steps:
       - uses: actions/checkout@v4
@@ -82,7 +86,7 @@ jobs:
         run: |
           set -euo pipefail
           args=(--state-dir "$STATE_DIR" --checkpoint-git --min-orders "$MIN_DAILY_ORDERS" --max-orders "$MAX_DAILY_ORDERS" --max-sessions "$MAX_SESSIONS")
-          args+=(--channel "$TEST_CHANNEL")
+          args+=(--channel "$TEST_CHANNEL" --channels "$SIMULATION_CHANNELS" --email-embed "$EMAIL_EMBED")
           if [ "$PURCHASE_ONLY" = true ]; then
             args+=(--purchase-only)
           fi

@@ -55,7 +55,7 @@ class SimulatorTests(unittest.TestCase):
                           datetime.fromisoformat('2026-10-14T09:00:00+02:00'), 1,
                           lambda: None, channel='search', purchase_only=True)
         self.assertEqual([s['status'] for s in plan['sessions']], ['pending', 'pending', 'completed'])
-        self.assertEqual(client.calls[0][0], 'search/search')
+        self.assertIn('search/search', [endpoint for endpoint, _ in client.calls])
         click = next(p for endpoint, p in client.calls if endpoint == 'log/click')
         self.assertEqual(click['api'], 'search/search')
         self.assertEqual(click['labels'], ['Search - Results'])
@@ -107,7 +107,8 @@ class SimulatorTests(unittest.TestCase):
         catalog = catalog_fixture()
         client = RecordingClient(catalog)
         outcome = sim.run_journey(session('organic'), catalog, client)
-        self.assertEqual([endpoint for endpoint, _ in client.calls], ['log/sale'])
+        self.assertFalse(any(endpoint == 'log/click' for endpoint, _ in client.calls))
+        self.assertTrue(any(endpoint == 'log/pageview' for endpoint, _ in client.calls))
         self.assertFalse(outcome['clicked_ids'])
         self.assertGreater(len(outcome['sale']['products']), 0)
 
@@ -125,7 +126,8 @@ class SimulatorTests(unittest.TestCase):
         client = RecordingClient(catalog)
         outcome = sim.run_journey(session('clerk'), catalog, client)
         self.assertEqual(set(outcome['clicked_ids']), {p['id'] for p in outcome['sale']['products']})
-        source, params = client.calls[0]
+        source, params = next((endpoint, payload) for endpoint, payload in client.calls
+                              if endpoint.startswith('recommendations/') or endpoint == 'search/search')
         result = sim.ClerkClient(catalog).request(source, params)['result']
         for endpoint, payload in client.calls:
             self.assertEqual(payload['visitor'], 'abcd1234')
@@ -147,7 +149,29 @@ class SimulatorTests(unittest.TestCase):
         with patch.object(client, 'request', return_value={'result': []}) as request:
             with self.assertRaises(sim.ApiError):
                 sim.run_journey(session('clerk'), client.catalog, client)
-            self.assertEqual(request.call_count, 1)
+            self.assertFalse(any(call.args[0] == 'log/sale' for call in request.call_args_list))
+
+    def test_natural_queries_are_not_full_titles(self):
+        product = {'name': 'Studio Cobalt Overshirt Edition 4', 'color': ['Cobalt'], 'brand': 'Northline'}
+        queries = sim.search_queries(product, sim.random.Random(4))
+        self.assertEqual(queries[-1], 'overshirt')
+        self.assertTrue(all('studio' not in q and 'edition' not in q for q in queries))
+
+    def test_purchase_tracks_cart_then_sale_then_empty_cart(self):
+        client = RecordingClient(catalog_fixture())
+        outcome = sim.run_journey(session('organic'), client.catalog, client)
+        endpoints = [e for e, _ in client.calls]
+        sale_index = endpoints.index('log/sale')
+        self.assertIn('log/cart/update', endpoints[:sale_index])
+        self.assertEqual(client.calls[sale_index + 1][1]['products'], [])
+        self.assertEqual(outcome['events'][-1]['url'], sim.STORE_URL + 'checkout/success/')
+
+    def test_pageviews_use_documented_v3_endpoint_and_accept_204(self):
+        client = sim.ClerkClient(catalog_fixture(), key='test-secret', live=True)
+        with patch.object(sim, 'urlopen') as connection:
+            connection.return_value.__enter__.return_value.read.return_value = b''
+            client.request('log/pageview', {'visitor': 'abc', 'url': sim.STORE_URL})
+            self.assertEqual(connection.call_args.args[0].full_url, 'https://api.clerk.io/v3/log/pageview')
 
     def test_claim_is_persisted_before_api_and_rerun_skips_completed_and_failed(self):
         catalog = catalog_fixture()
@@ -185,6 +209,36 @@ class SimulatorTests(unittest.TestCase):
         with patch.object(sim, 'urlopen', side_effect=AssertionError('Network forbidden')):
             for mode in ['organic', 'mixed', 'clerk', 'browse']:
                 sim.run_journey(session(mode), client.catalog, client)
+            for channel in ['email', 'chat']:
+                sim.run_journey({**session('mixed'), 'channel': channel}, client.catalog, client)
+
+    def test_email_sale_uses_actual_embed_and_external_click(self):
+        client = RecordingClient(catalog_fixture())
+        outcome = sim.run_journey({**session('mixed'), 'channel': 'email'}, client.catalog, client)
+        self.assertEqual(outcome['events'][2]['api'], 'campaigns/click')
+        click = next(p for e, p in client.calls if e == 'log/click')
+        self.assertEqual(click['external'], 1)
+        self.assertEqual(click['labels'], ['Automated / Popular'])
+        self.assertEqual(outcome['channel'], 'email')
+
+    def test_chat_clicks_only_products_from_conversation(self):
+        client = RecordingClient(catalog_fixture())
+        outcome = sim.run_journey({**session('clerk'), 'channel': 'chat'}, client.catalog, client)
+        self.assertTrue(any(e['api'] == 'chat/message' for e in outcome['events']))
+        click = next(p for e, p in client.calls if e == 'log/click')
+        self.assertEqual(click['api'], 'assistant/search/products')
+        self.assertNotIn('labels', click)
+        self.assertEqual(outcome['channel'], 'chat')
+
+    def test_chat_tool_hooks_are_not_executed(self):
+        with self.assertRaises(sim.ApiError):
+            sim.chat_products({'messages': [{'type': 'hook', 'content': 'run-this'}]})
+
+    def test_daily_plan_can_include_four_assisted_channels(self):
+        plan = sim.create_plan('2026-10-15', ZoneInfo('Europe/Copenhagen'), 100, 100, 4,
+                               ['search', 'recommendations', 'email', 'chat'])
+        self.assertEqual({s['channel'] for s in plan['sessions'] if s['mode'] == 'clerk'},
+                         {'search', 'recommendations', 'email', 'chat'})
 
     def test_invalid_http_200_body_is_not_success(self):
         client = sim.ClerkClient(catalog_fixture(), key='test-secret', live=True)
