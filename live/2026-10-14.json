@@ -1273,7 +1273,8 @@
       "profile": 3,
       "mode": "mixed",
       "scheduled_at": "2026-10-14T09:13:14+02:00",
-      "status": "pending"
+      "status": "in_progress",
+      "channel": "email"
     },
     {
       "id": "demo-2026-10-14-0266",
