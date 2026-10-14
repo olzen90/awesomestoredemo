@@ -183,7 +183,10 @@ class ClerkClient:
         except (URLError, TimeoutError, OSError, ValueError):
             raise ApiError(f"{endpoint}: delivery uncertain; review before retrying") from None
         if not isinstance(result, dict) or result.get("status") == "error" or result.get("error"):
-            raise ApiError(f"{endpoint}: API rejected response; review before retrying")
+            detail = str(result.get('error') or result.get('message') or 'API error') if isinstance(result, dict) else 'Invalid JSON shape'
+            detail = detail.replace(self.key or '\0', '[redacted]')
+            detail = re.sub(r'https?://\S+', '[url]', detail)[:180]
+            raise ApiError(f"{endpoint}: API rejected response ({detail}); review before retrying")
         return result
 
     def chat_request(self, endpoint, payload):
@@ -314,7 +317,8 @@ def run_journey(session, catalog, client):
             email_result = client.email_landing(session, candidates)
             source, params, label = email_result['api'], {}, None
             events.append({'api': 'campaigns/click', 'embed': client.email_embed,
-                           'product': email_result['id'], 'n': email_result['n']})
+                           'product': email_result['id'], 'n': email_result['n'],
+                           'source_api': email_result['api'], 'labels': email_result['labels']})
         elif channel == 'chat':
             source, params, label = 'assistant/search/products', {}, None
         elif channel == 'search':
