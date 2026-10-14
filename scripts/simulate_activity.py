@@ -161,7 +161,7 @@ class ClerkClient:
 
     def request(self, endpoint, payload):
         if not self.live:
-            if endpoint.startswith("recommendations/") or endpoint == "search/products":
+            if endpoint.startswith("recommendations/") or endpoint in ('search/products', 'search/omni'):
                 category = payload.get("category")
                 query = payload.get("query", "").lower()
                 matches = [p['id'] for p in self.catalog.values()
@@ -171,7 +171,7 @@ class ClerkClient:
                 return {"result": matches[:payload.get("limit", 12)]}
             return {"status": "ok"}
         body = json.dumps({**payload, "key": self.key}).encode()
-        base = "https://api.clerk.io/v3/" if endpoint in ('log/pageview', 'search/products') else API_URL
+        base = "https://api.clerk.io/v3/" if endpoint in ('log/pageview', 'search/products', 'search/omni') else API_URL
         request = Request(base + endpoint, data=body, method="POST",
                           headers={"Content-Type": "application/json", "User-Agent": "AwesomeStoreSimulator/1.0"})
         try:
@@ -188,6 +188,8 @@ class ClerkClient:
             detail = detail.replace(self.key or '\0', '[redacted]')
             detail = re.sub(r'https?://\S+', '[url]', detail)[:180]
             raise ApiError(f"{endpoint}: API rejected response ({detail}); review before retrying")
+        if endpoint == 'search/omni':
+            result['result'] = result.get('results', {}).get('products', {}).get('result', [])
         return result
 
     def chat_request(self, endpoint, payload):
@@ -342,10 +344,16 @@ def run_journey(session, catalog, client):
         elif channel == 'chat':
             source, params, label = 'assistant/search/products', {}, None
         elif channel == 'search':
-            source, params, label = 'search/products', {'facets': ['brand', 'color']}, 'Search - Results'
+            source, params, label = 'search/omni', {
+                'content': 'omni-search', 'searches': {
+                    'products': {'index': 'products', 'limit': 12, 'facets': ['brand', 'color']},
+                    'categories': {'index': 'categories', 'limit': 3},
+                    'pages': {'index': 'pages', 'limit': 3}}}, 'Omni-search'
         else:
             source, params, label = 'recommendations/category/popular', {'category': category}, 'Category - Popular'
         payload = {**params, "visitor": session['visitor'], "limit": 12}
+        if source == 'search/omni':
+            payload.pop('limit')
         if label:
             payload['labels'] = [label]
         if channel == 'email':

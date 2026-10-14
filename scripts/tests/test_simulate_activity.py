@@ -55,10 +55,10 @@ class SimulatorTests(unittest.TestCase):
                           datetime.fromisoformat('2026-10-14T09:00:00+02:00'), 1,
                           lambda: None, channel='search', purchase_only=True)
         self.assertEqual([s['status'] for s in plan['sessions']], ['pending', 'pending', 'completed'])
-        self.assertIn('search/products', [endpoint for endpoint, _ in client.calls])
+        self.assertIn('search/omni', [endpoint for endpoint, _ in client.calls])
         click = next(p for endpoint, p in client.calls if endpoint == 'log/click')
-        self.assertEqual(click['api'], 'search/products')
-        self.assertEqual(click['labels'], ['Search - Results'])
+        self.assertEqual(click['api'], 'search/omni')
+        self.assertEqual(click['labels'], ['Omni-search'])
         self.assertEqual(sum(endpoint == 'log/sale' for endpoint, _ in client.calls), 1)
 
     def test_old_completed_channels_are_read_from_recorded_events(self):
@@ -127,7 +127,7 @@ class SimulatorTests(unittest.TestCase):
         outcome = sim.run_journey(session('clerk'), catalog, client)
         self.assertEqual(set(outcome['clicked_ids']), {p['id'] for p in outcome['sale']['products']})
         source, params = next((endpoint, payload) for endpoint, payload in client.calls
-                              if endpoint.startswith('recommendations/') or endpoint == 'search/products')
+                              if endpoint.startswith('recommendations/') or endpoint == 'search/omni')
         result = sim.ClerkClient(catalog).request(source, params)['result']
         for endpoint, payload in client.calls:
             self.assertEqual(payload['visitor'], 'abcd1234')
