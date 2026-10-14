@@ -1314,8 +1314,163 @@
       "profile": 5,
       "mode": "mixed",
       "scheduled_at": "2026-10-14T09:15:03+02:00",
-      "status": "in_progress",
-      "channel": "chat"
+      "status": "completed",
+      "channel": "chat",
+      "outcome": {
+        "profile": "slow-morning",
+        "channel": "chat",
+        "clicked_ids": [
+          10391
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "39fa0677a02a",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "39fa0677a02a",
+            "email": "ellen.ripley.assisted-2026-10-14-266@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "39fa0677a02a",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/movement",
+            "category": "602"
+          },
+          {
+            "api": "chat/message",
+            "visitor": "39fa0677a02a",
+            "chat_uid": "25a11c12-1ddc-46bc-a195-fc654789bdd6",
+            "prompt": "I'm shopping for stretch strap for my slow morning. My budget is 180 euros. Can you show me suitable products?",
+            "message_types": [
+              "slider",
+              "text"
+            ],
+            "returned_ids": [
+              10388,
+              10383,
+              10384,
+              10389,
+              10385,
+              10390,
+              10391
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "39fa0677a02a",
+            "product": 10391,
+            "n": 6,
+            "source_api": "assistant/search/products"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "39fa0677a02a",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/ease-charcoal-stretch-strap-10391",
+            "product": "10391"
+          },
+          {
+            "api": "log/product",
+            "visitor": "39fa0677a02a",
+            "product": "10391"
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "39fa0677a02a",
+            "email": "ellen.ripley.assisted-2026-10-14-266@example.com",
+            "products": [
+              {
+                "id": 10391,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "39fa0677a02a",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/balance-charcoal-yoga-mat-edition-2-10395",
+            "product": "10395"
+          },
+          {
+            "api": "log/product",
+            "visitor": "39fa0677a02a",
+            "product": "10395"
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "39fa0677a02a",
+            "email": "ellen.ripley.assisted-2026-10-14-266@example.com",
+            "products": [
+              {
+                "id": 10391,
+                "quantity": 1
+              },
+              {
+                "id": 10395,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "39fa0677a02a",
+            "url": "https://olzen90.github.io/awesomestoredemo/cart/"
+          },
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0266",
+            "visitor": "39fa0677a02a",
+            "customer": "demo-assisted-2026-10-14-266",
+            "email": "ellen.ripley.assisted-2026-10-14-266@example.com",
+            "products": [
+              {
+                "id": 10391,
+                "price": 100,
+                "quantity": 1
+              },
+              {
+                "id": 10395,
+                "price": 72.8,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "39fa0677a02a",
+            "email": "ellen.ripley.assisted-2026-10-14-266@example.com",
+            "products": []
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "39fa0677a02a",
+            "url": "https://olzen90.github.io/awesomestoredemo/checkout/success/"
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0266",
+          "visitor": "39fa0677a02a",
+          "customer": "demo-assisted-2026-10-14-266",
+          "email": "ellen.ripley.assisted-2026-10-14-266@example.com",
+          "products": [
+            {
+              "id": 10391,
+              "price": 100,
+              "quantity": 1
+            },
+            {
+              "id": 10395,
+              "price": 72.8,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 172.8,
+        "estimated_profit": 62.19
+      },
+      "processed_at": "2026-10-14T14:31:34.056587+02:00"
     },
     {
       "id": "demo-2026-10-14-0224",
