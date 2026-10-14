@@ -29,7 +29,7 @@ jobs:
       SIMULATION_ENABLED: ${{ vars.SIMULATION_ENABLED }}
       CLERK_API_KEY: ${{ secrets.CLERK_API_KEY }}
       MIN_DAILY_ORDERS: ${{ vars.MIN_DAILY_ORDERS || '50' }}
-      MAX_DAILY_ORDERS: ${{ vars.MAX_DAILY_ORDERS || '50' }}
+      MAX_DAILY_ORDERS: ${{ vars.MAX_DAILY_ORDERS || '100' }}
       STATE_DIR: .simulation-state
       MANUAL_DRY_RUN: ${{ inputs.dry_run }}
       PREVIEW_FULL_DAY: ${{ inputs.preview_full_day }}
@@ -88,5 +88,6 @@ jobs:
         with:
           name: simulation-records-${{ github.run_id }}
           path: ${{ env.STATE_DIR }}/**/*.json
+          include-hidden-files: true
           if-no-files-found: ignore
           retention-days: 30

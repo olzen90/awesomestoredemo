@@ -6,7 +6,7 @@ feed but send no Clerk requests. Enable live mode only for the demo store.
 
 ## Behaviour
 
-- Default target: 50 orders daily, configurable from 1 to 100.
+- Default target: a randomly selected 50–100 orders daily, configurable from 1 to 100.
 - Deterministic daily plans, weighted towards Copenhagen daytime and evening.
 - Approximate purchase mix: 45% organic, 35% mixed, 20% entirely Clerk-assisted.
 - Four additional browsing sessions per planned order; these never buy.
@@ -53,7 +53,7 @@ Dry-run results are mock catalogue matches, not predictions of Clerk's ranking.
    named `CLERK_API_KEY`, containing the public API key for the Awesome Store demo.
 5. Confirm the demo store has imported the current product feed, including profit.
 6. Add a repository variable `SIMULATION_ENABLED` with value `true`.
-   Optionally set `MIN_DAILY_ORDERS` and `MAX_DAILY_ORDERS` (both default to `50`).
+   Optionally set `MIN_DAILY_ORDERS` (default `50`) and `MAX_DAILY_ORDERS` (default `100`).
 7. Run the workflow with **dry_run** unchecked for a live batch, or wait for its
    next scheduled run. The summary explicitly says `live` or `dry-run`.
 
@@ -76,7 +76,7 @@ the day's target without leaving late-evening orders for tomorrow.
 Before any live calls, the complete batch is marked `in_progress` and pushed to
 the state branch. When finished, outcomes are pushed. Failed or interrupted
 sessions remain `needs_review` or `in_progress` and are never automatically
-replayed. This favours avoiding duplicate sales over guaranteeing 50 successful
+   replayed. This favours avoiding duplicate sales over guaranteeing the target number of successful
 orders after a failure. HTTP errors, timeouts and API errors fail the run; inspect
 Clerk's received orders before manually deciding to retry a session.
 

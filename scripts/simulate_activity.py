@@ -273,7 +273,7 @@ def main():
     parser.add_argument('--catalog', default=FEED_URL)
     parser.add_argument('--state-dir', type=Path, default=Path('.simulation-state'))
     parser.add_argument('--min-orders', type=int, default=50)
-    parser.add_argument('--max-orders', type=int, default=50)
+    parser.add_argument('--max-orders', type=int, default=100)
     parser.add_argument('--browsers-per-order', type=int, default=4)
     parser.add_argument('--max-sessions', type=int, default=100)
     parser.add_argument('--timezone', default='Europe/Copenhagen')
