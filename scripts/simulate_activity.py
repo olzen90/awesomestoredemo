@@ -243,7 +243,7 @@ class ClerkClient:
         try:
             result = {'id': int(query['clerk_product'][0]),
                       'api': query['clerk_api'][0].replace('*', '/'),
-                      'labels': json.loads(query['clerk_labels'][0]),
+                      'labels': [query['clerk_labels'][0]],
                       'n': int(query['clerk_n'][0])}
         except (KeyError, ValueError, TypeError):
             raise ApiError('Email redirect missing tracking parameters') from None
@@ -284,6 +284,7 @@ def run_journey(session, catalog, client):
     mode = session['mode']
     channel = get_channel(session)
     events = []
+    session['attempt_events'] = events
     clicked = []
     basket = []
     source = None
@@ -294,6 +295,8 @@ def run_journey(session, catalog, client):
 
     def view(url, **context):
         record('log/pageview', {'visitor': session['visitor'], 'url': url, **context})
+        if context.get('product'):
+            record('log/product', {'visitor': session['visitor'], 'product': context['product']})
 
     def cart(products):
         record('log/cart/update', {'visitor': session['visitor'], 'email': session['email'],
@@ -337,8 +340,24 @@ def run_journey(session, catalog, client):
                 message_payload['user_consent_message'] = config['user_consent_message']
             response = client.chat_request('message', message_payload)
             events.append({'api': 'chat/message', 'visitor': session['visitor'],
-                           'chat_uid': response.get('chat_uid', uid), 'prompt': prompt})
-            response = {'result': chat_products(response)}
+                           'chat_uid': response.get('chat_uid', uid), 'prompt': prompt,
+                           'message_types': [m.get('type', 'text') for m in response.get('messages', [])],
+                           'returned_ids': [p.get('id') if isinstance(p, dict) else p
+                                            for p in chat_products(response)]})
+            products = chat_products(response)
+            candidate_ids = {p['id'] for p in candidates}
+            if not any(isinstance(p, dict) and p.get('id') in candidate_ids for p in products):
+                # A shopper can clarify an unhelpful answer. This is a new turn,
+                # not a retry of an uncertain request or a fabricated product.
+                followup = f"I'm interested in {anchor['name']}. Please show that product and similar options under {budget} euros."
+                response = client.chat_request('message', {
+                    **message_payload, 'chat_uid': response.get('chat_uid', uid), 'user_message': followup})
+                products = chat_products(response)
+                events.append({'api': 'chat/message', 'visitor': session['visitor'],
+                               'chat_uid': response.get('chat_uid', uid), 'prompt': followup,
+                               'message_types': [m.get('type', 'text') for m in response.get('messages', [])],
+                               'returned_ids': [p.get('id') if isinstance(p, dict) else p for p in products]})
+            response = {'result': products}
         elif channel == 'search':
             queries = search_queries(anchor, rng)
             # A small proportion explores a plausible catalogue gap before
@@ -465,6 +484,7 @@ def execute_batch(state, catalog, client, now, limit, checkpoint, local_checkpoi
     for session in due:
         try:
             session['outcome'] = run_journey(session, catalog, client)
+            session.pop('attempt_events', None)
             session['status'] = 'completed'
         except ApiError as error:
             session['status'] = 'needs_review'
