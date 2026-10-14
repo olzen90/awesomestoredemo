@@ -2144,8 +2144,191 @@
       "profile": 6,
       "mode": "clerk",
       "scheduled_at": "2026-10-14T12:03:39+02:00",
-      "status": "in_progress",
-      "channel": "search"
+      "status": "completed",
+      "channel": "search",
+      "outcome": {
+        "profile": "thoughtful-gift",
+        "channel": "search",
+        "clicked_ids": [
+          10212,
+          10204
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "92cdaad71a31",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "92cdaad71a31",
+            "email": "luke.skywalker.assisted-2026-10-14-302@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "92cdaad71a31",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/kitchen-table",
+            "category": "401"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "92cdaad71a31",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=common+field+carafe"
+          },
+          {
+            "api": "search/products",
+            "facets": [
+              "brand",
+              "color"
+            ],
+            "visitor": "92cdaad71a31",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ],
+            "query": "common field carafe"
+          },
+          {
+            "api": "log/click",
+            "visitor": "92cdaad71a31",
+            "product": 10212,
+            "n": 3,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/products"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "92cdaad71a31",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/curve-ink-carafe-10212",
+            "product": "10212"
+          },
+          {
+            "api": "log/product",
+            "visitor": "92cdaad71a31",
+            "product": "10212"
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "92cdaad71a31",
+            "email": "luke.skywalker.assisted-2026-10-14-302@example.com",
+            "products": [
+              {
+                "id": 10212,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "92cdaad71a31",
+            "product": 10204,
+            "n": 2,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/products"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "92cdaad71a31",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/forma-ink-carafe-10204",
+            "product": "10204"
+          },
+          {
+            "api": "log/product",
+            "visitor": "92cdaad71a31",
+            "product": "10204"
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "92cdaad71a31",
+            "email": "luke.skywalker.assisted-2026-10-14-302@example.com",
+            "products": [
+              {
+                "id": 10212,
+                "quantity": 1
+              },
+              {
+                "id": 10204,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "92cdaad71a31",
+            "email": "luke.skywalker.assisted-2026-10-14-302@example.com",
+            "products": [
+              {
+                "id": 10212,
+                "quantity": 1
+              },
+              {
+                "id": 10204,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "92cdaad71a31",
+            "url": "https://olzen90.github.io/awesomestoredemo/cart/"
+          },
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0302",
+            "visitor": "92cdaad71a31",
+            "customer": "demo-assisted-2026-10-14-302",
+            "email": "luke.skywalker.assisted-2026-10-14-302@example.com",
+            "products": [
+              {
+                "id": 10212,
+                "price": 86,
+                "quantity": 1
+              },
+              {
+                "id": 10204,
+                "price": 47.2,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "92cdaad71a31",
+            "email": "luke.skywalker.assisted-2026-10-14-302@example.com",
+            "products": []
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "92cdaad71a31",
+            "url": "https://olzen90.github.io/awesomestoredemo/checkout/success/"
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0302",
+          "visitor": "92cdaad71a31",
+          "customer": "demo-assisted-2026-10-14-302",
+          "email": "luke.skywalker.assisted-2026-10-14-302@example.com",
+          "products": [
+            {
+              "id": 10212,
+              "price": 86,
+              "quantity": 1
+            },
+            {
+              "id": 10204,
+              "price": 47.2,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 133.2,
+        "estimated_profit": 34.65
+      },
+      "processed_at": "2026-10-14T14:35:46.913977+02:00"
     },
     {
       "id": "demo-2026-10-14-0138",
