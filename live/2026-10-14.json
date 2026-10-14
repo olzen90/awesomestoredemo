@@ -1190,8 +1190,50 @@
       "profile": 5,
       "mode": "mixed",
       "scheduled_at": "2026-10-14T09:10:42+02:00",
-      "status": "in_progress",
-      "channel": "chat"
+      "status": "needs_review",
+      "channel": "chat",
+      "attempt_events": [
+        {
+          "api": "log/pageview",
+          "visitor": "fb1a7cd3e24c",
+          "url": "https://olzen90.github.io/awesomestoredemo/"
+        },
+        {
+          "api": "log/email",
+          "visitor": "fb1a7cd3e24c",
+          "email": "neo.assisted-2026-10-14-172@example.com"
+        },
+        {
+          "api": "log/pageview",
+          "visitor": "fb1a7cd3e24c",
+          "url": "https://olzen90.github.io/awesomestoredemo/category/bath-body",
+          "category": "601"
+        },
+        {
+          "api": "chat/message",
+          "visitor": "fb1a7cd3e24c",
+          "chat_uid": "ce72077f-d8da-46e0-8998-8a0086e2586f",
+          "prompt": "I'm shopping for bath towel for my slow morning. My budget is 180 euros. Can you show me suitable products?",
+          "message_types": [
+            "slider",
+            "text"
+          ],
+          "returned_ids": []
+        },
+        {
+          "api": "chat/message",
+          "visitor": "fb1a7cd3e24c",
+          "chat_uid": "ce72077f-d8da-46e0-8998-8a0086e2586f",
+          "prompt": "I'm interested in Daily Chalk Bath Towel. Please show that product and similar options under 180 euros.",
+          "message_types": [
+            "single_product",
+            "text"
+          ],
+          "returned_ids": []
+        }
+      ],
+      "error": "No eligible Clerk results; no synthetic sale sent",
+      "processed_at": "2026-10-14T14:28:10.049933+02:00"
     },
     {
       "id": "demo-2026-10-14-0296",
