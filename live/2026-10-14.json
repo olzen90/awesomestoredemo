@@ -1033,7 +1033,8 @@
       "profile": 5,
       "mode": "mixed",
       "scheduled_at": "2026-10-14T08:16:34+02:00",
-      "status": "pending"
+      "status": "in_progress",
+      "channel": "email"
     },
     {
       "id": "demo-2026-10-14-0046",
