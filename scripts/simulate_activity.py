@@ -21,6 +21,8 @@ from zoneinfo import ZoneInfo
 FEED_URL = "https://olzen90.github.io/awesomestoredemo/feeds/products.json"
 API_URL = "https://api.clerk.io/v2/"
 STORE_URL = FEED_URL.split('/feeds/')[0] + '/'
+# Relative probabilities among assisted purchases, not all store orders or revenue.
+ASSISTED_CHANNEL_WEIGHTS = {'search': 30, 'recommendations': 30, 'email': 25, 'chat': 15}
 
 
 def search_queries(product, rng):
@@ -107,12 +109,15 @@ def load_catalog(source):
 
 def create_plan(day, tz, minimum, maximum, browsers_per_order, channels=('search', 'recommendations')):
     rng = random.Random(seed(f"awesome-store:{day}:v1"))
+    # Separate RNG keeps unrelated scheduling/profile randomness independent of
+    # the channel policy. A saved plan is still loaded unchanged on later runs.
+    channel_rng = random.Random(seed(f"awesome-store-channel-mix:{day}:v2"))
+    channel_weights = [ASSISTED_CHANNEL_WEIGHTS[c] for c in channels]
     target = rng.randint(minimum, maximum)
     modes = rng.choices(["organic", "mixed", "clerk"], weights=[45, 35, 20], k=target)
     modes += ["browse"] * (target * browsers_per_order)
     rng.shuffle(modes)
     sessions = []
-    assisted_orders = 0
     for index, mode in enumerate(modes):
         hour = rng.choices(range(24), weights=HOUR_WEIGHTS)[0]
         scheduled = datetime.combine(datetime.fromisoformat(day).date(),
@@ -124,8 +129,7 @@ def create_plan(day, tz, minimum, maximum, browsers_per_order, channels=('search
         elif mode == 'browse':
             channel = rng.choice(channels)
         else:
-            channel = channels[assisted_orders % len(channels)]
-            assisted_orders += 1
+            channel = channel_rng.choices(channels, weights=channel_weights, k=1)[0]
         identity = f"{channel}-{customer}"
         sessions.append({
             "id": f"demo-{day}-{index:04d}",
@@ -138,7 +142,9 @@ def create_plan(day, tz, minimum, maximum, browsers_per_order, channels=('search
             "scheduled_at": scheduled.isoformat(),
             "status": "pending",
         })
-    return {"version": 1, "date": day, "target_orders": target,
+    return {"version": 2, "date": day, "target_orders": target,
+            "assisted_channel_targets_percent": {
+                c: round(100 * ASSISTED_CHANNEL_WEIGHTS[c] / sum(channel_weights), 2) for c in channels},
             "timezone": str(tz), "sessions": sorted(sessions, key=lambda s: s['scheduled_at'])}
 
 

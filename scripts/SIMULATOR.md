@@ -9,8 +9,13 @@ feed but send no Clerk requests. Enable live mode only for the demo store.
 - Default target: a randomly selected 50–100 orders daily, configurable from 1 to 100.
 - Deterministic daily plans, weighted towards Copenhagen daytime and evening.
 - Approximate purchase mix: 45% organic, 35% mixed, 20% entirely Clerk-assisted.
-- Assisted purchases in new daily plans alternate between Search and
-  Recommendations. Browsing journeys use both, and summaries show orders by channel.
+- Assisted purchases in new daily plans are selected randomly with target weights
+  of **30% Search, 30% Recommendations, 25% Email, 15% Chat**. These percentages
+  apply only to assisted order counts; organic purchases are outside this split.
+  Counts fluctuate each day and approach the target over time, rather than using
+  fixed daily quotas. When only some channels are enabled, their weights are
+  normalized (Search/Recommendations alone become 50/50).
+  Browsing journeys retain their separate mix, and summaries show orders by channel.
 - Four additional browsing sessions per planned order; these never buy.
 - Every journey logs page views and identifies its dummy email. Buyers track
   cart additions, the cart page, a sale, the cleared cart, and checkout success.
@@ -86,7 +91,9 @@ Manual tests can select `email` or `chat` with `max_sessions: 1` and
 channel, one **unprocessed** assisted journey is assigned to it before claiming.
 Completed orders are never changed. For future daily plans, set repository
 variable `SIMULATION_CHANNELS` to `search,recommendations,email,chat` to spread
-assisted journeys across all four. The default remains Search/Recommendations.
+assisted journeys across all four using the 30/30/25/15 target probabilities.
+This repository variable is already configured for the demo; the standalone
+script default remains Search/Recommendations.
 
 Email uses the real configured `automated-popular` embed (override with repository
 variable `SIMULATION_EMAIL_EMBED`). It requests `campaigns/click`, checks the
@@ -161,6 +168,11 @@ daily demo service, not an uptime-guaranteed traffic generator.
 These are synthetic events, which also affect Clerk's learning. The mix describes
 the simulated journeys, not a promise of exact attribution percentages in Clerk.
 The live test should confirm attribution and profit before leaving it enabled.
+The target split is not a guarantee of dashboard revenue shares: basket values,
+mixed baskets, attribution rules and failed journeys affect the revenue mix.
+Changing weights only affects newly generated daily plans, never saved orders
+or existing daily plans. Today’s manual channel tests are not a representative
+sample of the scheduled distribution.
 The recorded new orders are not automatically added to the storefront parcel feed.
 
 References: [Clerk visitor tracking](https://docs.clerk.io/docs/visitor-tracking),

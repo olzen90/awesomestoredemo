@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
-from datetime import datetime
+from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 from unittest.mock import patch
 
@@ -38,12 +38,37 @@ class RecordingClient(sim.ClerkClient):
 
 
 class SimulatorTests(unittest.TestCase):
-    def test_assisted_daily_plan_contains_balanced_channels(self):
+    def test_assisted_daily_plan_uses_only_enabled_channels(self):
         plan = sim.create_plan('2026-10-15', ZoneInfo('Europe/Copenhagen'), 50, 100, 4)
         channels = [s['channel'] for s in plan['sessions'] if s['mode'] in ('mixed', 'clerk')]
         self.assertGreater(channels.count('search'), 0)
         self.assertGreater(channels.count('recommendations'), 0)
-        self.assertLessEqual(abs(channels.count('search') - channels.count('recommendations')), 1)
+        self.assertEqual(set(channels), {'search', 'recommendations'})
+        self.assertEqual(plan['assisted_channel_targets_percent'], {'search': 50, 'recommendations': 50})
+
+    def test_assisted_mix_approaches_requested_shares_and_varies_daily(self):
+        counts = dict.fromkeys(sim.ASSISTED_CHANNEL_WEIGHTS, 0)
+        daily_counts = set()
+        for day in range(365):
+            date = (datetime(2026, 1, 1) + timedelta(days=day)).date().isoformat()
+            plan = sim.create_plan(date, ZoneInfo('Europe/Copenhagen'), 50, 100, 0, tuple(counts))
+            today = dict.fromkeys(counts, 0)
+            for s in plan['sessions']:
+                if s['mode'] == 'organic':
+                    self.assertEqual(s['channel'], 'organic')
+                else:
+                    counts[s['channel']] += 1
+                    today[s['channel']] += 1
+            daily_counts.add(tuple(today.values()))
+            self.assertEqual(plan['assisted_channel_targets_percent'], sim.ASSISTED_CHANNEL_WEIGHTS)
+        for channel, target in sim.ASSISTED_CHANNEL_WEIGHTS.items():
+            self.assertAlmostEqual(counts[channel] / sum(counts.values()), target / 100, delta=0.015)
+        self.assertGreater(len(daily_counts), 100)
+
+    def test_weighted_mix_is_repeatable_for_a_saved_day(self):
+        channels = tuple(sim.ASSISTED_CHANNEL_WEIGHTS)
+        args = ('2026-10-16', ZoneInfo('Europe/Copenhagen'), 50, 100, 4, channels)
+        self.assertEqual(sim.create_plan(*args), sim.create_plan(*args))
 
     def test_search_test_selects_only_due_search_purchases(self):
         plan = {'sessions': [{**session(mode), 'id': f'test-{index}', 'status': 'pending',
