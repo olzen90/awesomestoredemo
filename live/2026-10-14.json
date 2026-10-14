@@ -861,7 +861,8 @@
       "profile": 6,
       "mode": "clerk",
       "scheduled_at": "2026-10-14T08:08:43+02:00",
-      "status": "pending"
+      "status": "in_progress",
+      "channel": "email"
     },
     {
       "id": "demo-2026-10-14-0004",
