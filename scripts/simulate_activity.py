@@ -45,6 +45,18 @@ def eligible(product):
     return seed(f"purchase-cohort:{product['id']}") % 100 < 70
 
 
+def get_channel(session):
+    if session['mode'] == 'organic':
+        return 'organic'
+    if session.get('channel'):
+        return session['channel']
+    # Older completed plans retain their actual source, not a new random choice.
+    for event in session.get('outcome', {}).get('events', []):
+        if event.get('source_api'):
+            return 'search' if event['source_api'].startswith('search/') else 'recommendations'
+    return 'search' if seed('channel:' + session['id']) % 2 else 'recommendations'
+
+
 def load_catalog(source):
     if source.startswith("https://"):
         with urlopen(Request(source, headers={"User-Agent": "AwesomeStoreSimulator/1.0"}), timeout=30) as response:
@@ -77,13 +89,21 @@ def create_plan(day, tz, minimum, maximum, browsers_per_order):
     modes += ["browse"] * (target * browsers_per_order)
     rng.shuffle(modes)
     sessions = []
+    assisted_orders = 0
     for index, mode in enumerate(modes):
         hour = rng.choices(range(24), weights=HOUR_WEIGHTS)[0]
         scheduled = datetime.combine(datetime.fromisoformat(day).date(),
                                      time(hour, rng.randrange(17), rng.randrange(60)), tz)
         # A reusable pool makes roughly 30% of shoppers returning customers.
         customer = rng.randrange(120) if rng.random() < 0.3 else f"{day}-{index}"
-        identity = f"{'organic' if mode == 'organic' else 'assisted'}-{customer}"
+        if mode == 'organic':
+            channel = 'organic'
+        elif mode == 'browse':
+            channel = rng.choice(['search', 'recommendations'])
+        else:
+            channel = ['search', 'recommendations'][assisted_orders % 2]
+            assisted_orders += 1
+        identity = f"{channel}-{customer}"
         sessions.append({
             "id": f"demo-{day}-{index:04d}",
             "visitor": hashlib.sha256(identity.encode()).hexdigest()[:12],
@@ -91,6 +111,7 @@ def create_plan(day, tz, minimum, maximum, browsers_per_order):
             "email": f"{rng.choice(CHARACTERS)}.{identity}@example.com",
             "profile": rng.randrange(len(PROFILES)),
             "mode": mode,
+            "channel": channel,
             "scheduled_at": scheduled.isoformat(),
             "status": "pending",
         })
@@ -145,16 +166,17 @@ def run_journey(session, catalog, client):
     rng.shuffle(candidates)
     anchor = candidates[0]
     mode = session['mode']
+    channel = get_channel(session)
     events = []
     clicked = []
     basket = []
     source = None
     if mode != "organic":
         category = anchor['categories'][0]
-        source, params, label = rng.choice([
-            ("recommendations/category/popular", {"category": category}, "Category - Popular"),
-            ("search/search", {"query": anchor['name'].split(" Edition")[0]}, "Search - Results"),
-        ])
+        if channel == 'search':
+            source, params, label = 'search/search', {'query': anchor['name'].split(' Edition')[0]}, 'Search - Results'
+        else:
+            source, params, label = 'recommendations/category/popular', {'category': category}, 'Category - Popular'
         payload = {**params, "visitor": session['visitor'], "limit": 12, "labels": [label]}
         response = client.request(source, payload)
         events.append({"api": source, **payload})
@@ -189,7 +211,7 @@ def run_journey(session, catalog, client):
         if mode != "browse" and not basket:
             raise ApiError("No eligible Clerk results; no synthetic sale sent")
     if mode == "browse":
-        return {"profile": name, "clicked_ids": clicked, "events": events, "sale": None}
+        return {"profile": name, "channel": channel, "clicked_ids": clicked, "events": events, "sale": None}
     if mode == "organic":
         basket = [anchor]
     if mode == "mixed" or (mode == "organic" and rng.random() < 0.4):
@@ -211,7 +233,7 @@ def run_journey(session, catalog, client):
             "customer": session['customer'], "email": session['email'], "products": lines}
     client.request("log/sale", sale)
     events.append({"api": "log/sale", **sale})
-    return {"profile": name, "clicked_ids": clicked, "events": events, "sale": sale,
+    return {"profile": name, "channel": channel, "clicked_ids": clicked, "events": events, "sale": sale,
             "revenue": money(sum(p['price'] * p['quantity'] for p in lines)),
             "estimated_profit": money(sum(catalog[p['id']].get('profit', 0) * p['quantity'] for p in lines))}
 
@@ -232,12 +254,16 @@ def save_state(path, state, checkpoint_git=False):
         subprocess.run(['git', '-C', str(root), 'push', 'origin', 'HEAD:refs/heads/simulator-state'], check=True, stdout=subprocess.DEVNULL)
 
 
-def execute_batch(state, catalog, client, now, limit, checkpoint, local_checkpoint=None):
+def execute_batch(state, catalog, client, now, limit, checkpoint, local_checkpoint=None,
+                  channel='auto', purchase_only=False):
     due = [s for s in state['sessions'] if s['status'] == 'pending'
+           and (channel == 'auto' or get_channel(s) == channel)
+           and (not purchase_only or s['mode'] != 'browse')
            and datetime.fromisoformat(s['scheduled_at']) <= now][:limit]
     # Persist the claim remotely before sending anything. A crashed batch is
     # deliberately not replayed: the API might already have received the sale.
     for session in due:
+        session['channel'] = get_channel(session)
         session['status'] = 'in_progress'
     checkpoint()
     failures = 0
@@ -262,6 +288,8 @@ def summarize(state):
     return {"date": state['date'], "target_orders": state['target_orders'],
             "completed_orders": len(orders), "completed_browsing_sessions": len(completed) - len(orders),
             "orders_by_type": {m: sum(s['mode'] == m for s in orders) for m in ('organic', 'mixed', 'clerk')},
+            "orders_by_channel": {c: sum(get_channel(s) == c for s in orders)
+                                  for c in ('organic', 'search', 'recommendations')},
             "revenue": money(sum(s['outcome'].get('revenue', 0) for s in orders)),
             "estimated_profit": money(sum(s['outcome'].get('estimated_profit', 0) for s in orders)),
             "pending_sessions": sum(s['status'] == 'pending' for s in state['sessions']),
@@ -276,6 +304,8 @@ def main():
     parser.add_argument('--max-orders', type=int, default=100)
     parser.add_argument('--browsers-per-order', type=int, default=4)
     parser.add_argument('--max-sessions', type=int, default=100)
+    parser.add_argument('--channel', choices=['auto', 'search', 'recommendations'], default='auto')
+    parser.add_argument('--purchase-only', action='store_true', help='Bounded test: process planned purchasing journeys only')
     parser.add_argument('--timezone', default='Europe/Copenhagen')
     parser.add_argument('--now', help='Dry-run only: ISO timestamp for reproducible previews')
     parser.add_argument('--live', action='store_true', help='Send real tracking events to the configured demo store')
@@ -304,7 +334,7 @@ def main():
     client = ClerkClient(catalog, key, args.live)
     checkpoint = lambda: save_state(path, state, args.checkpoint_git)
     processed, failures = execute_batch(state, catalog, client, now, args.max_sessions, checkpoint,
-                                        lambda: save_state(path, state))
+                                        lambda: save_state(path, state), args.channel, args.purchase_only)
     summary = {"mode": mode, "processed_this_run": processed, **summarize(state)}
     print(json.dumps(summary, indent=2))
     if os.environ.get('GITHUB_STEP_SUMMARY'):

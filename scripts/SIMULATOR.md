@@ -9,6 +9,8 @@ feed but send no Clerk requests. Enable live mode only for the demo store.
 - Default target: a randomly selected 50–100 orders daily, configurable from 1 to 100.
 - Deterministic daily plans, weighted towards Copenhagen daytime and evening.
 - Approximate purchase mix: 45% organic, 35% mixed, 20% entirely Clerk-assisted.
+- Assisted purchases in new daily plans alternate between Search and
+  Recommendations. Browsing journeys use both, and summaries show orders by channel.
 - Four additional browsing sessions per planned order; these never buy.
 - Category recommendations and product search return real results in live mode.
   Only returned products are logged as Clerk clicks, with their original position,
@@ -57,6 +59,9 @@ Dry-run results are mock catalogue matches, not predictions of Clerk's ranking.
 7. Run the workflow with **dry_run** unchecked for a live batch. This explicit
    manual choice works even while recurring live activity is paused. Set
    **max_sessions** to a small number, such as `12`, for a bounded first test.
+   To verify a Search sale, choose **channel: search**, **purchase_only: true**,
+   and **max_sessions: 1**. This processes an existing due purchase; it does not
+   add orders beyond the daily plan or replay completed journeys.
    Scheduled runs use the repository variable. The summary says `live` or `dry-run`.
 
 To pause live activity, set `SIMULATION_ENABLED` to `false`. To stop all runs,

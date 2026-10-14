@@ -38,6 +38,34 @@ class RecordingClient(sim.ClerkClient):
 
 
 class SimulatorTests(unittest.TestCase):
+    def test_assisted_daily_plan_contains_balanced_channels(self):
+        plan = sim.create_plan('2026-10-15', ZoneInfo('Europe/Copenhagen'), 50, 100, 4)
+        channels = [s['channel'] for s in plan['sessions'] if s['mode'] in ('mixed', 'clerk')]
+        self.assertGreater(channels.count('search'), 0)
+        self.assertGreater(channels.count('recommendations'), 0)
+        self.assertLessEqual(abs(channels.count('search') - channels.count('recommendations')), 1)
+
+    def test_search_test_selects_only_due_search_purchases(self):
+        plan = {'sessions': [{**session(mode), 'id': f'test-{index}', 'status': 'pending',
+                             'channel': channel, 'scheduled_at': '2026-10-14T08:00:00+02:00'}
+                            for index, (mode, channel) in enumerate([
+                                ('browse', 'search'), ('clerk', 'recommendations'), ('mixed', 'search')])]}
+        client = RecordingClient(catalog_fixture())
+        sim.execute_batch(plan, client.catalog, client,
+                          datetime.fromisoformat('2026-10-14T09:00:00+02:00'), 1,
+                          lambda: None, channel='search', purchase_only=True)
+        self.assertEqual([s['status'] for s in plan['sessions']], ['pending', 'pending', 'completed'])
+        self.assertEqual(client.calls[0][0], 'search/search')
+        click = next(p for endpoint, p in client.calls if endpoint == 'log/click')
+        self.assertEqual(click['api'], 'search/search')
+        self.assertEqual(click['labels'], ['Search - Results'])
+        self.assertEqual(sum(endpoint == 'log/sale' for endpoint, _ in client.calls), 1)
+
+    def test_old_completed_channels_are_read_from_recorded_events(self):
+        old = {**session('mixed'), 'outcome': {'events': [
+            {'api': 'log/click', 'source_api': 'recommendations/category/popular'}]}}
+        self.assertEqual(sim.get_channel(old), 'recommendations')
+
     def test_plan_determinism_target_and_schedule(self):
         tz = ZoneInfo('Europe/Copenhagen')
         plan = sim.create_plan('2026-10-14', tz, 50, 50, 4)
