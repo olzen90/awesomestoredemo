@@ -546,7 +546,7 @@
       "profile": 1,
       "mode": "browse",
       "scheduled_at": "2026-10-14T05:14:37+02:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-10-14-0176",
@@ -556,7 +556,7 @@
       "profile": 4,
       "mode": "mixed",
       "scheduled_at": "2026-10-14T06:03:44+02:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-10-14-0095",
@@ -566,7 +566,7 @@
       "profile": 4,
       "mode": "organic",
       "scheduled_at": "2026-10-14T06:05:47+02:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-10-14-0210",
