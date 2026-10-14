@@ -1953,8 +1953,158 @@
       "profile": 0,
       "mode": "mixed",
       "scheduled_at": "2026-10-14T12:02:10+02:00",
-      "status": "in_progress",
-      "channel": "email"
+      "status": "completed",
+      "channel": "email",
+      "outcome": {
+        "profile": "commuter",
+        "channel": "email",
+        "clicked_ids": [
+          10165
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "85e568c3b91f",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "85e568c3b91f",
+            "email": "frodo.baggins.assisted-2026-10-14-101@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "85e568c3b91f",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/bags",
+            "category": "301"
+          },
+          {
+            "api": "campaigns/click",
+            "embed": "automated-popular",
+            "product": 10165,
+            "n": 0,
+            "source_api": "recommendations/popular",
+            "labels": [
+              "Automated / Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "85e568c3b91f",
+            "product": 10165,
+            "n": 0,
+            "labels": [
+              "Automated / Popular"
+            ],
+            "external": true,
+            "source_api": "recommendations/popular"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "85e568c3b91f",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/everyday-olive-daypack-10165",
+            "product": "10165"
+          },
+          {
+            "api": "log/product",
+            "visitor": "85e568c3b91f",
+            "product": "10165"
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "85e568c3b91f",
+            "email": "frodo.baggins.assisted-2026-10-14-101@example.com",
+            "products": [
+              {
+                "id": 10165,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "85e568c3b91f",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/utility-cobalt-daypack-10164",
+            "product": "10164"
+          },
+          {
+            "api": "log/product",
+            "visitor": "85e568c3b91f",
+            "product": "10164"
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "85e568c3b91f",
+            "email": "frodo.baggins.assisted-2026-10-14-101@example.com",
+            "products": [
+              {
+                "id": 10165,
+                "quantity": 1
+              },
+              {
+                "id": 10164,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "85e568c3b91f",
+            "url": "https://olzen90.github.io/awesomestoredemo/cart/"
+          },
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0101",
+            "visitor": "85e568c3b91f",
+            "customer": "demo-assisted-2026-10-14-101",
+            "email": "frodo.baggins.assisted-2026-10-14-101@example.com",
+            "products": [
+              {
+                "id": 10165,
+                "price": 125,
+                "quantity": 1
+              },
+              {
+                "id": 10164,
+                "price": 116,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "85e568c3b91f",
+            "email": "frodo.baggins.assisted-2026-10-14-101@example.com",
+            "products": []
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "85e568c3b91f",
+            "url": "https://olzen90.github.io/awesomestoredemo/checkout/success/"
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0101",
+          "visitor": "85e568c3b91f",
+          "customer": "demo-assisted-2026-10-14-101",
+          "email": "frodo.baggins.assisted-2026-10-14-101@example.com",
+          "products": [
+            {
+              "id": 10165,
+              "price": 125,
+              "quantity": 1
+            },
+            {
+              "id": 10164,
+              "price": 116,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 241.0,
+        "estimated_profit": 124.42
+      },
+      "processed_at": "2026-10-14T14:32:19.572341+02:00"
     },
     {
       "id": "demo-2026-10-14-0332",
