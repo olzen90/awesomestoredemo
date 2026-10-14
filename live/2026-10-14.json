@@ -1314,7 +1314,8 @@
       "profile": 5,
       "mode": "mixed",
       "scheduled_at": "2026-10-14T09:15:03+02:00",
-      "status": "pending"
+      "status": "in_progress",
+      "channel": "chat"
     },
     {
       "id": "demo-2026-10-14-0224",
