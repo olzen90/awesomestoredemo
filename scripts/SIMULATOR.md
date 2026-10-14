@@ -52,10 +52,12 @@ Dry-run results are mock catalogue matches, not predictions of Clerk's ranking.
 4. Under **Settings → Secrets and variables → Actions**, add a repository secret
    named `CLERK_API_KEY`, containing the public API key for the Awesome Store demo.
 5. Confirm the demo store has imported the current product feed, including profit.
-6. Add a repository variable `SIMULATION_ENABLED` with value `true`.
+6. For recurring live activity, add a repository variable `SIMULATION_ENABLED` with value `true`.
    Optionally set `MIN_DAILY_ORDERS` (default `50`) and `MAX_DAILY_ORDERS` (default `100`).
-7. Run the workflow with **dry_run** unchecked for a live batch, or wait for its
-   next scheduled run. The summary explicitly says `live` or `dry-run`.
+7. Run the workflow with **dry_run** unchecked for a live batch. This explicit
+   manual choice works even while recurring live activity is paused. Set
+   **max_sessions** to a small number, such as `12`, for a bounded first test.
+   Scheduled runs use the repository variable. The summary says `live` or `dry-run`.
 
 To pause live activity, set `SIMULATION_ENABLED` to `false`. To stop all runs,
 disable the workflow in GitHub Actions. The default `GITHUB_TOKEN` requires

@@ -13,6 +13,10 @@ on:
         description: Dry run only - preview the complete current day
         type: boolean
         default: false
+      max_sessions:
+        description: Maximum shopping journeys in this batch
+        type: number
+        default: 100
 
 permissions:
   contents: write
@@ -33,6 +37,7 @@ jobs:
       STATE_DIR: .simulation-state
       MANUAL_DRY_RUN: ${{ inputs.dry_run }}
       PREVIEW_FULL_DAY: ${{ inputs.preview_full_day }}
+      MAX_SESSIONS: ${{ inputs.max_sessions || '100' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -62,8 +67,8 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          args=(--state-dir "$STATE_DIR" --checkpoint-git --min-orders "$MIN_DAILY_ORDERS" --max-orders "$MAX_DAILY_ORDERS")
-          if [ "$SIMULATION_ENABLED" = true ] && [ "$MANUAL_DRY_RUN" != true ]; then
+          args=(--state-dir "$STATE_DIR" --checkpoint-git --min-orders "$MIN_DAILY_ORDERS" --max-orders "$MAX_DAILY_ORDERS" --max-sessions "$MAX_SESSIONS")
+          if [ "$MANUAL_DRY_RUN" = false ] || { [ "$SIMULATION_ENABLED" = true ] && [ "$MANUAL_DRY_RUN" != true ]; }; then
             args+=(--live)
           elif [ "$PREVIEW_FULL_DAY" = true ]; then
             preview_time=$(python -c 'from datetime import datetime; from zoneinfo import ZoneInfo; print(datetime.now(ZoneInfo("Europe/Copenhagen")).replace(hour=23, minute=59, second=59).isoformat())')
