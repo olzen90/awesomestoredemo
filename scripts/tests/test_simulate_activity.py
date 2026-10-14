@@ -173,6 +173,17 @@ class SimulatorTests(unittest.TestCase):
             client.request('log/pageview', {'visitor': 'abc', 'url': sim.STORE_URL})
             self.assertEqual(connection.call_args.args[0].full_url, 'https://api.clerk.io/v3/log/pageview')
 
+    def test_omnisearch_normalizes_only_returned_product_results(self):
+        client = sim.ClerkClient(catalog_fixture(), key='test-secret', live=True)
+        with patch.object(sim, 'urlopen') as connection:
+            connection.return_value.__enter__.return_value.read.return_value = json.dumps({
+                'results': {'products': {'result': [10001]},
+                            'categories': {'result': [101]}, 'pages': {'result': [5]}}}).encode()
+            result = client.request('search/omni', {'visitor': 'abc', 'query': 'tote',
+                                                   'content': 'omni-search', 'searches': {}})
+            self.assertEqual(result['result'], [10001])
+            self.assertEqual(connection.call_args.args[0].full_url, 'https://api.clerk.io/v3/search/omni')
+
     def test_claim_is_persisted_before_api_and_rerun_skips_completed_and_failed(self):
         catalog = catalog_fixture()
         plan = {'date': '2026-10-14', 'sessions': [
