@@ -1033,8 +1033,34 @@
       "profile": 5,
       "mode": "mixed",
       "scheduled_at": "2026-10-14T08:16:34+02:00",
-      "status": "in_progress",
-      "channel": "email"
+      "status": "needs_review",
+      "channel": "email",
+      "attempt_events": [
+        {
+          "api": "log/pageview",
+          "visitor": "05d9fc5d3796",
+          "url": "https://olzen90.github.io/awesomestoredemo/"
+        },
+        {
+          "api": "log/email",
+          "visitor": "05d9fc5d3796",
+          "email": "leia.organa.assisted-2026-10-14-134@example.com"
+        },
+        {
+          "api": "log/pageview",
+          "visitor": "05d9fc5d3796",
+          "url": "https://olzen90.github.io/awesomestoredemo/category/movement",
+          "category": "602"
+        },
+        {
+          "api": "campaigns/click",
+          "embed": "automated-popular",
+          "product": 10365,
+          "n": 0
+        }
+      ],
+      "error": "log/click: API rejected response; review before retrying",
+      "processed_at": "2026-10-14T14:26:31.952288+02:00"
     },
     {
       "id": "demo-2026-10-14-0046",
