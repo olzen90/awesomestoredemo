@@ -31,6 +31,10 @@ on:
         description: Test only - process planned purchasing journeys, skipping browsers
         type: boolean
         default: false
+      browse_only:
+        description: Process non-buyers only (no sales)
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -45,9 +49,11 @@ jobs:
     timeout-minutes: 20
     env:
       SIMULATION_ENABLED: ${{ vars.SIMULATION_ENABLED }}
+      SIMULATION_SEARCH_ENABLED: ${{ vars.SIMULATION_SEARCH_ENABLED }}
       CLERK_API_KEY: ${{ secrets.CLERK_API_KEY }}
       MIN_DAILY_ORDERS: ${{ vars.MIN_DAILY_ORDERS || '50' }}
       MAX_DAILY_ORDERS: ${{ vars.MAX_DAILY_ORDERS || '100' }}
+      MIN_DAILY_SEARCHES: ${{ vars.MIN_DAILY_SEARCHES || '100' }}
       STATE_DIR: .simulation-state
       MANUAL_DRY_RUN: ${{ inputs.dry_run }}
       PREVIEW_FULL_DAY: ${{ inputs.preview_full_day }}
@@ -56,6 +62,7 @@ jobs:
       SIMULATION_CHANNELS: ${{ vars.SIMULATION_CHANNELS || 'search,recommendations' }}
       EMAIL_EMBED: ${{ vars.SIMULATION_EMAIL_EMBED || 'automated-popular' }}
       PURCHASE_ONLY: ${{ inputs.purchase_only }}
+      BROWSE_ONLY: ${{ inputs.browse_only }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -87,11 +94,18 @@ jobs:
           set -euo pipefail
           args=(--state-dir "$STATE_DIR" --checkpoint-git --min-orders "$MIN_DAILY_ORDERS" --max-orders "$MAX_DAILY_ORDERS" --max-sessions "$MAX_SESSIONS")
           args+=(--channel "$TEST_CHANNEL" --channels "$SIMULATION_CHANNELS" --email-embed "$EMAIL_EMBED")
+          args+=(--min-searches "$MIN_DAILY_SEARCHES")
           if [ "$PURCHASE_ONLY" = true ]; then
             args+=(--purchase-only)
           fi
+          if [ "$BROWSE_ONLY" = true ]; then
+            args+=(--browse-only)
+          fi
           if [ "$MANUAL_DRY_RUN" = false ] || { [ "$SIMULATION_ENABLED" = true ] && [ "$MANUAL_DRY_RUN" != true ]; }; then
             args+=(--live)
+          elif [ "$SIMULATION_SEARCH_ENABLED" = true ] && [ "$MANUAL_DRY_RUN" != true ]; then
+            # Searches can run live while purchasing remains explicitly paused.
+            args+=(--live --browse-only --channel search)
           elif [ "$PREVIEW_FULL_DAY" = true ]; then
             preview_time=$(python -c 'from datetime import datetime; from zoneinfo import ZoneInfo; print(datetime.now(ZoneInfo("Europe/Copenhagen")).replace(hour=23, minute=59, second=59).isoformat())')
             args+=(--now "$preview_time" --max-sessions 1000)

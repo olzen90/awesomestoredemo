@@ -152,6 +152,54 @@ class ApiError(Exception):
     pass
 
 
+def count_search_requests(state):
+    endpoints = {'search/search', 'search/products', 'search/omni'}
+    return sum(event.get('api') in endpoints for s in state['sessions']
+               for event in (s.get('outcome') or {}).get('events', s.get('attempt_events', [])))
+
+
+def ensure_search_volume(state, minimum=100):
+    """Append non-buyers only; never rewrite existing journeys or purchases.
+
+    Each pending search browser contributes at least one planned request. Actual
+    accepted requests (including refinements) reduce any later top-up. Unknown
+    or failed deliveries are never replayed; additional visitors get new IDs.
+    """
+    if minimum == 0:
+        return
+    day = state['date']
+    target = max(state.get('target_search_requests', 0),
+                 minimum + seed(f'search-volume-target:{day}') % (minimum // 2 + 1))
+    state['target_search_requests'] = target
+    pending = sum(s['status'] == 'pending' and s['mode'] == 'browse'
+                  and get_channel(s) == 'search' for s in state['sessions'])
+    missing = max(0, target - count_search_requests(state) - pending)
+    # Do not create unlimited replacement traffic during an API outage.
+    attempted_or_planned = sum(s['mode'] == 'browse' and get_channel(s) == 'search'
+                               for s in state['sessions'])
+    missing = min(missing, max(0, 2 * target - attempted_or_planned))
+    tz = ZoneInfo(state['timezone'])
+    existing_ids = {s['id'] for s in state['sessions']}
+    index = 0
+    for _ in range(missing):
+        while f'demo-{day}-search-{index:04d}' in existing_ids:
+            index += 1
+        identifier = f'demo-{day}-search-{index:04d}'
+        existing_ids.add(identifier)
+        rng = random.Random(seed(identifier))
+        hour = rng.choices(range(24), weights=HOUR_WEIGHTS)[0]
+        scheduled = datetime.combine(datetime.fromisoformat(day).date(),
+                                     time(hour, rng.randrange(17), rng.randrange(60)), tz)
+        state['sessions'].append({
+            'id': identifier, 'visitor': hashlib.sha256(identifier.encode()).hexdigest()[:12],
+            'customer': identifier,
+            'email': f'{rng.choice(CHARACTERS)}.search-{day}-{index}@example.com',
+            'profile': rng.randrange(len(PROFILES)), 'mode': 'browse', 'channel': 'search',
+            'scheduled_at': scheduled.isoformat(), 'status': 'pending', 'search_volume': True})
+        index += 1
+    state['sessions'].sort(key=lambda s: s['scheduled_at'])
+
+
 class NoRedirect(HTTPRedirectHandler):
     def redirect_request(self, req, fp, code, msg, headers, newurl):
         return None
@@ -415,6 +463,10 @@ def run_journey(session, catalog, client):
         ids = response.get("result", [])
         if not isinstance(ids, list):
             raise ApiError("Unexpected Clerk result format")
+        if mode == 'browse' and channel == 'search' and rng.random() < 0.35:
+            # A real search need not produce a click or a purchase.
+            return {'profile': name, 'channel': channel, 'clicked_ids': [],
+                    'events': events, 'sale': None}
         returned = []
         for position, value in enumerate(ids):
             try:
@@ -508,10 +560,11 @@ def save_state(path, state, checkpoint_git=False):
 
 
 def execute_batch(state, catalog, client, now, limit, checkpoint, local_checkpoint=None,
-                  channel='auto', purchase_only=False):
+                  channel='auto', purchase_only=False, browse_only=False):
     due = [s for s in state['sessions'] if s['status'] == 'pending'
            and (channel == 'auto' or get_channel(s) == channel)
            and (not purchase_only or s['mode'] != 'browse')
+           and (not browse_only or s['mode'] == 'browse')
            and datetime.fromisoformat(s['scheduled_at']) <= now][:limit]
     # Persist the claim remotely before sending anything. A crashed batch is
     # deliberately not replayed: the API might already have received the sale.
@@ -540,6 +593,8 @@ def summarize(state):
     completed = [s for s in state['sessions'] if s['status'] == 'completed']
     orders = [s for s in completed if s['outcome'].get('sale')]
     return {"date": state['date'], "target_orders": state['target_orders'],
+            "target_search_requests": state.get('target_search_requests', 0),
+            "completed_search_requests": count_search_requests(state),
             "completed_orders": len(orders), "completed_browsing_sessions": len(completed) - len(orders),
             "orders_by_type": {m: sum(s['mode'] == m for s in orders) for m in ('organic', 'mixed', 'clerk')},
             "orders_by_channel": {c: sum(get_channel(s) == c for s in orders)
@@ -558,12 +613,15 @@ def main():
     parser.add_argument('--min-orders', type=int, default=50)
     parser.add_argument('--max-orders', type=int, default=100)
     parser.add_argument('--browsers-per-order', type=int, default=4)
+    parser.add_argument('--min-searches', type=int, default=100,
+                        help='Daily Search request floor; extra non-buyers never change sales mix')
     parser.add_argument('--max-sessions', type=int, default=100)
     parser.add_argument('--channel', choices=['auto', 'search', 'recommendations', 'email', 'chat'], default='auto')
     parser.add_argument('--channels', default='search,recommendations',
                         help='Channels for NEW daily plans; opt in to email/chat explicitly')
     parser.add_argument('--email-embed', default='automated-popular')
     parser.add_argument('--purchase-only', action='store_true', help='Bounded test: process planned purchasing journeys only')
+    parser.add_argument('--browse-only', action='store_true', help='Process non-buyers only; cannot send sales')
     parser.add_argument('--timezone', default='Europe/Copenhagen')
     parser.add_argument('--now', help='Dry-run only: ISO timestamp for reproducible previews')
     parser.add_argument('--live', action='store_true', help='Send real tracking events to the configured demo store')
@@ -573,6 +631,8 @@ def main():
         parser.error('Order range must be between 1 and 100')
     if not (0 <= args.browsers_per_order <= 10 and 1 <= args.max_sessions <= 1000):
         parser.error('Invalid batch or browsing volume')
+    if not 0 <= args.min_searches <= 1000 or (args.purchase_only and args.browse_only):
+        parser.error('Invalid search volume or conflicting purchase/browse-only modes')
     key = os.environ.get('CLERK_API_KEY')
     if args.live and (not key or args.now):
         parser.error('Live mode requires CLERK_API_KEY and cannot use --now')
@@ -592,6 +652,7 @@ def main():
     path = args.state_dir / mode / f'{day}.json'
     state = json.loads(path.read_text()) if path.exists() else create_plan(
         day, tz, args.min_orders, args.max_orders, args.browsers_per_order, channels)
+    ensure_search_volume(state, args.min_searches)
     # A targeted Chat test reuses ONE unprocessed assisted journey rather than
     # rewriting any completed purchase or creating a duplicate test order.
     if args.channel in ('email', 'chat') and not any(s['status'] == 'pending' and get_channel(s) == args.channel for s in state['sessions']):
@@ -607,7 +668,8 @@ def main():
     client = ClerkClient(catalog, key, args.live, {c['id']: c['url'] for c in category_data}, args.email_embed)
     checkpoint = lambda: save_state(path, state, args.checkpoint_git)
     processed, failures = execute_batch(state, catalog, client, now, args.max_sessions, checkpoint,
-                                        lambda: save_state(path, state), args.channel, args.purchase_only)
+                                        lambda: save_state(path, state), args.channel, args.purchase_only,
+                                        args.browse_only)
     summary = {"mode": mode, "processed_this_run": processed, **summarize(state)}
     print(json.dumps(summary, indent=2))
     if os.environ.get('GITHUB_STEP_SUMMARY'):

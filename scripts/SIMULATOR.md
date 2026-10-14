@@ -17,6 +17,15 @@ feed but send no Clerk requests. Enable live mode only for the demo store.
   normalized (Search/Recommendations alone become 50/50).
   Browsing journeys retain their separate mix, and summaries show orders by channel.
 - Four additional browsing sessions per planned order; these never buy.
+- A separate **minimum of 100 accepted Search requests daily** is planned, with
+  a varying target of 100–150. Existing Search requests and pending search-only
+  browsers count towards this target. Extra non-buying Search journeys are
+  appended when needed, without changing existing orders or their channel mix.
+  Searches include refinements and some visitors leave without clicking.
+  Successful request counts and the daily target appear in each run summary.
+  Delivery still depends on runner/API availability; errors are reported, not
+  fabricated as successes. Replacement search visitors are bounded to avoid
+  unlimited traffic during an outage.
 - Every journey logs page views and identifies its dummy email. Buyers track
   cart additions, the cart page, a sale, the cleared cart, and checkout success.
   Some non-buyers leave a tracked abandoned cart. No dummy address is subscribed.
@@ -83,6 +92,21 @@ To pause live activity, set `SIMULATION_ENABLED` to `false`. To stop all runs,
 disable the workflow in GitHub Actions. The default `GITHUB_TOKEN` requires
 permission to write repository contents; branch rules must allow writes to
 `simulator-state`. A secret is never written into the JSON activity records.
+
+### Search-only daily activity
+
+`MIN_DAILY_SEARCHES` controls the daily search floor (default `100`). Set
+`SIMULATION_SEARCH_ENABLED=true` to enable scheduled **search-only** live traffic
+while orders remain paused. Hourly runs then use `--live --browse-only --channel
+search`, so they cannot send sales, Email clicks or Chat conversations.
+`SIMULATION_ENABLED=true` enables the full shopping simulator instead, including
+the same Search floor. Set both enable variables to `false` to pause all live calls.
+Explicit manual dry runs remain dry even when scheduled Search activity is enabled.
+
+For a manual live Search-only batch, uncheck `dry_run`, set `channel: search`,
+check `browse_only`, leave `purchase_only` unchecked and choose `max_sessions`.
+Search targets can be added to today's saved plan; only additional non-buyers and
+the target metadata are added. Existing orders and completed journeys stay intact.
 
 ## Email and Chat
 

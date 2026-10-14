@@ -38,6 +38,58 @@ class RecordingClient(sim.ClerkClient):
 
 
 class SimulatorTests(unittest.TestCase):
+    def test_search_floor_runs_without_sales_and_does_not_repeat(self):
+        plan = sim.create_plan('2026-10-16', ZoneInfo('Europe/Copenhagen'), 1, 1, 0,
+                               tuple(sim.ASSISTED_CHANNEL_WEIGHTS))
+        plan['sessions'][0]['profile'] = 2
+        original_order = json.loads(json.dumps(plan['sessions'][0]))
+        sim.ensure_search_volume(plan, 100)
+        self.assertTrue(100 <= plan['target_search_requests'] <= 150)
+        ids = [s['id'] for s in plan['sessions']]
+        sim.ensure_search_volume(plan, 100)
+        self.assertEqual(ids, [s['id'] for s in plan['sessions']])
+        self.assertEqual(plan['target_orders'], 1)
+        for s in plan['sessions']:
+            if s['mode'] == 'browse':
+                s['profile'] = 2
+        client = RecordingClient(catalog_fixture())
+        for hour in range(24):
+            sim.ensure_search_volume(plan, 100)
+            sim.execute_batch(plan, client.catalog, client,
+                              datetime(2026, 10, 16, hour, 17, tzinfo=ZoneInfo('Europe/Copenhagen')),
+                              1000, lambda: None, channel='search', browse_only=True)
+        self.assertGreaterEqual(sim.summarize(plan)['completed_search_requests'], 100)
+        self.assertFalse(any(e == 'log/sale' for e, _ in client.calls))
+        self.assertEqual(next(s for s in plan['sessions'] if s['id'] == original_order['id']), original_order)
+        calls = len(client.calls)
+        sim.ensure_search_volume(plan, 100)
+        sim.execute_batch(plan, client.catalog, client,
+                          datetime(2026, 10, 16, 23, 59, tzinfo=ZoneInfo('Europe/Copenhagen')),
+                          1000, lambda: None, channel='search', browse_only=True)
+        self.assertEqual(calls, len(client.calls))
+
+    def test_search_topup_preserves_completed_orders_and_counts_partial_searches(self):
+        plan = sim.create_plan('2026-10-16', ZoneInfo('Europe/Copenhagen'), 1, 1, 0)
+        original = plan['sessions'][0]
+        original.update(status='needs_review', attempt_events=[{'api': 'search/omni', 'query': 'tote'}])
+        baseline = json.loads(json.dumps(original))
+        sim.ensure_search_volume(plan, 100)
+        self.assertEqual(next(s for s in plan['sessions'] if s['id'] == original['id']), baseline)
+        self.assertEqual(sim.count_search_requests(plan), 1)
+        self.assertEqual(sum(s['status'] == 'pending' for s in plan['sessions']),
+                         plan['target_search_requests'] - 1)
+        self.assertEqual(len({s['id'] for s in plan['sessions']}), len(plan['sessions']))
+
+    def test_search_replacements_are_bounded_during_an_outage(self):
+        plan = sim.create_plan('2026-10-16', ZoneInfo('Europe/Copenhagen'), 1, 1, 0)
+        for _ in range(5):
+            sim.ensure_search_volume(plan, 100)
+            for s in plan['sessions']:
+                if s['mode'] == 'browse':
+                    s['status'] = 'needs_review'
+        self.assertLessEqual(sum(s['mode'] == 'browse' for s in plan['sessions']),
+                             2 * plan['target_search_requests'])
+
     def test_assisted_daily_plan_uses_only_enabled_channels(self):
         plan = sim.create_plan('2026-10-15', ZoneInfo('Europe/Copenhagen'), 50, 100, 4)
         channels = [s['channel'] for s in plan['sessions'] if s['mode'] in ('mixed', 'clerk')]
