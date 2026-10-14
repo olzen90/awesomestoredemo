@@ -12,7 +12,36 @@
       "profile": 0,
       "mode": "browse",
       "scheduled_at": "2026-10-14T01:00:24+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "commuter",
+        "clicked_ids": [
+          10108
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Metro Sage Runner",
+            "visitor": "85a639881c6a",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "85a639881c6a",
+            "product": 10108,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T13:58:52.198207+02:00"
     },
     {
       "id": "demo-2026-10-14-0022",
@@ -22,7 +51,36 @@
       "profile": 2,
       "mode": "browse",
       "scheduled_at": "2026-10-14T01:03:34+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "wardrobe-refresh",
+        "clicked_ids": [
+          10035
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 102,
+            "visitor": "9fbd1b694a0c",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "9fbd1b694a0c",
+            "product": 10035,
+            "n": 10,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T13:58:52.198207+02:00"
     },
     {
       "id": "demo-2026-10-14-0072",
@@ -32,7 +90,36 @@
       "profile": 1,
       "mode": "browse",
       "scheduled_at": "2026-10-14T01:12:55+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "clicked_ids": [
+          10184
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 302,
+            "visitor": "315e8b7f31ca",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "315e8b7f31ca",
+            "product": 10184,
+            "n": 2,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T13:58:52.198207+02:00"
     },
     {
       "id": "demo-2026-10-14-0253",
@@ -42,7 +129,64 @@
       "profile": 0,
       "mode": "clerk",
       "scheduled_at": "2026-10-14T02:14:35+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "commuter",
+        "clicked_ids": [
+          10165
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 301,
+            "visitor": "d4202c35cec7",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "d4202c35cec7",
+            "product": 10165,
+            "n": 1,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          },
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0253",
+            "visitor": "d4202c35cec7",
+            "customer": "demo-assisted-2026-10-14-253",
+            "email": "ellen.ripley.assisted-2026-10-14-253@example.com",
+            "products": [
+              {
+                "id": 10165,
+                "price": 125,
+                "quantity": 1
+              }
+            ]
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0253",
+          "visitor": "d4202c35cec7",
+          "customer": "demo-assisted-2026-10-14-253",
+          "email": "ellen.ripley.assisted-2026-10-14-253@example.com",
+          "products": [
+            {
+              "id": 10165,
+              "price": 125,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 125.0,
+        "estimated_profit": 52.5
+      },
+      "processed_at": "2026-10-14T13:58:52.198207+02:00"
     },
     {
       "id": "demo-2026-10-14-0126",
@@ -52,7 +196,74 @@
       "profile": 2,
       "mode": "mixed",
       "scheduled_at": "2026-10-14T03:14:55+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "wardrobe-refresh",
+        "clicked_ids": [
+          10035
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 102,
+            "visitor": "da027cc57670",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "da027cc57670",
+            "product": 10035,
+            "n": 10,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          },
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0126",
+            "visitor": "da027cc57670",
+            "customer": "demo-assisted-70",
+            "email": "luke.skywalker.assisted-70@example.com",
+            "products": [
+              {
+                "id": 10035,
+                "price": 45,
+                "quantity": 1
+              },
+              {
+                "id": 10034,
+                "price": 81,
+                "quantity": 2
+              }
+            ]
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0126",
+          "visitor": "da027cc57670",
+          "customer": "demo-assisted-70",
+          "email": "luke.skywalker.assisted-70@example.com",
+          "products": [
+            {
+              "id": 10035,
+              "price": 45,
+              "quantity": 1
+            },
+            {
+              "id": 10034,
+              "price": 81,
+              "quantity": 2
+            }
+          ]
+        },
+        "revenue": 207.0,
+        "estimated_profit": 65.07
+      },
+      "processed_at": "2026-10-14T13:58:52.198207+02:00"
     },
     {
       "id": "demo-2026-10-14-0285",
@@ -62,7 +273,36 @@
       "profile": 3,
       "mode": "browse",
       "scheduled_at": "2026-10-14T04:01:14+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "clicked_ids": [
+          10204
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 401,
+            "visitor": "154eb1d7ec4b",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "154eb1d7ec4b",
+            "product": 10204,
+            "n": 7,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T13:58:52.198207+02:00"
     },
     {
       "id": "demo-2026-10-14-0212",
@@ -72,7 +312,36 @@
       "profile": 1,
       "mode": "browse",
       "scheduled_at": "2026-10-14T05:03:29+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "clicked_ids": [
+          10184
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Ready Charcoal Packing Cube",
+            "visitor": "5d042d7299a2",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "5d042d7299a2",
+            "product": 10184,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T13:58:52.198207+02:00"
     },
     {
       "id": "demo-2026-10-14-0300",
@@ -82,7 +351,36 @@
       "profile": 6,
       "mode": "browse",
       "scheduled_at": "2026-10-14T05:04:38+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "thoughtful-gift",
+        "clicked_ids": [
+          10211
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 401,
+            "visitor": "646ba56fdb58",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "646ba56fdb58",
+            "product": 10211,
+            "n": 3,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T13:58:52.198207+02:00"
     },
     {
       "id": "demo-2026-10-14-0119",
@@ -92,7 +390,36 @@
       "profile": 5,
       "mode": "browse",
       "scheduled_at": "2026-10-14T05:07:45+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "slow-morning",
+        "clicked_ids": [
+          10346
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 601,
+            "visitor": "bbcc9bf21b55",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "bbcc9bf21b55",
+            "product": 10346,
+            "n": 4,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T13:58:52.198207+02:00"
     },
     {
       "id": "demo-2026-10-14-0142",
@@ -102,7 +429,36 @@
       "profile": 3,
       "mode": "browse",
       "scheduled_at": "2026-10-14T05:09:43+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "clicked_ids": [
+          10209
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Ledge Chalk Carafe",
+            "visitor": "37f333796bfb",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "37f333796bfb",
+            "product": 10209,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T13:58:52.198207+02:00"
     },
     {
       "id": "demo-2026-10-14-0269",
@@ -112,7 +468,36 @@
       "profile": 5,
       "mode": "browse",
       "scheduled_at": "2026-10-14T05:10:08+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "slow-morning",
+        "clicked_ids": [
+          10391
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Ease Charcoal Stretch Strap",
+            "visitor": "68040c841e44",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "68040c841e44",
+            "product": 10391,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T13:58:52.198207+02:00"
     },
     {
       "id": "demo-2026-10-14-0318",
@@ -122,7 +507,36 @@
       "profile": 6,
       "mode": "browse",
       "scheduled_at": "2026-10-14T05:13:28+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "thoughtful-gift",
+        "clicked_ids": [
+          10499
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Open Ink Linen Napkin Set",
+            "visitor": "aaa7b97d1fb9",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "aaa7b97d1fb9",
+            "product": 10499,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T13:58:52.198207+02:00"
     },
     {
       "id": "demo-2026-10-14-0030",
