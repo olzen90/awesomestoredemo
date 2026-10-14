@@ -861,8 +861,10 @@
       "profile": 6,
       "mode": "clerk",
       "scheduled_at": "2026-10-14T08:08:43+02:00",
-      "status": "in_progress",
-      "channel": "email"
+      "status": "needs_review",
+      "channel": "email",
+      "error": "Email redirect missing tracking parameters",
+      "processed_at": "2026-10-14T14:23:26.335856+02:00"
     },
     {
       "id": "demo-2026-10-14-0004",
