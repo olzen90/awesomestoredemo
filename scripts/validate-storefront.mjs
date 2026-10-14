@@ -40,7 +40,7 @@ try {
 } catch (error) {
 	errors.push(`Invalid or missing order archive: ${error.message}`);
 }
-const requiredProductFields = ["id", "name", "description", "price", "image", "url", "categories", "created_at", "color", "margin_group"];
+const requiredProductFields = ["id", "name", "description", "price", "image", "url", "categories", "created_at", "color", "margin_group", "profit", "margin_percent"];
 const requiredOrderFields = ["id", "products", "time", "tracking"];
 const validKey = /^[A-Za-z0-9_]+$/;
 const validOrderStatuses = new Set(["PROCESSING", "SENT", "IN_TRANSIT", "OUT_FOR_DELIVERY", "DELIVERED", "EXCEPTION", "RETURNED"]);
@@ -62,6 +62,8 @@ if (products) {
 		if (!Array.isArray(product.color) || product.color.length === 0 || product.color.some((color) => typeof color !== "string" || !color.trim())) errors.push(`Product ${product.id} has an invalid color attribute; expected a non-empty list of simple color names`);
 		if (!Number.isInteger(product.margin_group) || product.margin_group < 1 || product.margin_group > 5) errors.push(`Product ${product.id} has an invalid margin_group; expected an integer from 1 to 5`);
 		if (product.price < 0 || product.list_price < 0) errors.push(`Product ${product.id} has a negative price`);
+		if (!Number.isFinite(product.profit) || product.profit <= 0 || product.profit >= product.price) errors.push(`Product ${product.id} has an invalid demo profit per unit`);
+		if (!Number.isFinite(product.margin_percent) || Math.abs(product.margin_percent - product.profit / product.price * 100) > 0.0051) errors.push(`Product ${product.id} has a margin_percent inconsistent with profit and price`);
 		if (!Number.isInteger(product.created_at)) errors.push(`Product ${product.id} has an invalid created_at timestamp`);
 		if (Object.keys(product).some((key) => !validKey.test(key))) errors.push(`Product ${product.id} contains an invalid attribute name`);
 		for (const [key, value] of Object.entries(product)) if (value === null) errors.push(`Product ${product.id} has null attribute ${key}`);

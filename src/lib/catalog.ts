@@ -43,6 +43,8 @@ export type Product = {
 	department: string;
 	sku: string;
 	margin_group: number;
+	profit: number;
+	margin_percent: number;
 	[key: string]: unknown;
 };
 
@@ -689,6 +691,12 @@ function createProduct(group: ProductGroup, groupIndex: number, localIndex: numb
 	const onSale = (localIndex + groupIndex) % 7 === 0;
 	const price = onSale ? money(listPrice * 0.8) : listPrice;
 	const marginGroup = ((productIndex * 3 + groupIndex) % 5) + 1;
+	// Deterministic demo estimates: higher groups have higher regular-price
+	// margins (roughly 28–60%). Costs stay fixed when a product is discounted.
+	const regularMargin = (28 + (marginGroup - 1) * 8 + ((id + groupIndex) % 5) - 2) / 100;
+	const estimatedUnitCost = money(listPrice * (1 - regularMargin));
+	const profit = money(price - estimatedUnitCost);
+	const marginPercent = money(profit / price * 100);
 	const image = `${BASE_IMAGE}/product-${productNumber}.jpg`;
 	const createdAt = productIndex < ARCHIVED_PRODUCT_COUNT
 		? CREATED_AT - (ARCHIVED_PRODUCT_COUNT - productIndex) * DAY
@@ -722,6 +730,8 @@ function createProduct(group: ProductGroup, groupIndex: number, localIndex: numb
 		department: group.department,
 		sku: `AWS-${String(id).padStart(5, "0")}`,
 		margin_group: marginGroup,
+		profit,
+		margin_percent: marginPercent,
 	};
 }
 
