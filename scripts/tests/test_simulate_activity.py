@@ -234,6 +234,23 @@ class SimulatorTests(unittest.TestCase):
         with self.assertRaises(sim.ApiError):
             sim.chat_products({'messages': [{'type': 'hook', 'content': 'run-this'}]})
 
+    def test_chat_html_product_cards_are_parsed_without_execution(self):
+        response = {'messages': [{'type': 'slider', 'content':
+                    "<clerk-product-slider products='[{&#34;id&#34;:10365}]'></clerk-product-slider>"},
+                    {'type': 'single_product', 'content':
+                    "<clerk-single-product product='{&#34;id&#34;:10351}'></clerk-single-product>"}]}
+        self.assertEqual(sim.chat_products(response), [{'id': 10365}, {'id': 10351}])
+
+    def test_email_redirect_contains_plain_text_label(self):
+        client = sim.ClerkClient(catalog_fixture(), key='test-secret', live=True)
+        landing = sim.STORE_URL + 'product/p?clerk_product=10001&clerk_api=recommendations%2Apopular&clerk_labels=Automated+%2F+Popular&clerk_n=0'
+        error = sim.HTTPError('redacted', 302, 'Found', {'Location': landing}, None)
+        with patch.object(sim, 'build_opener') as opener:
+            opener.return_value.open.side_effect = error
+            result = client.email_landing(session('clerk'), [client.catalog[10001]])
+        self.assertEqual(result['labels'], ['Automated / Popular'])
+        self.assertEqual(result['api'], 'recommendations/popular')
+
     def test_daily_plan_can_include_four_assisted_channels(self):
         plan = sim.create_plan('2026-10-15', ZoneInfo('Europe/Copenhagen'), 100, 100, 4,
                                ['search', 'recommendations', 'email', 'chat'])

@@ -3,6 +3,7 @@
 
 import argparse
 import hashlib
+from html.parser import HTMLParser
 import json
 import math
 import os
@@ -257,6 +258,23 @@ class ClerkClient:
         return result
 
 
+class ChatProductMarkup(HTMLParser):
+    """Read JSON attributes in Chat cards; never render or execute the HTML."""
+    def __init__(self):
+        super().__init__()
+        self.products = []
+
+    def handle_starttag(self, tag, attrs):
+        attribute = {'clerk-product-slider': 'products', 'clerk-single-product': 'product'}.get(tag)
+        if not attribute:
+            return
+        try:
+            data = json.loads(dict(attrs).get(attribute, ''))
+            self.products.extend(data if isinstance(data, list) else [data])
+        except (ValueError, TypeError):
+            pass
+
+
 def chat_products(response):
     products = []
     for message in response.get('messages', []):
@@ -270,7 +288,9 @@ def chat_products(response):
                 data = json.loads(message.get('content', ''))
                 values = data if isinstance(data, list) else data.get('products', [data])
             except (ValueError, TypeError, AttributeError):
-                pass
+                markup = ChatProductMarkup()
+                markup.feed(str(message.get('content', '')))
+                values = markup.products
         products.extend(values)
     return products
 
