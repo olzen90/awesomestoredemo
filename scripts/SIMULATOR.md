@@ -88,7 +88,8 @@ Dry-run results are mock catalogue matches, not predictions of Clerk's ranking.
    add orders beyond the daily plan or replay completed journeys.
    Scheduled runs use the repository variable. The summary says `live` or `dry-run`.
 
-To pause live activity, set `SIMULATION_ENABLED` to `false`. To stop all runs,
+To pause automatic purchases, set `SIMULATION_ENABLED` to `false`. To pause all
+live activity, also set `SIMULATION_SEARCH_ENABLED` to `false`. To stop all runs,
 disable the workflow in GitHub Actions. The default `GITHUB_TOKEN` requires
 permission to write repository contents; branch rules must allow writes to
 `simulator-state`. A secret is never written into the JSON activity records.
@@ -102,6 +103,8 @@ search`, so they cannot send sales, Email clicks or Chat conversations.
 `SIMULATION_ENABLED=true` enables the full shopping simulator instead, including
 the same Search floor. Set both enable variables to `false` to pause all live calls.
 Explicit manual dry runs remain dry even when scheduled Search activity is enabled.
+Search-only scheduling was enabled for this demo on 14 October 2026;
+automatic purchases remain paused.
 
 For a manual live Search-only batch, uncheck `dry_run`, set `channel: search`,
 check `browse_only`, leave `purchase_only` unchecked and choose `max_sessions`.
@@ -162,7 +165,8 @@ test inboxes; `example.com` addresses must never receive marketing emails.
 
 The workflow maintains a dedicated `simulator-state` branch, containing daily
 files under `dry-run/` and `live/`. It does not commit generated state to `main`
-or rebuild Pages. Each day is planned once; changing volume affects the next day.
+or rebuild Pages. Each day's purchase plan is created once; changing order volume
+affects the next day. Search-volume top-ups may append non-buyers on the current day.
 Planned times determine eligibility; actual tracking timestamps are when calls
 are sent. Journeys run sequentially within each hourly batch, without artificial
 minutes-long waits or historical timestamp spoofing.
