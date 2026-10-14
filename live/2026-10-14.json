@@ -1273,8 +1273,38 @@
       "profile": 3,
       "mode": "mixed",
       "scheduled_at": "2026-10-14T09:13:14+02:00",
-      "status": "in_progress",
-      "channel": "email"
+      "status": "needs_review",
+      "channel": "email",
+      "attempt_events": [
+        {
+          "api": "log/pageview",
+          "visitor": "83ec7e25db5f",
+          "url": "https://olzen90.github.io/awesomestoredemo/"
+        },
+        {
+          "api": "log/email",
+          "visitor": "83ec7e25db5f",
+          "email": "frodo.baggins.assisted-72@example.com"
+        },
+        {
+          "api": "log/pageview",
+          "visitor": "83ec7e25db5f",
+          "url": "https://olzen90.github.io/awesomestoredemo/category/kitchen-table",
+          "category": "401"
+        },
+        {
+          "api": "campaigns/click",
+          "embed": "automated-popular",
+          "product": 10265,
+          "n": 0,
+          "source_api": "recommendations/popular",
+          "labels": [
+            "Automated / Popular"
+          ]
+        }
+      ],
+      "error": "log/click: API rejected response (The argument \"external\" has invalid syntax. Please check the format and try again.); review before retrying",
+      "processed_at": "2026-10-14T14:30:18.242013+02:00"
     },
     {
       "id": "demo-2026-10-14-0266",
