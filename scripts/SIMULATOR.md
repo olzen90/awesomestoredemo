@@ -87,7 +87,8 @@ assisted journeys across all four. The default remains Search/Recommendations.
 Email uses the real configured `automated-popular` embed (override with repository
 variable `SIMULATION_EMAIL_EMBED`). It requests `campaigns/click`, checks the
 redirect without following it, and logs the returned product, original source,
-position and labels with `external: 1`. A dynamic product filter keeps the
+position and labels with `external: true` (the JSON API requires a boolean,
+even though the landing URL uses `clerk_external=1`). A dynamic product filter keeps the
 selection in the profile/budget/purchasing cohort. This tests **embedded Email
 attribution**, not newsletter delivery or flow-open statistics. It does not send
 emails, create subscribers, or pretend that a newsletter/flow was delivered.

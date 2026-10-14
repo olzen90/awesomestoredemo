@@ -217,7 +217,7 @@ class SimulatorTests(unittest.TestCase):
         outcome = sim.run_journey({**session('mixed'), 'channel': 'email'}, client.catalog, client)
         self.assertEqual(outcome['events'][2]['api'], 'campaigns/click')
         click = next(p for e, p in client.calls if e == 'log/click')
-        self.assertEqual(click['external'], 1)
+        self.assertIs(click['external'], True)
         self.assertEqual(click['labels'], ['Automated / Popular'])
         self.assertEqual(outcome['channel'], 'email')
 

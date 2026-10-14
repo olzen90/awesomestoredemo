@@ -427,7 +427,7 @@ def run_journey(session, catalog, client):
             if label:
                 click['labels'] = [label]
             if email_result:
-                click.update(n=email_result['n'], labels=email_result['labels'], external=1)
+                click.update(n=email_result['n'], labels=email_result['labels'], external=True)
             client.request("log/click", click)
             events.append({"api": "log/click", **{k: v for k, v in click.items() if k != "api"}, "source_api": source})
             clicked.append(product['id'])
