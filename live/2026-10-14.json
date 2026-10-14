@@ -868,8 +868,76 @@
       "profile": 6,
       "mode": "mixed",
       "scheduled_at": "2026-10-14T08:09:03+02:00",
-      "status": "in_progress",
-      "channel": "search"
+      "status": "completed",
+      "channel": "search",
+      "outcome": {
+        "profile": "thoughtful-gift",
+        "channel": "search",
+        "clicked_ids": [
+          10212
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Curve Ink Carafe",
+            "visitor": "661e4f5ba68e",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "661e4f5ba68e",
+            "product": 10212,
+            "n": 1,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          },
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0004",
+            "visitor": "661e4f5ba68e",
+            "customer": "demo-assisted-2026-10-14-4",
+            "email": "luke.skywalker.assisted-2026-10-14-4@example.com",
+            "products": [
+              {
+                "id": 10212,
+                "price": 86,
+                "quantity": 1
+              },
+              {
+                "id": 10477,
+                "price": 62,
+                "quantity": 1
+              }
+            ]
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0004",
+          "visitor": "661e4f5ba68e",
+          "customer": "demo-assisted-2026-10-14-4",
+          "email": "luke.skywalker.assisted-2026-10-14-4@example.com",
+          "products": [
+            {
+              "id": 10212,
+              "price": 86,
+              "quantity": 1
+            },
+            {
+              "id": 10477,
+              "price": 62,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 148.0,
+        "estimated_profit": 63.62
+      },
+      "processed_at": "2026-10-14T14:06:29.656199+02:00"
     },
     {
       "id": "demo-2026-10-14-0200",
