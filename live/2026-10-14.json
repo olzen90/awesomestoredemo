@@ -546,7 +546,36 @@
       "profile": 1,
       "mode": "browse",
       "scheduled_at": "2026-10-14T05:14:37+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "clicked_ids": [
+          10177
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 302,
+            "visitor": "a799ea47f242",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "a799ea47f242",
+            "product": 10177,
+            "n": 9,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T14:00:16.833525+02:00"
     },
     {
       "id": "demo-2026-10-14-0176",
@@ -556,7 +585,74 @@
       "profile": 4,
       "mode": "mixed",
       "scheduled_at": "2026-10-14T06:03:44+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "focused-workday",
+        "clicked_ids": [
+          10344
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 502,
+            "visitor": "76a0790fc3f5",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "76a0790fc3f5",
+            "product": 10344,
+            "n": 1,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          },
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0176",
+            "visitor": "76a0790fc3f5",
+            "customer": "demo-assisted-2026-10-14-176",
+            "email": "tony.stark.assisted-2026-10-14-176@example.com",
+            "products": [
+              {
+                "id": 10344,
+                "price": 97,
+                "quantity": 1
+              },
+              {
+                "id": 10327,
+                "price": 63.2,
+                "quantity": 1
+              }
+            ]
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0176",
+          "visitor": "76a0790fc3f5",
+          "customer": "demo-assisted-2026-10-14-176",
+          "email": "tony.stark.assisted-2026-10-14-176@example.com",
+          "products": [
+            {
+              "id": 10344,
+              "price": 97,
+              "quantity": 1
+            },
+            {
+              "id": 10327,
+              "price": 63.2,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 160.2,
+        "estimated_profit": 57.61
+      },
+      "processed_at": "2026-10-14T14:00:16.833525+02:00"
     },
     {
       "id": "demo-2026-10-14-0095",
@@ -566,7 +662,43 @@
       "profile": 4,
       "mode": "organic",
       "scheduled_at": "2026-10-14T06:05:47+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "focused-workday",
+        "clicked_ids": [],
+        "events": [
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0095",
+            "visitor": "38b71d1c3ab8",
+            "customer": "demo-organic-2026-10-14-95",
+            "email": "neo.organic-2026-10-14-95@example.com",
+            "products": [
+              {
+                "id": 10336,
+                "price": 115,
+                "quantity": 1
+              }
+            ]
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0095",
+          "visitor": "38b71d1c3ab8",
+          "customer": "demo-organic-2026-10-14-95",
+          "email": "neo.organic-2026-10-14-95@example.com",
+          "products": [
+            {
+              "id": 10336,
+              "price": 115,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 115.0,
+        "estimated_profit": 41.4
+      },
+      "processed_at": "2026-10-14T14:00:16.833525+02:00"
     },
     {
       "id": "demo-2026-10-14-0210",
