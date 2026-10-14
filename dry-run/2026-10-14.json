@@ -4010,7 +4010,74 @@
       "profile": 5,
       "mode": "mixed",
       "scheduled_at": "2026-10-14T14:00:04+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "slow-morning",
+        "clicked_ids": [
+          10348
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Earth Clay Bath Towel",
+            "visitor": "3db00e143c9b",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "3db00e143c9b",
+            "product": 10348,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          },
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0087",
+            "visitor": "3db00e143c9b",
+            "customer": "demo-assisted-2026-10-14-87",
+            "email": "ellen.ripley.assisted-2026-10-14-87@example.com",
+            "products": [
+              {
+                "id": 10348,
+                "price": 81,
+                "quantity": 1
+              },
+              {
+                "id": 10368,
+                "price": 64.8,
+                "quantity": 1
+              }
+            ]
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0087",
+          "visitor": "3db00e143c9b",
+          "customer": "demo-assisted-2026-10-14-87",
+          "email": "ellen.ripley.assisted-2026-10-14-87@example.com",
+          "products": [
+            {
+              "id": 10348,
+              "price": 81,
+              "quantity": 1
+            },
+            {
+              "id": 10368,
+              "price": 64.8,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 145.8,
+        "estimated_profit": 64.8
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0124",
@@ -4020,7 +4087,36 @@
       "profile": 3,
       "mode": "browse",
       "scheduled_at": "2026-10-14T14:01:18+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "clicked_ids": [
+          10215
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 401,
+            "visitor": "d0a01fa09d11",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "d0a01fa09d11",
+            "product": 10215,
+            "n": 11,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0117",
@@ -4030,7 +4126,36 @@
       "profile": 1,
       "mode": "browse",
       "scheduled_at": "2026-10-14T14:03:38+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "clicked_ids": [
+          10177
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 302,
+            "visitor": "8f4f89a902e1",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "8f4f89a902e1",
+            "product": 10177,
+            "n": 2,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0082",
@@ -4040,7 +4165,36 @@
       "profile": 4,
       "mode": "browse",
       "scheduled_at": "2026-10-14T14:03:43+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "focused-workday",
+        "clicked_ids": [
+          10290
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Ledger Moss Notebook",
+            "visitor": "c71985753894",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "c71985753894",
+            "product": 10290,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0122",
@@ -4050,7 +4204,36 @@
       "profile": 6,
       "mode": "browse",
       "scheduled_at": "2026-10-14T14:04:59+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "thoughtful-gift",
+        "clicked_ids": [
+          10488
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 802,
+            "visitor": "858aa4355927",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "858aa4355927",
+            "product": 10488,
+            "n": 3,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0115",
@@ -4060,7 +4243,36 @@
       "profile": 3,
       "mode": "browse",
       "scheduled_at": "2026-10-14T14:05:33+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "clicked_ids": [
+          10242
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 402,
+            "visitor": "630636dfdf40",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "630636dfdf40",
+            "product": 10242,
+            "n": 9,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0134",
@@ -4070,7 +4282,36 @@
       "profile": 4,
       "mode": "browse",
       "scheduled_at": "2026-10-14T14:08:51+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "focused-workday",
+        "clicked_ids": [
+          10290
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 501,
+            "visitor": "05d9fc5d3796",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "05d9fc5d3796",
+            "product": 10290,
+            "n": 1,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0013",
@@ -4080,7 +4321,43 @@
       "profile": 5,
       "mode": "organic",
       "scheduled_at": "2026-10-14T14:08:55+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "slow-morning",
+        "clicked_ids": [],
+        "events": [
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0013",
+            "visitor": "96e5af686de0",
+            "customer": "demo-organic-2026-10-14-13",
+            "email": "luke.skywalker.organic-2026-10-14-13@example.com",
+            "products": [
+              {
+                "id": 10358,
+                "price": 81,
+                "quantity": 2
+              }
+            ]
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0013",
+          "visitor": "96e5af686de0",
+          "customer": "demo-organic-2026-10-14-13",
+          "email": "luke.skywalker.organic-2026-10-14-13@example.com",
+          "products": [
+            {
+              "id": 10358,
+              "price": 81,
+              "quantity": 2
+            }
+          ]
+        },
+        "revenue": 162.0,
+        "estimated_profit": 81.0
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0015",
@@ -4090,7 +4367,36 @@
       "profile": 0,
       "mode": "browse",
       "scheduled_at": "2026-10-14T14:09:29+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "commuter",
+        "clicked_ids": [
+          10101
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Lane Rust Slip-On",
+            "visitor": "b3a093bed597",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "b3a093bed597",
+            "product": 10101,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0068",
@@ -4100,7 +4406,36 @@
       "profile": 0,
       "mode": "browse",
       "scheduled_at": "2026-10-14T14:10:51+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "commuter",
+        "clicked_ids": [
+          10100
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Daily Sage Slip-On",
+            "visitor": "e4b38928b982",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "e4b38928b982",
+            "product": 10100,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0243",
@@ -4110,7 +4445,36 @@
       "profile": 2,
       "mode": "browse",
       "scheduled_at": "2026-10-14T14:11:43+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "wardrobe-refresh",
+        "clicked_ids": [
+          10069
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 103,
+            "visitor": "c1aeb3ceb0c5",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "c1aeb3ceb0c5",
+            "product": 10069,
+            "n": 10,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0019",
@@ -4120,7 +4484,74 @@
       "profile": 2,
       "mode": "mixed",
       "scheduled_at": "2026-10-14T14:14:11+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "wardrobe-refresh",
+        "clicked_ids": [
+          10067
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Move Navy Trouser",
+            "visitor": "dab1ce1be971",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "dab1ce1be971",
+            "product": 10067,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          },
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0019",
+            "visitor": "dab1ce1be971",
+            "customer": "demo-assisted-2026-10-14-19",
+            "email": "hermione.granger.assisted-2026-10-14-19@example.com",
+            "products": [
+              {
+                "id": 10067,
+                "price": 129,
+                "quantity": 1
+              },
+              {
+                "id": 10038,
+                "price": 72,
+                "quantity": 1
+              }
+            ]
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0019",
+          "visitor": "dab1ce1be971",
+          "customer": "demo-assisted-2026-10-14-19",
+          "email": "hermione.granger.assisted-2026-10-14-19@example.com",
+          "products": [
+            {
+              "id": 10067,
+              "price": 129,
+              "quantity": 1
+            },
+            {
+              "id": 10038,
+              "price": 72,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 201.0,
+        "estimated_profit": 71.82
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0055",
@@ -4130,7 +4561,74 @@
       "profile": 4,
       "mode": "mixed",
       "scheduled_at": "2026-10-14T14:16:37+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "focused-workday",
+        "clicked_ids": [
+          10315
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Record Navy Notebook",
+            "visitor": "df4047346fa0",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "df4047346fa0",
+            "product": 10315,
+            "n": 1,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          },
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0055",
+            "visitor": "df4047346fa0",
+            "customer": "demo-assisted-2026-10-14-55",
+            "email": "luke.skywalker.assisted-2026-10-14-55@example.com",
+            "products": [
+              {
+                "id": 10315,
+                "price": 61,
+                "quantity": 1
+              },
+              {
+                "id": 10295,
+                "price": 61,
+                "quantity": 1
+              }
+            ]
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0055",
+          "visitor": "df4047346fa0",
+          "customer": "demo-assisted-2026-10-14-55",
+          "email": "luke.skywalker.assisted-2026-10-14-55@example.com",
+          "products": [
+            {
+              "id": 10315,
+              "price": 61,
+              "quantity": 1
+            },
+            {
+              "id": 10295,
+              "price": 61,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 122.0,
+        "estimated_profit": 51.24
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0001",
@@ -4140,7 +4638,36 @@
       "profile": 5,
       "mode": "browse",
       "scheduled_at": "2026-10-14T15:05:56+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "slow-morning",
+        "clicked_ids": [
+          10382
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 602,
+            "visitor": "e020090b321b",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "e020090b321b",
+            "product": 10382,
+            "n": 9,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0033",
@@ -4150,7 +4677,36 @@
       "profile": 2,
       "mode": "browse",
       "scheduled_at": "2026-10-14T15:06:58+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "wardrobe-refresh",
+        "clicked_ids": [
+          10066
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 103,
+            "visitor": "e92b0cc92a66",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "e92b0cc92a66",
+            "product": 10066,
+            "n": 7,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0164",
@@ -4160,7 +4716,36 @@
       "profile": 4,
       "mode": "browse",
       "scheduled_at": "2026-10-14T15:07:29+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "focused-workday",
+        "clicked_ids": [
+          10322
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 502,
+            "visitor": "f22c19c048c1",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "f22c19c048c1",
+            "product": 10322,
+            "n": 5,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0215",
@@ -4170,7 +4755,36 @@
       "profile": 0,
       "mode": "browse",
       "scheduled_at": "2026-10-14T15:07:36+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "commuter",
+        "clicked_ids": [
+          10107
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Walk Fog Slip-On",
+            "visitor": "02af65156c9a",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "02af65156c9a",
+            "product": 10107,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0057",
@@ -4180,7 +4794,36 @@
       "profile": 6,
       "mode": "browse",
       "scheduled_at": "2026-10-14T15:09:14+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "thoughtful-gift",
+        "clicked_ids": [
+          10499
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Open Ink Linen Napkin Set",
+            "visitor": "723c1b1c9779",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "723c1b1c9779",
+            "product": 10499,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0206",
@@ -4190,7 +4833,64 @@
       "profile": 0,
       "mode": "clerk",
       "scheduled_at": "2026-10-14T15:11:19+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "commuter",
+        "clicked_ids": [
+          10112
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Pace Sage Runner",
+            "visitor": "6fb1f32105d6",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "6fb1f32105d6",
+            "product": 10112,
+            "n": 1,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          },
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0206",
+            "visitor": "6fb1f32105d6",
+            "customer": "demo-assisted-2026-10-14-206",
+            "email": "tony.stark.assisted-2026-10-14-206@example.com",
+            "products": [
+              {
+                "id": 10112,
+                "price": 163,
+                "quantity": 1
+              }
+            ]
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0206",
+          "visitor": "6fb1f32105d6",
+          "customer": "demo-assisted-2026-10-14-206",
+          "email": "tony.stark.assisted-2026-10-14-206@example.com",
+          "products": [
+            {
+              "id": 10112,
+              "price": 163,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 163.0,
+        "estimated_profit": 55.42
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0104",
@@ -4200,7 +4900,36 @@
       "profile": 2,
       "mode": "browse",
       "scheduled_at": "2026-10-14T15:11:29+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "wardrobe-refresh",
+        "clicked_ids": [
+          10059
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 103,
+            "visitor": "392677d5268d",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "392677d5268d",
+            "product": 10059,
+            "n": 0,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0231",
@@ -4210,7 +4939,36 @@
       "profile": 1,
       "mode": "browse",
       "scheduled_at": "2026-10-14T15:12:45+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "clicked_ids": [
+          10182
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Map Coral Packing Cube",
+            "visitor": "daa8b043ecd4",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "daa8b043ecd4",
+            "product": 10182,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0026",
@@ -4220,7 +4978,36 @@
       "profile": 3,
       "mode": "browse",
       "scheduled_at": "2026-10-14T15:13:31+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "clicked_ids": [
+          10257
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Quiet Oat Throw",
+            "visitor": "e4b38928b982",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "e4b38928b982",
+            "product": 10257,
+            "n": 1,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0190",
@@ -4230,7 +5017,36 @@
       "profile": 3,
       "mode": "browse",
       "scheduled_at": "2026-10-14T15:13:33+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "clicked_ids": [
+          10244
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 402,
+            "visitor": "b91e7616f603",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "b91e7616f603",
+            "product": 10244,
+            "n": 11,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0106",
@@ -4240,7 +5056,74 @@
       "profile": 5,
       "mode": "mixed",
       "scheduled_at": "2026-10-14T15:13:49+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "slow-morning",
+        "clicked_ids": [
+          10349
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Soft Oat Bath Towel",
+            "visitor": "2e69876bc166",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "2e69876bc166",
+            "product": 10349,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          },
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0106",
+            "visitor": "2e69876bc166",
+            "customer": "demo-assisted-2026-10-14-106",
+            "email": "leia.organa.assisted-2026-10-14-106@example.com",
+            "products": [
+              {
+                "id": 10349,
+                "price": 90,
+                "quantity": 1
+              },
+              {
+                "id": 10369,
+                "price": 90,
+                "quantity": 1
+              }
+            ]
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0106",
+          "visitor": "2e69876bc166",
+          "customer": "demo-assisted-2026-10-14-106",
+          "email": "leia.organa.assisted-2026-10-14-106@example.com",
+          "products": [
+            {
+              "id": 10349,
+              "price": 90,
+              "quantity": 1
+            },
+            {
+              "id": 10369,
+              "price": 90,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 180.0,
+        "estimated_profit": 63.0
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0131",
@@ -4250,7 +5133,36 @@
       "profile": 3,
       "mode": "browse",
       "scheduled_at": "2026-10-14T15:14:01+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "clicked_ids": [
+          10270
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 403,
+            "visitor": "7f64fcf67d8e",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "7f64fcf67d8e",
+            "product": 10270,
+            "n": 9,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0168",
@@ -4260,7 +5172,53 @@
       "profile": 4,
       "mode": "organic",
       "scheduled_at": "2026-10-14T15:16:56+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "focused-workday",
+        "clicked_ids": [],
+        "events": [
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0168",
+            "visitor": "0f6acabdfe87",
+            "customer": "demo-organic-2026-10-14-168",
+            "email": "leia.organa.organic-2026-10-14-168@example.com",
+            "products": [
+              {
+                "id": 10335,
+                "price": 106,
+                "quantity": 1
+              },
+              {
+                "id": 10296,
+                "price": 70,
+                "quantity": 1
+              }
+            ]
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0168",
+          "visitor": "0f6acabdfe87",
+          "customer": "demo-organic-2026-10-14-168",
+          "email": "leia.organa.organic-2026-10-14-168@example.com",
+          "products": [
+            {
+              "id": 10335,
+              "price": 106,
+              "quantity": 1
+            },
+            {
+              "id": 10296,
+              "price": 70,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 176.0,
+        "estimated_profit": 72.96
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0160",
@@ -4270,7 +5228,36 @@
       "profile": 2,
       "mode": "browse",
       "scheduled_at": "2026-10-14T16:00:56+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "wardrobe-refresh",
+        "clicked_ids": [
+          10061
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 103,
+            "visitor": "da027cc57670",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "da027cc57670",
+            "product": 10061,
+            "n": 2,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0162",
@@ -4280,7 +5267,36 @@
       "profile": 2,
       "mode": "browse",
       "scheduled_at": "2026-10-14T16:01:50+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "wardrobe-refresh",
+        "clicked_ids": [
+          10005
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Daily Cobalt Overshirt",
+            "visitor": "fe3588004e4f",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "fe3588004e4f",
+            "product": 10005,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0049",
@@ -4290,7 +5306,36 @@
       "profile": 3,
       "mode": "browse",
       "scheduled_at": "2026-10-14T16:04:06+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "clicked_ids": [
+          10244
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 402,
+            "visitor": "1f1c40576d9c",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "1f1c40576d9c",
+            "product": 10244,
+            "n": 11,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0212",
@@ -4300,7 +5345,36 @@
       "profile": 0,
       "mode": "browse",
       "scheduled_at": "2026-10-14T16:04:09+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "commuter",
+        "clicked_ids": [
+          10167
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Transit Natural Tote",
+            "visitor": "a0bdab30de02",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "a0bdab30de02",
+            "product": 10167,
+            "n": 1,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0127",
@@ -4310,7 +5384,74 @@
       "profile": 6,
       "mode": "mixed",
       "scheduled_at": "2026-10-14T16:04:35+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "thoughtful-gift",
+        "clicked_ids": [
+          10464
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Simple Amber Matchbox",
+            "visitor": "a39ccb341311",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "a39ccb341311",
+            "product": 10464,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          },
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0127",
+            "visitor": "a39ccb341311",
+            "customer": "demo-assisted-2026-10-14-127",
+            "email": "leia.organa.assisted-2026-10-14-127@example.com",
+            "products": [
+              {
+                "id": 10464,
+                "price": 80,
+                "quantity": 1
+              },
+              {
+                "id": 10229,
+                "price": 59,
+                "quantity": 1
+              }
+            ]
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0127",
+          "visitor": "a39ccb341311",
+          "customer": "demo-assisted-2026-10-14-127",
+          "email": "leia.organa.assisted-2026-10-14-127@example.com",
+          "products": [
+            {
+              "id": 10464,
+              "price": 80,
+              "quantity": 1
+            },
+            {
+              "id": 10229,
+              "price": 59,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 139.0,
+        "estimated_profit": 41.45
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0110",
@@ -4320,7 +5461,36 @@
       "profile": 1,
       "mode": "browse",
       "scheduled_at": "2026-10-14T16:06:40+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "clicked_ids": [
+          10408
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Trail Rust Camp Mug",
+            "visitor": "66a4da63a6f5",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "66a4da63a6f5",
+            "product": 10408,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0022",
@@ -4330,7 +5500,36 @@
       "profile": 1,
       "mode": "browse",
       "scheduled_at": "2026-10-14T16:10:45+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "clicked_ids": [
+          10179
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 302,
+            "visitor": "9fbd1b694a0c",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "9fbd1b694a0c",
+            "product": 10179,
+            "n": 4,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0008",
@@ -4340,7 +5539,36 @@
       "profile": 3,
       "mode": "browse",
       "scheduled_at": "2026-10-14T16:12:56+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "clicked_ids": [
+          10245
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Hearth Oat Cushion",
+            "visitor": "bec750450cf8",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "bec750450cf8",
+            "product": 10245,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0006",
@@ -4350,7 +5578,36 @@
       "profile": 2,
       "mode": "browse",
       "scheduled_at": "2026-10-14T16:13:07+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "wardrobe-refresh",
+        "clicked_ids": [
+          10003
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Field Charcoal Overshirt",
+            "visitor": "43315c8a6bd9",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "43315c8a6bd9",
+            "product": 10003,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0000",
@@ -4360,7 +5617,74 @@
       "profile": 5,
       "mode": "mixed",
       "scheduled_at": "2026-10-14T16:14:28+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "slow-morning",
+        "clicked_ids": [
+          10374
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 602,
+            "visitor": "983261ac258a",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "983261ac258a",
+            "product": 10374,
+            "n": 1,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          },
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0000",
+            "visitor": "983261ac258a",
+            "customer": "demo-assisted-2026-10-14-0",
+            "email": "luke.skywalker.assisted-2026-10-14-0@example.com",
+            "products": [
+              {
+                "id": 10374,
+                "price": 65.6,
+                "quantity": 1
+              },
+              {
+                "id": 10392,
+                "price": 109,
+                "quantity": 1
+              }
+            ]
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0000",
+          "visitor": "983261ac258a",
+          "customer": "demo-assisted-2026-10-14-0",
+          "email": "luke.skywalker.assisted-2026-10-14-0@example.com",
+          "products": [
+            {
+              "id": 10374,
+              "price": 65.6,
+              "quantity": 1
+            },
+            {
+              "id": 10392,
+              "price": 109,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 174.6,
+        "estimated_profit": 56.74
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0220",
@@ -4370,7 +5694,36 @@
       "profile": 4,
       "mode": "browse",
       "scheduled_at": "2026-10-14T16:15:49+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "focused-workday",
+        "clicked_ids": [
+          10299
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 501,
+            "visitor": "8d81f6aa07da",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "8d81f6aa07da",
+            "product": 10299,
+            "n": 10,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0076",
@@ -4380,7 +5733,36 @@
       "profile": 3,
       "mode": "browse",
       "scheduled_at": "2026-10-14T17:00:39+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "clicked_ids": [
+          10243
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 402,
+            "visitor": "b91e7616f603",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "b91e7616f603",
+            "product": 10243,
+            "n": 10,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0186",
@@ -4390,7 +5772,36 @@
       "profile": 4,
       "mode": "browse",
       "scheduled_at": "2026-10-14T17:01:03+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "focused-workday",
+        "clicked_ids": [
+          10325
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 502,
+            "visitor": "8e1916ec91bc",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "8e1916ec91bc",
+            "product": 10325,
+            "n": 8,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0161",
@@ -4400,7 +5811,36 @@
       "profile": 5,
       "mode": "browse",
       "scheduled_at": "2026-10-14T17:01:24+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "slow-morning",
+        "clicked_ids": [
+          10354
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 601,
+            "visitor": "2a9e51758216",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "2a9e51758216",
+            "product": 10354,
+            "n": 9,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0070",
@@ -4410,7 +5850,36 @@
       "profile": 1,
       "mode": "browse",
       "scheduled_at": "2026-10-14T17:05:16+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "clicked_ids": [
+          10181
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 302,
+            "visitor": "2c9cabb93fc6",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "2c9cabb93fc6",
+            "product": 10181,
+            "n": 6,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0052",
@@ -4420,7 +5889,36 @@
       "profile": 5,
       "mode": "browse",
       "scheduled_at": "2026-10-14T17:05:49+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "slow-morning",
+        "clicked_ids": [
+          10373
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 602,
+            "visitor": "a4270be940d9",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "a4270be940d9",
+            "product": 10373,
+            "n": 0,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0197",
@@ -4430,7 +5928,74 @@
       "profile": 1,
       "mode": "mixed",
       "scheduled_at": "2026-10-14T17:06:59+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "clicked_ids": [
+          10403
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Camp Forest Camp Mug",
+            "visitor": "79ce93893a59",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "79ce93893a59",
+            "product": 10403,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          },
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0197",
+            "visitor": "79ce93893a59",
+            "customer": "demo-assisted-2026-10-14-197",
+            "email": "neo.assisted-2026-10-14-197@example.com",
+            "products": [
+              {
+                "id": 10403,
+                "price": 86,
+                "quantity": 1
+              },
+              {
+                "id": 10421,
+                "price": 68,
+                "quantity": 1
+              }
+            ]
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0197",
+          "visitor": "79ce93893a59",
+          "customer": "demo-assisted-2026-10-14-197",
+          "email": "neo.assisted-2026-10-14-197@example.com",
+          "products": [
+            {
+              "id": 10403,
+              "price": 86,
+              "quantity": 1
+            },
+            {
+              "id": 10421,
+              "price": 68,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 154.0,
+        "estimated_profit": 63.52
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0041",
@@ -4440,7 +6005,36 @@
       "profile": 1,
       "mode": "browse",
       "scheduled_at": "2026-10-14T17:07:17+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "clicked_ids": [
+          10147
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 301,
+            "visitor": "c861c076818b",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "c861c076818b",
+            "product": 10147,
+            "n": 1,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0144",
@@ -4450,7 +6044,36 @@
       "profile": 1,
       "mode": "browse",
       "scheduled_at": "2026-10-14T17:07:27+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "clicked_ids": [
+          10185
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 302,
+            "visitor": "d96d21fbeb6a",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "d96d21fbeb6a",
+            "product": 10185,
+            "n": 10,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0150",
@@ -4460,7 +6083,36 @@
       "profile": 1,
       "mode": "browse",
       "scheduled_at": "2026-10-14T17:07:32+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "clicked_ids": [
+          10407
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 701,
+            "visitor": "35ea68b315bb",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "35ea68b315bb",
+            "product": 10407,
+            "n": 6,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0233",
@@ -4470,7 +6122,43 @@
       "profile": 0,
       "mode": "organic",
       "scheduled_at": "2026-10-14T17:08:10+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "commuter",
+        "clicked_ids": [],
+        "events": [
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0233",
+            "visitor": "c1dabe1832e6",
+            "customer": "demo-organic-2026-10-14-233",
+            "email": "hermione.granger.organic-2026-10-14-233@example.com",
+            "products": [
+              {
+                "id": 10162,
+                "price": 78.4,
+                "quantity": 1
+              }
+            ]
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0233",
+          "visitor": "c1dabe1832e6",
+          "customer": "demo-organic-2026-10-14-233",
+          "email": "hermione.granger.organic-2026-10-14-233@example.com",
+          "products": [
+            {
+              "id": 10162,
+              "price": 78.4,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 78.4,
+        "estimated_profit": 31.36
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0054",
@@ -4480,7 +6168,36 @@
       "profile": 3,
       "mode": "browse",
       "scheduled_at": "2026-10-14T17:08:11+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "clicked_ids": [
+          10210
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 401,
+            "visitor": "11afe8105e16",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "11afe8105e16",
+            "product": 10210,
+            "n": 6,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0027",
@@ -4490,7 +6207,74 @@
       "profile": 0,
       "mode": "mixed",
       "scheduled_at": "2026-10-14T17:08:29+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "commuter",
+        "clicked_ids": [
+          10090
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 201,
+            "visitor": "9285a47a6b1e",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "9285a47a6b1e",
+            "product": 10090,
+            "n": 2,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          },
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0027",
+            "visitor": "9285a47a6b1e",
+            "customer": "demo-assisted-3",
+            "email": "tony.stark.assisted-3@example.com",
+            "products": [
+              {
+                "id": 10090,
+                "price": 145,
+                "quantity": 1
+              },
+              {
+                "id": 10146,
+                "price": 89,
+                "quantity": 1
+              }
+            ]
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0027",
+          "visitor": "9285a47a6b1e",
+          "customer": "demo-assisted-3",
+          "email": "tony.stark.assisted-3@example.com",
+          "products": [
+            {
+              "id": 10090,
+              "price": 145,
+              "quantity": 1
+            },
+            {
+              "id": 10146,
+              "price": 89,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 234.0,
+        "estimated_profit": 66.08
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0032",
@@ -4500,7 +6284,36 @@
       "profile": 2,
       "mode": "browse",
       "scheduled_at": "2026-10-14T17:09:10+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "wardrobe-refresh",
+        "clicked_ids": [
+          10032
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 102,
+            "visitor": "5ed32e7718d7",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "5ed32e7718d7",
+            "product": 10032,
+            "n": 2,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0018",
@@ -4510,7 +6323,36 @@
       "profile": 6,
       "mode": "browse",
       "scheduled_at": "2026-10-14T17:09:20+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "thoughtful-gift",
+        "clicked_ids": [
+          10462
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Kind Cobalt Matchbox",
+            "visitor": "49905d358afb",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "49905d358afb",
+            "product": 10462,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0043",
@@ -4520,7 +6362,36 @@
       "profile": 0,
       "mode": "browse",
       "scheduled_at": "2026-10-14T17:11:47+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "commuter",
+        "clicked_ids": [
+          10147
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 301,
+            "visitor": "411c108ce761",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "411c108ce761",
+            "product": 10147,
+            "n": 1,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0050",
@@ -4530,7 +6401,36 @@
       "profile": 4,
       "mode": "browse",
       "scheduled_at": "2026-10-14T17:12:04+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "focused-workday",
+        "clicked_ids": [
+          10319
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 502,
+            "visitor": "3c79150de1a6",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "3c79150de1a6",
+            "product": 10319,
+            "n": 2,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0097",
@@ -4540,7 +6440,36 @@
       "profile": 1,
       "mode": "browse",
       "scheduled_at": "2026-10-14T17:12:28+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "clicked_ids": [
+          10177
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 302,
+            "visitor": "b0ec482e30f6",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "b0ec482e30f6",
+            "product": 10177,
+            "n": 2,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0042",
@@ -4550,7 +6479,64 @@
       "profile": 3,
       "mode": "clerk",
       "scheduled_at": "2026-10-14T17:12:38+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "clicked_ids": [
+          10239
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Soft Sage Throw",
+            "visitor": "6078907e8b37",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "6078907e8b37",
+            "product": 10239,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          },
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0042",
+            "visitor": "6078907e8b37",
+            "customer": "demo-assisted-2026-10-14-42",
+            "email": "ellen.ripley.assisted-2026-10-14-42@example.com",
+            "products": [
+              {
+                "id": 10239,
+                "price": 69.6,
+                "quantity": 1
+              }
+            ]
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0042",
+          "visitor": "6078907e8b37",
+          "customer": "demo-assisted-2026-10-14-42",
+          "email": "ellen.ripley.assisted-2026-10-14-42@example.com",
+          "products": [
+            {
+              "id": 10239,
+              "price": 69.6,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 69.6,
+        "estimated_profit": 20.88
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0123",
@@ -4560,7 +6546,36 @@
       "profile": 5,
       "mode": "browse",
       "scheduled_at": "2026-10-14T17:13:33+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "slow-morning",
+        "clicked_ids": [
+          10371
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Daily Chalk Bath Towel",
+            "visitor": "e89cb4d5bb72",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "e89cb4d5bb72",
+            "product": 10371,
+            "n": 1,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0064",
@@ -4570,7 +6585,36 @@
       "profile": 5,
       "mode": "browse",
       "scheduled_at": "2026-10-14T17:15:07+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "slow-morning",
+        "clicked_ids": [
+          10364
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Care Clay Body Brush",
+            "visitor": "85a639881c6a",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "85a639881c6a",
+            "product": 10364,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0014",
@@ -4580,7 +6624,36 @@
       "profile": 3,
       "mode": "browse",
       "scheduled_at": "2026-10-14T17:16:17+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "clicked_ids": [
+          10263
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 403,
+            "visitor": "75fc600ef416",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "75fc600ef416",
+            "product": 10263,
+            "n": 2,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0234",
@@ -4590,7 +6663,36 @@
       "profile": 3,
       "mode": "browse",
       "scheduled_at": "2026-10-14T17:16:25+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "clicked_ids": [
+          10272
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 403,
+            "visitor": "2d77b11f0b91",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "2d77b11f0b91",
+            "product": 10272,
+            "n": 11,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0156",
@@ -4600,7 +6702,36 @@
       "profile": 3,
       "mode": "browse",
       "scheduled_at": "2026-10-14T17:16:30+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "clicked_ids": [
+          10277
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Arc Black Candle Holder",
+            "visitor": "6d74a19f6ddc",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "6d74a19f6ddc",
+            "product": 10277,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0181",
@@ -4610,7 +6741,36 @@
       "profile": 5,
       "mode": "browse",
       "scheduled_at": "2026-10-14T18:01:54+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "slow-morning",
+        "clicked_ids": [
+          10386
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Open Clay Stretch Strap",
+            "visitor": "89f8661e48d6",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "89f8661e48d6",
+            "product": 10386,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0249",
@@ -4620,7 +6780,36 @@
       "profile": 5,
       "mode": "browse",
       "scheduled_at": "2026-10-14T18:03:04+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "slow-morning",
+        "clicked_ids": [
+          10382
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 602,
+            "visitor": "d96d21fbeb6a",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "d96d21fbeb6a",
+            "product": 10382,
+            "n": 9,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0201",
@@ -4630,7 +6819,36 @@
       "profile": 3,
       "mode": "browse",
       "scheduled_at": "2026-10-14T18:03:21+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "clicked_ids": [
+          10253
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Cloud Oat Throw",
+            "visitor": "336f63b1fd4a",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "336f63b1fd4a",
+            "product": 10253,
+            "n": 1,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0237",
@@ -4640,7 +6858,43 @@
       "profile": 2,
       "mode": "organic",
       "scheduled_at": "2026-10-14T18:04:26+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "wardrobe-refresh",
+        "clicked_ids": [],
+        "events": [
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0237",
+            "visitor": "88a7a19f2248",
+            "customer": "demo-organic-2026-10-14-237",
+            "email": "luke.skywalker.organic-2026-10-14-237@example.com",
+            "products": [
+              {
+                "id": 10029,
+                "price": 92,
+                "quantity": 1
+              }
+            ]
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0237",
+          "visitor": "88a7a19f2248",
+          "customer": "demo-organic-2026-10-14-237",
+          "email": "luke.skywalker.organic-2026-10-14-237@example.com",
+          "products": [
+            {
+              "id": 10029,
+              "price": 92,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 92.0,
+        "estimated_profit": 48.3
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0204",
@@ -4650,7 +6904,64 @@
       "profile": 6,
       "mode": "clerk",
       "scheduled_at": "2026-10-14T18:05:50+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "thoughtful-gift",
+        "clicked_ids": [
+          10464
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Simple Amber Matchbox",
+            "visitor": "1a3511bb0540",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "1a3511bb0540",
+            "product": 10464,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          },
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0204",
+            "visitor": "1a3511bb0540",
+            "customer": "demo-assisted-2026-10-14-204",
+            "email": "leia.organa.assisted-2026-10-14-204@example.com",
+            "products": [
+              {
+                "id": 10464,
+                "price": 80,
+                "quantity": 1
+              }
+            ]
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0204",
+          "visitor": "1a3511bb0540",
+          "customer": "demo-assisted-2026-10-14-204",
+          "email": "leia.organa.assisted-2026-10-14-204@example.com",
+          "products": [
+            {
+              "id": 10464,
+              "price": 80,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 80.0,
+        "estimated_profit": 20.8
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0178",
@@ -4660,7 +6971,85 @@
       "profile": 0,
       "mode": "clerk",
       "scheduled_at": "2026-10-14T18:07:16+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "commuter",
+        "clicked_ids": [
+          10155,
+          10152
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 301,
+            "visitor": "d73f98c3c34e",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "d73f98c3c34e",
+            "product": 10155,
+            "n": 9,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          },
+          {
+            "api": "log/click",
+            "visitor": "d73f98c3c34e",
+            "product": 10152,
+            "n": 6,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          },
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0178",
+            "visitor": "d73f98c3c34e",
+            "customer": "demo-assisted-2026-10-14-178",
+            "email": "hermione.granger.assisted-2026-10-14-178@example.com",
+            "products": [
+              {
+                "id": 10155,
+                "price": 100,
+                "quantity": 1
+              },
+              {
+                "id": 10152,
+                "price": 98,
+                "quantity": 1
+              }
+            ]
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0178",
+          "visitor": "d73f98c3c34e",
+          "customer": "demo-assisted-2026-10-14-178",
+          "email": "hermione.granger.assisted-2026-10-14-178@example.com",
+          "products": [
+            {
+              "id": 10155,
+              "price": 100,
+              "quantity": 1
+            },
+            {
+              "id": 10152,
+              "price": 98,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 198.0,
+        "estimated_profit": 78.46
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0085",
@@ -4670,7 +7059,36 @@
       "profile": 2,
       "mode": "browse",
       "scheduled_at": "2026-10-14T18:08:08+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "wardrobe-refresh",
+        "clicked_ids": [
+          10041
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Rib Chalk Long Sleeve",
+            "visitor": "775306f431c2",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "775306f431c2",
+            "product": 10041,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0195",
@@ -4680,7 +7098,36 @@
       "profile": 3,
       "mode": "browse",
       "scheduled_at": "2026-10-14T18:08:14+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "clicked_ids": [
+          10210
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 401,
+            "visitor": "ac26c2d0824a",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "ac26c2d0824a",
+            "product": 10210,
+            "n": 6,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0048",
@@ -4690,7 +7137,43 @@
       "profile": 3,
       "mode": "organic",
       "scheduled_at": "2026-10-14T18:08:22+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "clicked_ids": [],
+        "events": [
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0048",
+            "visitor": "758db8d82401",
+            "customer": "demo-organic-103",
+            "email": "luke.skywalker.organic-103@example.com",
+            "products": [
+              {
+                "id": 10236,
+                "price": 105,
+                "quantity": 1
+              }
+            ]
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0048",
+          "visitor": "758db8d82401",
+          "customer": "demo-organic-103",
+          "email": "luke.skywalker.organic-103@example.com",
+          "products": [
+            {
+              "id": 10236,
+              "price": 105,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 105.0,
+        "estimated_profit": 56.7
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0129",
@@ -4700,7 +7183,36 @@
       "profile": 0,
       "mode": "browse",
       "scheduled_at": "2026-10-14T18:08:30+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "commuter",
+        "clicked_ids": [
+          10094
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 201,
+            "visitor": "c91dcd5a2468",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "c91dcd5a2468",
+            "product": 10094,
+            "n": 6,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0135",
@@ -4710,7 +7222,36 @@
       "profile": 2,
       "mode": "browse",
       "scheduled_at": "2026-10-14T18:09:39+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "wardrobe-refresh",
+        "clicked_ids": [
+          10061
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 103,
+            "visitor": "cf10c9acfb5b",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "cf10c9acfb5b",
+            "product": 10061,
+            "n": 2,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0167",
@@ -4720,7 +7261,36 @@
       "profile": 4,
       "mode": "browse",
       "scheduled_at": "2026-10-14T18:11:23+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "focused-workday",
+        "clicked_ids": [
+          10296
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 501,
+            "visitor": "a4b7ba0d9de5",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "a4b7ba0d9de5",
+            "product": 10296,
+            "n": 7,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0004",
@@ -4730,7 +7300,36 @@
       "profile": 2,
       "mode": "browse",
       "scheduled_at": "2026-10-14T18:11:44+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "wardrobe-refresh",
+        "clicked_ids": [
+          10049
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Core Chalk Long Sleeve",
+            "visitor": "661e4f5ba68e",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "661e4f5ba68e",
+            "product": 10049,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0222",
@@ -4740,7 +7339,36 @@
       "profile": 3,
       "mode": "browse",
       "scheduled_at": "2026-10-14T18:14:01+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "clicked_ids": [
+          10211
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 401,
+            "visitor": "731d04e33e4f",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "731d04e33e4f",
+            "product": 10211,
+            "n": 7,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0078",
@@ -4750,7 +7378,36 @@
       "profile": 0,
       "mode": "browse",
       "scheduled_at": "2026-10-14T19:01:31+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "commuter",
+        "clicked_ids": [
+          10162
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Studio Ink Daypack",
+            "visitor": "7b7f95993155",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "7b7f95993155",
+            "product": 10162,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0133",
@@ -4760,7 +7417,36 @@
       "profile": 3,
       "mode": "browse",
       "scheduled_at": "2026-10-14T19:01:37+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "clicked_ids": [
+          10204
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 401,
+            "visitor": "22e891592ca1",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "22e891592ca1",
+            "product": 10204,
+            "n": 0,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0223",
@@ -4770,7 +7456,36 @@
       "profile": 2,
       "mode": "browse",
       "scheduled_at": "2026-10-14T19:01:50+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "wardrobe-refresh",
+        "clicked_ids": [
+          10011
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 101,
+            "visitor": "52d53408181b",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "52d53408181b",
+            "product": 10011,
+            "n": 10,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0099",
@@ -4780,7 +7495,36 @@
       "profile": 3,
       "mode": "browse",
       "scheduled_at": "2026-10-14T19:02:14+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "clicked_ids": [
+          10258
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Fold Rust Throw",
+            "visitor": "7c9c852e7955",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "7c9c852e7955",
+            "product": 10258,
+            "n": 1,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0028",
@@ -4790,7 +7534,74 @@
       "profile": 2,
       "mode": "mixed",
       "scheduled_at": "2026-10-14T19:04:05+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "wardrobe-refresh",
+        "clicked_ids": [
+          10004
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 101,
+            "visitor": "0670c2fa1164",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "0670c2fa1164",
+            "product": 10004,
+            "n": 3,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          },
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0028",
+            "visitor": "0670c2fa1164",
+            "customer": "demo-assisted-2026-10-14-28",
+            "email": "neo.assisted-2026-10-14-28@example.com",
+            "products": [
+              {
+                "id": 10004,
+                "price": 115,
+                "quantity": 1
+              },
+              {
+                "id": 10038,
+                "price": 72,
+                "quantity": 1
+              }
+            ]
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0028",
+          "visitor": "0670c2fa1164",
+          "customer": "demo-assisted-2026-10-14-28",
+          "email": "neo.assisted-2026-10-14-28@example.com",
+          "products": [
+            {
+              "id": 10004,
+              "price": 115,
+              "quantity": 1
+            },
+            {
+              "id": 10038,
+              "price": 72,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 187.0,
+        "estimated_profit": 104.42
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0072",
@@ -4800,7 +7611,64 @@
       "profile": 3,
       "mode": "clerk",
       "scheduled_at": "2026-10-14T19:04:26+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "clicked_ids": [
+          10207
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 401,
+            "visitor": "315e8b7f31ca",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "315e8b7f31ca",
+            "product": 10207,
+            "n": 3,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          },
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0072",
+            "visitor": "315e8b7f31ca",
+            "customer": "demo-assisted-2026-10-14-72",
+            "email": "hermione.granger.assisted-2026-10-14-72@example.com",
+            "products": [
+              {
+                "id": 10207,
+                "price": 86,
+                "quantity": 1
+              }
+            ]
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0072",
+          "visitor": "315e8b7f31ca",
+          "customer": "demo-assisted-2026-10-14-72",
+          "email": "hermione.granger.assisted-2026-10-14-72@example.com",
+          "products": [
+            {
+              "id": 10207,
+              "price": 86,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 86.0,
+        "estimated_profit": 25.8
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0194",
@@ -4810,7 +7678,36 @@
       "profile": 2,
       "mode": "browse",
       "scheduled_at": "2026-10-14T19:04:26+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "wardrobe-refresh",
+        "clicked_ids": [
+          10076
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Studio Clay Short",
+            "visitor": "ea59d36712df",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "ea59d36712df",
+            "product": 10076,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0036",
@@ -4820,7 +7717,36 @@
       "profile": 1,
       "mode": "browse",
       "scheduled_at": "2026-10-14T19:05:13+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "clicked_ids": [
+          10152
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Studio Cobalt Tote",
+            "visitor": "6d2a99aed3e8",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "6d2a99aed3e8",
+            "product": 10152,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0100",
@@ -4830,7 +7756,36 @@
       "profile": 3,
       "mode": "browse",
       "scheduled_at": "2026-10-14T19:05:52+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "clicked_ids": [
+          10207
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 401,
+            "visitor": "b79a7c16186f",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "b79a7c16186f",
+            "product": 10207,
+            "n": 3,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0218",
@@ -4840,7 +7795,36 @@
       "profile": 6,
       "mode": "browse",
       "scheduled_at": "2026-10-14T19:06:37+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "thoughtful-gift",
+        "clicked_ids": [
+          10496
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 802,
+            "visitor": "ac67fbef9d1b",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "ac67fbef9d1b",
+            "product": 10496,
+            "n": 11,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0141",
@@ -4850,7 +7834,36 @@
       "profile": 4,
       "mode": "browse",
       "scheduled_at": "2026-10-14T19:07:31+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "focused-workday",
+        "clicked_ids": [
+          10327
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Mono Chalk Charging Dock",
+            "visitor": "3a6f49c99413",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "3a6f49c99413",
+            "product": 10327,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0069",
@@ -4860,7 +7873,36 @@
       "profile": 0,
       "mode": "browse",
       "scheduled_at": "2026-10-14T19:07:48+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "commuter",
+        "clicked_ids": [
+          10153
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Weekender Olive Tote",
+            "visitor": "478c89c9cfab",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "478c89c9cfab",
+            "product": 10153,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0152",
@@ -4870,7 +7912,36 @@
       "profile": 3,
       "mode": "browse",
       "scheduled_at": "2026-10-14T19:07:52+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "clicked_ids": [
+          10243
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 402,
+            "visitor": "65b5081363e0",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "65b5081363e0",
+            "product": 10243,
+            "n": 10,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0037",
@@ -4880,7 +7951,74 @@
       "profile": 4,
       "mode": "mixed",
       "scheduled_at": "2026-10-14T19:08:08+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "focused-workday",
+        "clicked_ids": [
+          10294
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Focus Moss Notebook",
+            "visitor": "2a3e6512ecbe",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "2a3e6512ecbe",
+            "product": 10294,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          },
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0037",
+            "visitor": "2a3e6512ecbe",
+            "customer": "demo-assisted-2026-10-14-37",
+            "email": "hermione.granger.assisted-2026-10-14-37@example.com",
+            "products": [
+              {
+                "id": 10294,
+                "price": 52,
+                "quantity": 1
+              },
+              {
+                "id": 10314,
+                "price": 41.6,
+                "quantity": 1
+              }
+            ]
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0037",
+          "visitor": "2a3e6512ecbe",
+          "customer": "demo-assisted-2026-10-14-37",
+          "email": "hermione.granger.assisted-2026-10-14-37@example.com",
+          "products": [
+            {
+              "id": 10294,
+              "price": 52,
+              "quantity": 1
+            },
+            {
+              "id": 10314,
+              "price": 41.6,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 93.6,
+        "estimated_profit": 54.08
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0025",
@@ -4890,7 +8028,36 @@
       "profile": 0,
       "mode": "browse",
       "scheduled_at": "2026-10-14T19:08:22+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "commuter",
+        "clicked_ids": [
+          10098
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 201,
+            "visitor": "6c000414247f",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "6c000414247f",
+            "product": 10098,
+            "n": 10,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0175",
@@ -4900,7 +8067,36 @@
       "profile": 2,
       "mode": "browse",
       "scheduled_at": "2026-10-14T19:08:26+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "wardrobe-refresh",
+        "clicked_ids": [
+          10081
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Pleat Stone Trouser",
+            "visitor": "181c732301f8",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "181c732301f8",
+            "product": 10081,
+            "n": 1,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0188",
@@ -4910,7 +8106,36 @@
       "profile": 6,
       "mode": "browse",
       "scheduled_at": "2026-10-14T19:09:29+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "thoughtful-gift",
+        "clicked_ids": [
+          10485
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 802,
+            "visitor": "b747bec553a7",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "b747bec553a7",
+            "product": 10485,
+            "n": 0,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0166",
@@ -4920,7 +8145,36 @@
       "profile": 1,
       "mode": "browse",
       "scheduled_at": "2026-10-14T19:10:16+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "clicked_ids": [
+          10146
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 301,
+            "visitor": "3e629cc3ade9",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "3e629cc3ade9",
+            "product": 10146,
+            "n": 0,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0096",
@@ -4930,7 +8184,74 @@
       "profile": 2,
       "mode": "mixed",
       "scheduled_at": "2026-10-14T19:10:36+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "wardrobe-refresh",
+        "clicked_ids": [
+          10063
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Weekend Navy Trouser",
+            "visitor": "c710d5a053e1",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "c710d5a053e1",
+            "product": 10063,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          },
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0096",
+            "visitor": "c710d5a053e1",
+            "customer": "demo-assisted-2026-10-14-96",
+            "email": "ellen.ripley.assisted-2026-10-14-96@example.com",
+            "products": [
+              {
+                "id": 10063,
+                "price": 138,
+                "quantity": 1
+              },
+              {
+                "id": 10036,
+                "price": 43.2,
+                "quantity": 1
+              }
+            ]
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0096",
+          "visitor": "c710d5a053e1",
+          "customer": "demo-assisted-2026-10-14-96",
+          "email": "ellen.ripley.assisted-2026-10-14-96@example.com",
+          "products": [
+            {
+              "id": 10063,
+              "price": 138,
+              "quantity": 1
+            },
+            {
+              "id": 10036,
+              "price": 43.2,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 181.2,
+        "estimated_profit": 77.64
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0246",
@@ -4940,7 +8261,36 @@
       "profile": 1,
       "mode": "browse",
       "scheduled_at": "2026-10-14T19:10:39+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "clicked_ids": [
+          10423
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Camp Forest Camp Mug",
+            "visitor": "f275c43031a8",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "f275c43031a8",
+            "product": 10423,
+            "n": 1,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0198",
@@ -4950,7 +8300,36 @@
       "profile": 0,
       "mode": "browse",
       "scheduled_at": "2026-10-14T19:11:29+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "commuter",
+        "clicked_ids": [
+          10094
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 201,
+            "visitor": "d96d21fbeb6a",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "d96d21fbeb6a",
+            "product": 10094,
+            "n": 6,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0140",
@@ -4960,7 +8339,36 @@
       "profile": 1,
       "mode": "browse",
       "scheduled_at": "2026-10-14T19:12:34+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "clicked_ids": [
+          10155
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Everyday Natural Tote",
+            "visitor": "1b9ad113441c",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "1b9ad113441c",
+            "product": 10155,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0067",
@@ -4970,7 +8378,36 @@
       "profile": 5,
       "mode": "browse",
       "scheduled_at": "2026-10-14T19:12:40+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "slow-morning",
+        "clicked_ids": [
+          10353
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 601,
+            "visitor": "04c4766d18bd",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "04c4766d18bd",
+            "product": 10353,
+            "n": 8,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0236",
@@ -4980,7 +8417,36 @@
       "profile": 0,
       "mode": "browse",
       "scheduled_at": "2026-10-14T19:12:47+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "commuter",
+        "clicked_ids": [
+          10152
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Studio Cobalt Tote",
+            "visitor": "183fd23687d3",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "183fd23687d3",
+            "product": 10152,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0203",
@@ -4990,7 +8456,36 @@
       "profile": 6,
       "mode": "browse",
       "scheduled_at": "2026-10-14T19:13:00+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "thoughtful-gift",
+        "clicked_ids": [
+          10490
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 802,
+            "visitor": "d80485f1812c",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "d80485f1812c",
+            "product": 10490,
+            "n": 5,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0157",
@@ -5000,7 +8495,36 @@
       "profile": 4,
       "mode": "browse",
       "scheduled_at": "2026-10-14T19:14:43+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "focused-workday",
+        "clicked_ids": [
+          10322
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 502,
+            "visitor": "ae8c63664971",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "ae8c63664971",
+            "product": 10322,
+            "n": 5,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0213",
@@ -5010,7 +8534,43 @@
       "profile": 1,
       "mode": "organic",
       "scheduled_at": "2026-10-14T19:15:43+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "clicked_ids": [],
+        "events": [
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0213",
+            "visitor": "6944c230c562",
+            "customer": "demo-organic-2026-10-14-213",
+            "email": "frodo.baggins.organic-2026-10-14-213@example.com",
+            "products": [
+              {
+                "id": 10171,
+                "price": 89,
+                "quantity": 1
+              }
+            ]
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0213",
+          "visitor": "6944c230c562",
+          "customer": "demo-organic-2026-10-14-213",
+          "email": "frodo.baggins.organic-2026-10-14-213@example.com",
+          "products": [
+            {
+              "id": 10171,
+              "price": 89,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 89.0,
+        "estimated_profit": 24.03
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0165",
@@ -5020,7 +8580,36 @@
       "profile": 5,
       "mode": "browse",
       "scheduled_at": "2026-10-14T19:15:55+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "slow-morning",
+        "clicked_ids": [
+          10361
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Daily Oat Body Brush",
+            "visitor": "af8c53837975",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "af8c53837975",
+            "product": 10361,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0173",
@@ -5030,7 +8619,64 @@
       "profile": 6,
       "mode": "clerk",
       "scheduled_at": "2026-10-14T19:16:34+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "thoughtful-gift",
+        "clicked_ids": [
+          10221
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Stack Chalk Serving Bowl",
+            "visitor": "365fc7782093",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "365fc7782093",
+            "product": 10221,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          },
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0173",
+            "visitor": "365fc7782093",
+            "customer": "demo-assisted-2026-10-14-173",
+            "email": "tony.stark.assisted-2026-10-14-173@example.com",
+            "products": [
+              {
+                "id": 10221,
+                "price": 77,
+                "quantity": 1
+              }
+            ]
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0173",
+          "visitor": "365fc7782093",
+          "customer": "demo-assisted-2026-10-14-173",
+          "email": "tony.stark.assisted-2026-10-14-173@example.com",
+          "products": [
+            {
+              "id": 10221,
+              "price": 77,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 77.0,
+        "estimated_profit": 34.65
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0059",
@@ -5040,7 +8686,74 @@
       "profile": 6,
       "mode": "mixed",
       "scheduled_at": "2026-10-14T19:16:40+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "thoughtful-gift",
+        "clicked_ids": [
+          10457
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 801,
+            "visitor": "07523d3414df",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "07523d3414df",
+            "product": 10457,
+            "n": 0,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          },
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0059",
+            "visitor": "07523d3414df",
+            "customer": "demo-assisted-2026-10-14-59",
+            "email": "frodo.baggins.assisted-2026-10-14-59@example.com",
+            "products": [
+              {
+                "id": 10457,
+                "price": 62,
+                "quantity": 1
+              },
+              {
+                "id": 10458,
+                "price": 71,
+                "quantity": 1
+              }
+            ]
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0059",
+          "visitor": "07523d3414df",
+          "customer": "demo-assisted-2026-10-14-59",
+          "email": "frodo.baggins.assisted-2026-10-14-59@example.com",
+          "products": [
+            {
+              "id": 10457,
+              "price": 62,
+              "quantity": 1
+            },
+            {
+              "id": 10458,
+              "price": 71,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 133.0,
+        "estimated_profit": 70.48
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0172",
@@ -5050,7 +8763,36 @@
       "profile": 5,
       "mode": "browse",
       "scheduled_at": "2026-10-14T19:16:47+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "slow-morning",
+        "clicked_ids": [
+          10371
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Daily Chalk Bath Towel",
+            "visitor": "fb1a7cd3e24c",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "fb1a7cd3e24c",
+            "product": 10371,
+            "n": 1,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0051",
@@ -5060,7 +8802,36 @@
       "profile": 1,
       "mode": "browse",
       "scheduled_at": "2026-10-14T20:00:40+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "clicked_ids": [
+          10176
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 302,
+            "visitor": "6b2c0f1afe3a",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "6b2c0f1afe3a",
+            "product": 10176,
+            "n": 1,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0091",
@@ -5070,7 +8841,36 @@
       "profile": 6,
       "mode": "browse",
       "scheduled_at": "2026-10-14T20:01:39+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "thoughtful-gift",
+        "clicked_ids": [
+          10484
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Simple Amber Matchbox",
+            "visitor": "27479defb3c5",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "27479defb3c5",
+            "product": 10484,
+            "n": 1,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0208",
@@ -5080,7 +8880,36 @@
       "profile": 4,
       "mode": "browse",
       "scheduled_at": "2026-10-14T20:01:44+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "focused-workday",
+        "clicked_ids": [
+          10289
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 501,
+            "visitor": "3d3feb424618",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "3d3feb424618",
+            "product": 10289,
+            "n": 0,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0137",
@@ -5090,7 +8919,36 @@
       "profile": 0,
       "mode": "browse",
       "scheduled_at": "2026-10-14T20:01:48+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "commuter",
+        "clicked_ids": [
+          10110
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Daily Black Runner",
+            "visitor": "4f323bcf6c64",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "4f323bcf6c64",
+            "product": 10110,
+            "n": 1,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0093",
@@ -5100,7 +8958,36 @@
       "profile": 4,
       "mode": "browse",
       "scheduled_at": "2026-10-14T20:01:57+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "focused-workday",
+        "clicked_ids": [
+          10340
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Dock Cobalt Desk Speaker",
+            "visitor": "5997c369dd60",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "5997c369dd60",
+            "product": 10340,
+            "n": 1,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0148",
@@ -5110,7 +8997,36 @@
       "profile": 2,
       "mode": "browse",
       "scheduled_at": "2026-10-14T20:03:20+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "wardrobe-refresh",
+        "clicked_ids": [
+          10014
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Form Oat Crewneck",
+            "visitor": "da027cc57670",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "da027cc57670",
+            "product": 10014,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0219",
@@ -5120,7 +9036,36 @@
       "profile": 5,
       "mode": "browse",
       "scheduled_at": "2026-10-14T20:05:04+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "slow-morning",
+        "clicked_ids": [
+          10361
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Daily Oat Body Brush",
+            "visitor": "b34a4acda349",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "b34a4acda349",
+            "product": 10361,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0128",
@@ -5130,7 +9075,36 @@
       "profile": 1,
       "mode": "browse",
       "scheduled_at": "2026-10-14T20:06:37+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "clicked_ids": [
+          10177
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 302,
+            "visitor": "076460db4bf9",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "076460db4bf9",
+            "product": 10177,
+            "n": 2,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0130",
@@ -5140,7 +9114,36 @@
       "profile": 0,
       "mode": "browse",
       "scheduled_at": "2026-10-14T20:07:21+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "commuter",
+        "clicked_ids": [
+          10094
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 201,
+            "visitor": "07f19b510f36",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "07f19b510f36",
+            "product": 10094,
+            "n": 6,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0113",
@@ -5150,7 +9153,36 @@
       "profile": 5,
       "mode": "browse",
       "scheduled_at": "2026-10-14T20:07:45+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "slow-morning",
+        "clicked_ids": [
+          10376
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Open Forest Yoga Mat",
+            "visitor": "ae6e89ffc7a8",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "ae6e89ffc7a8",
+            "product": 10376,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0094",
@@ -5160,7 +9192,36 @@
       "profile": 4,
       "mode": "browse",
       "scheduled_at": "2026-10-14T20:07:47+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "focused-workday",
+        "clicked_ids": [
+          10327
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 502,
+            "visitor": "06e34d5e9565",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "06e34d5e9565",
+            "product": 10327,
+            "n": 10,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0058",
@@ -5170,7 +9231,53 @@
       "profile": 0,
       "mode": "organic",
       "scheduled_at": "2026-10-14T20:08:36+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "commuter",
+        "clicked_ids": [],
+        "events": [
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0058",
+            "visitor": "301bf36ceb35",
+            "customer": "demo-organic-2026-10-14-58",
+            "email": "frodo.baggins.organic-2026-10-14-58@example.com",
+            "products": [
+              {
+                "id": 10153,
+                "price": 107,
+                "quantity": 1
+              },
+              {
+                "id": 10161,
+                "price": 89,
+                "quantity": 1
+              }
+            ]
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0058",
+          "visitor": "301bf36ceb35",
+          "customer": "demo-organic-2026-10-14-58",
+          "email": "frodo.baggins.organic-2026-10-14-58@example.com",
+          "products": [
+            {
+              "id": 10153,
+              "price": 107,
+              "quantity": 1
+            },
+            {
+              "id": 10161,
+              "price": 89,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 196.0,
+        "estimated_profit": 63.62
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0046",
@@ -5180,7 +9287,36 @@
       "profile": 1,
       "mode": "browse",
       "scheduled_at": "2026-10-14T20:08:46+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "clicked_ids": [
+          10406
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 701,
+            "visitor": "07e3ed4040c9",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "07e3ed4040c9",
+            "product": 10406,
+            "n": 5,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0216",
@@ -5190,7 +9326,36 @@
       "profile": 2,
       "mode": "browse",
       "scheduled_at": "2026-10-14T20:09:14+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "wardrobe-refresh",
+        "clicked_ids": [
+          10003
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Field Charcoal Overshirt",
+            "visitor": "d19e09d4e09f",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "d19e09d4e09f",
+            "product": 10003,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0020",
@@ -5200,7 +9365,36 @@
       "profile": 2,
       "mode": "browse",
       "scheduled_at": "2026-10-14T20:09:22+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "wardrobe-refresh",
+        "clicked_ids": [
+          10037
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 102,
+            "visitor": "d064d5e62127",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "d064d5e62127",
+            "product": 10037,
+            "n": 7,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0079",
@@ -5210,7 +9404,36 @@
       "profile": 4,
       "mode": "browse",
       "scheduled_at": "2026-10-14T20:10:26+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "focused-workday",
+        "clicked_ids": [
+          10299
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 501,
+            "visitor": "f21725d792ad",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "f21725d792ad",
+            "product": 10299,
+            "n": 10,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0244",
@@ -5220,7 +9443,36 @@
       "profile": 4,
       "mode": "browse",
       "scheduled_at": "2026-10-14T20:11:46+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "focused-workday",
+        "clicked_ids": [
+          10324
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 502,
+            "visitor": "26eac8128c40",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "26eac8128c40",
+            "product": 10324,
+            "n": 7,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0221",
@@ -5230,7 +9482,36 @@
       "profile": 3,
       "mode": "browse",
       "scheduled_at": "2026-10-14T20:11:57+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "clicked_ids": [
+          10270
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 403,
+            "visitor": "48eafdf59d78",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "48eafdf59d78",
+            "product": 10270,
+            "n": 9,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0183",
@@ -5240,7 +9521,43 @@
       "profile": 1,
       "mode": "organic",
       "scheduled_at": "2026-10-14T20:13:05+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "clicked_ids": [],
+        "events": [
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0183",
+            "visitor": "6b0d2756ccf3",
+            "customer": "demo-organic-15",
+            "email": "tony.stark.organic-15@example.com",
+            "products": [
+              {
+                "id": 10407,
+                "price": 77,
+                "quantity": 1
+              }
+            ]
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0183",
+          "visitor": "6b0d2756ccf3",
+          "customer": "demo-organic-15",
+          "email": "tony.stark.organic-15@example.com",
+          "products": [
+            {
+              "id": 10407,
+              "price": 77,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 77.0,
+        "estimated_profit": 33.11
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0098",
@@ -5250,7 +9567,36 @@
       "profile": 2,
       "mode": "browse",
       "scheduled_at": "2026-10-14T20:13:57+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "wardrobe-refresh",
+        "clicked_ids": [
+          10030
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 102,
+            "visitor": "9e6c522cc8ba",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "9e6c522cc8ba",
+            "product": 10030,
+            "n": 0,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0142",
@@ -5260,7 +9606,36 @@
       "profile": 1,
       "mode": "browse",
       "scheduled_at": "2026-10-14T20:16:46+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "clicked_ids": [
+          10157
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Transit Olive Daypack",
+            "visitor": "b91e7616f603",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "b91e7616f603",
+            "product": 10157,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0163",
@@ -5270,7 +9645,36 @@
       "profile": 3,
       "mode": "browse",
       "scheduled_at": "2026-10-14T21:01:25+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "clicked_ids": [
+          10263
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 403,
+            "visitor": "e4b38928b982",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "e4b38928b982",
+            "product": 10263,
+            "n": 2,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0191",
@@ -5280,7 +9684,36 @@
       "profile": 1,
       "mode": "browse",
       "scheduled_at": "2026-10-14T21:01:53+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "clicked_ids": [
+          10182
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 302,
+            "visitor": "a568b5a2440e",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "a568b5a2440e",
+            "product": 10182,
+            "n": 7,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0182",
@@ -5290,7 +9723,36 @@
       "profile": 6,
       "mode": "browse",
       "scheduled_at": "2026-10-14T21:02:11+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "thoughtful-gift",
+        "clicked_ids": [
+          10496
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 802,
+            "visitor": "319ec115738d",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "319ec115738d",
+            "product": 10496,
+            "n": 11,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0074",
@@ -5300,7 +9762,36 @@
       "profile": 4,
       "mode": "browse",
       "scheduled_at": "2026-10-14T21:05:16+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "focused-workday",
+        "clicked_ids": [
+          10327
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Mono Chalk Charging Dock",
+            "visitor": "65b5081363e0",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "65b5081363e0",
+            "product": 10327,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0199",
@@ -5310,7 +9801,36 @@
       "profile": 6,
       "mode": "browse",
       "scheduled_at": "2026-10-14T21:06:17+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "thoughtful-gift",
+        "clicked_ids": [
+          10498
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Share Forest Linen Napkin Set",
+            "visitor": "836c444110ad",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "836c444110ad",
+            "product": 10498,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0044",
@@ -5320,7 +9840,74 @@
       "profile": 6,
       "mode": "mixed",
       "scheduled_at": "2026-10-14T21:06:41+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "thoughtful-gift",
+        "clicked_ids": [
+          10205
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 401,
+            "visitor": "be4e93c3760c",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "be4e93c3760c",
+            "product": 10205,
+            "n": 1,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          },
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0044",
+            "visitor": "be4e93c3760c",
+            "customer": "demo-assisted-2026-10-14-44",
+            "email": "leia.organa.assisted-2026-10-14-44@example.com",
+            "products": [
+              {
+                "id": 10205,
+                "price": 68,
+                "quantity": 1
+              },
+              {
+                "id": 10484,
+                "price": 80,
+                "quantity": 1
+              }
+            ]
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0044",
+          "visitor": "be4e93c3760c",
+          "customer": "demo-assisted-2026-10-14-44",
+          "email": "leia.organa.assisted-2026-10-14-44@example.com",
+          "products": [
+            {
+              "id": 10205,
+              "price": 68,
+              "quantity": 1
+            },
+            {
+              "id": 10484,
+              "price": 80,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 148.0,
+        "estimated_profit": 61.6
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0023",
@@ -5330,7 +9917,36 @@
       "profile": 1,
       "mode": "browse",
       "scheduled_at": "2026-10-14T21:06:47+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "clicked_ids": [
+          10152
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 301,
+            "visitor": "34d7d539ae08",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "34d7d539ae08",
+            "product": 10152,
+            "n": 6,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0211",
@@ -5340,7 +9956,36 @@
       "profile": 2,
       "mode": "browse",
       "scheduled_at": "2026-10-14T21:07:19+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "wardrobe-refresh",
+        "clicked_ids": [
+          10033
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 102,
+            "visitor": "ba7de2a33af9",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "ba7de2a33af9",
+            "product": 10033,
+            "n": 3,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0102",
@@ -5350,7 +9995,36 @@
       "profile": 0,
       "mode": "browse",
       "scheduled_at": "2026-10-14T21:07:38+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "commuter",
+        "clicked_ids": [
+          10090
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 201,
+            "visitor": "506b331496aa",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "506b331496aa",
+            "product": 10090,
+            "n": 2,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0030",
@@ -5360,7 +10034,36 @@
       "profile": 5,
       "mode": "browse",
       "scheduled_at": "2026-10-14T21:07:51+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "slow-morning",
+        "clicked_ids": [
+          10382
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 602,
+            "visitor": "de3a71d244f5",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "de3a71d244f5",
+            "product": 10382,
+            "n": 9,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0062",
@@ -5370,7 +10073,74 @@
       "profile": 5,
       "mode": "mixed",
       "scheduled_at": "2026-10-14T21:09:16+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "slow-morning",
+        "clicked_ids": [
+          10376
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Open Forest Yoga Mat",
+            "visitor": "9b38a8efccee",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "9b38a8efccee",
+            "product": 10376,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          },
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0062",
+            "visitor": "9b38a8efccee",
+            "customer": "demo-assisted-2026-10-14-62",
+            "email": "luke.skywalker.assisted-2026-10-14-62@example.com",
+            "products": [
+              {
+                "id": 10376,
+                "price": 100,
+                "quantity": 1
+              },
+              {
+                "id": 10346,
+                "price": 63,
+                "quantity": 1
+              }
+            ]
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0062",
+          "visitor": "9b38a8efccee",
+          "customer": "demo-assisted-2026-10-14-62",
+          "email": "luke.skywalker.assisted-2026-10-14-62@example.com",
+          "products": [
+            {
+              "id": 10376,
+              "price": 100,
+              "quantity": 1
+            },
+            {
+              "id": 10346,
+              "price": 63,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 163.0,
+        "estimated_profit": 82.35
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0209",
@@ -5380,7 +10150,36 @@
       "profile": 5,
       "mode": "browse",
       "scheduled_at": "2026-10-14T21:10:11+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "slow-morning",
+        "clicked_ids": [
+          10356
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 601,
+            "visitor": "db662f9de176",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "db662f9de176",
+            "product": 10356,
+            "n": 11,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0090",
@@ -5390,7 +10189,36 @@
       "profile": 4,
       "mode": "browse",
       "scheduled_at": "2026-10-14T21:10:59+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "focused-workday",
+        "clicked_ids": [
+          10327
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Mono Chalk Charging Dock",
+            "visitor": "acfd82f3e5fe",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "acfd82f3e5fe",
+            "product": 10327,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0053",
@@ -5400,7 +10228,53 @@
       "profile": 5,
       "mode": "organic",
       "scheduled_at": "2026-10-14T21:11:34+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "slow-morning",
+        "clicked_ids": [],
+        "events": [
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0053",
+            "visitor": "fc6935841e3b",
+            "customer": "demo-organic-2026-10-14-53",
+            "email": "hermione.granger.organic-2026-10-14-53@example.com",
+            "products": [
+              {
+                "id": 10363,
+                "price": 81,
+                "quantity": 1
+              },
+              {
+                "id": 10349,
+                "price": 90,
+                "quantity": 1
+              }
+            ]
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0053",
+          "visitor": "fc6935841e3b",
+          "customer": "demo-organic-2026-10-14-53",
+          "email": "hermione.granger.organic-2026-10-14-53@example.com",
+          "products": [
+            {
+              "id": 10363,
+              "price": 81,
+              "quantity": 1
+            },
+            {
+              "id": 10349,
+              "price": 90,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 171.0,
+        "estimated_profit": 72.0
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0012",
@@ -5410,7 +10284,36 @@
       "profile": 1,
       "mode": "browse",
       "scheduled_at": "2026-10-14T21:11:53+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "clicked_ids": [
+          10184
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 302,
+            "visitor": "22e891592ca1",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "22e891592ca1",
+            "product": 10184,
+            "n": 9,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0040",
@@ -5420,7 +10323,36 @@
       "profile": 3,
       "mode": "browse",
       "scheduled_at": "2026-10-14T21:12:02+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "clicked_ids": [
+          10271
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 403,
+            "visitor": "775306f431c2",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "775306f431c2",
+            "product": 10271,
+            "n": 10,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0158",
@@ -5430,7 +10362,36 @@
       "profile": 3,
       "mode": "browse",
       "scheduled_at": "2026-10-14T21:13:44+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "clicked_ids": [
+          10279
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Still Brass Candle Holder",
+            "visitor": "f8c3f30af301",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "f8c3f30af301",
+            "product": 10279,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0035",
@@ -5440,7 +10401,36 @@
       "profile": 5,
       "mode": "browse",
       "scheduled_at": "2026-10-14T21:14:21+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "slow-morning",
+        "clicked_ids": [
+          10357
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Cloud Oat Body Brush",
+            "visitor": "965b225d7fdd",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "965b225d7fdd",
+            "product": 10357,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0077",
@@ -5450,7 +10440,36 @@
       "profile": 1,
       "mode": "browse",
       "scheduled_at": "2026-10-14T21:14:58+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "clicked_ids": [
+          10176
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Air Charcoal Packing Cube",
+            "visitor": "15d4ac2eebdd",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "15d4ac2eebdd",
+            "product": 10176,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0009",
@@ -5460,7 +10479,36 @@
       "profile": 3,
       "mode": "browse",
       "scheduled_at": "2026-10-14T21:15:06+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "clicked_ids": [
+          10268
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Signal Aluminum Desk Lamp",
+            "visitor": "f0449ad7f623",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "f0449ad7f623",
+            "product": 10268,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0247",
@@ -5470,7 +10518,36 @@
       "profile": 2,
       "mode": "browse",
       "scheduled_at": "2026-10-14T21:16:14+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "wardrobe-refresh",
+        "clicked_ids": [
+          10077
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Move Stone Short",
+            "visitor": "d9b62f65cdb2",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "d9b62f65cdb2",
+            "product": 10077,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0184",
@@ -5480,7 +10557,36 @@
       "profile": 3,
       "mode": "browse",
       "scheduled_at": "2026-10-14T22:02:21+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "clicked_ids": [
+          10231
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Stack Amber Carafe",
+            "visitor": "32764ffe299a",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "32764ffe299a",
+            "product": 10231,
+            "n": 1,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0235",
@@ -5490,7 +10596,36 @@
       "profile": 4,
       "mode": "browse",
       "scheduled_at": "2026-10-14T22:03:41+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "focused-workday",
+        "clicked_ids": [
+          10331
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Wave Chalk Charging Dock",
+            "visitor": "94087f3816e1",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "94087f3816e1",
+            "product": 10331,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0029",
@@ -5500,7 +10635,53 @@
       "profile": 4,
       "mode": "organic",
       "scheduled_at": "2026-10-14T22:03:57+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "focused-workday",
+        "clicked_ids": [],
+        "events": [
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0029",
+            "visitor": "c72974f4c6c9",
+            "customer": "demo-organic-69",
+            "email": "neo.organic-69@example.com",
+            "products": [
+              {
+                "id": 10315,
+                "price": 61,
+                "quantity": 2
+              },
+              {
+                "id": 10333,
+                "price": 88,
+                "quantity": 1
+              }
+            ]
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0029",
+          "visitor": "c72974f4c6c9",
+          "customer": "demo-organic-69",
+          "email": "neo.organic-69@example.com",
+          "products": [
+            {
+              "id": 10315,
+              "price": 61,
+              "quantity": 2
+            },
+            {
+              "id": 10333,
+              "price": 88,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 210.0,
+        "estimated_profit": 91.72
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0230",
@@ -5510,7 +10691,74 @@
       "profile": 5,
       "mode": "mixed",
       "scheduled_at": "2026-10-14T22:04:25+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "slow-morning",
+        "clicked_ids": [
+          10351
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 601,
+            "visitor": "793b6130b0d6",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "793b6130b0d6",
+            "product": 10351,
+            "n": 6,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          },
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0230",
+            "visitor": "793b6130b0d6",
+            "customer": "demo-assisted-2026-10-14-230",
+            "email": "neo.assisted-2026-10-14-230@example.com",
+            "products": [
+              {
+                "id": 10351,
+                "price": 63,
+                "quantity": 1
+              },
+              {
+                "id": 10346,
+                "price": 63,
+                "quantity": 1
+              }
+            ]
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0230",
+          "visitor": "793b6130b0d6",
+          "customer": "demo-assisted-2026-10-14-230",
+          "email": "neo.assisted-2026-10-14-230@example.com",
+          "products": [
+            {
+              "id": 10351,
+              "price": 63,
+              "quantity": 1
+            },
+            {
+              "id": 10346,
+              "price": 63,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 126.0,
+        "estimated_profit": 56.7
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0034",
@@ -5520,7 +10768,36 @@
       "profile": 6,
       "mode": "browse",
       "scheduled_at": "2026-10-14T22:08:51+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "thoughtful-gift",
+        "clicked_ids": [
+          10210
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 401,
+            "visitor": "ad02b5b49bf2",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "ad02b5b49bf2",
+            "product": 10210,
+            "n": 6,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0061",
@@ -5530,7 +10807,36 @@
       "profile": 1,
       "mode": "browse",
       "scheduled_at": "2026-10-14T22:10:03+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "clicked_ids": [
+          10177
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 302,
+            "visitor": "d2893dee78ad",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "d2893dee78ad",
+            "product": 10177,
+            "n": 2,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0038",
@@ -5540,7 +10846,36 @@
       "profile": 1,
       "mode": "browse",
       "scheduled_at": "2026-10-14T22:10:57+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "clicked_ids": [
+          10407
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Summit Forest Camp Mug",
+            "visitor": "957a5ca1f90b",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "957a5ca1f90b",
+            "product": 10407,
+            "n": 0,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0005",
@@ -5550,7 +10885,36 @@
       "profile": 1,
       "mode": "browse",
       "scheduled_at": "2026-10-14T22:12:34+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "clicked_ids": [
+          10203
+        ],
+        "events": [
+          {
+            "api": "search/search",
+            "query": "Stay Stone Packing Cube",
+            "visitor": "555680496102",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "555680496102",
+            "product": 10203,
+            "n": 1,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0031",
@@ -5560,7 +10924,53 @@
       "profile": 6,
       "mode": "organic",
       "scheduled_at": "2026-10-14T22:14:41+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "thoughtful-gift",
+        "clicked_ids": [],
+        "events": [
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0031",
+            "visitor": "163ed7893179",
+            "customer": "demo-organic-28",
+            "email": "neo.organic-28@example.com",
+            "products": [
+              {
+                "id": 10225,
+                "price": 54.4,
+                "quantity": 1
+              },
+              {
+                "id": 10229,
+                "price": 59,
+                "quantity": 1
+              }
+            ]
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0031",
+          "visitor": "163ed7893179",
+          "customer": "demo-organic-28",
+          "email": "neo.organic-28@example.com",
+          "products": [
+            {
+              "id": 10225,
+              "price": 54.4,
+              "quantity": 1
+            },
+            {
+              "id": 10229,
+              "price": 59,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 113.4,
+        "estimated_profit": 47.85
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0171",
@@ -5570,7 +10980,53 @@
       "profile": 0,
       "mode": "organic",
       "scheduled_at": "2026-10-14T23:06:17+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "commuter",
+        "clicked_ids": [],
+        "events": [
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0171",
+            "visitor": "bd6ed294705d",
+            "customer": "demo-organic-52",
+            "email": "ellen.ripley.organic-52@example.com",
+            "products": [
+              {
+                "id": 10109,
+                "price": 136,
+                "quantity": 1
+              },
+              {
+                "id": 10146,
+                "price": 89,
+                "quantity": 1
+              }
+            ]
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0171",
+          "visitor": "bd6ed294705d",
+          "customer": "demo-organic-52",
+          "email": "ellen.ripley.organic-52@example.com",
+          "products": [
+            {
+              "id": 10109,
+              "price": 136,
+              "quantity": 1
+            },
+            {
+              "id": 10146,
+              "price": 89,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 225.0,
+        "estimated_profit": 83.87
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     },
     {
       "id": "demo-2026-10-14-0125",
@@ -5580,7 +11036,36 @@
       "profile": 2,
       "mode": "browse",
       "scheduled_at": "2026-10-14T23:08:33+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "wardrobe-refresh",
+        "clicked_ids": [
+          10061
+        ],
+        "events": [
+          {
+            "api": "recommendations/category/popular",
+            "category": 103,
+            "visitor": "835fc04a7f76",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "835fc04a7f76",
+            "product": 10061,
+            "n": 2,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-14T23:59:59.128129+02:00"
     }
   ]
 }
