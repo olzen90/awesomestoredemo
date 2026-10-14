@@ -1547,8 +1547,140 @@
       "profile": 3,
       "mode": "clerk",
       "scheduled_at": "2026-10-14T12:01:20+02:00",
-      "status": "in_progress",
-      "channel": "search"
+      "status": "completed",
+      "channel": "search",
+      "outcome": {
+        "profile": "home-host",
+        "channel": "search",
+        "clicked_ids": [
+          10267
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "75fc600ef416",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "75fc600ef416",
+            "email": "tony.stark.assisted-69@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "75fc600ef416",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/lighting-objects",
+            "category": "403"
+          },
+          {
+            "api": "search/search",
+            "visitor": "75fc600ef416",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ],
+            "query": "suitcase"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "75fc600ef416",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=brass+desk+lamp"
+          },
+          {
+            "api": "search/search",
+            "visitor": "75fc600ef416",
+            "limit": 12,
+            "labels": [
+              "Search - Results"
+            ],
+            "query": "brass desk lamp"
+          },
+          {
+            "api": "log/click",
+            "visitor": "75fc600ef416",
+            "product": 10267,
+            "n": 2,
+            "labels": [
+              "Search - Results"
+            ],
+            "source_api": "search/search"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "75fc600ef416",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/arc-brass-desk-lamp-10267",
+            "product": "10267"
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "75fc600ef416",
+            "email": "tony.stark.assisted-69@example.com",
+            "products": [
+              {
+                "id": 10267,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "75fc600ef416",
+            "email": "tony.stark.assisted-69@example.com",
+            "products": [
+              {
+                "id": 10267,
+                "quantity": 2
+              }
+            ]
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "75fc600ef416",
+            "url": "https://olzen90.github.io/awesomestoredemo/cart/"
+          },
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0122",
+            "visitor": "75fc600ef416",
+            "customer": "demo-assisted-69",
+            "email": "tony.stark.assisted-69@example.com",
+            "products": [
+              {
+                "id": 10267,
+                "price": 98,
+                "quantity": 2
+              }
+            ]
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "75fc600ef416",
+            "email": "tony.stark.assisted-69@example.com",
+            "products": []
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "75fc600ef416",
+            "url": "https://olzen90.github.io/awesomestoredemo/checkout/success/"
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0122",
+          "visitor": "75fc600ef416",
+          "customer": "demo-assisted-69",
+          "email": "tony.stark.assisted-69@example.com",
+          "products": [
+            {
+              "id": 10267,
+              "price": 98,
+              "quantity": 2
+            }
+          ]
+        },
+        "revenue": 196.0,
+        "estimated_profit": 84.28
+      },
+      "processed_at": "2026-10-14T14:22:21.280789+02:00"
     },
     {
       "id": "demo-2026-10-14-0101",
