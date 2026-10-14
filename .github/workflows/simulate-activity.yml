@@ -1,0 +1,92 @@
+name: Simulate Awesome Store activity
+
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Preview only (no Clerk API requests)
+        type: boolean
+        default: true
+      preview_full_day:
+        description: Dry run only - preview the complete current day
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: awesome-store-simulation
+  cancel-in-progress: false
+
+jobs:
+  simulate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      SIMULATION_ENABLED: ${{ vars.SIMULATION_ENABLED }}
+      CLERK_API_KEY: ${{ secrets.CLERK_API_KEY }}
+      MIN_DAILY_ORDERS: ${{ vars.MIN_DAILY_ORDERS || '50' }}
+      MAX_DAILY_ORDERS: ${{ vars.MAX_DAILY_ORDERS || '50' }}
+      STATE_DIR: .simulation-state
+      MANUAL_DRY_RUN: ${{ inputs.dry_run }}
+      PREVIEW_FULL_DAY: ${{ inputs.preview_full_day }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test simulator
+        run: python -m unittest discover -s scripts/tests -v
+      - name: Load persistent simulation state
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          if git ls-remote --exit-code --heads origin simulator-state > /dev/null; then
+            git fetch origin simulator-state
+            git worktree add --detach "$STATE_DIR" FETCH_HEAD
+          else
+            status=$?
+            if [ "$status" != 2 ]; then
+              echo 'Cannot read simulation state branch; stopping.'
+              exit "$status"
+            fi
+            git worktree add --detach "$STATE_DIR" HEAD
+            git -C "$STATE_DIR" switch --orphan simulator-state
+          fi
+      - name: Generate shopping activity
+        shell: bash
+        run: |
+          set -euo pipefail
+          args=(--state-dir "$STATE_DIR" --checkpoint-git --min-orders "$MIN_DAILY_ORDERS" --max-orders "$MAX_DAILY_ORDERS")
+          if [ "$SIMULATION_ENABLED" = true ] && [ "$MANUAL_DRY_RUN" != true ]; then
+            args+=(--live)
+          elif [ "$PREVIEW_FULL_DAY" = true ]; then
+            preview_time=$(python -c 'from datetime import datetime; from zoneinfo import ZoneInfo; print(datetime.now(ZoneInfo("Europe/Copenhagen")).replace(hour=23, minute=59, second=59).isoformat())')
+            args+=(--now "$preview_time" --max-sessions 1000)
+          fi
+          python scripts/simulate_activity.py "${args[@]}"
+      - name: Preserve final state after an interrupted batch
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -d "$STATE_DIR" ]; then
+            git -C "$STATE_DIR" add -- '*.json'
+            if ! git -C "$STATE_DIR" diff --cached --quiet; then
+              git -C "$STATE_DIR" commit -m 'Record simulator outcome'
+              git -C "$STATE_DIR" push origin HEAD:refs/heads/simulator-state
+            fi
+          fi
+      - name: Upload run records
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: simulation-records-${{ github.run_id }}
+          path: ${{ env.STATE_DIR }}/**/*.json
+          if-no-files-found: ignore
+          retention-days: 30
