@@ -1,0 +1,2508 @@
+{
+  "version": 1,
+  "date": "2026-10-14",
+  "target_orders": 50,
+  "timezone": "Europe/Copenhagen",
+  "sessions": [
+    {
+      "id": "demo-2026-10-14-0081",
+      "visitor": "b909fc52cd8e",
+      "customer": "demo-assisted-2026-10-14-81",
+      "email": "leia.organa.assisted-2026-10-14-81@example.com",
+      "profile": 0,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T01:00:24+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0039",
+      "visitor": "1b4320edd4b9",
+      "customer": "demo-assisted-2026-10-14-39",
+      "email": "hermione.granger.assisted-2026-10-14-39@example.com",
+      "profile": 2,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T01:03:34+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0089",
+      "visitor": "8239eb5925d6",
+      "customer": "demo-assisted-2026-10-14-89",
+      "email": "frodo.baggins.assisted-2026-10-14-89@example.com",
+      "profile": 1,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T01:12:55+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0016",
+      "visitor": "7c975f1b4d64",
+      "customer": "demo-assisted-94",
+      "email": "leia.organa.assisted-94@example.com",
+      "profile": 5,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T03:06:43+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0143",
+      "visitor": "9da79ab919f1",
+      "customer": "demo-organic-70",
+      "email": "luke.skywalker.organic-70@example.com",
+      "profile": 2,
+      "mode": "organic",
+      "scheduled_at": "2026-10-14T03:14:55+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0229",
+      "visitor": "5d042d7299a2",
+      "customer": "demo-assisted-36",
+      "email": "jeanluc.picard.assisted-36@example.com",
+      "profile": 1,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T05:03:29+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0136",
+      "visitor": "3be8ecff4d9c",
+      "customer": "demo-assisted-2026-10-14-136",
+      "email": "tony.stark.assisted-2026-10-14-136@example.com",
+      "profile": 5,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T05:07:45+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0159",
+      "visitor": "04c4aaee727f",
+      "customer": "demo-assisted-2026-10-14-159",
+      "email": "ellen.ripley.assisted-2026-10-14-159@example.com",
+      "profile": 3,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T05:09:43+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0047",
+      "visitor": "8d4cfec56283",
+      "customer": "demo-assisted-2026-10-14-47",
+      "email": "luke.skywalker.assisted-2026-10-14-47@example.com",
+      "profile": 1,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T05:14:37+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0193",
+      "visitor": "6922661bd658",
+      "customer": "demo-assisted-2026-10-14-193",
+      "email": "tony.stark.assisted-2026-10-14-193@example.com",
+      "profile": 4,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T06:03:44+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0112",
+      "visitor": "bd7e78254cb4",
+      "customer": "demo-assisted-2026-10-14-112",
+      "email": "neo.assisted-2026-10-14-112@example.com",
+      "profile": 4,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T06:05:47+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0227",
+      "visitor": "7d65facda1ec",
+      "customer": "demo-assisted-2026-10-14-227",
+      "email": "leia.organa.assisted-2026-10-14-227@example.com",
+      "profile": 6,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T06:06:04+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0176",
+      "visitor": "f97c09ddf8fb",
+      "customer": "demo-organic-2026-10-14-176",
+      "email": "tony.stark.organic-2026-10-14-176@example.com",
+      "profile": 0,
+      "mode": "organic",
+      "scheduled_at": "2026-10-14T06:09:23+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0169",
+      "visitor": "149b48e5be9a",
+      "customer": "demo-assisted-59",
+      "email": "leia.organa.assisted-59@example.com",
+      "profile": 4,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T07:01:17+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0205",
+      "visitor": "11ff54c2e8d1",
+      "customer": "demo-assisted-2026-10-14-205",
+      "email": "leia.organa.assisted-2026-10-14-205@example.com",
+      "profile": 5,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T07:01:37+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0180",
+      "visitor": "0696407f2e06",
+      "customer": "demo-assisted-2026-10-14-180",
+      "email": "ellen.ripley.assisted-2026-10-14-180@example.com",
+      "profile": 1,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T07:03:49+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0242",
+      "visitor": "c83cafc493b5",
+      "customer": "demo-assisted-46",
+      "email": "neo.assisted-46@example.com",
+      "profile": 6,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T07:06:42+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0107",
+      "visitor": "1f1c40576d9c",
+      "customer": "demo-assisted-71",
+      "email": "ellen.ripley.assisted-71@example.com",
+      "profile": 0,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T07:07:09+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0177",
+      "visitor": "967aba56e48e",
+      "customer": "demo-assisted-2026-10-14-177",
+      "email": "jeanluc.picard.assisted-2026-10-14-177@example.com",
+      "profile": 2,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T07:11:05+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0200",
+      "visitor": "d12c0285bd24",
+      "customer": "demo-assisted-2026-10-14-200",
+      "email": "frodo.baggins.assisted-2026-10-14-200@example.com",
+      "profile": 3,
+      "mode": "clerk",
+      "scheduled_at": "2026-10-14T07:14:49+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0007",
+      "visitor": "189d60d11fd0",
+      "customer": "demo-assisted-2026-10-14-7",
+      "email": "frodo.baggins.assisted-2026-10-14-7@example.com",
+      "profile": 3,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T08:03:28+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0147",
+      "visitor": "478c89c9cfab",
+      "customer": "demo-assisted-41",
+      "email": "luke.skywalker.assisted-41@example.com",
+      "profile": 6,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T08:08:43+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0021",
+      "visitor": "6f37d67fda10",
+      "customer": "demo-assisted-2026-10-14-21",
+      "email": "luke.skywalker.assisted-2026-10-14-21@example.com",
+      "profile": 6,
+      "mode": "mixed",
+      "scheduled_at": "2026-10-14T08:09:03+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0217",
+      "visitor": "dc91da265710",
+      "customer": "demo-assisted-2026-10-14-217",
+      "email": "leia.organa.assisted-2026-10-14-217@example.com",
+      "profile": 4,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T08:10:05+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0108",
+      "visitor": "9ec4cd60003a",
+      "customer": "demo-assisted-2026-10-14-108",
+      "email": "frodo.baggins.assisted-2026-10-14-108@example.com",
+      "profile": 3,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T08:11:03+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0024",
+      "visitor": "af8c53837975",
+      "customer": "demo-assisted-26",
+      "email": "frodo.baggins.assisted-26@example.com",
+      "profile": 6,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T08:11:09+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0065",
+      "visitor": "4d45735511f8",
+      "customer": "demo-assisted-28",
+      "email": "jeanluc.picard.assisted-28@example.com",
+      "profile": 5,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T08:12:17+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0192",
+      "visitor": "8e49f631d367",
+      "customer": "demo-assisted-2026-10-14-192",
+      "email": "luke.skywalker.assisted-2026-10-14-192@example.com",
+      "profile": 5,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T08:12:36+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0146",
+      "visitor": "5516a3a317a7",
+      "customer": "demo-assisted-2026-10-14-146",
+      "email": "jeanluc.picard.assisted-2026-10-14-146@example.com",
+      "profile": 2,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T08:12:39+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0084",
+      "visitor": "4d504075ecb9",
+      "customer": "demo-assisted-2026-10-14-84",
+      "email": "luke.skywalker.assisted-2026-10-14-84@example.com",
+      "profile": 5,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T08:13:28+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0114",
+      "visitor": "7f5d92f2bcfc",
+      "customer": "demo-assisted-2026-10-14-114",
+      "email": "frodo.baggins.assisted-2026-10-14-114@example.com",
+      "profile": 2,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T08:15:44+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0151",
+      "visitor": "2cdeea3e05d9",
+      "customer": "demo-assisted-2026-10-14-151",
+      "email": "leia.organa.assisted-2026-10-14-151@example.com",
+      "profile": 5,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T08:16:34+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0063",
+      "visitor": "414423b86e3e",
+      "customer": "demo-assisted-2026-10-14-63",
+      "email": "hermione.granger.assisted-2026-10-14-63@example.com",
+      "profile": 3,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T09:00:34+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0240",
+      "visitor": "1a306d78be4f",
+      "customer": "demo-assisted-7",
+      "email": "ellen.ripley.assisted-7@example.com",
+      "profile": 4,
+      "mode": "clerk",
+      "scheduled_at": "2026-10-14T09:01:09+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0187",
+      "visitor": "3c3f11a58913",
+      "customer": "demo-assisted-2026-10-14-187",
+      "email": "jeanluc.picard.assisted-2026-10-14-187@example.com",
+      "profile": 4,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T09:04:16+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0066",
+      "visitor": "df3932ea4352",
+      "customer": "demo-assisted-2026-10-14-66",
+      "email": "tony.stark.assisted-2026-10-14-66@example.com",
+      "profile": 6,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T09:05:28+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0086",
+      "visitor": "26d67f05d9f5",
+      "customer": "demo-assisted-107",
+      "email": "jeanluc.picard.assisted-107@example.com",
+      "profile": 6,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T09:07:21+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0011",
+      "visitor": "d3b4c93037f6",
+      "customer": "demo-assisted-2026-10-14-11",
+      "email": "luke.skywalker.assisted-2026-10-14-11@example.com",
+      "profile": 5,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T09:08:28+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0083",
+      "visitor": "10ab49bdc456",
+      "customer": "demo-assisted-2026-10-14-83",
+      "email": "leia.organa.assisted-2026-10-14-83@example.com",
+      "profile": 1,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T09:10:17+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0189",
+      "visitor": "048b167ba76a",
+      "customer": "demo-assisted-2026-10-14-189",
+      "email": "neo.assisted-2026-10-14-189@example.com",
+      "profile": 5,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T09:10:42+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0224",
+      "visitor": "3efce2487d72",
+      "customer": "demo-assisted-2026-10-14-224",
+      "email": "tony.stark.assisted-2026-10-14-224@example.com",
+      "profile": 3,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T09:11:51+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0210",
+      "visitor": "83ec7e25db5f",
+      "customer": "demo-assisted-72",
+      "email": "frodo.baggins.assisted-72@example.com",
+      "profile": 3,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T09:13:14+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0241",
+      "visitor": "123114ff8272",
+      "customer": "demo-assisted-2026-10-14-241",
+      "email": "luke.skywalker.assisted-2026-10-14-241@example.com",
+      "profile": 0,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T09:16:17+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0228",
+      "visitor": "dc64ff0221b0",
+      "customer": "demo-assisted-2026-10-14-228",
+      "email": "jeanluc.picard.assisted-2026-10-14-228@example.com",
+      "profile": 6,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T09:16:26+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0196",
+      "visitor": "af8c53837975",
+      "customer": "demo-assisted-26",
+      "email": "ellen.ripley.assisted-26@example.com",
+      "profile": 3,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T09:16:29+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0017",
+      "visitor": "063ffa2b0a5b",
+      "customer": "demo-assisted-2026-10-14-17",
+      "email": "tony.stark.assisted-2026-10-14-17@example.com",
+      "profile": 2,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T09:16:48+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0092",
+      "visitor": "77aff5f6b2f0",
+      "customer": "demo-assisted-2026-10-14-92",
+      "email": "frodo.baggins.assisted-2026-10-14-92@example.com",
+      "profile": 2,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T09:16:49+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0225",
+      "visitor": "e89cb4d5bb72",
+      "customer": "demo-assisted-73",
+      "email": "luke.skywalker.assisted-73@example.com",
+      "profile": 6,
+      "mode": "mixed",
+      "scheduled_at": "2026-10-14T09:16:51+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0119",
+      "visitor": "bbcc9bf21b55",
+      "customer": "demo-assisted-2026-10-14-119",
+      "email": "frodo.baggins.assisted-2026-10-14-119@example.com",
+      "profile": 2,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T09:16:54+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0202",
+      "visitor": "f22c19c048c1",
+      "customer": "demo-assisted-89",
+      "email": "hermione.granger.assisted-89@example.com",
+      "profile": 5,
+      "mode": "mixed",
+      "scheduled_at": "2026-10-14T10:01:58+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0170",
+      "visitor": "3fee3a42024c",
+      "customer": "demo-assisted-2026-10-14-170",
+      "email": "leia.organa.assisted-2026-10-14-170@example.com",
+      "profile": 3,
+      "mode": "mixed",
+      "scheduled_at": "2026-10-14T10:03:24+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0109",
+      "visitor": "be6b04edfff3",
+      "customer": "demo-organic-12",
+      "email": "luke.skywalker.organic-12@example.com",
+      "profile": 6,
+      "mode": "organic",
+      "scheduled_at": "2026-10-14T10:04:50+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0120",
+      "visitor": "f83f0289ee16",
+      "customer": "demo-organic-2026-10-14-120",
+      "email": "frodo.baggins.organic-2026-10-14-120@example.com",
+      "profile": 0,
+      "mode": "organic",
+      "scheduled_at": "2026-10-14T10:06:24+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0103",
+      "visitor": "f0448f6bd6d6",
+      "customer": "demo-assisted-86",
+      "email": "neo.assisted-86@example.com",
+      "profile": 2,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T10:15:07+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0214",
+      "visitor": "20915202c0c7",
+      "customer": "demo-assisted-2026-10-14-214",
+      "email": "leia.organa.assisted-2026-10-14-214@example.com",
+      "profile": 4,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T10:15:55+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0138",
+      "visitor": "6eb63aec01e1",
+      "customer": "demo-assisted-2026-10-14-138",
+      "email": "luke.skywalker.assisted-2026-10-14-138@example.com",
+      "profile": 0,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T11:04:11+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0111",
+      "visitor": "67263f212c32",
+      "customer": "demo-assisted-2026-10-14-111",
+      "email": "jeanluc.picard.assisted-2026-10-14-111@example.com",
+      "profile": 4,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T11:07:14+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0126",
+      "visitor": "5c38f1ea95d1",
+      "customer": "demo-assisted-2026-10-14-126",
+      "email": "ellen.ripley.assisted-2026-10-14-126@example.com",
+      "profile": 2,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T11:07:49+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0071",
+      "visitor": "b97ef4746c80",
+      "customer": "demo-assisted-2026-10-14-71",
+      "email": "hermione.granger.assisted-2026-10-14-71@example.com",
+      "profile": 1,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T11:08:14+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0010",
+      "visitor": "1d62c42350d1",
+      "customer": "demo-assisted-2026-10-14-10",
+      "email": "hermione.granger.assisted-2026-10-14-10@example.com",
+      "profile": 1,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T11:08:18+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0056",
+      "visitor": "2d07665d3afe",
+      "customer": "demo-assisted-2026-10-14-56",
+      "email": "hermione.granger.assisted-2026-10-14-56@example.com",
+      "profile": 4,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T11:09:21+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0239",
+      "visitor": "7cf9ab00f881",
+      "customer": "demo-organic-2026-10-14-239",
+      "email": "jeanluc.picard.organic-2026-10-14-239@example.com",
+      "profile": 5,
+      "mode": "organic",
+      "scheduled_at": "2026-10-14T11:10:19+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0095",
+      "visitor": "b069a31ac084",
+      "customer": "demo-assisted-2026-10-14-95",
+      "email": "tony.stark.assisted-2026-10-14-95@example.com",
+      "profile": 5,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T11:10:35+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0154",
+      "visitor": "6f22f4566f66",
+      "customer": "demo-assisted-2026-10-14-154",
+      "email": "jeanluc.picard.assisted-2026-10-14-154@example.com",
+      "profile": 3,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T11:14:04+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0101",
+      "visitor": "96c73065b1f0",
+      "customer": "demo-assisted-8",
+      "email": "ellen.ripley.assisted-8@example.com",
+      "profile": 4,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T11:15:24+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0073",
+      "visitor": "01e1a128b1c0",
+      "customer": "demo-assisted-2026-10-14-73",
+      "email": "leia.organa.assisted-2026-10-14-73@example.com",
+      "profile": 3,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T11:15:32+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0045",
+      "visitor": "b43dbfec96aa",
+      "customer": "demo-assisted-2026-10-14-45",
+      "email": "jeanluc.picard.assisted-2026-10-14-45@example.com",
+      "profile": 2,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T11:16:29+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0139",
+      "visitor": "75fc600ef416",
+      "customer": "demo-assisted-69",
+      "email": "tony.stark.assisted-69@example.com",
+      "profile": 3,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T12:01:20+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0118",
+      "visitor": "45c963195cc1",
+      "customer": "demo-assisted-2026-10-14-118",
+      "email": "frodo.baggins.assisted-2026-10-14-118@example.com",
+      "profile": 0,
+      "mode": "clerk",
+      "scheduled_at": "2026-10-14T12:02:10+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0155",
+      "visitor": "c984f165db53",
+      "customer": "demo-assisted-2026-10-14-155",
+      "email": "luke.skywalker.assisted-2026-10-14-155@example.com",
+      "profile": 6,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T12:04:06+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0232",
+      "visitor": "93e7c970688d",
+      "customer": "demo-assisted-2026-10-14-232",
+      "email": "hermione.granger.assisted-2026-10-14-232@example.com",
+      "profile": 5,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T12:08:30+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0185",
+      "visitor": "92e8b782808d",
+      "customer": "demo-assisted-2026-10-14-185",
+      "email": "ellen.ripley.assisted-2026-10-14-185@example.com",
+      "profile": 3,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T12:08:47+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0121",
+      "visitor": "8fbdda6b5ff6",
+      "customer": "demo-assisted-2026-10-14-121",
+      "email": "hermione.granger.assisted-2026-10-14-121@example.com",
+      "profile": 4,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T12:10:09+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0002",
+      "visitor": "b6f3366b9980",
+      "customer": "demo-assisted-2026-10-14-2",
+      "email": "leia.organa.assisted-2026-10-14-2@example.com",
+      "profile": 5,
+      "mode": "mixed",
+      "scheduled_at": "2026-10-14T12:11:50+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0080",
+      "visitor": "ec08719082b1",
+      "customer": "demo-assisted-2026-10-14-80",
+      "email": "frodo.baggins.assisted-2026-10-14-80@example.com",
+      "profile": 6,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T12:15:10+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0060",
+      "visitor": "8fb6ada81fdd",
+      "customer": "demo-assisted-101",
+      "email": "neo.assisted-101@example.com",
+      "profile": 3,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T12:16:09+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0226",
+      "visitor": "aa62500db0e5",
+      "customer": "demo-assisted-2026-10-14-226",
+      "email": "luke.skywalker.assisted-2026-10-14-226@example.com",
+      "profile": 0,
+      "mode": "clerk",
+      "scheduled_at": "2026-10-14T13:00:24+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0088",
+      "visitor": "1c469d6bf241",
+      "customer": "demo-assisted-2026-10-14-88",
+      "email": "frodo.baggins.assisted-2026-10-14-88@example.com",
+      "profile": 0,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T13:01:18+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0145",
+      "visitor": "681990d4ae3c",
+      "customer": "demo-assisted-2026-10-14-145",
+      "email": "ellen.ripley.assisted-2026-10-14-145@example.com",
+      "profile": 4,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T13:02:30+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0245",
+      "visitor": "f6f26d693109",
+      "customer": "demo-assisted-2026-10-14-245",
+      "email": "tony.stark.assisted-2026-10-14-245@example.com",
+      "profile": 2,
+      "mode": "clerk",
+      "scheduled_at": "2026-10-14T13:03:40+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0207",
+      "visitor": "773af183f1f2",
+      "customer": "demo-assisted-2026-10-14-207",
+      "email": "luke.skywalker.assisted-2026-10-14-207@example.com",
+      "profile": 0,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T13:04:00+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0238",
+      "visitor": "e89c44638a83",
+      "customer": "demo-assisted-2026-10-14-238",
+      "email": "luke.skywalker.assisted-2026-10-14-238@example.com",
+      "profile": 2,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T13:04:40+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0174",
+      "visitor": "2e68a45fd969",
+      "customer": "demo-assisted-2026-10-14-174",
+      "email": "neo.assisted-2026-10-14-174@example.com",
+      "profile": 2,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T13:06:29+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0105",
+      "visitor": "252a7bfadf7e",
+      "customer": "demo-assisted-2026-10-14-105",
+      "email": "leia.organa.assisted-2026-10-14-105@example.com",
+      "profile": 6,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T13:07:13+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0116",
+      "visitor": "2997d61c295e",
+      "customer": "demo-assisted-61",
+      "email": "luke.skywalker.assisted-61@example.com",
+      "profile": 0,
+      "mode": "mixed",
+      "scheduled_at": "2026-10-14T13:12:49+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0153",
+      "visitor": "1ffc62efec56",
+      "customer": "demo-assisted-2026-10-14-153",
+      "email": "frodo.baggins.assisted-2026-10-14-153@example.com",
+      "profile": 2,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T13:13:46+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0149",
+      "visitor": "b0516eef6ee9",
+      "customer": "demo-assisted-2026-10-14-149",
+      "email": "tony.stark.assisted-2026-10-14-149@example.com",
+      "profile": 2,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T13:14:03+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0003",
+      "visitor": "f65a03fa7d2e",
+      "customer": "demo-assisted-2026-10-14-3",
+      "email": "tony.stark.assisted-2026-10-14-3@example.com",
+      "profile": 5,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T13:14:37+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0248",
+      "visitor": "f821c30802a1",
+      "customer": "demo-assisted-2026-10-14-248",
+      "email": "neo.assisted-2026-10-14-248@example.com",
+      "profile": 4,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T13:15:11+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0132",
+      "visitor": "393bd24a3e3b",
+      "customer": "demo-organic-2026-10-14-132",
+      "email": "jeanluc.picard.organic-2026-10-14-132@example.com",
+      "profile": 6,
+      "mode": "organic",
+      "scheduled_at": "2026-10-14T13:15:40+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0075",
+      "visitor": "c90155814e8f",
+      "customer": "demo-assisted-2026-10-14-75",
+      "email": "neo.assisted-2026-10-14-75@example.com",
+      "profile": 3,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T13:16:22+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0179",
+      "visitor": "ccb888741e07",
+      "customer": "demo-assisted-79",
+      "email": "neo.assisted-79@example.com",
+      "profile": 0,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T13:16:35+02:00",
+      "status": "in_progress"
+    },
+    {
+      "id": "demo-2026-10-14-0087",
+      "visitor": "3db00e143c9b",
+      "customer": "demo-assisted-2026-10-14-87",
+      "email": "ellen.ripley.assisted-2026-10-14-87@example.com",
+      "profile": 5,
+      "mode": "mixed",
+      "scheduled_at": "2026-10-14T14:00:04+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0124",
+      "visitor": "d0a01fa09d11",
+      "customer": "demo-assisted-2026-10-14-124",
+      "email": "leia.organa.assisted-2026-10-14-124@example.com",
+      "profile": 3,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T14:01:18+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0117",
+      "visitor": "8f4f89a902e1",
+      "customer": "demo-assisted-2026-10-14-117",
+      "email": "tony.stark.assisted-2026-10-14-117@example.com",
+      "profile": 1,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T14:03:38+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0082",
+      "visitor": "c71985753894",
+      "customer": "demo-assisted-2026-10-14-82",
+      "email": "ellen.ripley.assisted-2026-10-14-82@example.com",
+      "profile": 4,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T14:03:43+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0122",
+      "visitor": "858aa4355927",
+      "customer": "demo-assisted-2026-10-14-122",
+      "email": "tony.stark.assisted-2026-10-14-122@example.com",
+      "profile": 6,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T14:04:59+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0115",
+      "visitor": "630636dfdf40",
+      "customer": "demo-assisted-15",
+      "email": "ellen.ripley.assisted-15@example.com",
+      "profile": 3,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T14:05:33+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0134",
+      "visitor": "05d9fc5d3796",
+      "customer": "demo-assisted-2026-10-14-134",
+      "email": "ellen.ripley.assisted-2026-10-14-134@example.com",
+      "profile": 4,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T14:08:51+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0013",
+      "visitor": "96e5af686de0",
+      "customer": "demo-organic-2026-10-14-13",
+      "email": "luke.skywalker.organic-2026-10-14-13@example.com",
+      "profile": 5,
+      "mode": "organic",
+      "scheduled_at": "2026-10-14T14:08:55+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0015",
+      "visitor": "b3a093bed597",
+      "customer": "demo-assisted-2026-10-14-15",
+      "email": "ellen.ripley.assisted-2026-10-14-15@example.com",
+      "profile": 0,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T14:09:29+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0068",
+      "visitor": "e4b38928b982",
+      "customer": "demo-assisted-43",
+      "email": "jeanluc.picard.assisted-43@example.com",
+      "profile": 0,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T14:10:51+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0243",
+      "visitor": "c1aeb3ceb0c5",
+      "customer": "demo-assisted-2026-10-14-243",
+      "email": "hermione.granger.assisted-2026-10-14-243@example.com",
+      "profile": 2,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T14:11:43+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0019",
+      "visitor": "dab1ce1be971",
+      "customer": "demo-assisted-2026-10-14-19",
+      "email": "hermione.granger.assisted-2026-10-14-19@example.com",
+      "profile": 2,
+      "mode": "mixed",
+      "scheduled_at": "2026-10-14T14:14:11+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0055",
+      "visitor": "df4047346fa0",
+      "customer": "demo-assisted-2026-10-14-55",
+      "email": "luke.skywalker.assisted-2026-10-14-55@example.com",
+      "profile": 4,
+      "mode": "mixed",
+      "scheduled_at": "2026-10-14T14:16:37+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0001",
+      "visitor": "e020090b321b",
+      "customer": "demo-assisted-2026-10-14-1",
+      "email": "luke.skywalker.assisted-2026-10-14-1@example.com",
+      "profile": 5,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T15:05:56+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0033",
+      "visitor": "e92b0cc92a66",
+      "customer": "demo-assisted-2026-10-14-33",
+      "email": "frodo.baggins.assisted-2026-10-14-33@example.com",
+      "profile": 2,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T15:06:58+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0164",
+      "visitor": "f22c19c048c1",
+      "customer": "demo-assisted-89",
+      "email": "luke.skywalker.assisted-89@example.com",
+      "profile": 4,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T15:07:29+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0215",
+      "visitor": "02af65156c9a",
+      "customer": "demo-assisted-2026-10-14-215",
+      "email": "neo.assisted-2026-10-14-215@example.com",
+      "profile": 0,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T15:07:36+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0057",
+      "visitor": "723c1b1c9779",
+      "customer": "demo-assisted-2026-10-14-57",
+      "email": "jeanluc.picard.assisted-2026-10-14-57@example.com",
+      "profile": 6,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T15:09:14+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0206",
+      "visitor": "6fb1f32105d6",
+      "customer": "demo-assisted-2026-10-14-206",
+      "email": "tony.stark.assisted-2026-10-14-206@example.com",
+      "profile": 0,
+      "mode": "clerk",
+      "scheduled_at": "2026-10-14T15:11:19+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0104",
+      "visitor": "392677d5268d",
+      "customer": "demo-assisted-2026-10-14-104",
+      "email": "ellen.ripley.assisted-2026-10-14-104@example.com",
+      "profile": 2,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T15:11:29+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0231",
+      "visitor": "daa8b043ecd4",
+      "customer": "demo-assisted-2026-10-14-231",
+      "email": "jeanluc.picard.assisted-2026-10-14-231@example.com",
+      "profile": 1,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T15:12:45+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0026",
+      "visitor": "e4b38928b982",
+      "customer": "demo-assisted-43",
+      "email": "leia.organa.assisted-43@example.com",
+      "profile": 3,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T15:13:31+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0190",
+      "visitor": "b91e7616f603",
+      "customer": "demo-assisted-14",
+      "email": "ellen.ripley.assisted-14@example.com",
+      "profile": 3,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T15:13:33+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0106",
+      "visitor": "2e69876bc166",
+      "customer": "demo-assisted-2026-10-14-106",
+      "email": "leia.organa.assisted-2026-10-14-106@example.com",
+      "profile": 5,
+      "mode": "mixed",
+      "scheduled_at": "2026-10-14T15:13:49+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0131",
+      "visitor": "7f64fcf67d8e",
+      "customer": "demo-assisted-2026-10-14-131",
+      "email": "leia.organa.assisted-2026-10-14-131@example.com",
+      "profile": 3,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T15:14:01+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0168",
+      "visitor": "0f6acabdfe87",
+      "customer": "demo-organic-2026-10-14-168",
+      "email": "leia.organa.organic-2026-10-14-168@example.com",
+      "profile": 4,
+      "mode": "organic",
+      "scheduled_at": "2026-10-14T15:16:56+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0160",
+      "visitor": "da027cc57670",
+      "customer": "demo-assisted-70",
+      "email": "frodo.baggins.assisted-70@example.com",
+      "profile": 2,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T16:00:56+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0162",
+      "visitor": "fe3588004e4f",
+      "customer": "demo-assisted-2026-10-14-162",
+      "email": "frodo.baggins.assisted-2026-10-14-162@example.com",
+      "profile": 2,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T16:01:50+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0049",
+      "visitor": "1f1c40576d9c",
+      "customer": "demo-assisted-71",
+      "email": "hermione.granger.assisted-71@example.com",
+      "profile": 3,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T16:04:06+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0212",
+      "visitor": "a0bdab30de02",
+      "customer": "demo-assisted-2026-10-14-212",
+      "email": "frodo.baggins.assisted-2026-10-14-212@example.com",
+      "profile": 0,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T16:04:09+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0127",
+      "visitor": "a39ccb341311",
+      "customer": "demo-assisted-2026-10-14-127",
+      "email": "leia.organa.assisted-2026-10-14-127@example.com",
+      "profile": 6,
+      "mode": "mixed",
+      "scheduled_at": "2026-10-14T16:04:35+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0110",
+      "visitor": "66a4da63a6f5",
+      "customer": "demo-assisted-38",
+      "email": "ellen.ripley.assisted-38@example.com",
+      "profile": 1,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T16:06:40+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0022",
+      "visitor": "9fbd1b694a0c",
+      "customer": "demo-assisted-2026-10-14-22",
+      "email": "frodo.baggins.assisted-2026-10-14-22@example.com",
+      "profile": 1,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T16:10:45+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0008",
+      "visitor": "bec750450cf8",
+      "customer": "demo-assisted-2026-10-14-8",
+      "email": "frodo.baggins.assisted-2026-10-14-8@example.com",
+      "profile": 3,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T16:12:56+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0006",
+      "visitor": "43315c8a6bd9",
+      "customer": "demo-assisted-2026-10-14-6",
+      "email": "luke.skywalker.assisted-2026-10-14-6@example.com",
+      "profile": 2,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T16:13:07+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0000",
+      "visitor": "983261ac258a",
+      "customer": "demo-assisted-2026-10-14-0",
+      "email": "luke.skywalker.assisted-2026-10-14-0@example.com",
+      "profile": 5,
+      "mode": "mixed",
+      "scheduled_at": "2026-10-14T16:14:28+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0220",
+      "visitor": "8d81f6aa07da",
+      "customer": "demo-assisted-102",
+      "email": "hermione.granger.assisted-102@example.com",
+      "profile": 4,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T16:15:49+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0076",
+      "visitor": "b91e7616f603",
+      "customer": "demo-assisted-14",
+      "email": "ellen.ripley.assisted-14@example.com",
+      "profile": 3,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T17:00:39+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0186",
+      "visitor": "8e1916ec91bc",
+      "customer": "demo-assisted-2026-10-14-186",
+      "email": "hermione.granger.assisted-2026-10-14-186@example.com",
+      "profile": 4,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T17:01:03+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0161",
+      "visitor": "2a9e51758216",
+      "customer": "demo-assisted-2026-10-14-161",
+      "email": "neo.assisted-2026-10-14-161@example.com",
+      "profile": 5,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T17:01:24+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0070",
+      "visitor": "2c9cabb93fc6",
+      "customer": "demo-assisted-2026-10-14-70",
+      "email": "ellen.ripley.assisted-2026-10-14-70@example.com",
+      "profile": 1,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T17:05:16+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0052",
+      "visitor": "a4270be940d9",
+      "customer": "demo-assisted-17",
+      "email": "luke.skywalker.assisted-17@example.com",
+      "profile": 5,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T17:05:49+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0197",
+      "visitor": "79ce93893a59",
+      "customer": "demo-assisted-2026-10-14-197",
+      "email": "neo.assisted-2026-10-14-197@example.com",
+      "profile": 1,
+      "mode": "mixed",
+      "scheduled_at": "2026-10-14T17:06:59+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0041",
+      "visitor": "c861c076818b",
+      "customer": "demo-assisted-2026-10-14-41",
+      "email": "ellen.ripley.assisted-2026-10-14-41@example.com",
+      "profile": 1,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T17:07:17+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0144",
+      "visitor": "d96d21fbeb6a",
+      "customer": "demo-assisted-90",
+      "email": "hermione.granger.assisted-90@example.com",
+      "profile": 1,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T17:07:27+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0150",
+      "visitor": "35ea68b315bb",
+      "customer": "demo-assisted-2026-10-14-150",
+      "email": "neo.assisted-2026-10-14-150@example.com",
+      "profile": 1,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T17:07:32+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0233",
+      "visitor": "c1dabe1832e6",
+      "customer": "demo-organic-2026-10-14-233",
+      "email": "hermione.granger.organic-2026-10-14-233@example.com",
+      "profile": 0,
+      "mode": "organic",
+      "scheduled_at": "2026-10-14T17:08:10+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0054",
+      "visitor": "11afe8105e16",
+      "customer": "demo-assisted-2026-10-14-54",
+      "email": "luke.skywalker.assisted-2026-10-14-54@example.com",
+      "profile": 3,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T17:08:11+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0027",
+      "visitor": "9285a47a6b1e",
+      "customer": "demo-assisted-3",
+      "email": "tony.stark.assisted-3@example.com",
+      "profile": 0,
+      "mode": "mixed",
+      "scheduled_at": "2026-10-14T17:08:29+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0032",
+      "visitor": "5ed32e7718d7",
+      "customer": "demo-assisted-2026-10-14-32",
+      "email": "leia.organa.assisted-2026-10-14-32@example.com",
+      "profile": 2,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T17:09:10+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0018",
+      "visitor": "49905d358afb",
+      "customer": "demo-assisted-78",
+      "email": "neo.assisted-78@example.com",
+      "profile": 6,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T17:09:20+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0043",
+      "visitor": "411c108ce761",
+      "customer": "demo-assisted-2026-10-14-43",
+      "email": "leia.organa.assisted-2026-10-14-43@example.com",
+      "profile": 0,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T17:11:47+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0050",
+      "visitor": "3c79150de1a6",
+      "customer": "demo-assisted-2026-10-14-50",
+      "email": "frodo.baggins.assisted-2026-10-14-50@example.com",
+      "profile": 4,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T17:12:04+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0097",
+      "visitor": "b0ec482e30f6",
+      "customer": "demo-assisted-2026-10-14-97",
+      "email": "frodo.baggins.assisted-2026-10-14-97@example.com",
+      "profile": 1,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T17:12:28+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0042",
+      "visitor": "6078907e8b37",
+      "customer": "demo-assisted-2026-10-14-42",
+      "email": "ellen.ripley.assisted-2026-10-14-42@example.com",
+      "profile": 3,
+      "mode": "clerk",
+      "scheduled_at": "2026-10-14T17:12:38+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0123",
+      "visitor": "e89cb4d5bb72",
+      "customer": "demo-assisted-73",
+      "email": "frodo.baggins.assisted-73@example.com",
+      "profile": 5,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T17:13:33+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0064",
+      "visitor": "85a639881c6a",
+      "customer": "demo-assisted-2026-10-14-64",
+      "email": "hermione.granger.assisted-2026-10-14-64@example.com",
+      "profile": 5,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T17:15:07+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0014",
+      "visitor": "75fc600ef416",
+      "customer": "demo-assisted-69",
+      "email": "jeanluc.picard.assisted-69@example.com",
+      "profile": 3,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T17:16:17+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0234",
+      "visitor": "2d77b11f0b91",
+      "customer": "demo-assisted-2026-10-14-234",
+      "email": "jeanluc.picard.assisted-2026-10-14-234@example.com",
+      "profile": 3,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T17:16:25+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0156",
+      "visitor": "6d74a19f6ddc",
+      "customer": "demo-assisted-2026-10-14-156",
+      "email": "tony.stark.assisted-2026-10-14-156@example.com",
+      "profile": 3,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T17:16:30+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0181",
+      "visitor": "89f8661e48d6",
+      "customer": "demo-assisted-11",
+      "email": "ellen.ripley.assisted-11@example.com",
+      "profile": 5,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T18:01:54+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0249",
+      "visitor": "d96d21fbeb6a",
+      "customer": "demo-assisted-90",
+      "email": "ellen.ripley.assisted-90@example.com",
+      "profile": 5,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T18:03:04+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0201",
+      "visitor": "336f63b1fd4a",
+      "customer": "demo-assisted-2026-10-14-201",
+      "email": "ellen.ripley.assisted-2026-10-14-201@example.com",
+      "profile": 3,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T18:03:21+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0237",
+      "visitor": "88a7a19f2248",
+      "customer": "demo-organic-2026-10-14-237",
+      "email": "luke.skywalker.organic-2026-10-14-237@example.com",
+      "profile": 2,
+      "mode": "organic",
+      "scheduled_at": "2026-10-14T18:04:26+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0204",
+      "visitor": "1a3511bb0540",
+      "customer": "demo-assisted-2026-10-14-204",
+      "email": "leia.organa.assisted-2026-10-14-204@example.com",
+      "profile": 6,
+      "mode": "clerk",
+      "scheduled_at": "2026-10-14T18:05:50+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0178",
+      "visitor": "d73f98c3c34e",
+      "customer": "demo-assisted-2026-10-14-178",
+      "email": "hermione.granger.assisted-2026-10-14-178@example.com",
+      "profile": 0,
+      "mode": "clerk",
+      "scheduled_at": "2026-10-14T18:07:16+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0085",
+      "visitor": "775306f431c2",
+      "customer": "demo-assisted-103",
+      "email": "leia.organa.assisted-103@example.com",
+      "profile": 2,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T18:08:08+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0195",
+      "visitor": "ac26c2d0824a",
+      "customer": "demo-assisted-2026-10-14-195",
+      "email": "frodo.baggins.assisted-2026-10-14-195@example.com",
+      "profile": 3,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T18:08:14+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0048",
+      "visitor": "758db8d82401",
+      "customer": "demo-organic-103",
+      "email": "luke.skywalker.organic-103@example.com",
+      "profile": 3,
+      "mode": "organic",
+      "scheduled_at": "2026-10-14T18:08:22+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0129",
+      "visitor": "c91dcd5a2468",
+      "customer": "demo-assisted-2026-10-14-129",
+      "email": "ellen.ripley.assisted-2026-10-14-129@example.com",
+      "profile": 0,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T18:08:30+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0135",
+      "visitor": "cf10c9acfb5b",
+      "customer": "demo-assisted-10",
+      "email": "ellen.ripley.assisted-10@example.com",
+      "profile": 2,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T18:09:39+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0167",
+      "visitor": "a4b7ba0d9de5",
+      "customer": "demo-assisted-2026-10-14-167",
+      "email": "luke.skywalker.assisted-2026-10-14-167@example.com",
+      "profile": 4,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T18:11:23+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0004",
+      "visitor": "661e4f5ba68e",
+      "customer": "demo-assisted-2026-10-14-4",
+      "email": "neo.assisted-2026-10-14-4@example.com",
+      "profile": 2,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T18:11:44+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0222",
+      "visitor": "731d04e33e4f",
+      "customer": "demo-assisted-2026-10-14-222",
+      "email": "hermione.granger.assisted-2026-10-14-222@example.com",
+      "profile": 3,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T18:14:01+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0078",
+      "visitor": "7b7f95993155",
+      "customer": "demo-assisted-2026-10-14-78",
+      "email": "luke.skywalker.assisted-2026-10-14-78@example.com",
+      "profile": 0,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T19:01:31+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0133",
+      "visitor": "22e891592ca1",
+      "customer": "demo-assisted-31",
+      "email": "hermione.granger.assisted-31@example.com",
+      "profile": 3,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T19:01:37+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0223",
+      "visitor": "52d53408181b",
+      "customer": "demo-assisted-2026-10-14-223",
+      "email": "neo.assisted-2026-10-14-223@example.com",
+      "profile": 2,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T19:01:50+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0099",
+      "visitor": "7c9c852e7955",
+      "customer": "demo-assisted-2026-10-14-99",
+      "email": "frodo.baggins.assisted-2026-10-14-99@example.com",
+      "profile": 3,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T19:02:14+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0028",
+      "visitor": "0670c2fa1164",
+      "customer": "demo-assisted-2026-10-14-28",
+      "email": "neo.assisted-2026-10-14-28@example.com",
+      "profile": 2,
+      "mode": "mixed",
+      "scheduled_at": "2026-10-14T19:04:05+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0072",
+      "visitor": "315e8b7f31ca",
+      "customer": "demo-assisted-2026-10-14-72",
+      "email": "hermione.granger.assisted-2026-10-14-72@example.com",
+      "profile": 3,
+      "mode": "clerk",
+      "scheduled_at": "2026-10-14T19:04:26+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0194",
+      "visitor": "ea59d36712df",
+      "customer": "demo-assisted-2026-10-14-194",
+      "email": "luke.skywalker.assisted-2026-10-14-194@example.com",
+      "profile": 2,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T19:04:26+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0036",
+      "visitor": "6d2a99aed3e8",
+      "customer": "demo-assisted-2026-10-14-36",
+      "email": "jeanluc.picard.assisted-2026-10-14-36@example.com",
+      "profile": 1,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T19:05:13+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0100",
+      "visitor": "b79a7c16186f",
+      "customer": "demo-assisted-2026-10-14-100",
+      "email": "hermione.granger.assisted-2026-10-14-100@example.com",
+      "profile": 3,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T19:05:52+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0218",
+      "visitor": "ac67fbef9d1b",
+      "customer": "demo-assisted-2026-10-14-218",
+      "email": "ellen.ripley.assisted-2026-10-14-218@example.com",
+      "profile": 6,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T19:06:37+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0141",
+      "visitor": "3a6f49c99413",
+      "customer": "demo-assisted-2026-10-14-141",
+      "email": "neo.assisted-2026-10-14-141@example.com",
+      "profile": 4,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T19:07:31+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0069",
+      "visitor": "478c89c9cfab",
+      "customer": "demo-assisted-41",
+      "email": "hermione.granger.assisted-41@example.com",
+      "profile": 0,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T19:07:48+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0152",
+      "visitor": "65b5081363e0",
+      "customer": "demo-assisted-88",
+      "email": "jeanluc.picard.assisted-88@example.com",
+      "profile": 3,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T19:07:52+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0037",
+      "visitor": "2a3e6512ecbe",
+      "customer": "demo-assisted-2026-10-14-37",
+      "email": "hermione.granger.assisted-2026-10-14-37@example.com",
+      "profile": 4,
+      "mode": "mixed",
+      "scheduled_at": "2026-10-14T19:08:08+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0025",
+      "visitor": "6c000414247f",
+      "customer": "demo-assisted-2026-10-14-25",
+      "email": "hermione.granger.assisted-2026-10-14-25@example.com",
+      "profile": 0,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T19:08:22+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0175",
+      "visitor": "181c732301f8",
+      "customer": "demo-assisted-109",
+      "email": "hermione.granger.assisted-109@example.com",
+      "profile": 2,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T19:08:26+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0188",
+      "visitor": "b747bec553a7",
+      "customer": "demo-assisted-2026-10-14-188",
+      "email": "leia.organa.assisted-2026-10-14-188@example.com",
+      "profile": 6,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T19:09:29+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0166",
+      "visitor": "3e629cc3ade9",
+      "customer": "demo-assisted-2026-10-14-166",
+      "email": "jeanluc.picard.assisted-2026-10-14-166@example.com",
+      "profile": 1,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T19:10:16+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0096",
+      "visitor": "c710d5a053e1",
+      "customer": "demo-assisted-2026-10-14-96",
+      "email": "ellen.ripley.assisted-2026-10-14-96@example.com",
+      "profile": 2,
+      "mode": "mixed",
+      "scheduled_at": "2026-10-14T19:10:36+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0246",
+      "visitor": "f275c43031a8",
+      "customer": "demo-assisted-2026-10-14-246",
+      "email": "neo.assisted-2026-10-14-246@example.com",
+      "profile": 1,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T19:10:39+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0198",
+      "visitor": "d96d21fbeb6a",
+      "customer": "demo-assisted-90",
+      "email": "ellen.ripley.assisted-90@example.com",
+      "profile": 0,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T19:11:29+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0140",
+      "visitor": "1b9ad113441c",
+      "customer": "demo-assisted-2026-10-14-140",
+      "email": "jeanluc.picard.assisted-2026-10-14-140@example.com",
+      "profile": 1,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T19:12:34+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0067",
+      "visitor": "04c4766d18bd",
+      "customer": "demo-assisted-2026-10-14-67",
+      "email": "ellen.ripley.assisted-2026-10-14-67@example.com",
+      "profile": 5,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T19:12:40+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0236",
+      "visitor": "183fd23687d3",
+      "customer": "demo-assisted-2026-10-14-236",
+      "email": "frodo.baggins.assisted-2026-10-14-236@example.com",
+      "profile": 0,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T19:12:47+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0203",
+      "visitor": "d80485f1812c",
+      "customer": "demo-assisted-2026-10-14-203",
+      "email": "leia.organa.assisted-2026-10-14-203@example.com",
+      "profile": 6,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T19:13:00+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0157",
+      "visitor": "ae8c63664971",
+      "customer": "demo-assisted-2026-10-14-157",
+      "email": "leia.organa.assisted-2026-10-14-157@example.com",
+      "profile": 4,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T19:14:43+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0213",
+      "visitor": "6944c230c562",
+      "customer": "demo-organic-2026-10-14-213",
+      "email": "frodo.baggins.organic-2026-10-14-213@example.com",
+      "profile": 1,
+      "mode": "organic",
+      "scheduled_at": "2026-10-14T19:15:43+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0165",
+      "visitor": "af8c53837975",
+      "customer": "demo-assisted-26",
+      "email": "luke.skywalker.assisted-26@example.com",
+      "profile": 5,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T19:15:55+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0173",
+      "visitor": "365fc7782093",
+      "customer": "demo-assisted-2026-10-14-173",
+      "email": "tony.stark.assisted-2026-10-14-173@example.com",
+      "profile": 6,
+      "mode": "clerk",
+      "scheduled_at": "2026-10-14T19:16:34+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0059",
+      "visitor": "07523d3414df",
+      "customer": "demo-assisted-2026-10-14-59",
+      "email": "frodo.baggins.assisted-2026-10-14-59@example.com",
+      "profile": 6,
+      "mode": "mixed",
+      "scheduled_at": "2026-10-14T19:16:40+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0172",
+      "visitor": "fb1a7cd3e24c",
+      "customer": "demo-assisted-2026-10-14-172",
+      "email": "leia.organa.assisted-2026-10-14-172@example.com",
+      "profile": 5,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T19:16:47+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0051",
+      "visitor": "6b2c0f1afe3a",
+      "customer": "demo-assisted-2026-10-14-51",
+      "email": "leia.organa.assisted-2026-10-14-51@example.com",
+      "profile": 1,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T20:00:40+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0091",
+      "visitor": "27479defb3c5",
+      "customer": "demo-assisted-2026-10-14-91",
+      "email": "frodo.baggins.assisted-2026-10-14-91@example.com",
+      "profile": 6,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T20:01:39+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0208",
+      "visitor": "3d3feb424618",
+      "customer": "demo-assisted-117",
+      "email": "neo.assisted-117@example.com",
+      "profile": 4,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T20:01:44+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0137",
+      "visitor": "4f323bcf6c64",
+      "customer": "demo-assisted-2026-10-14-137",
+      "email": "tony.stark.assisted-2026-10-14-137@example.com",
+      "profile": 0,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T20:01:48+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0093",
+      "visitor": "5997c369dd60",
+      "customer": "demo-assisted-2026-10-14-93",
+      "email": "hermione.granger.assisted-2026-10-14-93@example.com",
+      "profile": 4,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T20:01:57+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0148",
+      "visitor": "da027cc57670",
+      "customer": "demo-assisted-70",
+      "email": "ellen.ripley.assisted-70@example.com",
+      "profile": 2,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T20:03:20+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0219",
+      "visitor": "b34a4acda349",
+      "customer": "demo-assisted-2026-10-14-219",
+      "email": "neo.assisted-2026-10-14-219@example.com",
+      "profile": 5,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T20:05:04+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0128",
+      "visitor": "076460db4bf9",
+      "customer": "demo-assisted-2026-10-14-128",
+      "email": "hermione.granger.assisted-2026-10-14-128@example.com",
+      "profile": 1,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T20:06:37+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0130",
+      "visitor": "07f19b510f36",
+      "customer": "demo-assisted-2026-10-14-130",
+      "email": "jeanluc.picard.assisted-2026-10-14-130@example.com",
+      "profile": 0,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T20:07:21+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0113",
+      "visitor": "ae6e89ffc7a8",
+      "customer": "demo-assisted-2026-10-14-113",
+      "email": "ellen.ripley.assisted-2026-10-14-113@example.com",
+      "profile": 5,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T20:07:45+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0094",
+      "visitor": "06e34d5e9565",
+      "customer": "demo-assisted-2026-10-14-94",
+      "email": "luke.skywalker.assisted-2026-10-14-94@example.com",
+      "profile": 4,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T20:07:47+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0058",
+      "visitor": "301bf36ceb35",
+      "customer": "demo-organic-2026-10-14-58",
+      "email": "frodo.baggins.organic-2026-10-14-58@example.com",
+      "profile": 0,
+      "mode": "organic",
+      "scheduled_at": "2026-10-14T20:08:36+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0046",
+      "visitor": "07e3ed4040c9",
+      "customer": "demo-assisted-2026-10-14-46",
+      "email": "luke.skywalker.assisted-2026-10-14-46@example.com",
+      "profile": 1,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T20:08:46+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0216",
+      "visitor": "d19e09d4e09f",
+      "customer": "demo-assisted-95",
+      "email": "tony.stark.assisted-95@example.com",
+      "profile": 2,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T20:09:14+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0020",
+      "visitor": "d064d5e62127",
+      "customer": "demo-assisted-2026-10-14-20",
+      "email": "frodo.baggins.assisted-2026-10-14-20@example.com",
+      "profile": 2,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T20:09:22+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0079",
+      "visitor": "f21725d792ad",
+      "customer": "demo-assisted-66",
+      "email": "neo.assisted-66@example.com",
+      "profile": 4,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T20:10:26+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0244",
+      "visitor": "26eac8128c40",
+      "customer": "demo-assisted-2026-10-14-244",
+      "email": "leia.organa.assisted-2026-10-14-244@example.com",
+      "profile": 4,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T20:11:46+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0221",
+      "visitor": "48eafdf59d78",
+      "customer": "demo-assisted-2026-10-14-221",
+      "email": "tony.stark.assisted-2026-10-14-221@example.com",
+      "profile": 3,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T20:11:57+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0183",
+      "visitor": "6b0d2756ccf3",
+      "customer": "demo-organic-15",
+      "email": "tony.stark.organic-15@example.com",
+      "profile": 1,
+      "mode": "organic",
+      "scheduled_at": "2026-10-14T20:13:05+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0098",
+      "visitor": "9e6c522cc8ba",
+      "customer": "demo-assisted-2026-10-14-98",
+      "email": "ellen.ripley.assisted-2026-10-14-98@example.com",
+      "profile": 2,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T20:13:57+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0142",
+      "visitor": "b91e7616f603",
+      "customer": "demo-assisted-14",
+      "email": "hermione.granger.assisted-14@example.com",
+      "profile": 1,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T20:16:46+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0163",
+      "visitor": "e4b38928b982",
+      "customer": "demo-assisted-43",
+      "email": "tony.stark.assisted-43@example.com",
+      "profile": 3,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T21:01:25+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0191",
+      "visitor": "a568b5a2440e",
+      "customer": "demo-assisted-2026-10-14-191",
+      "email": "frodo.baggins.assisted-2026-10-14-191@example.com",
+      "profile": 1,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T21:01:53+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0182",
+      "visitor": "319ec115738d",
+      "customer": "demo-assisted-2026-10-14-182",
+      "email": "tony.stark.assisted-2026-10-14-182@example.com",
+      "profile": 6,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T21:02:11+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0074",
+      "visitor": "65b5081363e0",
+      "customer": "demo-assisted-88",
+      "email": "neo.assisted-88@example.com",
+      "profile": 4,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T21:05:16+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0199",
+      "visitor": "836c444110ad",
+      "customer": "demo-assisted-106",
+      "email": "jeanluc.picard.assisted-106@example.com",
+      "profile": 6,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T21:06:17+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0044",
+      "visitor": "be4e93c3760c",
+      "customer": "demo-assisted-2026-10-14-44",
+      "email": "leia.organa.assisted-2026-10-14-44@example.com",
+      "profile": 6,
+      "mode": "mixed",
+      "scheduled_at": "2026-10-14T21:06:41+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0023",
+      "visitor": "34d7d539ae08",
+      "customer": "demo-assisted-2026-10-14-23",
+      "email": "leia.organa.assisted-2026-10-14-23@example.com",
+      "profile": 1,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T21:06:47+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0211",
+      "visitor": "ba7de2a33af9",
+      "customer": "demo-assisted-76",
+      "email": "frodo.baggins.assisted-76@example.com",
+      "profile": 2,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T21:07:19+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0102",
+      "visitor": "506b331496aa",
+      "customer": "demo-assisted-2026-10-14-102",
+      "email": "neo.assisted-2026-10-14-102@example.com",
+      "profile": 0,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T21:07:38+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0030",
+      "visitor": "de3a71d244f5",
+      "customer": "demo-assisted-112",
+      "email": "frodo.baggins.assisted-112@example.com",
+      "profile": 5,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T21:07:51+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0062",
+      "visitor": "9b38a8efccee",
+      "customer": "demo-assisted-2026-10-14-62",
+      "email": "luke.skywalker.assisted-2026-10-14-62@example.com",
+      "profile": 5,
+      "mode": "mixed",
+      "scheduled_at": "2026-10-14T21:09:16+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0209",
+      "visitor": "db662f9de176",
+      "customer": "demo-assisted-2026-10-14-209",
+      "email": "tony.stark.assisted-2026-10-14-209@example.com",
+      "profile": 5,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T21:10:11+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0090",
+      "visitor": "acfd82f3e5fe",
+      "customer": "demo-assisted-2026-10-14-90",
+      "email": "hermione.granger.assisted-2026-10-14-90@example.com",
+      "profile": 4,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T21:10:59+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0053",
+      "visitor": "fc6935841e3b",
+      "customer": "demo-organic-2026-10-14-53",
+      "email": "hermione.granger.organic-2026-10-14-53@example.com",
+      "profile": 5,
+      "mode": "organic",
+      "scheduled_at": "2026-10-14T21:11:34+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0012",
+      "visitor": "22e891592ca1",
+      "customer": "demo-assisted-31",
+      "email": "neo.assisted-31@example.com",
+      "profile": 1,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T21:11:53+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0040",
+      "visitor": "775306f431c2",
+      "customer": "demo-assisted-103",
+      "email": "luke.skywalker.assisted-103@example.com",
+      "profile": 3,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T21:12:02+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0158",
+      "visitor": "f8c3f30af301",
+      "customer": "demo-assisted-2026-10-14-158",
+      "email": "frodo.baggins.assisted-2026-10-14-158@example.com",
+      "profile": 3,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T21:13:44+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0035",
+      "visitor": "965b225d7fdd",
+      "customer": "demo-assisted-2026-10-14-35",
+      "email": "leia.organa.assisted-2026-10-14-35@example.com",
+      "profile": 5,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T21:14:21+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0077",
+      "visitor": "15d4ac2eebdd",
+      "customer": "demo-assisted-2026-10-14-77",
+      "email": "tony.stark.assisted-2026-10-14-77@example.com",
+      "profile": 1,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T21:14:58+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0009",
+      "visitor": "f0449ad7f623",
+      "customer": "demo-assisted-55",
+      "email": "jeanluc.picard.assisted-55@example.com",
+      "profile": 3,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T21:15:06+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0247",
+      "visitor": "d9b62f65cdb2",
+      "customer": "demo-assisted-2026-10-14-247",
+      "email": "tony.stark.assisted-2026-10-14-247@example.com",
+      "profile": 2,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T21:16:14+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0184",
+      "visitor": "32764ffe299a",
+      "customer": "demo-assisted-2026-10-14-184",
+      "email": "tony.stark.assisted-2026-10-14-184@example.com",
+      "profile": 3,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T22:02:21+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0235",
+      "visitor": "94087f3816e1",
+      "customer": "demo-assisted-2026-10-14-235",
+      "email": "luke.skywalker.assisted-2026-10-14-235@example.com",
+      "profile": 4,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T22:03:41+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0029",
+      "visitor": "c72974f4c6c9",
+      "customer": "demo-organic-69",
+      "email": "neo.organic-69@example.com",
+      "profile": 4,
+      "mode": "organic",
+      "scheduled_at": "2026-10-14T22:03:57+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0230",
+      "visitor": "793b6130b0d6",
+      "customer": "demo-assisted-2026-10-14-230",
+      "email": "neo.assisted-2026-10-14-230@example.com",
+      "profile": 5,
+      "mode": "mixed",
+      "scheduled_at": "2026-10-14T22:04:25+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0034",
+      "visitor": "ad02b5b49bf2",
+      "customer": "demo-assisted-2026-10-14-34",
+      "email": "leia.organa.assisted-2026-10-14-34@example.com",
+      "profile": 6,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T22:08:51+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0061",
+      "visitor": "d2893dee78ad",
+      "customer": "demo-assisted-2026-10-14-61",
+      "email": "luke.skywalker.assisted-2026-10-14-61@example.com",
+      "profile": 1,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T22:10:03+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0038",
+      "visitor": "957a5ca1f90b",
+      "customer": "demo-assisted-2026-10-14-38",
+      "email": "frodo.baggins.assisted-2026-10-14-38@example.com",
+      "profile": 1,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T22:10:57+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0005",
+      "visitor": "555680496102",
+      "customer": "demo-assisted-2026-10-14-5",
+      "email": "jeanluc.picard.assisted-2026-10-14-5@example.com",
+      "profile": 1,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T22:12:34+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0031",
+      "visitor": "163ed7893179",
+      "customer": "demo-organic-28",
+      "email": "neo.organic-28@example.com",
+      "profile": 6,
+      "mode": "organic",
+      "scheduled_at": "2026-10-14T22:14:41+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0171",
+      "visitor": "bd6ed294705d",
+      "customer": "demo-organic-52",
+      "email": "ellen.ripley.organic-52@example.com",
+      "profile": 0,
+      "mode": "organic",
+      "scheduled_at": "2026-10-14T23:06:17+02:00",
+      "status": "pending"
+    },
+    {
+      "id": "demo-2026-10-14-0125",
+      "visitor": "835fc04a7f76",
+      "customer": "demo-assisted-2026-10-14-125",
+      "email": "neo.assisted-2026-10-14-125@example.com",
+      "profile": 2,
+      "mode": "browse",
+      "scheduled_at": "2026-10-14T23:08:33+02:00",
+      "status": "pending"
+    }
+  ]
+}
