@@ -104,6 +104,23 @@ which is **not a versioned public API**; contract changes fail closed. Returned
 client-tool hooks are not executed: they stop the journey for manual review.
 This does not yet simulate the Chat add-to-cart tool itself.
 
+### Demo account setup (14 October 2026)
+
+- Shared MJML design: **Awesome Store — Everyday picks**, ID `327953`.
+- Newsletter drafts: **Newsletter — Weekend essentials** (Visitor Recommendations)
+  and **Newsletter — Fresh everyday finds** (Newest Products).
+- Disabled flow: **Cart — Helpful reminder**, Abandoned Cart, four-hour delay,
+  Products In Cart.
+- Disabled flow: **After purchase — Complementary picks**, Made an Order,
+  seven-day delay, Recommendations Based On Orders.
+- Existing **Automated / Popular** embed is used for simulated Email clicks.
+
+Bounded live tests verified Search, Email and Chat orders in the Overview
+dashboard. Search query-insights tables still showed no queries after refreshing,
+despite successful v2/v3 Search responses and Search-attributed sales. Do not
+describe those tables as validated or fabricate their contents; this needs a
+separate tracking/aggregation investigation in Clerk.
+
 Keep flows disabled while testing synthetic tracking. Actual newsletter/flow
 delivery needs a verified sender domain and deliberately opted-in controlled
 test inboxes; `example.com` addresses must never receive marketing emails.
