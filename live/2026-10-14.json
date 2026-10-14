@@ -2678,8 +2678,211 @@
       "profile": 0,
       "mode": "mixed",
       "scheduled_at": "2026-10-14T14:10:51+02:00",
-      "status": "in_progress",
-      "channel": "search"
+      "status": "completed",
+      "channel": "search",
+      "outcome": {
+        "profile": "commuter",
+        "channel": "search",
+        "clicked_ids": [
+          10094
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "e4b38928b982",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "e4b38928b982",
+            "email": "jeanluc.picard.assisted-43@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "e4b38928b982",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/everyday-shoes",
+            "category": "201"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "e4b38928b982",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=groundwork+runner"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "e4b38928b982",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "groundwork runner"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "e4b38928b982",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=runner"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "e4b38928b982",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "runner"
+          },
+          {
+            "api": "log/click",
+            "visitor": "e4b38928b982",
+            "product": 10094,
+            "n": 11,
+            "labels": [
+              "Omni-search"
+            ],
+            "source_api": "search/omni"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "e4b38928b982",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/transit-black-runner-10094",
+            "product": "10094"
+          },
+          {
+            "api": "log/product",
+            "visitor": "e4b38928b982",
+            "product": "10094"
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "e4b38928b982",
+            "email": "jeanluc.picard.assisted-43@example.com",
+            "products": [
+              {
+                "id": 10094,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "e4b38928b982",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/everyday-natural-tote-10155",
+            "product": "10155"
+          },
+          {
+            "api": "log/product",
+            "visitor": "e4b38928b982",
+            "product": "10155"
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "e4b38928b982",
+            "email": "jeanluc.picard.assisted-43@example.com",
+            "products": [
+              {
+                "id": 10094,
+                "quantity": 1
+              },
+              {
+                "id": 10155,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "e4b38928b982",
+            "url": "https://olzen90.github.io/awesomestoredemo/cart/"
+          },
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-14-0051",
+            "visitor": "e4b38928b982",
+            "customer": "demo-assisted-43",
+            "email": "jeanluc.picard.assisted-43@example.com",
+            "products": [
+              {
+                "id": 10094,
+                "price": 136,
+                "quantity": 1
+              },
+              {
+                "id": 10155,
+                "price": 100,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "e4b38928b982",
+            "email": "jeanluc.picard.assisted-43@example.com",
+            "products": []
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "e4b38928b982",
+            "url": "https://olzen90.github.io/awesomestoredemo/checkout/success/"
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-14-0051",
+          "visitor": "e4b38928b982",
+          "customer": "demo-assisted-43",
+          "email": "jeanluc.picard.assisted-43@example.com",
+          "products": [
+            {
+              "id": 10094,
+              "price": 136,
+              "quantity": 1
+            },
+            {
+              "id": 10155,
+              "price": 100,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 236.0,
+        "estimated_profit": 87.34
+      },
+      "processed_at": "2026-10-14T14:45:20.752052+02:00"
     },
     {
       "id": "demo-2026-10-14-0226",
