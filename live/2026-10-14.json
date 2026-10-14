@@ -2678,7 +2678,8 @@
       "profile": 0,
       "mode": "mixed",
       "scheduled_at": "2026-10-14T14:10:51+02:00",
-      "status": "pending"
+      "status": "in_progress",
+      "channel": "search"
     },
     {
       "id": "demo-2026-10-14-0226",
