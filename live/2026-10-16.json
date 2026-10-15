@@ -19,7 +19,96 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-10-16T00:00:30+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "focused-workday",
+        "channel": "search",
+        "clicked_ids": [],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "35501732b5a0",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "35501732b5a0",
+            "email": "ellen.ripley.search-2026-10-16-184@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "35501732b5a0",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/power-audio",
+            "category": "502"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "35501732b5a0",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=chalk+desk+speaker"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "35501732b5a0",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "chalk desk speaker"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "35501732b5a0",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=desk+speaker"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "35501732b5a0",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "desk speaker"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-16T00:18:15.894331+02:00"
     },
     {
       "id": "demo-2026-10-16-0108",
@@ -30,7 +119,123 @@
       "mode": "organic",
       "channel": "organic",
       "scheduled_at": "2026-10-16T00:04:41+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "channel": "organic",
+        "clicked_ids": [],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "2d8cc1351c4c",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "2d8cc1351c4c",
+            "email": "luke.skywalker.organic-2026-10-16-108@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "2d8cc1351c4c",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/soft-goods",
+            "category": "402"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "2d8cc1351c4c",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/hearth-sage-throw-10235",
+            "product": "10235"
+          },
+          {
+            "api": "log/product",
+            "visitor": "2d8cc1351c4c",
+            "product": "10235"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "2d8cc1351c4c",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/focus-aluminum-candle-holder-10280",
+            "product": "10280"
+          },
+          {
+            "api": "log/product",
+            "visitor": "2d8cc1351c4c",
+            "product": "10280"
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "2d8cc1351c4c",
+            "email": "luke.skywalker.organic-2026-10-16-108@example.com",
+            "products": [
+              {
+                "id": 10235,
+                "quantity": 1
+              },
+              {
+                "id": 10280,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "2d8cc1351c4c",
+            "url": "https://olzen90.github.io/awesomestoredemo/cart/"
+          },
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-16-0108",
+            "visitor": "2d8cc1351c4c",
+            "customer": "demo-organic-2026-10-16-108",
+            "email": "luke.skywalker.organic-2026-10-16-108@example.com",
+            "products": [
+              {
+                "id": 10235,
+                "price": 96,
+                "quantity": 1
+              },
+              {
+                "id": 10280,
+                "price": 100,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "2d8cc1351c4c",
+            "email": "luke.skywalker.organic-2026-10-16-108@example.com",
+            "products": []
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "2d8cc1351c4c",
+            "url": "https://olzen90.github.io/awesomestoredemo/checkout/success/"
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-16-0108",
+          "visitor": "2d8cc1351c4c",
+          "customer": "demo-organic-2026-10-16-108",
+          "email": "luke.skywalker.organic-2026-10-16-108@example.com",
+          "products": [
+            {
+              "id": 10235,
+              "price": 96,
+              "quantity": 1
+            },
+            {
+              "id": 10280,
+              "price": 100,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 196.0,
+        "estimated_profit": 50.34
+      },
+      "processed_at": "2026-10-16T00:18:15.894331+02:00"
     },
     {
       "id": "demo-2026-10-16-0015",
