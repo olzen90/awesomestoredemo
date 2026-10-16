@@ -246,7 +246,66 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-10-16T01:04:10+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "slow-morning",
+        "channel": "email",
+        "clicked_ids": [
+          10365
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "f4f91449ae1d",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "f4f91449ae1d",
+            "email": "tony.stark.email-2026-10-16-15@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "f4f91449ae1d",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/bath-body",
+            "category": "601"
+          },
+          {
+            "api": "campaigns/click",
+            "embed": "automated-popular",
+            "product": 10365,
+            "n": 0,
+            "source_api": "recommendations/popular",
+            "labels": [
+              "Automated / Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "f4f91449ae1d",
+            "product": 10365,
+            "n": 0,
+            "labels": [
+              "Automated / Popular"
+            ],
+            "external": true,
+            "source_api": "recommendations/popular"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "f4f91449ae1d",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/steam-oat-bath-towel-edition-2-10365",
+            "product": "10365"
+          },
+          {
+            "api": "log/product",
+            "visitor": "f4f91449ae1d",
+            "product": "10365"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-16T03:20:51.572526+02:00"
     },
     {
       "id": "demo-2026-10-16-0030",
@@ -257,7 +316,80 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-10-16T02:04:40+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "commuter",
+        "channel": "recommendations",
+        "clicked_ids": [
+          10112
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "215b7fe5b3fe",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "215b7fe5b3fe",
+            "email": "frodo.baggins.recommendations-103@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "215b7fe5b3fe",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/everyday-shoes",
+            "category": "201"
+          },
+          {
+            "api": "recommendations/category/popular",
+            "category": 201,
+            "visitor": "215b7fe5b3fe",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "215b7fe5b3fe",
+            "product": 10112,
+            "n": 4,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "215b7fe5b3fe",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/pace-sage-runner-edition-2-10112",
+            "product": "10112"
+          },
+          {
+            "api": "log/product",
+            "visitor": "215b7fe5b3fe",
+            "product": "10112"
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "215b7fe5b3fe",
+            "email": "frodo.baggins.recommendations-103@example.com",
+            "products": [
+              {
+                "id": 10112,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "215b7fe5b3fe",
+            "url": "https://olzen90.github.io/awesomestoredemo/cart/"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-16T03:20:51.572526+02:00"
     },
     {
       "id": "demo-2026-10-16-0122",
@@ -268,7 +400,64 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-10-16T02:14:29+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "channel": "recommendations",
+        "clicked_ids": [
+          10425
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "1f6aeda5268d",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "1f6aeda5268d",
+            "email": "hermione.granger.recommendations-2026-10-16-122@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "1f6aeda5268d",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/camp-picnic",
+            "category": "701"
+          },
+          {
+            "api": "recommendations/category/popular",
+            "category": 701,
+            "visitor": "1f6aeda5268d",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "1f6aeda5268d",
+            "product": 10425,
+            "n": 0,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "1f6aeda5268d",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/pine-navy-camp-mug-edition-2-10425",
+            "product": "10425"
+          },
+          {
+            "api": "log/product",
+            "visitor": "1f6aeda5268d",
+            "product": "10425"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-16T03:20:51.572526+02:00"
     },
     {
       "id": "demo-2026-10-16-search-0042",
@@ -279,8 +468,136 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-10-16T03:07:06+02:00",
-      "status": "in_progress",
-      "search_volume": true
+      "status": "completed",
+      "search_volume": true,
+      "outcome": {
+        "profile": "home-host",
+        "channel": "search",
+        "clicked_ids": [
+          10278
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "975f15b6de6e",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "975f15b6de6e",
+            "email": "ellen.ripley.search-2026-10-16-42@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "975f15b6de6e",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/lighting-objects",
+            "category": "403"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "975f15b6de6e",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=plain+form+candle+holder"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "975f15b6de6e",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "plain form candle holder"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "975f15b6de6e",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=candle+holder"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "975f15b6de6e",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "candle holder"
+          },
+          {
+            "api": "log/click",
+            "visitor": "975f15b6de6e",
+            "product": 10278,
+            "n": 7,
+            "labels": [
+              "Omni-search"
+            ],
+            "source_api": "search/omni"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "975f15b6de6e",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/signal-warm-white-candle-holder-10278",
+            "product": "10278"
+          },
+          {
+            "api": "log/product",
+            "visitor": "975f15b6de6e",
+            "product": "10278"
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "975f15b6de6e",
+            "email": "ellen.ripley.search-2026-10-16-42@example.com",
+            "products": [
+              {
+                "id": 10278,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "975f15b6de6e",
+            "url": "https://olzen90.github.io/awesomestoredemo/cart/"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-16T03:20:51.572526+02:00"
     },
     {
       "id": "demo-2026-10-16-0150",
@@ -291,7 +608,64 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-10-16T03:11:08+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "channel": "search",
+        "clicked_ids": [],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "c72e11de8a18",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "c72e11de8a18",
+            "email": "jeanluc.picard.search-2026-10-16-150@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "c72e11de8a18",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/kitchen-table",
+            "category": "401"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "c72e11de8a18",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=chalk+serving+bowl"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "c72e11de8a18",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "chalk serving bowl"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-16T03:20:51.572526+02:00"
     },
     {
       "id": "demo-2026-10-16-0167",
