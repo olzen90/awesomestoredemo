@@ -19,7 +19,82 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-10-18T00:08:31+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "focused-workday",
+        "channel": "email",
+        "clicked_ids": [
+          10312
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "c937e096dded",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "c937e096dded",
+            "email": "tony.stark.email-2026-10-18-83@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "c937e096dded",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/desk-essentials",
+            "category": "501"
+          },
+          {
+            "api": "campaigns/click",
+            "embed": "automated-popular",
+            "product": 10312,
+            "n": 0,
+            "source_api": "recommendations/popular",
+            "labels": [
+              "Automated / Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "c937e096dded",
+            "product": 10312,
+            "n": 0,
+            "labels": [
+              "Automated / Popular"
+            ],
+            "external": true,
+            "source_api": "recommendations/popular"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "c937e096dded",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/grid-chalk-notebook-edition-2-10312",
+            "product": "10312"
+          },
+          {
+            "api": "log/product",
+            "visitor": "c937e096dded",
+            "product": "10312"
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "c937e096dded",
+            "email": "tony.stark.email-2026-10-18-83@example.com",
+            "products": [
+              {
+                "id": 10312,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "c937e096dded",
+            "url": "https://olzen90.github.io/awesomestoredemo/cart/"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-18T00:19:05.013113+02:00"
     },
     {
       "id": "demo-2026-10-18-0338",
@@ -30,7 +105,85 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-10-18T00:10:52+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "focused-workday",
+        "channel": "chat",
+        "clicked_ids": [
+          10295
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "b9c8b78d265b",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "b9c8b78d265b",
+            "email": "frodo.baggins.chat-2026-10-18-338@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "b9c8b78d265b",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/desk-essentials",
+            "category": "501"
+          },
+          {
+            "api": "chat/message",
+            "visitor": "b9c8b78d265b",
+            "chat_uid": "f1cac7fd-6d8c-4be9-be76-9b6971a70d5a",
+            "prompt": "I'm shopping for notebook for my focused workday. My budget is 220 euros. Can you show me suitable products?",
+            "message_types": [
+              "slider",
+              "text"
+            ],
+            "returned_ids": [
+              10314,
+              10312,
+              10295,
+              10311,
+              10294
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "b9c8b78d265b",
+            "product": 10295,
+            "n": 2,
+            "source_api": "assistant/search/products"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "b9c8b78d265b",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/record-navy-notebook-10295",
+            "product": "10295"
+          },
+          {
+            "api": "log/product",
+            "visitor": "b9c8b78d265b",
+            "product": "10295"
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "b9c8b78d265b",
+            "email": "frodo.baggins.chat-2026-10-18-338@example.com",
+            "products": [
+              {
+                "id": 10295,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "b9c8b78d265b",
+            "url": "https://olzen90.github.io/awesomestoredemo/cart/"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-18T00:19:05.013113+02:00"
     },
     {
       "id": "demo-2026-10-18-0458",
@@ -41,7 +194,82 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-10-18T00:13:28+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "channel": "email",
+        "clicked_ids": [
+          10165
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "80789bfb375f",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "80789bfb375f",
+            "email": "luke.skywalker.email-105@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "80789bfb375f",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/travel-accessories",
+            "category": "302"
+          },
+          {
+            "api": "campaigns/click",
+            "embed": "automated-popular",
+            "product": 10165,
+            "n": 0,
+            "source_api": "recommendations/popular",
+            "labels": [
+              "Automated / Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "80789bfb375f",
+            "product": 10165,
+            "n": 0,
+            "labels": [
+              "Automated / Popular"
+            ],
+            "external": true,
+            "source_api": "recommendations/popular"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "80789bfb375f",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/everyday-olive-daypack-10165",
+            "product": "10165"
+          },
+          {
+            "api": "log/product",
+            "visitor": "80789bfb375f",
+            "product": "10165"
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "80789bfb375f",
+            "email": "luke.skywalker.email-105@example.com",
+            "products": [
+              {
+                "id": 10165,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "80789bfb375f",
+            "url": "https://olzen90.github.io/awesomestoredemo/cart/"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-18T00:19:05.013113+02:00"
     },
     {
       "id": "demo-2026-10-18-0309",
