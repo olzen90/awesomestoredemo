@@ -280,7 +280,84 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-10-18T01:04:01+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "channel": "chat",
+        "clicked_ids": [
+          10271
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "2b8bf800c179",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "2b8bf800c179",
+            "email": "frodo.baggins.chat-23@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "2b8bf800c179",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/lighting-objects",
+            "category": "403"
+          },
+          {
+            "api": "chat/message",
+            "visitor": "2b8bf800c179",
+            "chat_uid": "3f1625cc-597a-4f8f-a1bf-55b4b66c098b",
+            "prompt": "I'm shopping for candle holder for my home host. My budget is 200 euros. Can you show me suitable products?",
+            "message_types": [
+              "slider",
+              "text"
+            ],
+            "returned_ids": [
+              10273,
+              10271,
+              10278,
+              10279
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "2b8bf800c179",
+            "product": 10271,
+            "n": 1,
+            "source_api": "assistant/search/products"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "2b8bf800c179",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/halo-brass-candle-holder-10271",
+            "product": "10271"
+          },
+          {
+            "api": "log/product",
+            "visitor": "2b8bf800c179",
+            "product": "10271"
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "2b8bf800c179",
+            "email": "frodo.baggins.chat-23@example.com",
+            "products": [
+              {
+                "id": 10271,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "2b8bf800c179",
+            "url": "https://olzen90.github.io/awesomestoredemo/cart/"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-18T03:02:46.098476+02:00"
     },
     {
       "id": "demo-2026-10-18-0158",
@@ -291,7 +368,64 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-10-18T01:10:03+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "slow-morning",
+        "channel": "recommendations",
+        "clicked_ids": [
+          10384
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "647fe3cf1c5b",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "647fe3cf1c5b",
+            "email": "neo.recommendations-2026-10-18-158@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "647fe3cf1c5b",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/movement",
+            "category": "602"
+          },
+          {
+            "api": "recommendations/category/popular",
+            "category": 602,
+            "visitor": "647fe3cf1c5b",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "647fe3cf1c5b",
+            "product": 10384,
+            "n": 3,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "647fe3cf1c5b",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/flow-forest-stretch-strap-10384",
+            "product": "10384"
+          },
+          {
+            "api": "log/product",
+            "visitor": "647fe3cf1c5b",
+            "product": "10384"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-18T03:02:46.098476+02:00"
     },
     {
       "id": "demo-2026-10-18-0119",
@@ -302,7 +436,64 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-10-18T02:01:32+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "focused-workday",
+        "channel": "search",
+        "clicked_ids": [],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "221a49d7c1fa",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "221a49d7c1fa",
+            "email": "ellen.ripley.search-2026-10-18-119@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "221a49d7c1fa",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/desk-essentials",
+            "category": "501"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "221a49d7c1fa",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=navy+notebook"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "221a49d7c1fa",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "navy notebook"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-18T03:02:46.098476+02:00"
     },
     {
       "id": "demo-2026-10-18-0187",
@@ -313,7 +504,98 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-10-18T02:11:24+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "channel": "chat",
+        "clicked_ids": [
+          10265
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "6cd4fa122a11",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "6cd4fa122a11",
+            "email": "frodo.baggins.chat-2026-10-18-187@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "6cd4fa122a11",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/lighting-objects",
+            "category": "403"
+          },
+          {
+            "api": "chat/message",
+            "visitor": "6cd4fa122a11",
+            "chat_uid": "99e3637d-1007-477c-9a83-7228063c8a4b",
+            "prompt": "I'm shopping for desk lamp for my home host. My budget is 200 euros. Can you show me suitable products?",
+            "message_types": [
+              "slider",
+              "text"
+            ],
+            "returned_ids": [
+              10266,
+              10287
+            ]
+          },
+          {
+            "api": "chat/message",
+            "visitor": "6cd4fa122a11",
+            "chat_uid": "99e3637d-1007-477c-9a83-7228063c8a4b",
+            "prompt": "I'm interested in North Black Desk Lamp. Please show that product and similar options under 200 euros.",
+            "message_types": [
+              "slider",
+              "text"
+            ],
+            "returned_ids": [
+              10265,
+              10269,
+              10261,
+              10263
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "6cd4fa122a11",
+            "product": 10265,
+            "n": 0,
+            "source_api": "assistant/search/products"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "6cd4fa122a11",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/north-black-desk-lamp-10265",
+            "product": "10265"
+          },
+          {
+            "api": "log/product",
+            "visitor": "6cd4fa122a11",
+            "product": "10265"
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "6cd4fa122a11",
+            "email": "frodo.baggins.chat-2026-10-18-187@example.com",
+            "products": [
+              {
+                "id": 10265,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "6cd4fa122a11",
+            "url": "https://olzen90.github.io/awesomestoredemo/cart/"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-18T03:02:46.098476+02:00"
     },
     {
       "id": "demo-2026-10-18-0412",
@@ -324,7 +606,64 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-10-18T02:15:47+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "thoughtful-gift",
+        "channel": "recommendations",
+        "clicked_ids": [
+          10492
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "45f3047a36b6",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "45f3047a36b6",
+            "email": "tony.stark.recommendations-93@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "45f3047a36b6",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/gifts-for-the-host",
+            "category": "802"
+          },
+          {
+            "api": "recommendations/category/popular",
+            "category": 802,
+            "visitor": "45f3047a36b6",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "45f3047a36b6",
+            "product": 10492,
+            "n": 1,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "45f3047a36b6",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/guest-natural-serving-board-10492",
+            "product": "10492"
+          },
+          {
+            "api": "log/product",
+            "visitor": "45f3047a36b6",
+            "product": "10492"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-18T03:02:46.098476+02:00"
     },
     {
       "id": "demo-2026-10-18-0461",
