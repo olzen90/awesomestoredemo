@@ -19,7 +19,119 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-10-19T00:05:04+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "slow-morning",
+        "channel": "search",
+        "clicked_ids": [
+          10371
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "137be3108bd5",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "137be3108bd5",
+            "email": "neo.search-2026-10-19-436@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "137be3108bd5",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/bath-body",
+            "category": "601"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "137be3108bd5",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=sage+bath+towel"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "137be3108bd5",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "sage bath towel"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "137be3108bd5",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=bath+towel"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "137be3108bd5",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "bath towel"
+          },
+          {
+            "api": "log/click",
+            "visitor": "137be3108bd5",
+            "product": 10371,
+            "n": 11,
+            "labels": [
+              "Omni-search"
+            ],
+            "source_api": "search/omni"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "137be3108bd5",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/daily-chalk-bath-towel-edition-2-10371",
+            "product": "10371"
+          },
+          {
+            "api": "log/product",
+            "visitor": "137be3108bd5",
+            "product": "10371"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-19T01:12:39.181550+02:00"
     },
     {
       "id": "demo-2026-10-19-0167",
@@ -30,7 +142,70 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-10-19T00:15:53+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "wardrobe-refresh",
+        "channel": "chat",
+        "clicked_ids": [
+          10031
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "5d4afff7b17d",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "5d4afff7b17d",
+            "email": "jeanluc.picard.chat-2026-10-19-167@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "5d4afff7b17d",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/tops",
+            "category": "102"
+          },
+          {
+            "api": "chat/message",
+            "visitor": "5d4afff7b17d",
+            "chat_uid": "22bfb971-0014-484c-8f13-a2000acd1071",
+            "prompt": "I'm shopping for t-shirt for my wardrobe refresh. My budget is 220 euros. Can you show me suitable products?",
+            "message_types": [
+              "slider",
+              "text"
+            ],
+            "returned_ids": [
+              10052,
+              10057,
+              10053,
+              10031,
+              10055,
+              10054
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "5d4afff7b17d",
+            "product": 10031,
+            "n": 3,
+            "source_api": "assistant/search/products"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "5d4afff7b17d",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/rib-coral-t-shirt-10031",
+            "product": "10031"
+          },
+          {
+            "api": "log/product",
+            "visitor": "5d4afff7b17d",
+            "product": "10031"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-19T01:12:39.181550+02:00"
     },
     {
       "id": "demo-2026-10-19-0316",
@@ -41,7 +216,66 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-10-19T01:02:43+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "channel": "email",
+        "clicked_ids": [
+          10165
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "d70939ec5790",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "d70939ec5790",
+            "email": "ellen.ripley.email-2026-10-19-316@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "d70939ec5790",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/travel-accessories",
+            "category": "302"
+          },
+          {
+            "api": "campaigns/click",
+            "embed": "automated-popular",
+            "product": 10165,
+            "n": 0,
+            "source_api": "recommendations/popular",
+            "labels": [
+              "Automated / Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "d70939ec5790",
+            "product": 10165,
+            "n": 0,
+            "labels": [
+              "Automated / Popular"
+            ],
+            "external": true,
+            "source_api": "recommendations/popular"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "d70939ec5790",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/everyday-olive-daypack-10165",
+            "product": "10165"
+          },
+          {
+            "api": "log/product",
+            "visitor": "d70939ec5790",
+            "product": "10165"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-19T01:12:39.181550+02:00"
     },
     {
       "id": "demo-2026-10-19-0285",
@@ -52,7 +286,119 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-10-19T01:07:10+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "commuter",
+        "channel": "search",
+        "clicked_ids": [
+          10146
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "92a0d69f03e6",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "92a0d69f03e6",
+            "email": "neo.search-2026-10-19-285@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "92a0d69f03e6",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/bags",
+            "category": "301"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "92a0d69f03e6",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=olive+tote"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "92a0d69f03e6",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "olive tote"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "92a0d69f03e6",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=tote"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "92a0d69f03e6",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "tote"
+          },
+          {
+            "api": "log/click",
+            "visitor": "92a0d69f03e6",
+            "product": 10146,
+            "n": 9,
+            "labels": [
+              "Omni-search"
+            ],
+            "source_api": "search/omni"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "92a0d69f03e6",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/market-ink-tote-10146",
+            "product": "10146"
+          },
+          {
+            "api": "log/product",
+            "visitor": "92a0d69f03e6",
+            "product": "10146"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-19T01:12:39.181550+02:00"
     },
     {
       "id": "demo-2026-10-19-0300",
@@ -63,7 +409,119 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-10-19T01:07:44+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "wardrobe-refresh",
+        "channel": "search",
+        "clicked_ids": [
+          10004
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "56146212602e",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "56146212602e",
+            "email": "frodo.baggins.search-60@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "56146212602e",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/shirts-layers",
+            "category": "101"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "56146212602e",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=aster+works+overshirt"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "56146212602e",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "aster works overshirt"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "56146212602e",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=overshirt"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "56146212602e",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "overshirt"
+          },
+          {
+            "api": "log/click",
+            "visitor": "56146212602e",
+            "product": 10004,
+            "n": 7,
+            "labels": [
+              "Omni-search"
+            ],
+            "source_api": "search/omni"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "56146212602e",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/form-moss-overshirt-10004",
+            "product": "10004"
+          },
+          {
+            "api": "log/product",
+            "visitor": "56146212602e",
+            "product": "10004"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-19T01:12:39.181550+02:00"
     },
     {
       "id": "demo-2026-10-19-0080",
@@ -74,7 +532,64 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-10-19T01:11:50+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "wardrobe-refresh",
+        "channel": "recommendations",
+        "clicked_ids": [
+          10031
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "ba54331c7767",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "ba54331c7767",
+            "email": "jeanluc.picard.recommendations-2026-10-19-80@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "ba54331c7767",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/tops",
+            "category": "102"
+          },
+          {
+            "api": "recommendations/category/popular",
+            "category": 102,
+            "visitor": "ba54331c7767",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "ba54331c7767",
+            "product": 10031,
+            "n": 4,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "ba54331c7767",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/rib-coral-t-shirt-10031",
+            "product": "10031"
+          },
+          {
+            "api": "log/product",
+            "visitor": "ba54331c7767",
+            "product": "10031"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-19T01:12:39.181550+02:00"
     },
     {
       "id": "demo-2026-10-19-search-0032",
