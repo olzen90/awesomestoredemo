@@ -600,8 +600,104 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-10-19T01:13:37+02:00",
-      "status": "in_progress",
-      "search_volume": true
+      "status": "completed",
+      "search_volume": true,
+      "outcome": {
+        "profile": "home-host",
+        "channel": "search",
+        "clicked_ids": [
+          10251
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "ffe80198f61e",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "ffe80198f61e",
+            "email": "jeanluc.picard.search-2026-10-19-32@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "ffe80198f61e",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/soft-goods",
+            "category": "402"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "ffe80198f61e",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=sage+cushion"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "ffe80198f61e",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "sage cushion"
+          },
+          {
+            "api": "log/click",
+            "visitor": "ffe80198f61e",
+            "product": 10251,
+            "n": 0,
+            "labels": [
+              "Omni-search"
+            ],
+            "source_api": "search/omni"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "ffe80198f61e",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/woven-sage-cushion-10251",
+            "product": "10251"
+          },
+          {
+            "api": "log/product",
+            "visitor": "ffe80198f61e",
+            "product": "10251"
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "ffe80198f61e",
+            "email": "jeanluc.picard.search-2026-10-19-32@example.com",
+            "products": [
+              {
+                "id": 10251,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "ffe80198f61e",
+            "url": "https://olzen90.github.io/awesomestoredemo/cart/"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-19T03:17:07.190888+02:00"
     },
     {
       "id": "demo-2026-10-19-0171",
@@ -612,7 +708,96 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-10-19T02:08:08+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "focused-workday",
+        "channel": "search",
+        "clicked_ids": [],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "19b3a1febbba",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "19b3a1febbba",
+            "email": "leia.organa.search-2026-10-19-171@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "19b3a1febbba",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/power-audio",
+            "category": "502"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "19b3a1febbba",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=chalk+desk+speaker"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "19b3a1febbba",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "chalk desk speaker"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "19b3a1febbba",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=desk+speaker"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "19b3a1febbba",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "desk speaker"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-19T03:17:07.190888+02:00"
     },
     {
       "id": "demo-2026-10-19-0348",
@@ -623,7 +808,70 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-10-19T03:03:49+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "slow-morning",
+        "channel": "chat",
+        "clicked_ids": [
+          10374
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "d670c3835d66",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "d670c3835d66",
+            "email": "luke.skywalker.chat-2026-10-19-348@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "d670c3835d66",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/movement",
+            "category": "602"
+          },
+          {
+            "api": "chat/message",
+            "visitor": "d670c3835d66",
+            "chat_uid": "c9ca22a8-f2f9-4354-83b1-3558e787633b",
+            "prompt": "I'm shopping for yoga mat for my slow morning. My budget is 180 euros. Can you show me suitable products?",
+            "message_types": [
+              "slider",
+              "text"
+            ],
+            "returned_ids": [
+              10374,
+              10395,
+              10393,
+              10378,
+              10381,
+              10380
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "d670c3835d66",
+            "product": 10374,
+            "n": 0,
+            "source_api": "assistant/search/products"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "d670c3835d66",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/flow-clay-yoga-mat-10374",
+            "product": "10374"
+          },
+          {
+            "api": "log/product",
+            "visitor": "d670c3835d66",
+            "product": "10374"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-19T03:17:07.190888+02:00"
     },
     {
       "id": "demo-2026-10-19-0014",
@@ -634,7 +882,64 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-10-19T03:05:55+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "commuter",
+        "channel": "recommendations",
+        "clicked_ids": [
+          10091
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "29fcc8063c74",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "29fcc8063c74",
+            "email": "leia.organa.recommendations-2026-10-19-14@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "29fcc8063c74",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/everyday-shoes",
+            "category": "201"
+          },
+          {
+            "api": "recommendations/category/popular",
+            "category": 201,
+            "visitor": "29fcc8063c74",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "29fcc8063c74",
+            "product": 10091,
+            "n": 8,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "29fcc8063c74",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/lane-fog-runner-10091",
+            "product": "10091"
+          },
+          {
+            "api": "log/product",
+            "visitor": "29fcc8063c74",
+            "product": "10091"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-19T03:17:07.190888+02:00"
     },
     {
       "id": "demo-2026-10-19-0199",
@@ -645,7 +950,92 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-10-19T03:13:45+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "thoughtful-gift",
+        "channel": "chat",
+        "clicked_ids": [
+          10225
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "786764133a6d",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "786764133a6d",
+            "email": "luke.skywalker.chat-2026-10-19-199@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "786764133a6d",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/kitchen-table",
+            "category": "401"
+          },
+          {
+            "api": "chat/message",
+            "visitor": "786764133a6d",
+            "chat_uid": "0f481734-1e3e-4ce9-bfe7-78df0356cef2",
+            "prompt": "I'm shopping for carafe for my thoughtful gift. My budget is 150 euros. Can you show me suitable products?",
+            "message_types": [
+              "slider",
+              "text"
+            ],
+            "returned_ids": [
+              "10204",
+              "10225",
+              "10211",
+              "10210",
+              "10206",
+              "10213",
+              "10224",
+              "10209"
+            ]
+          },
+          {
+            "api": "chat/message",
+            "visitor": "786764133a6d",
+            "chat_uid": "0f481734-1e3e-4ce9-bfe7-78df0356cef2",
+            "prompt": "I'm interested in Ritual Chalk Carafe. Please show that product and similar options under 150 euros.",
+            "message_types": [
+              "slider",
+              "text"
+            ],
+            "returned_ids": [
+              10213,
+              10225,
+              10205,
+              10209,
+              10211,
+              10210,
+              10206,
+              10204
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "786764133a6d",
+            "product": 10225,
+            "n": 1,
+            "source_api": "assistant/search/products"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "786764133a6d",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/dune-chalk-carafe-edition-2-10225",
+            "product": "10225"
+          },
+          {
+            "api": "log/product",
+            "visitor": "786764133a6d",
+            "product": "10225"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-19T03:17:07.190888+02:00"
     },
     {
       "id": "demo-2026-10-19-0443",
