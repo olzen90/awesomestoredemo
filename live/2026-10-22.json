@@ -19,7 +19,85 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-10-22T00:05:11+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "commuter",
+        "channel": "chat",
+        "clicked_ids": [
+          10104
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "3d5d714b841f",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "3d5d714b841f",
+            "email": "leia.organa.chat-2026-10-22-274@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "3d5d714b841f",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/everyday-shoes",
+            "category": "201"
+          },
+          {
+            "api": "chat/message",
+            "visitor": "3d5d714b841f",
+            "chat_uid": "0a2dc263-bd66-41f2-a934-2c121415cf79",
+            "prompt": "I'm shopping for slip-on for my commuter. My budget is 250 euros. Can you show me suitable products?",
+            "message_types": [
+              "slider",
+              "text"
+            ],
+            "returned_ids": [
+              10099,
+              10106,
+              10103,
+              10098,
+              10104
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "3d5d714b841f",
+            "product": 10104,
+            "n": 4,
+            "source_api": "assistant/search/products"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "3d5d714b841f",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/transit-sage-slip-on-10104",
+            "product": "10104"
+          },
+          {
+            "api": "log/product",
+            "visitor": "3d5d714b841f",
+            "product": "10104"
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "3d5d714b841f",
+            "email": "leia.organa.chat-2026-10-22-274@example.com",
+            "products": [
+              {
+                "id": 10104,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "3d5d714b841f",
+            "url": "https://olzen90.github.io/awesomestoredemo/cart/"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-22T01:19:25.042118+02:00"
     },
     {
       "id": "demo-2026-10-22-0221",
@@ -30,7 +108,70 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-10-22T00:06:50+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "commuter",
+        "channel": "chat",
+        "clicked_ids": [
+          10157
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "fb262d6190fa",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "fb262d6190fa",
+            "email": "ellen.ripley.chat-2026-10-22-221@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "fb262d6190fa",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/bags",
+            "category": "301"
+          },
+          {
+            "api": "chat/message",
+            "visitor": "fb262d6190fa",
+            "chat_uid": "8274ee13-acc4-4bcd-81d6-7a312c56c4cf",
+            "prompt": "I'm shopping for daypack for my commuter. My budget is 250 euros. Can you show me suitable products?",
+            "message_types": [
+              "slider",
+              "text"
+            ],
+            "returned_ids": [
+              10162,
+              10156,
+              10161,
+              10157,
+              10163,
+              10158
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "fb262d6190fa",
+            "product": 10157,
+            "n": 3,
+            "source_api": "assistant/search/products"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "fb262d6190fa",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/transit-olive-daypack-10157",
+            "product": "10157"
+          },
+          {
+            "api": "log/product",
+            "visitor": "fb262d6190fa",
+            "product": "10157"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-22T01:19:25.042118+02:00"
     },
     {
       "id": "demo-2026-10-22-0187",
@@ -41,7 +182,64 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-10-22T00:09:00+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "focused-workday",
+        "channel": "search",
+        "clicked_ids": [],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "f5138590d771",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "f5138590d771",
+            "email": "tony.stark.search-22@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "f5138590d771",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/power-audio",
+            "category": "502"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "f5138590d771",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=cobalt+desk+speaker"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "f5138590d771",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "cobalt desk speaker"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-22T01:19:25.042118+02:00"
     },
     {
       "id": "demo-2026-10-22-search-0028",
@@ -52,8 +250,115 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-10-22T00:10:26+02:00",
-      "status": "in_progress",
-      "search_volume": true
+      "status": "completed",
+      "search_volume": true,
+      "outcome": {
+        "profile": "wardrobe-refresh",
+        "channel": "search",
+        "clicked_ids": [
+          10036
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "e2fd9359c5ea",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "e2fd9359c5ea",
+            "email": "ellen.ripley.search-2026-10-22-28@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "e2fd9359c5ea",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/tops",
+            "category": "102"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "e2fd9359c5ea",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "suitcase"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "e2fd9359c5ea",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=sky+t-shirt"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "e2fd9359c5ea",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "sky t-shirt"
+          },
+          {
+            "api": "log/click",
+            "visitor": "e2fd9359c5ea",
+            "product": 10036,
+            "n": 2,
+            "labels": [
+              "Omni-search"
+            ],
+            "source_api": "search/omni"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "e2fd9359c5ea",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/frame-sky-t-shirt-10036",
+            "product": "10036"
+          },
+          {
+            "api": "log/product",
+            "visitor": "e2fd9359c5ea",
+            "product": "10036"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-22T01:19:25.042118+02:00"
     },
     {
       "id": "demo-2026-10-22-0162",
