@@ -19,7 +19,119 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-10-23T00:11:07+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "channel": "search",
+        "clicked_ids": [
+          10417
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "dd914aded2d8",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "dd914aded2d8",
+            "email": "ellen.ripley.search-69@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "dd914aded2d8",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/camp-picnic",
+            "category": "701"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "dd914aded2d8",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=chalk+picnic+blanket"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "dd914aded2d8",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "chalk picnic blanket"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "dd914aded2d8",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=picnic+blanket"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "dd914aded2d8",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "picnic blanket"
+          },
+          {
+            "api": "log/click",
+            "visitor": "dd914aded2d8",
+            "product": 10417,
+            "n": 4,
+            "labels": [
+              "Omni-search"
+            ],
+            "source_api": "search/omni"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "dd914aded2d8",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/summit-navy-picnic-blanket-10417",
+            "product": "10417"
+          },
+          {
+            "api": "log/product",
+            "visitor": "dd914aded2d8",
+            "product": "10417"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-23T00:24:30.709130+02:00"
     },
     {
       "id": "demo-2026-10-23-0079",
@@ -30,7 +142,86 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-10-23T00:11:19+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "channel": "chat",
+        "clicked_ids": [
+          10234
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "8fe827963e84",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "8fe827963e84",
+            "email": "ellen.ripley.chat-2026-10-23-79@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "8fe827963e84",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/soft-goods",
+            "category": "402"
+          },
+          {
+            "api": "chat/message",
+            "visitor": "8fe827963e84",
+            "chat_uid": "5011a699-1c3c-4d02-92ed-304493b346e5",
+            "prompt": "I'm shopping for throw for my home host. My budget is 200 euros. Can you show me suitable products?",
+            "message_types": [
+              "slider",
+              "text"
+            ],
+            "returned_ids": [
+              10253,
+              10239,
+              10260,
+              10233,
+              10258,
+              10234
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "8fe827963e84",
+            "product": 10234,
+            "n": 5,
+            "source_api": "assistant/search/products"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "8fe827963e84",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/grid-rust-throw-10234",
+            "product": "10234"
+          },
+          {
+            "api": "log/product",
+            "visitor": "8fe827963e84",
+            "product": "10234"
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "8fe827963e84",
+            "email": "ellen.ripley.chat-2026-10-23-79@example.com",
+            "products": [
+              {
+                "id": 10234,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "8fe827963e84",
+            "url": "https://olzen90.github.io/awesomestoredemo/cart/"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-23T00:24:30.709130+02:00"
     },
     {
       "id": "demo-2026-10-23-0087",
@@ -41,7 +232,66 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-10-23T00:16:56+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "channel": "email",
+        "clicked_ids": [
+          10165
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "042503b355e3",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "042503b355e3",
+            "email": "tony.stark.email-2026-10-23-87@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "042503b355e3",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/bags",
+            "category": "301"
+          },
+          {
+            "api": "campaigns/click",
+            "embed": "automated-popular",
+            "product": 10165,
+            "n": 0,
+            "source_api": "recommendations/popular",
+            "labels": [
+              "Automated / Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "042503b355e3",
+            "product": 10165,
+            "n": 0,
+            "labels": [
+              "Automated / Popular"
+            ],
+            "external": true,
+            "source_api": "recommendations/popular"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "042503b355e3",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/everyday-olive-daypack-10165",
+            "product": "10165"
+          },
+          {
+            "api": "log/product",
+            "visitor": "042503b355e3",
+            "product": "10165"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-23T00:24:30.709130+02:00"
     },
     {
       "id": "demo-2026-10-23-0335",
