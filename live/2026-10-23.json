@@ -302,7 +302,210 @@
       "mode": "mixed",
       "channel": "search",
       "scheduled_at": "2026-10-23T01:01:52+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "slow-morning",
+        "channel": "search",
+        "clicked_ids": [
+          10386
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "9b39fd508198",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "9b39fd508198",
+            "email": "hermione.granger.search-2026-10-23-335@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "9b39fd508198",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/movement",
+            "category": "602"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "9b39fd508198",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=groundwork+stretch+strap"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "9b39fd508198",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "groundwork stretch strap"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "9b39fd508198",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=stretch+strap"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "9b39fd508198",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "stretch strap"
+          },
+          {
+            "api": "log/click",
+            "visitor": "9b39fd508198",
+            "product": 10386,
+            "n": 1,
+            "labels": [
+              "Omni-search"
+            ],
+            "source_api": "search/omni"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "9b39fd508198",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/open-clay-stretch-strap-10386",
+            "product": "10386"
+          },
+          {
+            "api": "log/product",
+            "visitor": "9b39fd508198",
+            "product": "10386"
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "9b39fd508198",
+            "email": "hermione.granger.search-2026-10-23-335@example.com",
+            "products": [
+              {
+                "id": 10386,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "9b39fd508198",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/cloud-chalk-bath-towel-10347",
+            "product": "10347"
+          },
+          {
+            "api": "log/product",
+            "visitor": "9b39fd508198",
+            "product": "10347"
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "9b39fd508198",
+            "email": "hermione.granger.search-2026-10-23-335@example.com",
+            "products": [
+              {
+                "id": 10386,
+                "quantity": 1
+              },
+              {
+                "id": 10347,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "9b39fd508198",
+            "url": "https://olzen90.github.io/awesomestoredemo/cart/"
+          },
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-23-0335",
+            "visitor": "9b39fd508198",
+            "customer": "demo-search-2026-10-23-335",
+            "email": "hermione.granger.search-2026-10-23-335@example.com",
+            "products": [
+              {
+                "id": 10386,
+                "price": 100,
+                "quantity": 1
+              },
+              {
+                "id": 10347,
+                "price": 57.6,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "9b39fd508198",
+            "email": "hermione.granger.search-2026-10-23-335@example.com",
+            "products": []
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "9b39fd508198",
+            "url": "https://olzen90.github.io/awesomestoredemo/checkout/success/"
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-23-0335",
+          "visitor": "9b39fd508198",
+          "customer": "demo-search-2026-10-23-335",
+          "email": "hermione.granger.search-2026-10-23-335@example.com",
+          "products": [
+            {
+              "id": 10386,
+              "price": 100,
+              "quantity": 1
+            },
+            {
+              "id": 10347,
+              "price": 57.6,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 157.6,
+        "estimated_profit": 61.2
+      },
+      "processed_at": "2026-10-23T03:31:31.044631+02:00"
     },
     {
       "id": "demo-2026-10-23-0154",
@@ -313,7 +516,71 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-10-23T01:04:17+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "slow-morning",
+        "channel": "chat",
+        "clicked_ids": [
+          10389
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "b6e170d737ec",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "b6e170d737ec",
+            "email": "tony.stark.chat-2026-10-23-154@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "b6e170d737ec",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/movement",
+            "category": "602"
+          },
+          {
+            "api": "chat/message",
+            "visitor": "b6e170d737ec",
+            "chat_uid": "c735440f-29e2-4f5f-9521-73493a1ea0b7",
+            "prompt": "I'm shopping for stretch strap for my slow morning. My budget is 180 euros. Can you show me suitable products?",
+            "message_types": [
+              "slider",
+              "text"
+            ],
+            "returned_ids": [
+              10388,
+              10383,
+              10384,
+              10389,
+              10385,
+              10390,
+              10391
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "b6e170d737ec",
+            "product": 10389,
+            "n": 3,
+            "source_api": "assistant/search/products"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "b6e170d737ec",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/pace-cobalt-stretch-strap-10389",
+            "product": "10389"
+          },
+          {
+            "api": "log/product",
+            "visitor": "b6e170d737ec",
+            "product": "10389"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-23T03:31:31.044631+02:00"
     },
     {
       "id": "demo-2026-10-23-0291",
@@ -324,7 +591,66 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-10-23T01:08:24+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "thoughtful-gift",
+        "channel": "email",
+        "clicked_ids": [
+          10227
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "0e8af8efbbb9",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "0e8af8efbbb9",
+            "email": "leia.organa.email-33@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "0e8af8efbbb9",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/gifts-for-the-host",
+            "category": "802"
+          },
+          {
+            "api": "campaigns/click",
+            "embed": "automated-popular",
+            "product": 10227,
+            "n": 0,
+            "source_api": "recommendations/popular",
+            "labels": [
+              "Automated / Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "0e8af8efbbb9",
+            "product": 10227,
+            "n": 0,
+            "labels": [
+              "Automated / Popular"
+            ],
+            "external": true,
+            "source_api": "recommendations/popular"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "0e8af8efbbb9",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/arc-amber-carafe-edition-2-10227",
+            "product": "10227"
+          },
+          {
+            "api": "log/product",
+            "visitor": "0e8af8efbbb9",
+            "product": "10227"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-23T03:31:31.044631+02:00"
     },
     {
       "id": "demo-2026-10-23-0231",
@@ -335,7 +661,82 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-10-23T01:09:16+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "commuter",
+        "channel": "email",
+        "clicked_ids": [
+          10165
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "c6dc6e788282",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "c6dc6e788282",
+            "email": "neo.email-2026-10-23-231@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "c6dc6e788282",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/bags",
+            "category": "301"
+          },
+          {
+            "api": "campaigns/click",
+            "embed": "automated-popular",
+            "product": 10165,
+            "n": 0,
+            "source_api": "recommendations/popular",
+            "labels": [
+              "Automated / Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "c6dc6e788282",
+            "product": 10165,
+            "n": 0,
+            "labels": [
+              "Automated / Popular"
+            ],
+            "external": true,
+            "source_api": "recommendations/popular"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "c6dc6e788282",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/everyday-olive-daypack-10165",
+            "product": "10165"
+          },
+          {
+            "api": "log/product",
+            "visitor": "c6dc6e788282",
+            "product": "10165"
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "c6dc6e788282",
+            "email": "neo.email-2026-10-23-231@example.com",
+            "products": [
+              {
+                "id": 10165,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "c6dc6e788282",
+            "url": "https://olzen90.github.io/awesomestoredemo/cart/"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-23T03:31:31.044631+02:00"
     },
     {
       "id": "demo-2026-10-23-0155",
@@ -346,7 +747,64 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-10-23T01:09:42+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "channel": "search",
+        "clicked_ids": [],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "d30ae98cc1a5",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "d30ae98cc1a5",
+            "email": "ellen.ripley.search-2026-10-23-155@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "d30ae98cc1a5",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/lighting-objects",
+            "category": "403"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "d30ae98cc1a5",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=warm+white+desk+lamp"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "d30ae98cc1a5",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "warm white desk lamp"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-23T03:31:31.044631+02:00"
     },
     {
       "id": "demo-2026-10-23-0006",
@@ -357,7 +815,66 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-10-23T02:03:58+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "commuter",
+        "channel": "email",
+        "clicked_ids": [
+          10165
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "068e9f99bee0",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "068e9f99bee0",
+            "email": "tony.stark.email-88@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "068e9f99bee0",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/bags",
+            "category": "301"
+          },
+          {
+            "api": "campaigns/click",
+            "embed": "automated-popular",
+            "product": 10165,
+            "n": 0,
+            "source_api": "recommendations/popular",
+            "labels": [
+              "Automated / Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "068e9f99bee0",
+            "product": 10165,
+            "n": 0,
+            "labels": [
+              "Automated / Popular"
+            ],
+            "external": true,
+            "source_api": "recommendations/popular"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "068e9f99bee0",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/everyday-olive-daypack-10165",
+            "product": "10165"
+          },
+          {
+            "api": "log/product",
+            "visitor": "068e9f99bee0",
+            "product": "10165"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-23T03:31:31.044631+02:00"
     },
     {
       "id": "demo-2026-10-23-0090",
@@ -368,7 +885,155 @@
       "mode": "mixed",
       "channel": "recommendations",
       "scheduled_at": "2026-10-23T02:07:29+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "channel": "recommendations",
+        "clicked_ids": [
+          10275
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "e9efcb55c788",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "e9efcb55c788",
+            "email": "leia.organa.recommendations-76@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "e9efcb55c788",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/lighting-objects",
+            "category": "403"
+          },
+          {
+            "api": "recommendations/category/popular",
+            "category": 403,
+            "visitor": "e9efcb55c788",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "e9efcb55c788",
+            "product": 10275,
+            "n": 1,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "e9efcb55c788",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/north-brass-candle-holder-10275",
+            "product": "10275"
+          },
+          {
+            "api": "log/product",
+            "visitor": "e9efcb55c788",
+            "product": "10275"
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "e9efcb55c788",
+            "email": "leia.organa.recommendations-76@example.com",
+            "products": [
+              {
+                "id": 10275,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "e9efcb55c788",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/morrow-ink-serving-bowl-10220",
+            "product": "10220"
+          },
+          {
+            "api": "log/product",
+            "visitor": "e9efcb55c788",
+            "product": "10220"
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "e9efcb55c788",
+            "email": "leia.organa.recommendations-76@example.com",
+            "products": [
+              {
+                "id": 10275,
+                "quantity": 1
+              },
+              {
+                "id": 10220,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "e9efcb55c788",
+            "url": "https://olzen90.github.io/awesomestoredemo/cart/"
+          },
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-23-0090",
+            "visitor": "e9efcb55c788",
+            "customer": "demo-recommendations-76",
+            "email": "leia.organa.recommendations-76@example.com",
+            "products": [
+              {
+                "id": 10275,
+                "price": 125,
+                "quantity": 1
+              },
+              {
+                "id": 10220,
+                "price": 68,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "e9efcb55c788",
+            "email": "leia.organa.recommendations-76@example.com",
+            "products": []
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "e9efcb55c788",
+            "url": "https://olzen90.github.io/awesomestoredemo/checkout/success/"
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-23-0090",
+          "visitor": "e9efcb55c788",
+          "customer": "demo-recommendations-76",
+          "email": "leia.organa.recommendations-76@example.com",
+          "products": [
+            {
+              "id": 10275,
+              "price": 125,
+              "quantity": 1
+            },
+            {
+              "id": 10220,
+              "price": 68,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 193.0,
+        "estimated_profit": 88.3
+      },
+      "processed_at": "2026-10-23T03:31:31.044631+02:00"
     },
     {
       "id": "demo-2026-10-23-0074",
@@ -379,7 +1044,86 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-10-23T02:12:04+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "commuter",
+        "channel": "chat",
+        "clicked_ids": [
+          10103
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "21b8ad70c830",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "21b8ad70c830",
+            "email": "jeanluc.picard.chat-2026-10-23-74@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "21b8ad70c830",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/everyday-shoes",
+            "category": "201"
+          },
+          {
+            "api": "chat/message",
+            "visitor": "21b8ad70c830",
+            "chat_uid": "43037f98-3a9e-4186-9bcf-fcee6b313ad3",
+            "prompt": "I'm shopping for slip-on for my commuter. My budget is 250 euros. Can you show me suitable products?",
+            "message_types": [
+              "slider",
+              "text"
+            ],
+            "returned_ids": [
+              10099,
+              10106,
+              10103,
+              10098,
+              10104,
+              10105
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "21b8ad70c830",
+            "product": 10103,
+            "n": 2,
+            "source_api": "assistant/search/products"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "21b8ad70c830",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/mile-fog-slip-on-10103",
+            "product": "10103"
+          },
+          {
+            "api": "log/product",
+            "visitor": "21b8ad70c830",
+            "product": "10103"
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "21b8ad70c830",
+            "email": "jeanluc.picard.chat-2026-10-23-74@example.com",
+            "products": [
+              {
+                "id": 10103,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "21b8ad70c830",
+            "url": "https://olzen90.github.io/awesomestoredemo/cart/"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-23T03:31:31.044631+02:00"
     },
     {
       "id": "demo-2026-10-23-0212",
@@ -390,7 +1134,210 @@
       "mode": "mixed",
       "channel": "search",
       "scheduled_at": "2026-10-23T03:06:10+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "focused-workday",
+        "channel": "search",
+        "clicked_ids": [
+          10316
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "f5138590d771",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "f5138590d771",
+            "email": "neo.search-22@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "f5138590d771",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/desk-essentials",
+            "category": "501"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "f5138590d771",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=lumen+notebook"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "f5138590d771",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "lumen notebook"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "f5138590d771",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=notebook"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "f5138590d771",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "notebook"
+          },
+          {
+            "api": "log/click",
+            "visitor": "f5138590d771",
+            "product": 10316,
+            "n": 7,
+            "labels": [
+              "Omni-search"
+            ],
+            "source_api": "search/omni"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "f5138590d771",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/open-chalk-notebook-edition-2-10316",
+            "product": "10316"
+          },
+          {
+            "api": "log/product",
+            "visitor": "f5138590d771",
+            "product": "10316"
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "f5138590d771",
+            "email": "neo.search-22@example.com",
+            "products": [
+              {
+                "id": 10316,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "f5138590d771",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/pulse-chalk-desk-speaker-10319",
+            "product": "10319"
+          },
+          {
+            "api": "log/product",
+            "visitor": "f5138590d771",
+            "product": "10319"
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "f5138590d771",
+            "email": "neo.search-22@example.com",
+            "products": [
+              {
+                "id": 10316,
+                "quantity": 1
+              },
+              {
+                "id": 10319,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "f5138590d771",
+            "url": "https://olzen90.github.io/awesomestoredemo/cart/"
+          },
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-10-23-0212",
+            "visitor": "f5138590d771",
+            "customer": "demo-search-22",
+            "email": "neo.search-22@example.com",
+            "products": [
+              {
+                "id": 10316,
+                "price": 70,
+                "quantity": 1
+              },
+              {
+                "id": 10319,
+                "price": 97,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "f5138590d771",
+            "email": "neo.search-22@example.com",
+            "products": []
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "f5138590d771",
+            "url": "https://olzen90.github.io/awesomestoredemo/checkout/success/"
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-10-23-0212",
+          "visitor": "f5138590d771",
+          "customer": "demo-search-22",
+          "email": "neo.search-22@example.com",
+          "products": [
+            {
+              "id": 10316,
+              "price": 70,
+              "quantity": 1
+            },
+            {
+              "id": 10319,
+              "price": 97,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 167.0,
+        "estimated_profit": 44.12
+      },
+      "processed_at": "2026-10-23T03:31:31.044631+02:00"
     },
     {
       "id": "demo-2026-10-23-0195",
@@ -401,7 +1348,87 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-10-23T03:11:07+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "slow-morning",
+        "channel": "search",
+        "clicked_ids": [
+          10369
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "4b84a6ec8aea",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "4b84a6ec8aea",
+            "email": "ellen.ripley.search-2026-10-23-195@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "4b84a6ec8aea",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/bath-body",
+            "category": "601"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "4b84a6ec8aea",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=oat+bath+towel"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "4b84a6ec8aea",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "oat bath towel"
+          },
+          {
+            "api": "log/click",
+            "visitor": "4b84a6ec8aea",
+            "product": 10369,
+            "n": 4,
+            "labels": [
+              "Omni-search"
+            ],
+            "source_api": "search/omni"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "4b84a6ec8aea",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/soft-oat-bath-towel-edition-2-10369",
+            "product": "10369"
+          },
+          {
+            "api": "log/product",
+            "visitor": "4b84a6ec8aea",
+            "product": "10369"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-23T03:31:31.044631+02:00"
     },
     {
       "id": "demo-2026-10-23-0359",
