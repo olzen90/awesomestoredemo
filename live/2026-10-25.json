@@ -19,7 +19,70 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-10-25T00:14:11+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "channel": "chat",
+        "clicked_ids": [
+          10234
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "5085b496975c",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "5085b496975c",
+            "email": "hermione.granger.chat-2026-10-25-206@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "5085b496975c",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/soft-goods",
+            "category": "402"
+          },
+          {
+            "api": "chat/message",
+            "visitor": "5085b496975c",
+            "chat_uid": "da95911a-a066-4591-8d65-c95405212aac",
+            "prompt": "I'm shopping for throw for my home host. My budget is 200 euros. Can you show me suitable products?",
+            "message_types": [
+              "slider",
+              "text"
+            ],
+            "returned_ids": [
+              10253,
+              10239,
+              10260,
+              10234,
+              10255,
+              10242
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "5085b496975c",
+            "product": 10234,
+            "n": 3,
+            "source_api": "assistant/search/products"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "5085b496975c",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/grid-rust-throw-10234",
+            "product": "10234"
+          },
+          {
+            "api": "log/product",
+            "visitor": "5085b496975c",
+            "product": "10234"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-25T01:14:25.099771+02:00"
     },
     {
       "id": "demo-2026-10-25-0091",
