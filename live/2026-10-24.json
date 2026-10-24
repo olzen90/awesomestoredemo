@@ -19,8 +19,147 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-10-24T02:03:55+02:00",
-      "status": "in_progress",
-      "search_volume": true
+      "status": "completed",
+      "search_volume": true,
+      "outcome": {
+        "profile": "slow-morning",
+        "channel": "search",
+        "clicked_ids": [
+          10382
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "3785dfd6f7d4",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "3785dfd6f7d4",
+            "email": "jeanluc.picard.search-2026-10-24-46@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "3785dfd6f7d4",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/movement",
+            "category": "602"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "3785dfd6f7d4",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "suitcase"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "3785dfd6f7d4",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=groundwork+yoga+mat"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "3785dfd6f7d4",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "groundwork yoga mat"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "3785dfd6f7d4",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=yoga+mat"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "3785dfd6f7d4",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "yoga mat"
+          },
+          {
+            "api": "log/click",
+            "visitor": "3785dfd6f7d4",
+            "product": 10382,
+            "n": 2,
+            "labels": [
+              "Omni-search"
+            ],
+            "source_api": "search/omni"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "3785dfd6f7d4",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/form-clay-yoga-mat-10382",
+            "product": "10382"
+          },
+          {
+            "api": "log/product",
+            "visitor": "3785dfd6f7d4",
+            "product": "10382"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-24T02:42:21.597398+02:00"
     },
     {
       "id": "demo-2026-10-24-0349",
@@ -31,7 +170,64 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-10-24T02:06:23+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "channel": "recommendations",
+        "clicked_ids": [
+          10204
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "d3124cef329b",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "d3124cef329b",
+            "email": "neo.recommendations-2026-10-24-349@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "d3124cef329b",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/kitchen-table",
+            "category": "401"
+          },
+          {
+            "api": "recommendations/category/popular",
+            "category": 401,
+            "visitor": "d3124cef329b",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "d3124cef329b",
+            "product": 10204,
+            "n": 7,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "d3124cef329b",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/forma-ink-carafe-10204",
+            "product": "10204"
+          },
+          {
+            "api": "log/product",
+            "visitor": "d3124cef329b",
+            "product": "10204"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-24T02:42:21.597398+02:00"
     },
     {
       "id": "demo-2026-10-24-0055",
@@ -42,7 +238,68 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-10-24T02:07:08+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "commuter",
+        "channel": "chat",
+        "clicked_ids": [
+          10095
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "1888837e4428",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "1888837e4428",
+            "email": "leia.organa.chat-2026-10-24-55@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "1888837e4428",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/everyday-shoes",
+            "category": "201"
+          },
+          {
+            "api": "chat/message",
+            "visitor": "1888837e4428",
+            "chat_uid": "bb03054a-7f53-40b8-9dd7-a6098883c180",
+            "prompt": "I'm shopping for runner for my commuter. My budget is 250 euros. Can you show me suitable products?",
+            "message_types": [
+              "slider",
+              "text"
+            ],
+            "returned_ids": [
+              10113,
+              10108,
+              10114,
+              10095
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "1888837e4428",
+            "product": 10095,
+            "n": 3,
+            "source_api": "assistant/search/products"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "1888837e4428",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/low-fog-runner-10095",
+            "product": "10095"
+          },
+          {
+            "api": "log/product",
+            "visitor": "1888837e4428",
+            "product": "10095"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-24T02:42:21.597398+02:00"
     },
     {
       "id": "demo-2026-10-24-0215",
