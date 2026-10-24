@@ -19,7 +19,7 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-10-24T02:03:55+02:00",
-      "status": "pending",
+      "status": "in_progress",
       "search_volume": true
     },
     {
@@ -31,7 +31,7 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-10-24T02:06:23+02:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-10-24-0055",
@@ -42,7 +42,7 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-10-24T02:07:08+02:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-10-24-0215",
