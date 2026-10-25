@@ -93,7 +93,72 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-10-25T02:13:25+02:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "thoughtful-gift",
+        "channel": "chat",
+        "clicked_ids": [
+          10215
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "d8e50cf1f279",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "d8e50cf1f279",
+            "email": "tony.stark.chat-2026-10-25-91@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "d8e50cf1f279",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/kitchen-table",
+            "category": "401"
+          },
+          {
+            "api": "chat/message",
+            "visitor": "d8e50cf1f279",
+            "chat_uid": "0aad53ed-cfc9-4c37-85d9-08015ee5d62b",
+            "prompt": "I'm shopping for serving bowl for my thoughtful gift. My budget is 150 euros. Can you show me suitable products?",
+            "message_types": [
+              "slider",
+              "text"
+            ],
+            "returned_ids": [
+              10222,
+              10221,
+              10215,
+              10223,
+              10216,
+              10217,
+              10214,
+              10220
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "d8e50cf1f279",
+            "product": 10215,
+            "n": 2,
+            "source_api": "assistant/search/products"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "d8e50cf1f279",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/dune-amber-serving-bowl-10215",
+            "product": "10215"
+          },
+          {
+            "api": "log/product",
+            "visitor": "d8e50cf1f279",
+            "product": "10215"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-25T02:13:20.862505+01:00"
     },
     {
       "id": "demo-2026-10-25-0010",
