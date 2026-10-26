@@ -5,12 +5,17 @@ export type FeedCustomer = {
 	name: string;
 	email: string;
 	subscribed: false;
-	order_delivery_estimates: Record<string, string>;
+	order_delivery_estimates: string;
+	order_ids: number[];
+	order_tracking_statuses: string[];
 };
 
 export function customersFromOrders(orders: readonly Order[]): FeedCustomer[] {
 	const customers = new Map<number, FeedCustomer>();
-	for (const order of orders) {
+	const summaries = new Map<number, string[]>();
+	const seenOrderIds = new Set<number>();
+	// Sort the source records once, never the parallel lists independently.
+	for (const order of [...orders].sort((left, right) => left.id - right.id)) {
 		let customer = customers.get(order.customer);
 		if (!customer) {
 			customer = {
@@ -19,17 +24,26 @@ export function customersFromOrders(orders: readonly Order[]): FeedCustomer[] {
 				email: order.email,
 				// These are fictional customers, not marketing subscribers.
 				subscribed: false,
-				order_delivery_estimates: {},
+				order_delivery_estimates: "",
+				order_ids: [],
+				order_tracking_statuses: [],
 			};
 			customers.set(customer.id, customer);
+			summaries.set(customer.id, []);
 		} else if (customer.email !== order.email || customer.name !== order.customer_name) {
 			throw new Error(`Inconsistent customer identity for customer ${order.customer}`);
 		}
-		const orderId = String(order.id);
-		if (Object.hasOwn(customer.order_delivery_estimates, orderId)) {
+		if (seenOrderIds.has(order.id)) {
 			throw new Error(`Duplicate order ${order.id} in customer delivery estimates`);
 		}
-		customer.order_delivery_estimates[orderId] = order.delivery_estimate;
+		seenOrderIds.add(order.id);
+		const status = order.tracking[0]?.status || order.order_status;
+		customer.order_ids.push(order.id);
+		customer.order_tracking_statuses.push(status);
+		summaries.get(customer.id)!.push(`Order ${order.id}: estimated delivery ${order.delivery_estimate}; tracking status ${status}.`);
+	}
+	for (const customer of customers.values()) {
+		customer.order_delivery_estimates = summaries.get(customer.id)!.join("\n");
 	}
 	return [...customers.values()].sort((left, right) => left.id - right.id);
 }

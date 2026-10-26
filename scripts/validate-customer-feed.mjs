@@ -19,22 +19,31 @@ for (const customer of customers) {
 	assert.equal(typeof customer.email, "string");
 	assert(customer.email.endsWith(".example"), "Customer feed must use fictional emails");
 	assert.equal(customer.subscribed, false, "Fictional customers must not be subscribed");
-	const estimates = customer.order_delivery_estimates;
-	assert(estimates && typeof estimates === "object" && !Array.isArray(estimates), "Delivery estimates must be a dictionary");
-	for (const [orderId, estimate] of Object.entries(estimates)) {
-		const order = ordersById.get(orderId);
+	assert.equal(typeof customer.order_delivery_estimates, "string", "Delivery estimates must be one long string");
+	assert(Array.isArray(customer.order_ids), "Order IDs must be a list");
+	assert(Array.isArray(customer.order_tracking_statuses), "Tracking statuses must be a list");
+	assert.equal(customer.order_ids.length, customer.order_tracking_statuses.length, "Parallel lists must have equal lengths");
+	assert.equal(new Set(customer.order_ids).size, customer.order_ids.length, "Duplicate customer order IDs");
+	const expectedLines = [];
+	for (const [index, orderId] of customer.order_ids.entries()) {
+		assert(Number.isInteger(orderId), "Order IDs must remain integers");
+		const order = ordersById.get(String(orderId));
 		assert(order, `Customer ${customer.id} references unknown order ${orderId}`);
 		assert.equal(order.customer, customer.id, `Order ${orderId} belongs to another customer`);
 		assert.equal(order.email, customer.email);
 		assert.equal(order.customer_name, customer.name);
-		assert.equal(typeof estimate, "string");
-		assert.equal(estimate, order.delivery_estimate, `Estimate differs for order ${orderId}`);
+		const status = order.tracking[0]?.status || order.order_status;
+		assert.equal(typeof customer.order_tracking_statuses[index], "string");
+		assert.equal(customer.order_tracking_statuses[index], status, `Wrong status at index ${index} for order ${orderId}`);
+		expectedLines.push(`Order ${orderId}: estimated delivery ${order.delivery_estimate}; tracking status ${status}.`);
 		entries++;
 	}
+	assert.deepEqual(customer.order_ids, [...customer.order_ids].sort((left, right) => left - right), "Order list must be deterministic");
+	assert.equal(customer.order_delivery_estimates, expectedLines.join("\n"), "Long string must include exactly the same orders and values");
 }
 for (const order of orders) {
-	assert.equal(customersById.get(order.customer)?.order_delivery_estimates[String(order.id)], order.delivery_estimate,
-		`Missing customer mapping for order ${order.id}`);
+	const customer = customersById.get(order.customer);
+	assert(customer?.order_ids.includes(order.id), `Missing customer mapping for order ${order.id}`);
 }
 assert.equal(entries, orders.length, "Every order must be mapped exactly once");
-console.log(`Customer feed validation passed: ${customers.length} customers, ${entries} matching order delivery estimates.`);
+console.log(`Customer feed validation passed: ${customers.length} customers, ${entries} order summaries and aligned tracking-status entries.`);
