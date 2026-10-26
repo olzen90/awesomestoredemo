@@ -1,6 +1,7 @@
 import type { APIRoute } from "astro";
 import { blogPages, categories, products } from "../../lib/catalog";
 import { orders } from "../../lib/orders";
+import { customers } from "../../lib/customers";
 import { categoryToFeed, configuredSiteUrl, jsonResponse, pageToFeed, productToFeed } from "../../lib/feed";
 
 export const GET = (({ request }) => {
@@ -10,6 +11,7 @@ export const GET = (({ request }) => {
 		categories: categories.map((category) => categoryToFeed(category, baseUrl)),
 		pages: blogPages.map((page) => pageToFeed(page, baseUrl)),
 		orders,
+		customers,
 		config: { created: Math.floor(Date.now() / 1000), strict: false },
 	});
 }) satisfies APIRoute;

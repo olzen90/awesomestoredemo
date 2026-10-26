@@ -10,7 +10,7 @@
     "build": "astro build",
     "build:verify": "npm run build && npm run validate",
     "preview": "astro preview",
-    "validate": "node scripts/validate-storefront.mjs",
+    "validate": "node scripts/validate-storefront.mjs && node scripts/validate-customer-feed.mjs",
     "astro": "astro"
   },
   "dependencies": {
