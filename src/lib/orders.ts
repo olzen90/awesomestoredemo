@@ -37,7 +37,17 @@ export type Order = {
 	order_status: string;
 	order_total: number;
 	tracking: TrackingParcel[];
+	delivery_estimate: string;
 };
+
+type StoredOrder = Omit<Order, "delivery_estimate">;
+
+const deliveryEstimates = ["3 to 5 days", "4 to 6 days", "5 to 7 days", "6 to 7 days"];
+
+function withDeliveryEstimate(order: StoredOrder): Order {
+	// Enrich the feed without changing the archive or consuming the order RNG.
+	return { ...order, delivery_estimate: deliveryEstimates[order.id % deliveryEstimates.length] ?? "5 to 7 days" };
+}
 
 type Customer = {
 	id: number;
@@ -239,7 +249,7 @@ function createTracking(orderId: number, orderTime: number, status: string, parc
 	};
 }
 
-function createFutureOrder(focalProduct: Product, slot: number): Order {
+function createFutureOrder(focalProduct: Product, slot: number): StoredOrder {
 	const productOffset = focalProduct.id - ARCHIVED_CATALOG_MAX_PRODUCT_ID - 1;
 	const orderId = FIRST_FUTURE_ORDER_ID + productOffset * FUTURE_ORDER_SLOTS_PER_PRODUCT + slot;
 	const rng = createRng(0xF00D00 + focalProduct.id * 97 + slot * 1_009);
@@ -292,7 +302,7 @@ function createFutureOrder(focalProduct: Product, slot: number): Order {
 	};
 }
 
-const archivedOrders = ordersArchive as Order[];
+const archivedOrders = ordersArchive as StoredOrder[];
 if (archivedOrders.length !== ARCHIVED_ORDER_COUNT) {
 	throw new Error(`Awesome Store order archive expected ${ARCHIVED_ORDER_COUNT} orders, found ${archivedOrders.length}`);
 }
@@ -304,7 +314,7 @@ const futureOrders = futureProducts.flatMap((product) =>
 	Array.from({ length: FUTURE_ORDER_SLOTS_PER_PRODUCT }, (_, slot) => createFutureOrder(product, slot)),
 );
 
-export const orders: Order[] = [...archivedOrders, ...futureOrders];
+export const orders: Order[] = [...archivedOrders, ...futureOrders].map(withDeliveryEstimate);
 
 if (new Set(orders.map((order) => order.id)).size !== orders.length) {
 	throw new Error("Awesome Store order archive and append-only orders contain duplicate IDs");

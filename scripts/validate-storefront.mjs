@@ -41,7 +41,7 @@ try {
 	errors.push(`Invalid or missing order archive: ${error.message}`);
 }
 const requiredProductFields = ["id", "name", "description", "price", "image", "url", "categories", "created_at", "color", "margin_group", "profit", "margin_percent"];
-const requiredOrderFields = ["id", "products", "time", "tracking"];
+const requiredOrderFields = ["id", "products", "time", "tracking", "delivery_estimate"];
 const validKey = /^[A-Za-z0-9_]+$/;
 const validOrderStatuses = new Set(["PROCESSING", "SENT", "IN_TRANSIT", "OUT_FOR_DELIVERY", "DELIVERED", "EXCEPTION", "RETURNED"]);
 const validCarriers = new Set(["GLS", "UPS", "FedEx"]);
@@ -87,7 +87,8 @@ if (categories) {
 if (pages && pages.length !== 3) errors.push(`Expected 3 blog pages, found ${pages.length}`);
 if (orderArchive && orderArchive.length !== 10_000) errors.push(`Expected 10000 archived orders, found ${orderArchive.length}`);
 if (orders && orders.length < 10_000) errors.push(`Expected at least 10000 orders, found ${orders.length}`);
-if (orders && orderArchive && orders.length >= orderArchive.length && JSON.stringify(orders.slice(0, orderArchive.length)) !== JSON.stringify(orderArchive)) {
+const archivedFeedOrders = orders?.slice(0, orderArchive?.length ?? 0).map(({ delivery_estimate, ...original }) => original);
+if (orders && orderArchive && orders.length >= orderArchive.length && JSON.stringify(archivedFeedOrders) !== JSON.stringify(orderArchive)) {
 	errors.push("The generated order feed changed one or more archived orders");
 }
 if (orders) {
@@ -103,6 +104,8 @@ if (orders) {
 		orderIds.add(order.id);
 		if (!Number.isInteger(order.id)) errors.push(`Order ${order.id} does not use an integer ID`);
 		if (!Number.isInteger(order.time)) errors.push(`Order ${order.id} has an invalid time`);
+		const estimate = typeof order.delivery_estimate === "string" && order.delivery_estimate.match(/^(\d+) to (\d+) days$/);
+		if (!estimate || Number(estimate[1]) < 1 || Number(estimate[1]) > Number(estimate[2])) errors.push(`Order ${order.id} has an invalid delivery_estimate`);
 		if (!Array.isArray(order.products) || order.products.length === 0) errors.push(`Order ${order.id} has no products`);
 		if (order.products?.length === 1) singleProductOrders += 1;
 		for (const item of order.products || []) {
@@ -144,6 +147,7 @@ if (orders) {
 if (combined) {
 	if (combined.products?.length < 512) errors.push("Combined feed does not contain at least 512 products");
 	if (combined.orders?.length < 10_000) errors.push("Combined feed does not contain at least 10000 orders");
+	if (orders && JSON.stringify(combined.orders) !== JSON.stringify(orders)) errors.push("Combined and standalone order feeds differ, including delivery_estimate");
 	if (combined.config?.strict !== false) errors.push("Combined feed config.strict must be false");
 	if (!Number.isInteger(combined.config?.created)) errors.push("Combined feed config.created must be a Unix timestamp");
 }
