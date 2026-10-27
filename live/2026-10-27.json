@@ -360,7 +360,7 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-10-27T01:01:59+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-10-27-0163",
@@ -371,7 +371,7 @@
       "mode": "organic",
       "channel": "organic",
       "scheduled_at": "2026-10-27T01:07:44+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-10-27-0148",
@@ -382,7 +382,7 @@
       "mode": "organic",
       "channel": "organic",
       "scheduled_at": "2026-10-27T01:10:33+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-10-27-0049",
@@ -393,7 +393,7 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-10-27T01:16:06+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-10-27-0139",
@@ -404,7 +404,7 @@
       "mode": "mixed",
       "channel": "chat",
       "scheduled_at": "2026-10-27T02:11:57+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-10-27-0200",
@@ -415,7 +415,7 @@
       "mode": "mixed",
       "channel": "search",
       "scheduled_at": "2026-10-27T03:08:41+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-10-27-0108",
@@ -426,7 +426,7 @@
       "mode": "mixed",
       "channel": "search",
       "scheduled_at": "2026-10-27T03:12:37+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-10-27-0251",
@@ -437,7 +437,7 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-10-27T04:08:55+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-10-27-0073",
@@ -448,7 +448,7 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-10-27T06:00:15+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-10-27-0030",
@@ -459,7 +459,7 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-10-27T06:00:58+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-10-27-search-0031",
