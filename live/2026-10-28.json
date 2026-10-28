@@ -19,7 +19,64 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-10-28T00:13:41+01:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "channel": "search",
+        "clicked_ids": [],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "e274c3b77546",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "e274c3b77546",
+            "email": "tony.stark.search-2026-10-28-203@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "e274c3b77546",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/travel-accessories",
+            "category": "302"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "e274c3b77546",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=cobalt+packing+cube"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "e274c3b77546",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "cobalt packing cube"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-28T02:22:08.192767+01:00"
     },
     {
       "id": "demo-2026-10-28-0280",
@@ -30,7 +87,64 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-10-28T00:14:36+01:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "channel": "recommendations",
+        "clicked_ids": [
+          10148
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "35c54a30b13d",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "35c54a30b13d",
+            "email": "neo.recommendations-2026-10-28-280@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "35c54a30b13d",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/bags",
+            "category": "301"
+          },
+          {
+            "api": "recommendations/category/popular",
+            "category": 301,
+            "visitor": "35c54a30b13d",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "35c54a30b13d",
+            "product": 10148,
+            "n": 1,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "35c54a30b13d",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/work-cobalt-tote-10148",
+            "product": "10148"
+          },
+          {
+            "api": "log/product",
+            "visitor": "35c54a30b13d",
+            "product": "10148"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-28T02:22:08.192767+01:00"
     },
     {
       "id": "demo-2026-10-28-0104",
@@ -41,7 +155,64 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-10-28T01:01:17+01:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "channel": "recommendations",
+        "clicked_ids": [
+          10282
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "2904f98b6940",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "2904f98b6940",
+            "email": "leia.organa.recommendations-100@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "2904f98b6940",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/lighting-objects",
+            "category": "403"
+          },
+          {
+            "api": "recommendations/category/popular",
+            "category": 403,
+            "visitor": "2904f98b6940",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "2904f98b6940",
+            "product": 10282,
+            "n": 3,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "2904f98b6940",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/beam-warm-white-desk-lamp-edition-2-10282",
+            "product": "10282"
+          },
+          {
+            "api": "log/product",
+            "visitor": "2904f98b6940",
+            "product": "10282"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-28T02:22:08.192767+01:00"
     },
     {
       "id": "demo-2026-10-28-search-0011",
@@ -52,8 +223,115 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-10-28T02:00:28+01:00",
-      "status": "in_progress",
-      "search_volume": true
+      "status": "completed",
+      "search_volume": true,
+      "outcome": {
+        "profile": "home-host",
+        "channel": "search",
+        "clicked_ids": [
+          10267
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "af10054ee9b0",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "af10054ee9b0",
+            "email": "frodo.baggins.search-2026-10-28-11@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "af10054ee9b0",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/lighting-objects",
+            "category": "403"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "af10054ee9b0",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "sofa"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "af10054ee9b0",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=brass+desk+lamp"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "af10054ee9b0",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "brass desk lamp"
+          },
+          {
+            "api": "log/click",
+            "visitor": "af10054ee9b0",
+            "product": 10267,
+            "n": 0,
+            "labels": [
+              "Omni-search"
+            ],
+            "source_api": "search/omni"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "af10054ee9b0",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/arc-brass-desk-lamp-10267",
+            "product": "10267"
+          },
+          {
+            "api": "log/product",
+            "visitor": "af10054ee9b0",
+            "product": "10267"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-28T02:22:08.192767+01:00"
     },
     {
       "id": "demo-2026-10-28-0022",
