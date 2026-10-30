@@ -19,7 +19,72 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-10-31T00:08:28+01:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "focused-workday",
+        "channel": "chat",
+        "clicked_ids": [
+          10315
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "5e08993ff2c3",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "5e08993ff2c3",
+            "email": "luke.skywalker.chat-2026-10-31-148@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "5e08993ff2c3",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/desk-essentials",
+            "category": "501"
+          },
+          {
+            "api": "chat/message",
+            "visitor": "5e08993ff2c3",
+            "chat_uid": "42c7754c-e861-4d21-b010-275d1550826b",
+            "prompt": "I'm shopping for notebook for my focused workday. My budget is 220 euros. Can you show me suitable products?",
+            "message_types": [
+              "slider",
+              "text"
+            ],
+            "returned_ids": [
+              10314,
+              10294,
+              10289,
+              10309,
+              10290,
+              10295,
+              10310,
+              10315
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "5e08993ff2c3",
+            "product": 10315,
+            "n": 7,
+            "source_api": "assistant/search/products"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "5e08993ff2c3",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/record-navy-notebook-edition-2-10315",
+            "product": "10315"
+          },
+          {
+            "api": "log/product",
+            "visitor": "5e08993ff2c3",
+            "product": "10315"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-31T00:46:59.637718+01:00"
     },
     {
       "id": "demo-2026-10-31-0304",
@@ -30,7 +95,72 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-10-31T00:13:13+01:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "slow-morning",
+        "channel": "chat",
+        "clicked_ids": [
+          10365
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "69cc8dd751fa",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "69cc8dd751fa",
+            "email": "tony.stark.chat-2026-10-31-304@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "69cc8dd751fa",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/bath-body",
+            "category": "601"
+          },
+          {
+            "api": "chat/message",
+            "visitor": "69cc8dd751fa",
+            "chat_uid": "fdc95752-a229-4ba2-824d-16022860d5d8",
+            "prompt": "I'm shopping for bath towel for my slow morning. My budget is 180 euros. Can you show me suitable products?",
+            "message_types": [
+              "slider",
+              "text"
+            ],
+            "returned_ids": [
+              10345,
+              10350,
+              10365,
+              10370,
+              10347,
+              10346,
+              10351,
+              10366
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "69cc8dd751fa",
+            "product": 10365,
+            "n": 2,
+            "source_api": "assistant/search/products"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "69cc8dd751fa",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/steam-oat-bath-towel-edition-2-10365",
+            "product": "10365"
+          },
+          {
+            "api": "log/product",
+            "visitor": "69cc8dd751fa",
+            "product": "10365"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-10-31T00:46:59.637718+01:00"
     },
     {
       "id": "demo-2026-10-31-0117",
