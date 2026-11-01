@@ -19,7 +19,64 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-11-02T00:07:54+01:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "wardrobe-refresh",
+        "channel": "recommendations",
+        "clicked_ids": [
+          10032
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "22bb570796a1",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "22bb570796a1",
+            "email": "leia.organa.recommendations-2026-11-02-254@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "22bb570796a1",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/tops",
+            "category": "102"
+          },
+          {
+            "api": "recommendations/category/popular",
+            "category": 102,
+            "visitor": "22bb570796a1",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "22bb570796a1",
+            "product": 10032,
+            "n": 10,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "22bb570796a1",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/studio-sky-t-shirt-10032",
+            "product": "10032"
+          },
+          {
+            "api": "log/product",
+            "visitor": "22bb570796a1",
+            "product": "10032"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-11-02T00:35:55.706569+01:00"
     },
     {
       "id": "demo-2026-11-02-0317",
@@ -30,7 +87,87 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-02T00:10:18+01:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "wardrobe-refresh",
+        "channel": "search",
+        "clicked_ids": [
+          10015
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "88e7fda4c566",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "88e7fda4c566",
+            "email": "neo.search-5@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "88e7fda4c566",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/shirts-layers",
+            "category": "101"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "88e7fda4c566",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=aster+works+crewneck"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "88e7fda4c566",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "aster works crewneck"
+          },
+          {
+            "api": "log/click",
+            "visitor": "88e7fda4c566",
+            "product": 10015,
+            "n": 2,
+            "labels": [
+              "Omni-search"
+            ],
+            "source_api": "search/omni"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "88e7fda4c566",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/daily-charcoal-crewneck-10015",
+            "product": "10015"
+          },
+          {
+            "api": "log/product",
+            "visitor": "88e7fda4c566",
+            "product": "10015"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-11-02T00:35:55.706569+01:00"
     },
     {
       "id": "demo-2026-11-02-0368",
