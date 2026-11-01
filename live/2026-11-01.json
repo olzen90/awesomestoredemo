@@ -19,7 +19,64 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-11-01T00:03:25+01:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "commuter",
+        "channel": "recommendations",
+        "clicked_ids": [
+          10105
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "13a51e719028",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "13a51e719028",
+            "email": "hermione.granger.recommendations-2026-11-01-126@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "13a51e719028",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/everyday-shoes",
+            "category": "201"
+          },
+          {
+            "api": "recommendations/category/popular",
+            "category": 201,
+            "visitor": "13a51e719028",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "13a51e719028",
+            "product": 10105,
+            "n": 5,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "13a51e719028",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/low-rust-slip-on-10105",
+            "product": "10105"
+          },
+          {
+            "api": "log/product",
+            "visitor": "13a51e719028",
+            "product": "10105"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-11-01T02:09:57.131303+01:00"
     },
     {
       "id": "demo-2026-11-01-0199",
@@ -30,7 +87,80 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-11-01T00:10:16+01:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "commuter",
+        "channel": "recommendations",
+        "clicked_ids": [
+          10115
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "16fcb5fe6855",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "16fcb5fe6855",
+            "email": "ellen.ripley.recommendations-2026-11-01-199@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "16fcb5fe6855",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/everyday-shoes",
+            "category": "201"
+          },
+          {
+            "api": "recommendations/category/popular",
+            "category": 201,
+            "visitor": "16fcb5fe6855",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "16fcb5fe6855",
+            "product": 10115,
+            "n": 10,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "16fcb5fe6855",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/low-fog-runner-edition-2-10115",
+            "product": "10115"
+          },
+          {
+            "api": "log/product",
+            "visitor": "16fcb5fe6855",
+            "product": "10115"
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "16fcb5fe6855",
+            "email": "ellen.ripley.recommendations-2026-11-01-199@example.com",
+            "products": [
+              {
+                "id": 10115,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "16fcb5fe6855",
+            "url": "https://olzen90.github.io/awesomestoredemo/cart/"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-11-01T02:09:57.131303+01:00"
     },
     {
       "id": "demo-2026-11-01-search-0065",
@@ -41,8 +171,88 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-01T00:13:09+01:00",
-      "status": "in_progress",
-      "search_volume": true
+      "status": "completed",
+      "search_volume": true,
+      "outcome": {
+        "profile": "wardrobe-refresh",
+        "channel": "search",
+        "clicked_ids": [
+          10033
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "493a828ee416",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "493a828ee416",
+            "email": "leia.organa.search-2026-11-01-65@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "493a828ee416",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/tops",
+            "category": "102"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "493a828ee416",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=ink+t-shirt"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "493a828ee416",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "ink t-shirt"
+          },
+          {
+            "api": "log/click",
+            "visitor": "493a828ee416",
+            "product": 10033,
+            "n": 9,
+            "labels": [
+              "Omni-search"
+            ],
+            "source_api": "search/omni"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "493a828ee416",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/clean-chalk-t-shirt-10033",
+            "product": "10033"
+          },
+          {
+            "api": "log/product",
+            "visitor": "493a828ee416",
+            "product": "10033"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-11-01T02:09:57.131303+01:00"
     },
     {
       "id": "demo-2026-11-01-0231",
