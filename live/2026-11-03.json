@@ -19,7 +19,64 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-11-03T00:09:32+01:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "thoughtful-gift",
+        "channel": "recommendations",
+        "clicked_ids": [
+          10462
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "5e8e25d4c5d7",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "5e8e25d4c5d7",
+            "email": "frodo.baggins.recommendations-2026-11-03-87@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "5e8e25d4c5d7",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/gifts-under-50",
+            "category": "801"
+          },
+          {
+            "api": "recommendations/category/popular",
+            "category": 801,
+            "visitor": "5e8e25d4c5d7",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "5e8e25d4c5d7",
+            "product": 10462,
+            "n": 0,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "5e8e25d4c5d7",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/kind-cobalt-matchbox-10462",
+            "product": "10462"
+          },
+          {
+            "api": "log/product",
+            "visitor": "5e8e25d4c5d7",
+            "product": "10462"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-11-03T00:30:21.021717+01:00"
     },
     {
       "id": "demo-2026-11-03-0255",
@@ -30,7 +87,155 @@
       "mode": "mixed",
       "channel": "recommendations",
       "scheduled_at": "2026-11-03T00:11:56+01:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "commuter",
+        "channel": "recommendations",
+        "clicked_ids": [
+          10165
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "0127b1229cf6",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "0127b1229cf6",
+            "email": "jeanluc.picard.recommendations-2026-11-03-255@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "0127b1229cf6",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/bags",
+            "category": "301"
+          },
+          {
+            "api": "recommendations/category/popular",
+            "category": 301,
+            "visitor": "0127b1229cf6",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "0127b1229cf6",
+            "product": 10165,
+            "n": 0,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "0127b1229cf6",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/everyday-olive-daypack-10165",
+            "product": "10165"
+          },
+          {
+            "api": "log/product",
+            "visitor": "0127b1229cf6",
+            "product": "10165"
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "0127b1229cf6",
+            "email": "jeanluc.picard.recommendations-2026-11-03-255@example.com",
+            "products": [
+              {
+                "id": 10165,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "0127b1229cf6",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/transit-natural-tote-edition-2-10167",
+            "product": "10167"
+          },
+          {
+            "api": "log/product",
+            "visitor": "0127b1229cf6",
+            "product": "10167"
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "0127b1229cf6",
+            "email": "jeanluc.picard.recommendations-2026-11-03-255@example.com",
+            "products": [
+              {
+                "id": 10165,
+                "quantity": 1
+              },
+              {
+                "id": 10167,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "0127b1229cf6",
+            "url": "https://olzen90.github.io/awesomestoredemo/cart/"
+          },
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-11-03-0255",
+            "visitor": "0127b1229cf6",
+            "customer": "demo-recommendations-2026-11-03-255",
+            "email": "jeanluc.picard.recommendations-2026-11-03-255@example.com",
+            "products": [
+              {
+                "id": 10165,
+                "price": 125,
+                "quantity": 1
+              },
+              {
+                "id": 10167,
+                "price": 98,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "0127b1229cf6",
+            "email": "jeanluc.picard.recommendations-2026-11-03-255@example.com",
+            "products": []
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "0127b1229cf6",
+            "url": "https://olzen90.github.io/awesomestoredemo/checkout/success/"
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-11-03-0255",
+          "visitor": "0127b1229cf6",
+          "customer": "demo-recommendations-2026-11-03-255",
+          "email": "jeanluc.picard.recommendations-2026-11-03-255@example.com",
+          "products": [
+            {
+              "id": 10165,
+              "price": 125,
+              "quantity": 1
+            },
+            {
+              "id": 10167,
+              "price": 98,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 223.0,
+        "estimated_profit": 103.46
+      },
+      "processed_at": "2026-11-03T00:30:21.021717+01:00"
     },
     {
       "id": "demo-2026-11-03-0147",
@@ -41,7 +246,75 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-11-03T00:14:34+01:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "commuter",
+        "channel": "chat",
+        "clicked_ids": [
+          10147
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "1ea988a2bb1a",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "1ea988a2bb1a",
+            "email": "hermione.granger.chat-2026-11-03-147@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "1ea988a2bb1a",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/bags",
+            "category": "301"
+          },
+          {
+            "api": "chat/message",
+            "visitor": "1ea988a2bb1a",
+            "chat_uid": "0ba867f0-9424-42e8-9b9b-ab44612cc2e3",
+            "prompt": "I'm shopping for tote for my commuter. My budget is 250 euros. Can you show me suitable products?",
+            "message_types": [
+              "slider",
+              "text"
+            ],
+            "returned_ids": [
+              10148,
+              10151,
+              10146,
+              10169,
+              10152,
+              10147,
+              10155,
+              10153,
+              10149,
+              10154,
+              10150
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "1ea988a2bb1a",
+            "product": 10147,
+            "n": 5,
+            "source_api": "assistant/search/products"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "1ea988a2bb1a",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/transit-natural-tote-10147",
+            "product": "10147"
+          },
+          {
+            "api": "log/product",
+            "visitor": "1ea988a2bb1a",
+            "product": "10147"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-11-03T00:30:21.021717+01:00"
     },
     {
       "id": "demo-2026-11-03-0277",
