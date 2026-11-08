@@ -19,7 +19,76 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-11-09T00:06:49+01:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "channel": "chat",
+        "clicked_ids": [
+          10195
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "dced50b47d7b",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "dced50b47d7b",
+            "email": "neo.chat-61@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "dced50b47d7b",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/travel-accessories",
+            "category": "302"
+          },
+          {
+            "api": "chat/message",
+            "visitor": "dced50b47d7b",
+            "chat_uid": "27772c50-f6c5-423b-9362-aab6597ce736",
+            "prompt": "I'm shopping for packing cube for my weekend traveller. My budget is 250 euros. Can you show me suitable products?",
+            "message_types": [
+              "slider",
+              "text"
+            ],
+            "returned_ids": [
+              10176,
+              10180,
+              10175,
+              10195,
+              10200,
+              10197,
+              10181,
+              10196,
+              10201,
+              10183,
+              10182,
+              10177
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "dced50b47d7b",
+            "product": 10195,
+            "n": 3,
+            "source_api": "assistant/search/products"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "dced50b47d7b",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/fold-stone-packing-cube-edition-2-10195",
+            "product": "10195"
+          },
+          {
+            "api": "log/product",
+            "visitor": "dced50b47d7b",
+            "product": "10195"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-11-09T00:42:38.312318+01:00"
     },
     {
       "id": "demo-2026-11-09-0280",
@@ -30,7 +99,66 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-11-09T00:11:09+01:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "channel": "email",
+        "clicked_ids": [
+          10265
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "a7bba99a91e6",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "a7bba99a91e6",
+            "email": "frodo.baggins.email-35@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "a7bba99a91e6",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/soft-goods",
+            "category": "402"
+          },
+          {
+            "api": "campaigns/click",
+            "embed": "automated-popular",
+            "product": 10265,
+            "n": 0,
+            "source_api": "recommendations/popular",
+            "labels": [
+              "Automated / Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "a7bba99a91e6",
+            "product": 10265,
+            "n": 0,
+            "labels": [
+              "Automated / Popular"
+            ],
+            "external": true,
+            "source_api": "recommendations/popular"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "a7bba99a91e6",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/north-black-desk-lamp-10265",
+            "product": "10265"
+          },
+          {
+            "api": "log/product",
+            "visitor": "a7bba99a91e6",
+            "product": "10265"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-11-09T00:42:38.312318+01:00"
     },
     {
       "id": "demo-2026-11-09-0399",
@@ -41,7 +169,64 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-11-09T00:11:41+01:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "thoughtful-gift",
+        "channel": "recommendations",
+        "clicked_ids": [
+          10219
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "230e5907aa83",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "230e5907aa83",
+            "email": "ellen.ripley.recommendations-2026-11-09-399@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "230e5907aa83",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/kitchen-table",
+            "category": "401"
+          },
+          {
+            "api": "recommendations/category/popular",
+            "category": 401,
+            "visitor": "230e5907aa83",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "230e5907aa83",
+            "product": 10219,
+            "n": 11,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "230e5907aa83",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/ledge-amber-serving-bowl-10219",
+            "product": "10219"
+          },
+          {
+            "api": "log/product",
+            "visitor": "230e5907aa83",
+            "product": "10219"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-11-09T00:42:38.312318+01:00"
     },
     {
       "id": "demo-2026-11-09-0363",
@@ -52,7 +237,123 @@
       "mode": "organic",
       "channel": "organic",
       "scheduled_at": "2026-11-09T00:15:56+01:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "channel": "organic",
+        "clicked_ids": [],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "10768277ff61",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "10768277ff61",
+            "email": "tony.stark.organic-2026-11-09-363@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "10768277ff61",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/camp-picnic",
+            "category": "701"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "10768277ff61",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/camp-navy-picnic-blanket-10413",
+            "product": "10413"
+          },
+          {
+            "api": "log/product",
+            "visitor": "10768277ff61",
+            "product": "10413"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "10768277ff61",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/market-ink-tote-10146",
+            "product": "10146"
+          },
+          {
+            "api": "log/product",
+            "visitor": "10768277ff61",
+            "product": "10146"
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "10768277ff61",
+            "email": "tony.stark.organic-2026-11-09-363@example.com",
+            "products": [
+              {
+                "id": 10413,
+                "quantity": 1
+              },
+              {
+                "id": 10146,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "10768277ff61",
+            "url": "https://olzen90.github.io/awesomestoredemo/cart/"
+          },
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-11-09-0363",
+            "visitor": "10768277ff61",
+            "customer": "demo-organic-2026-11-09-363",
+            "email": "tony.stark.organic-2026-11-09-363@example.com",
+            "products": [
+              {
+                "id": 10413,
+                "price": 86,
+                "quantity": 1
+              },
+              {
+                "id": 10146,
+                "price": 89,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "10768277ff61",
+            "email": "tony.stark.organic-2026-11-09-363@example.com",
+            "products": []
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "10768277ff61",
+            "url": "https://olzen90.github.io/awesomestoredemo/checkout/success/"
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-11-09-0363",
+          "visitor": "10768277ff61",
+          "customer": "demo-organic-2026-11-09-363",
+          "email": "tony.stark.organic-2026-11-09-363@example.com",
+          "products": [
+            {
+              "id": 10413,
+              "price": 86,
+              "quantity": 1
+            },
+            {
+              "id": 10146,
+              "price": 89,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 175.0,
+        "estimated_profit": 48.11
+      },
+      "processed_at": "2026-11-09T00:42:38.312318+01:00"
     },
     {
       "id": "demo-2026-11-09-0240",
