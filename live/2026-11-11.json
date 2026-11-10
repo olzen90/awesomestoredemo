@@ -19,8 +19,65 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-11T00:04:25+01:00",
-      "status": "in_progress",
-      "search_volume": true
+      "status": "completed",
+      "search_volume": true,
+      "outcome": {
+        "profile": "slow-morning",
+        "channel": "search",
+        "clicked_ids": [],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "f56cdbf1b6b9",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "f56cdbf1b6b9",
+            "email": "tony.stark.search-2026-11-11-49@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "f56cdbf1b6b9",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/bath-body",
+            "category": "601"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "f56cdbf1b6b9",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=chalk+bath+towel"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "f56cdbf1b6b9",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "chalk bath towel"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-11-11T00:22:13.025816+01:00"
     },
     {
       "id": "demo-2026-11-11-0382",
@@ -31,7 +88,80 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-11-11T00:05:01+01:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "channel": "recommendations",
+        "clicked_ids": [
+          10166
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "4f483696b191",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "4f483696b191",
+            "email": "tony.stark.recommendations-4@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "4f483696b191",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/bags",
+            "category": "301"
+          },
+          {
+            "api": "recommendations/category/popular",
+            "category": 301,
+            "visitor": "4f483696b191",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "4f483696b191",
+            "product": 10166,
+            "n": 10,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "4f483696b191",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/market-ink-tote-edition-2-10166",
+            "product": "10166"
+          },
+          {
+            "api": "log/product",
+            "visitor": "4f483696b191",
+            "product": "10166"
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "4f483696b191",
+            "email": "tony.stark.recommendations-4@example.com",
+            "products": [
+              {
+                "id": 10166,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "4f483696b191",
+            "url": "https://olzen90.github.io/awesomestoredemo/cart/"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-11-11T00:22:13.025816+01:00"
     },
     {
       "id": "demo-2026-11-11-0422",
@@ -42,7 +172,64 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-11T00:13:07+01:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "thoughtful-gift",
+        "channel": "search",
+        "clicked_ids": [],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "e8226c37472f",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "e8226c37472f",
+            "email": "leia.organa.search-2026-11-11-422@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "e8226c37472f",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/gifts-under-50",
+            "category": "801"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "e8226c37472f",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=amber+matchbox"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "e8226c37472f",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "amber matchbox"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-11-11T00:22:13.025816+01:00"
     },
     {
       "id": "demo-2026-11-11-0328",
