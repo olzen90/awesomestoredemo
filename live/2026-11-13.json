@@ -19,7 +19,178 @@
       "mode": "mixed",
       "channel": "search",
       "scheduled_at": "2026-11-13T01:06:10+01:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "slow-morning",
+        "channel": "search",
+        "clicked_ids": [
+          10347
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "b444571bd48c",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "b444571bd48c",
+            "email": "hermione.granger.search-2026-11-13-70@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "b444571bd48c",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/bath-body",
+            "category": "601"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "b444571bd48c",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=common+field+bath+towel"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "b444571bd48c",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "common field bath towel"
+          },
+          {
+            "api": "log/click",
+            "visitor": "b444571bd48c",
+            "product": 10347,
+            "n": 0,
+            "labels": [
+              "Omni-search"
+            ],
+            "source_api": "search/omni"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "b444571bd48c",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/cloud-chalk-bath-towel-10347",
+            "product": "10347"
+          },
+          {
+            "api": "log/product",
+            "visitor": "b444571bd48c",
+            "product": "10347"
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "b444571bd48c",
+            "email": "hermione.granger.search-2026-11-13-70@example.com",
+            "products": [
+              {
+                "id": 10347,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "b444571bd48c",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/form-forest-stretch-strap-10392",
+            "product": "10392"
+          },
+          {
+            "api": "log/product",
+            "visitor": "b444571bd48c",
+            "product": "10392"
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "b444571bd48c",
+            "email": "hermione.granger.search-2026-11-13-70@example.com",
+            "products": [
+              {
+                "id": 10347,
+                "quantity": 1
+              },
+              {
+                "id": 10392,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "b444571bd48c",
+            "url": "https://olzen90.github.io/awesomestoredemo/cart/"
+          },
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-11-13-0070",
+            "visitor": "b444571bd48c",
+            "customer": "demo-search-2026-11-13-70",
+            "email": "hermione.granger.search-2026-11-13-70@example.com",
+            "products": [
+              {
+                "id": 10347,
+                "price": 57.6,
+                "quantity": 1
+              },
+              {
+                "id": 10392,
+                "price": 109,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "b444571bd48c",
+            "email": "hermione.granger.search-2026-11-13-70@example.com",
+            "products": []
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "b444571bd48c",
+            "url": "https://olzen90.github.io/awesomestoredemo/checkout/success/"
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-11-13-0070",
+          "visitor": "b444571bd48c",
+          "customer": "demo-search-2026-11-13-70",
+          "email": "hermione.granger.search-2026-11-13-70@example.com",
+          "products": [
+            {
+              "id": 10347,
+              "price": 57.6,
+              "quantity": 1
+            },
+            {
+              "id": 10392,
+              "price": 109,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 166.6,
+        "estimated_profit": 44.26
+      },
+      "processed_at": "2026-11-13T01:23:46.352678+01:00"
     },
     {
       "id": "demo-2026-11-13-0287",
@@ -30,7 +201,82 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-11-13T01:12:40+01:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "wardrobe-refresh",
+        "channel": "email",
+        "clicked_ids": [
+          10087
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "d1a6371b0842",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "d1a6371b0842",
+            "email": "frodo.baggins.email-2026-11-13-287@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "d1a6371b0842",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/bottoms",
+            "category": "103"
+          },
+          {
+            "api": "campaigns/click",
+            "embed": "automated-popular",
+            "product": 10087,
+            "n": 0,
+            "source_api": "recommendations/popular",
+            "labels": [
+              "Automated / Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "d1a6371b0842",
+            "product": 10087,
+            "n": 0,
+            "labels": [
+              "Automated / Popular"
+            ],
+            "external": true,
+            "source_api": "recommendations/popular"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "d1a6371b0842",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/move-navy-trouser-edition-2-10087",
+            "product": "10087"
+          },
+          {
+            "api": "log/product",
+            "visitor": "d1a6371b0842",
+            "product": "10087"
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "d1a6371b0842",
+            "email": "frodo.baggins.email-2026-11-13-287@example.com",
+            "products": [
+              {
+                "id": 10087,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "d1a6371b0842",
+            "url": "https://olzen90.github.io/awesomestoredemo/cart/"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-11-13T01:23:46.352678+01:00"
     },
     {
       "id": "demo-2026-11-13-0295",
@@ -41,7 +287,64 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-13T01:15:03+01:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "focused-workday",
+        "channel": "search",
+        "clicked_ids": [],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "5618ea661e82",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "5618ea661e82",
+            "email": "tony.stark.search-2026-11-13-295@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "5618ea661e82",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/desk-essentials",
+            "category": "501"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "5618ea661e82",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=navy+desk+tray"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "5618ea661e82",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "navy desk tray"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-11-13T01:23:46.352678+01:00"
     },
     {
       "id": "demo-2026-11-13-0112",
