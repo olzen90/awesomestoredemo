@@ -1143,7 +1143,7 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-16T03:08:23+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0387",
@@ -1154,7 +1154,7 @@
       "mode": "mixed",
       "channel": "recommendations",
       "scheduled_at": "2026-11-16T03:10:22+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-search-0007",
@@ -1165,7 +1165,7 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-16T04:00:17+01:00",
-      "status": "pending",
+      "status": "in_progress",
       "search_volume": true
     },
     {
@@ -1177,7 +1177,7 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-11-16T04:05:05+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0039",
@@ -1188,7 +1188,7 @@
       "mode": "clerk",
       "channel": "recommendations",
       "scheduled_at": "2026-11-16T04:06:27+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0321",
@@ -1199,7 +1199,7 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-11-16T05:03:50+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0414",
@@ -1210,7 +1210,7 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-11-16T05:04:13+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0122",
@@ -1221,7 +1221,7 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-16T05:04:27+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0327",
@@ -1232,7 +1232,7 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-11-16T05:06:16+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0412",
@@ -1243,7 +1243,7 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-11-16T05:09:48+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0406",
@@ -1254,7 +1254,7 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-11-16T06:01:14+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0158",
@@ -1265,7 +1265,7 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-11-16T06:04:46+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0418",
@@ -1276,7 +1276,7 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-11-16T06:06:50+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0363",
@@ -1287,7 +1287,7 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-11-16T06:07:31+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0455",
@@ -1298,7 +1298,7 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-11-16T06:08:28+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0262",
@@ -1309,7 +1309,7 @@
       "mode": "clerk",
       "channel": "chat",
       "scheduled_at": "2026-11-16T06:08:30+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0134",
@@ -1320,7 +1320,7 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-11-16T06:14:00+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0206",
@@ -1331,7 +1331,7 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-11-16T07:01:02+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0399",
@@ -1342,7 +1342,7 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-11-16T07:02:33+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0157",
@@ -1353,7 +1353,7 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-11-16T07:02:50+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-search-0025",
@@ -1364,7 +1364,7 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-16T07:03:23+01:00",
-      "status": "pending",
+      "status": "in_progress",
       "search_volume": true
     },
     {
@@ -1376,7 +1376,7 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-16T07:03:51+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0179",
@@ -1387,7 +1387,7 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-11-16T07:04:23+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0364",
@@ -1398,7 +1398,7 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-11-16T07:04:25+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0097",
@@ -1409,7 +1409,7 @@
       "mode": "clerk",
       "channel": "recommendations",
       "scheduled_at": "2026-11-16T07:05:29+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-search-0029",
@@ -1420,7 +1420,7 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-16T07:05:42+01:00",
-      "status": "pending",
+      "status": "in_progress",
       "search_volume": true
     },
     {
@@ -1432,7 +1432,7 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-11-16T07:07:47+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0038",
@@ -1443,7 +1443,7 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-11-16T07:10:24+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0302",
@@ -1454,7 +1454,7 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-11-16T07:10:57+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0329",
@@ -1465,7 +1465,7 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-11-16T07:11:52+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0407",
@@ -1476,7 +1476,7 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-11-16T07:14:05+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-search-0009",
@@ -1487,7 +1487,7 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-16T07:14:14+01:00",
-      "status": "pending",
+      "status": "in_progress",
       "search_volume": true
     },
     {
@@ -1499,7 +1499,7 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-16T07:15:49+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0427",
@@ -1510,7 +1510,7 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-16T07:15:56+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-search-0000",
@@ -1521,7 +1521,7 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-16T08:00:46+01:00",
-      "status": "pending",
+      "status": "in_progress",
       "search_volume": true
     },
     {
@@ -1533,7 +1533,7 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-16T08:01:00+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0335",
@@ -1544,7 +1544,7 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-16T08:01:12+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0224",
@@ -1555,7 +1555,7 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-11-16T08:01:13+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0216",
@@ -1566,7 +1566,7 @@
       "mode": "mixed",
       "channel": "email",
       "scheduled_at": "2026-11-16T08:01:44+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0228",
@@ -1577,7 +1577,7 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-16T08:02:03+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0006",
@@ -1588,7 +1588,7 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-11-16T08:02:45+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0248",
@@ -1599,7 +1599,7 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-11-16T08:04:48+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0026",
@@ -1610,7 +1610,7 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-11-16T08:06:16+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0114",
@@ -1621,7 +1621,7 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-11-16T08:07:33+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0185",
@@ -1632,7 +1632,7 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-11-16T08:08:56+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0091",
@@ -1643,7 +1643,7 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-16T08:09:46+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0145",
@@ -1654,7 +1654,7 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-11-16T08:14:34+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0246",
@@ -1665,7 +1665,7 @@
       "mode": "mixed",
       "channel": "recommendations",
       "scheduled_at": "2026-11-16T08:16:01+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0404",
@@ -1676,7 +1676,7 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-11-16T09:00:18+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0282",
@@ -1687,7 +1687,7 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-11-16T09:00:52+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0377",
@@ -1698,7 +1698,7 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-11-16T09:01:31+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0130",
@@ -1709,7 +1709,7 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-11-16T09:01:35+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0285",
@@ -1720,7 +1720,7 @@
       "mode": "organic",
       "channel": "organic",
       "scheduled_at": "2026-11-16T09:05:24+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0193",
@@ -1731,7 +1731,7 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-16T09:05:45+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0305",
@@ -1742,7 +1742,7 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-11-16T09:06:15+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-search-0032",
@@ -1753,7 +1753,7 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-16T09:06:42+01:00",
-      "status": "pending",
+      "status": "in_progress",
       "search_volume": true
     },
     {
@@ -1765,7 +1765,7 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-16T09:07:56+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0115",
@@ -1776,7 +1776,7 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-16T09:08:12+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0135",
@@ -1787,7 +1787,7 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-11-16T09:08:39+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0195",
@@ -1798,7 +1798,7 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-11-16T09:09:06+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0433",
@@ -1809,7 +1809,7 @@
       "mode": "mixed",
       "channel": "search",
       "scheduled_at": "2026-11-16T09:10:40+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0318",
@@ -1820,7 +1820,7 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-11-16T09:12:20+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0003",
@@ -1831,7 +1831,7 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-16T09:14:32+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0449",
@@ -1842,7 +1842,7 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-11-16T09:15:43+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-search-0008",
@@ -1853,7 +1853,7 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-16T09:15:50+01:00",
-      "status": "pending",
+      "status": "in_progress",
       "search_volume": true
     },
     {
@@ -1865,7 +1865,7 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-11-16T09:15:54+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0064",
@@ -1876,7 +1876,7 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-11-16T09:16:03+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0209",
@@ -1887,7 +1887,7 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-11-16T09:16:09+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0075",
@@ -1898,7 +1898,7 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-16T09:16:17+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0353",
@@ -1909,7 +1909,7 @@
       "mode": "organic",
       "channel": "organic",
       "scheduled_at": "2026-11-16T09:16:45+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0055",
@@ -1920,7 +1920,7 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-16T09:16:55+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0183",
@@ -1931,7 +1931,7 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-11-16T10:00:02+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0233",
@@ -1942,7 +1942,7 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-11-16T10:00:16+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0191",
@@ -1953,7 +1953,7 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-11-16T10:01:25+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0024",
@@ -1964,7 +1964,7 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-11-16T10:02:58+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0362",
@@ -1975,7 +1975,7 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-11-16T10:03:16+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0149",
@@ -1986,7 +1986,7 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-11-16T10:03:23+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0033",
@@ -1997,7 +1997,7 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-16T10:04:02+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0316",
@@ -2008,7 +2008,7 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-11-16T10:04:02+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0065",
@@ -2019,7 +2019,7 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-16T10:05:01+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0175",
@@ -2030,7 +2030,7 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-11-16T10:06:19+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0009",
@@ -2041,7 +2041,7 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-11-16T10:06:50+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0452",
@@ -2052,7 +2052,7 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-11-16T10:07:01+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0203",
@@ -2063,7 +2063,7 @@
       "mode": "clerk",
       "channel": "recommendations",
       "scheduled_at": "2026-11-16T10:07:15+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0068",
@@ -2074,7 +2074,7 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-11-16T10:07:26+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0021",
@@ -2085,7 +2085,7 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-11-16T10:07:44+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0330",
@@ -2096,7 +2096,7 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-11-16T10:09:12+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0082",
@@ -2107,7 +2107,7 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-11-16T10:09:41+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0376",
@@ -2118,7 +2118,7 @@
       "mode": "mixed",
       "channel": "email",
       "scheduled_at": "2026-11-16T10:10:23+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0037",
@@ -2129,7 +2129,7 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-16T10:10:45+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0099",
@@ -2140,7 +2140,7 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-16T10:11:03+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0108",
@@ -2151,7 +2151,7 @@
       "mode": "organic",
       "channel": "organic",
       "scheduled_at": "2026-11-16T10:12:30+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0308",
@@ -2162,7 +2162,7 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-16T10:12:31+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0032",
@@ -2173,7 +2173,7 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-11-16T10:14:10+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0119",
@@ -2184,7 +2184,7 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-11-16T10:14:26+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0454",
@@ -2195,7 +2195,7 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-11-16T10:14:29+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0147",
@@ -2206,7 +2206,7 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-11-16T10:14:42+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0350",
@@ -2217,7 +2217,7 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-11-16T10:14:59+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0094",
@@ -2228,7 +2228,7 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-16T10:15:46+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0172",
@@ -2239,7 +2239,7 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-16T10:16:22+01:00",
-      "status": "pending"
+      "status": "in_progress"
     },
     {
       "id": "demo-2026-11-16-0396",
