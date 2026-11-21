@@ -19,7 +19,74 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-11-22T00:01:43+01:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "commuter",
+        "channel": "chat",
+        "clicked_ids": [
+          10148
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "8df51cf3e98c",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "8df51cf3e98c",
+            "email": "jeanluc.picard.chat-2026-11-22-293@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "8df51cf3e98c",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/bags",
+            "category": "301"
+          },
+          {
+            "api": "chat/message",
+            "visitor": "8df51cf3e98c",
+            "chat_uid": "8bb2d55a-839a-4f84-a0a5-266155d10354",
+            "prompt": "I'm shopping for tote for my commuter. My budget is 250 euros. Can you show me suitable products?",
+            "message_types": [
+              "slider",
+              "text"
+            ],
+            "returned_ids": [
+              10148,
+              10167,
+              10147,
+              10153,
+              10146,
+              10155,
+              10174,
+              10152,
+              10151,
+              10154
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "8df51cf3e98c",
+            "product": 10148,
+            "n": 0,
+            "source_api": "assistant/search/products"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "8df51cf3e98c",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/work-cobalt-tote-10148",
+            "product": "10148"
+          },
+          {
+            "api": "log/product",
+            "visitor": "8df51cf3e98c",
+            "product": "10148"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-11-22T00:16:00.243171+01:00"
     },
     {
       "id": "demo-2026-11-22-0453",
@@ -30,7 +97,66 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-11-22T00:05:55+01:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "thoughtful-gift",
+        "channel": "email",
+        "clicked_ids": [
+          10227
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "794908edcbed",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "794908edcbed",
+            "email": "luke.skywalker.email-2026-11-22-453@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "794908edcbed",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/kitchen-table",
+            "category": "401"
+          },
+          {
+            "api": "campaigns/click",
+            "embed": "automated-popular",
+            "product": 10227,
+            "n": 0,
+            "source_api": "recommendations/popular",
+            "labels": [
+              "Automated / Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "794908edcbed",
+            "product": 10227,
+            "n": 0,
+            "labels": [
+              "Automated / Popular"
+            ],
+            "external": true,
+            "source_api": "recommendations/popular"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "794908edcbed",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/arc-amber-carafe-edition-2-10227",
+            "product": "10227"
+          },
+          {
+            "api": "log/product",
+            "visitor": "794908edcbed",
+            "product": "10227"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-11-22T00:16:00.243171+01:00"
     },
     {
       "id": "demo-2026-11-22-0020",
@@ -41,7 +167,119 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-22T00:07:32+01:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "slow-morning",
+        "channel": "search",
+        "clicked_ids": [
+          10393
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "e423e66ea529",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "e423e66ea529",
+            "email": "jeanluc.picard.search-2026-11-22-20@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "e423e66ea529",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/movement",
+            "category": "602"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "e423e66ea529",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=northline+yoga+mat"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "e423e66ea529",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "northline yoga mat"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "e423e66ea529",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=yoga+mat"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "e423e66ea529",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "yoga mat"
+          },
+          {
+            "api": "log/click",
+            "visitor": "e423e66ea529",
+            "product": 10393,
+            "n": 2,
+            "labels": [
+              "Omni-search"
+            ],
+            "source_api": "search/omni"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "e423e66ea529",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/ground-cobalt-yoga-mat-edition-2-10393",
+            "product": "10393"
+          },
+          {
+            "api": "log/product",
+            "visitor": "e423e66ea529",
+            "product": "10393"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-11-22T00:16:00.243171+01:00"
     },
     {
       "id": "demo-2026-11-22-0468",
@@ -52,7 +290,64 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-11-22T00:07:34+01:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "commuter",
+        "channel": "recommendations",
+        "clicked_ids": [
+          10166
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "e73794fc3c22",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "e73794fc3c22",
+            "email": "jeanluc.picard.recommendations-2026-11-22-468@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "e73794fc3c22",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/bags",
+            "category": "301"
+          },
+          {
+            "api": "recommendations/category/popular",
+            "category": 301,
+            "visitor": "e73794fc3c22",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "e73794fc3c22",
+            "product": 10166,
+            "n": 10,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "e73794fc3c22",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/market-ink-tote-edition-2-10166",
+            "product": "10166"
+          },
+          {
+            "api": "log/product",
+            "visitor": "e73794fc3c22",
+            "product": "10166"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-11-22T00:16:00.243171+01:00"
     },
     {
       "id": "demo-2026-11-22-0151",
@@ -63,7 +358,74 @@
       "mode": "browse",
       "channel": "chat",
       "scheduled_at": "2026-11-22T00:12:01+01:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "wardrobe-refresh",
+        "channel": "chat",
+        "clicked_ids": [
+          10002
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "c6557eb66515",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "c6557eb66515",
+            "email": "leia.organa.chat-2026-11-22-151@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "c6557eb66515",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/shirts-layers",
+            "category": "101"
+          },
+          {
+            "api": "chat/message",
+            "visitor": "c6557eb66515",
+            "chat_uid": "944d7890-6acf-433e-b70a-8ce2bba48d65",
+            "prompt": "I'm shopping for overshirt for my wardrobe refresh. My budget is 220 euros. Can you show me suitable products?",
+            "message_types": [
+              "slider",
+              "text"
+            ],
+            "returned_ids": [
+              10001,
+              10022,
+              10008,
+              10006,
+              10027,
+              10002,
+              10003,
+              10004,
+              10009,
+              10010
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "c6557eb66515",
+            "product": 10002,
+            "n": 5,
+            "source_api": "assistant/search/products"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "c6557eb66515",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/transit-oat-overshirt-10002",
+            "product": "10002"
+          },
+          {
+            "api": "log/product",
+            "visitor": "c6557eb66515",
+            "product": "10002"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-11-22T00:16:00.243171+01:00"
     },
     {
       "id": "demo-2026-11-22-0353",
@@ -74,7 +436,66 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-11-22T00:12:47+01:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "wardrobe-refresh",
+        "channel": "email",
+        "clicked_ids": [
+          10087
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "dcf34670d8f8",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "dcf34670d8f8",
+            "email": "luke.skywalker.email-2026-11-22-353@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "dcf34670d8f8",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/shirts-layers",
+            "category": "101"
+          },
+          {
+            "api": "campaigns/click",
+            "embed": "automated-popular",
+            "product": 10087,
+            "n": 0,
+            "source_api": "recommendations/popular",
+            "labels": [
+              "Automated / Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "dcf34670d8f8",
+            "product": 10087,
+            "n": 0,
+            "labels": [
+              "Automated / Popular"
+            ],
+            "external": true,
+            "source_api": "recommendations/popular"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "dcf34670d8f8",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/move-navy-trouser-edition-2-10087",
+            "product": "10087"
+          },
+          {
+            "api": "log/product",
+            "visitor": "dcf34670d8f8",
+            "product": "10087"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-11-22T00:16:00.243171+01:00"
     },
     {
       "id": "demo-2026-11-22-0394",
