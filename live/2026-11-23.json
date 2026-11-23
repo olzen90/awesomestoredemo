@@ -19,7 +19,80 @@
       "mode": "browse",
       "channel": "recommendations",
       "scheduled_at": "2026-11-23T00:09:51+01:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "weekend-traveller",
+        "channel": "recommendations",
+        "clicked_ids": [
+          10407
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "17d66a3f9461",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "17d66a3f9461",
+            "email": "tony.stark.recommendations-70@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "17d66a3f9461",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/camp-picnic",
+            "category": "701"
+          },
+          {
+            "api": "recommendations/category/popular",
+            "category": 701,
+            "visitor": "17d66a3f9461",
+            "limit": 12,
+            "labels": [
+              "Category - Popular"
+            ]
+          },
+          {
+            "api": "log/click",
+            "visitor": "17d66a3f9461",
+            "product": 10407,
+            "n": 4,
+            "labels": [
+              "Category - Popular"
+            ],
+            "source_api": "recommendations/category/popular"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "17d66a3f9461",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/summit-forest-camp-mug-10407",
+            "product": "10407"
+          },
+          {
+            "api": "log/product",
+            "visitor": "17d66a3f9461",
+            "product": "10407"
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "17d66a3f9461",
+            "email": "tony.stark.recommendations-70@example.com",
+            "products": [
+              {
+                "id": 10407,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "17d66a3f9461",
+            "url": "https://olzen90.github.io/awesomestoredemo/cart/"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-11-23T01:53:41.034250+01:00"
     },
     {
       "id": "demo-2026-11-23-search-0053",
@@ -30,8 +103,97 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-23T01:06:40+01:00",
-      "status": "in_progress",
-      "search_volume": true
+      "status": "completed",
+      "search_volume": true,
+      "outcome": {
+        "profile": "wardrobe-refresh",
+        "channel": "search",
+        "clicked_ids": [],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "8f2a2f11945d",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "8f2a2f11945d",
+            "email": "ellen.ripley.search-2026-11-23-53@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "8f2a2f11945d",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/tops",
+            "category": "102"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "8f2a2f11945d",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=plain+form+t-shirt"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "8f2a2f11945d",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "plain form t-shirt"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "8f2a2f11945d",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=t-shirt"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "8f2a2f11945d",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "t-shirt"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-11-23T01:53:41.034250+01:00"
     },
     {
       "id": "demo-2026-11-23-0184",
