@@ -19,7 +19,27 @@
       "mode": "clerk",
       "channel": "email",
       "scheduled_at": "2026-11-25T00:03:15+01:00",
-      "status": "in_progress"
+      "status": "needs_review",
+      "attempt_events": [
+        {
+          "api": "log/pageview",
+          "visitor": "67ceb0c72e0e",
+          "url": "https://olzen90.github.io/awesomestoredemo/"
+        },
+        {
+          "api": "log/email",
+          "visitor": "67ceb0c72e0e",
+          "email": "hermione.granger.email-112@example.com"
+        },
+        {
+          "api": "log/pageview",
+          "visitor": "67ceb0c72e0e",
+          "url": "https://olzen90.github.io/awesomestoredemo/category/everyday-shoes",
+          "category": "201"
+        }
+      ],
+      "error": "Email click did not return a tracking redirect",
+      "processed_at": "2026-11-25T03:28:32.571675+01:00"
     },
     {
       "id": "demo-2026-11-25-0068",
@@ -30,7 +50,98 @@
       "mode": "organic",
       "channel": "organic",
       "scheduled_at": "2026-11-25T00:04:06+01:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "slow-morning",
+        "channel": "organic",
+        "clicked_ids": [],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "2ab3fd3b237b",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "2ab3fd3b237b",
+            "email": "hermione.granger.organic-2026-11-25-68@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "2ab3fd3b237b",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/movement",
+            "category": "602"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "2ab3fd3b237b",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/form-forest-stretch-strap-10392",
+            "product": "10392"
+          },
+          {
+            "api": "log/product",
+            "visitor": "2ab3fd3b237b",
+            "product": "10392"
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "2ab3fd3b237b",
+            "email": "hermione.granger.organic-2026-11-25-68@example.com",
+            "products": [
+              {
+                "id": 10392,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "2ab3fd3b237b",
+            "url": "https://olzen90.github.io/awesomestoredemo/cart/"
+          },
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-11-25-0068",
+            "visitor": "2ab3fd3b237b",
+            "customer": "demo-organic-2026-11-25-68",
+            "email": "hermione.granger.organic-2026-11-25-68@example.com",
+            "products": [
+              {
+                "id": 10392,
+                "price": 109,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "2ab3fd3b237b",
+            "email": "hermione.granger.organic-2026-11-25-68@example.com",
+            "products": []
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "2ab3fd3b237b",
+            "url": "https://olzen90.github.io/awesomestoredemo/checkout/success/"
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-11-25-0068",
+          "visitor": "2ab3fd3b237b",
+          "customer": "demo-organic-2026-11-25-68",
+          "email": "hermione.granger.organic-2026-11-25-68@example.com",
+          "products": [
+            {
+              "id": 10392,
+              "price": 109,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 109.0,
+        "estimated_profit": 37.06
+      },
+      "processed_at": "2026-11-25T03:28:32.571675+01:00"
     },
     {
       "id": "demo-2026-11-25-0247",
@@ -41,7 +152,27 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-11-25T00:11:17+01:00",
-      "status": "in_progress"
+      "status": "needs_review",
+      "attempt_events": [
+        {
+          "api": "log/pageview",
+          "visitor": "27001c75c57b",
+          "url": "https://olzen90.github.io/awesomestoredemo/"
+        },
+        {
+          "api": "log/email",
+          "visitor": "27001c75c57b",
+          "email": "jeanluc.picard.email-2026-11-25-247@example.com"
+        },
+        {
+          "api": "log/pageview",
+          "visitor": "27001c75c57b",
+          "url": "https://olzen90.github.io/awesomestoredemo/category/kitchen-table",
+          "category": "401"
+        }
+      ],
+      "error": "Email click did not return a tracking redirect",
+      "processed_at": "2026-11-25T03:28:32.571675+01:00"
     },
     {
       "id": "demo-2026-11-25-0115",
@@ -52,7 +183,27 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-11-25T00:12:45+01:00",
-      "status": "in_progress"
+      "status": "needs_review",
+      "attempt_events": [
+        {
+          "api": "log/pageview",
+          "visitor": "754e60bfc51d",
+          "url": "https://olzen90.github.io/awesomestoredemo/"
+        },
+        {
+          "api": "log/email",
+          "visitor": "754e60bfc51d",
+          "email": "hermione.granger.email-2026-11-25-115@example.com"
+        },
+        {
+          "api": "log/pageview",
+          "visitor": "754e60bfc51d",
+          "url": "https://olzen90.github.io/awesomestoredemo/category/camp-picnic",
+          "category": "701"
+        }
+      ],
+      "error": "Email click did not return a tracking redirect",
+      "processed_at": "2026-11-25T03:28:32.571675+01:00"
     },
     {
       "id": "demo-2026-11-25-0328",
@@ -63,7 +214,27 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-11-25T01:05:37+01:00",
-      "status": "in_progress"
+      "status": "needs_review",
+      "attempt_events": [
+        {
+          "api": "log/pageview",
+          "visitor": "3b375510a908",
+          "url": "https://olzen90.github.io/awesomestoredemo/"
+        },
+        {
+          "api": "log/email",
+          "visitor": "3b375510a908",
+          "email": "jeanluc.picard.email-2026-11-25-328@example.com"
+        },
+        {
+          "api": "log/pageview",
+          "visitor": "3b375510a908",
+          "url": "https://olzen90.github.io/awesomestoredemo/category/tops",
+          "category": "102"
+        }
+      ],
+      "error": "Email click did not return a tracking redirect",
+      "processed_at": "2026-11-25T03:28:32.571675+01:00"
     },
     {
       "id": "demo-2026-11-25-0156",
@@ -74,7 +245,27 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-11-25T01:11:34+01:00",
-      "status": "in_progress"
+      "status": "needs_review",
+      "attempt_events": [
+        {
+          "api": "log/pageview",
+          "visitor": "100bcc3aa81f",
+          "url": "https://olzen90.github.io/awesomestoredemo/"
+        },
+        {
+          "api": "log/email",
+          "visitor": "100bcc3aa81f",
+          "email": "hermione.granger.email-2026-11-25-156@example.com"
+        },
+        {
+          "api": "log/pageview",
+          "visitor": "100bcc3aa81f",
+          "url": "https://olzen90.github.io/awesomestoredemo/category/camp-picnic",
+          "category": "701"
+        }
+      ],
+      "error": "Email click did not return a tracking redirect",
+      "processed_at": "2026-11-25T03:28:32.571675+01:00"
     },
     {
       "id": "demo-2026-11-25-0253",
@@ -85,7 +276,27 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-11-25T02:00:39+01:00",
-      "status": "in_progress"
+      "status": "needs_review",
+      "attempt_events": [
+        {
+          "api": "log/pageview",
+          "visitor": "b15dc55bdc12",
+          "url": "https://olzen90.github.io/awesomestoredemo/"
+        },
+        {
+          "api": "log/email",
+          "visitor": "b15dc55bdc12",
+          "email": "leia.organa.email-2026-11-25-253@example.com"
+        },
+        {
+          "api": "log/pageview",
+          "visitor": "b15dc55bdc12",
+          "url": "https://olzen90.github.io/awesomestoredemo/category/travel-accessories",
+          "category": "302"
+        }
+      ],
+      "error": "Email click did not return a tracking redirect",
+      "processed_at": "2026-11-25T03:28:32.571675+01:00"
     },
     {
       "id": "demo-2026-11-25-0141",
@@ -96,7 +307,27 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-11-25T02:08:30+01:00",
-      "status": "in_progress"
+      "status": "needs_review",
+      "attempt_events": [
+        {
+          "api": "log/pageview",
+          "visitor": "40802b126bf7",
+          "url": "https://olzen90.github.io/awesomestoredemo/"
+        },
+        {
+          "api": "log/email",
+          "visitor": "40802b126bf7",
+          "email": "tony.stark.email-2026-11-25-141@example.com"
+        },
+        {
+          "api": "log/pageview",
+          "visitor": "40802b126bf7",
+          "url": "https://olzen90.github.io/awesomestoredemo/category/desk-essentials",
+          "category": "501"
+        }
+      ],
+      "error": "Email click did not return a tracking redirect",
+      "processed_at": "2026-11-25T03:28:32.571675+01:00"
     },
     {
       "id": "demo-2026-11-25-0218",
