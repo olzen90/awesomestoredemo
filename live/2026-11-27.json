@@ -19,8 +19,88 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-27T00:00:34+01:00",
-      "status": "in_progress",
-      "search_volume": true
+      "status": "completed",
+      "search_volume": true,
+      "outcome": {
+        "profile": "slow-morning",
+        "channel": "search",
+        "clicked_ids": [
+          10386
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "de6f0e2784da",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "de6f0e2784da",
+            "email": "leia.organa.search-2026-11-27-6@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "de6f0e2784da",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/movement",
+            "category": "602"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "de6f0e2784da",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=clay+stretch+strap"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "de6f0e2784da",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "clay stretch strap"
+          },
+          {
+            "api": "log/click",
+            "visitor": "de6f0e2784da",
+            "product": 10386,
+            "n": 0,
+            "labels": [
+              "Omni-search"
+            ],
+            "source_api": "search/omni"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "de6f0e2784da",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/open-clay-stretch-strap-10386",
+            "product": "10386"
+          },
+          {
+            "api": "log/product",
+            "visitor": "de6f0e2784da",
+            "product": "10386"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-11-27T00:53:26.517750+01:00"
     },
     {
       "id": "demo-2026-11-27-0068",
@@ -31,7 +111,27 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-11-27T00:02:58+01:00",
-      "status": "in_progress"
+      "status": "needs_review",
+      "attempt_events": [
+        {
+          "api": "log/pageview",
+          "visitor": "9addf4ef989b",
+          "url": "https://olzen90.github.io/awesomestoredemo/"
+        },
+        {
+          "api": "log/email",
+          "visitor": "9addf4ef989b",
+          "email": "neo.email-2026-11-27-68@example.com"
+        },
+        {
+          "api": "log/pageview",
+          "visitor": "9addf4ef989b",
+          "url": "https://olzen90.github.io/awesomestoredemo/category/bath-body",
+          "category": "601"
+        }
+      ],
+      "error": "Email click delivery uncertain; review before retrying",
+      "processed_at": "2026-11-27T00:53:26.517750+01:00"
     },
     {
       "id": "demo-2026-11-27-0206",
@@ -42,7 +142,27 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-11-27T00:05:36+01:00",
-      "status": "in_progress"
+      "status": "needs_review",
+      "attempt_events": [
+        {
+          "api": "log/pageview",
+          "visitor": "66af4d137a27",
+          "url": "https://olzen90.github.io/awesomestoredemo/"
+        },
+        {
+          "api": "log/email",
+          "visitor": "66af4d137a27",
+          "email": "neo.email-2026-11-27-206@example.com"
+        },
+        {
+          "api": "log/pageview",
+          "visitor": "66af4d137a27",
+          "url": "https://olzen90.github.io/awesomestoredemo/category/kitchen-table",
+          "category": "401"
+        }
+      ],
+      "error": "Email click delivery uncertain; review before retrying",
+      "processed_at": "2026-11-27T00:53:26.517750+01:00"
     },
     {
       "id": "demo-2026-11-27-0250",
