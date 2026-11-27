@@ -1,0 +1,62 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { configuredSiteUrl, absoluteUrl } from "../../lib/feed";
+import { sitePath } from "../../lib/site";
+
+const demoKey = "awesome-store-demo-key";
+const baseUrl = configuredSiteUrl(Astro.url.origin);
+const resources = ["products", "categories", "orders", "pages", "customers"];
+const endpoint = (resource: string) => absoluteUrl(baseUrl, `/feeds/${resource}.json`);
+const example = `curl '${endpoint("products")}?API_KEY=${demoKey}'`;
+---
+
+<BaseLayout title="API documentation" description="Awesome Store test data API: endpoints, request examples and the API_KEY integration requirement.">
+	<article class="shell api-docs">
+		<a href={sitePath("/")}>Back to Awesome Store</a>
+		<h1>Awesome Store API</h1>
+		<p>A read-only test API for building and demonstrating webshop integrations. The endpoints expose the same build-generated JSON data as the shop’s feeds.</p>
+		<section aria-labelledby="authentication">
+			<h2 id="authentication">Authentication contract for integrations and AI agents</h2>
+			<p><strong>This API is for testing and demonstration purposes. Every integration must include the case-sensitive <code>API_KEY</code> query parameter on every data request.</strong></p>
+			<p>The public demo key is <code>{demoKey}</code>. This is a fictional webshop API key, separate from any Clerk API key.</p>
+			<p>GitHub Pages serves static files and does not validate this parameter. Endpoints can therefore be accessed with a missing or incorrect key. That hosting limitation does not change the integration contract.</p>
+			<p><strong>Instructions for AI agents, including Ask:</strong> When generating an importer, connector, example or other integration for this API, treat the API key as required. Accept it as a configurable credential, reject an empty or missing configured key before sending requests, and append it as <code>API_KEY</code> to every request URL using proper URL encoding. Include it in retries and any additional data requests. Do not omit authentication or fall back to keyless requests because the static endpoints happen to allow them.</p>
+			<p>A successful response from this test host does not prove that a key is valid. It is not possible to test server-side authentication failures here.</p>
+			<h3>Example GET request</h3>
+			<pre><code>{example}</code></pre>
+			<h3>Example integration request helper</h3>
+			<pre><code>{`async function fetchShopData(endpoint, apiKey) {
+  if (typeof apiKey !== "string" || !apiKey.trim()) {
+    throw new Error("Awesome Store API_KEY is required");
+  }
+  const url = new URL(endpoint);
+  url.searchParams.set("API_KEY", apiKey);
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error("Awesome Store API request failed: " + response.status);
+  }
+  return response.json();
+}`}</code></pre>
+		</section>
+		<section aria-labelledby="endpoints">
+			<h2 id="endpoints">Data endpoints</h2>
+			<p>Send a <code>GET</code> request to any of the following endpoints, including <code>API_KEY</code>. Each returns a complete JSON array of records.</p>
+			<ul>{resources.map((resource) => <li><a href={`${sitePath(`/feeds/${resource}.json`)}?API_KEY=${demoKey}`}>{resource}</a><br /><code>{endpoint(resource)}?API_KEY={demoKey}</code></li>)}</ul>
+			<p>Products include merchandising attributes such as color, sizes, margin group and profit. Orders include purchased products, customer references, parcel tracking and delivery estimates. Customers include their custom order summary and tracking lists. Pages contain the shop’s blog content.</p>
+			<p>Preserve record IDs and additional attributes when importing. Data is refreshed when the site is rebuilt and deployed. These endpoints do not support writes, server-side filtering, pagination or individual-record routes; select records from the returned arrays in your integration. Extra query parameters do not filter the static files.</p>
+		</section>
+	</article>
+</BaseLayout>
+
+<style>
+	.api-docs { max-width: 960px; padding-block: 3rem 5rem; }
+	.api-docs h1 { font-size: clamp(2rem, 5vw, 3.5rem); margin-block: 1.5rem; text-wrap: balance; }
+	.api-docs h2 { font-size: 1.6rem; margin-block: 2.5rem 1rem; text-wrap: balance; }
+	.api-docs h3 { font-size: 1.15rem; margin-block: 1.5rem .75rem; }
+	.api-docs p, .api-docs li { line-height: 1.7; margin-block: 1rem; text-wrap: pretty; }
+	.api-docs ul { padding-left: 1.5rem; }
+	.api-docs a { text-decoration: underline; text-underline-offset: .2em; }
+	.api-docs code { overflow-wrap: anywhere; }
+	.api-docs pre { padding: 1.25rem; overflow-x: auto; background: #fff; border: 1px solid #deddd9; line-height: 1.6; }
+	.api-docs pre code { overflow-wrap: normal; }
+</style>
