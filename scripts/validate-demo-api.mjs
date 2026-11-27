@@ -15,6 +15,11 @@ for (const resource of resources) {
 assert(docs.includes("Instructions for AI agents, including Ask:"));
 assert(docs.includes("Do not omit authentication"));
 assert(docs.includes("text/html"));
+assert(docs.includes("/admin/"), "Documentation must link to the mock key administration page");
+const admin = await readFile(new URL("../dist/admin/index.html", import.meta.url), "utf8");
+assert(admin.includes('id="create-key-form"'));
+assert(admin.includes('id="revoke-dialog"'));
+assert(admin.includes("does not validate keys"));
 assert(docs.includes("data-python-helper"), "Documentation must provide a Python helper");
 assert(!docs.includes("async function fetchShopData"), "Remove the obsolete JavaScript example");
 const decodeHtml = (value) => value.replace(/&(?:amp|lt|gt|quot|#39);/g, (entity) => ({ "&amp;": "&", "&lt;": "<", "&gt;": ">", "&quot;": '"', "&#39;": "'" })[entity]);

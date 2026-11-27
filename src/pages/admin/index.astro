@@ -1,0 +1,126 @@
+---
+import { sitePath } from "../../lib/site";
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="robots" content="noindex" />
+		<title>API keys · Awesome Store Admin</title>
+		<link rel="icon" type="image/svg+xml" href={sitePath("/favicon.svg")} />
+	</head>
+	<body>
+		<a class="skip" href="#main">Skip to API key settings</a>
+		<header class="topbar"><a class="brand" href={sitePath("/admin/")}><span class="logo" aria-hidden="true">A</span> Awesome Store <span class="admin-label">Admin</span></a><a href={sitePath("/")}>View store <span aria-hidden="true">↗</span></a></header>
+		<div class="layout">
+			<aside><p class="nav-label">Store settings</p><nav aria-label="Administration"><a aria-current="page" href={sitePath("/admin/")}>API keys</a><a href={sitePath("/api/docs/")}>API documentation <span aria-hidden="true">↗</span></a></nav><div class="environment"><span class="dot" aria-hidden="true"></span> Demo environment</div></aside>
+			<main id="main">
+				<p class="breadcrumb">Settings / Developers</p>
+				<h1>API keys</h1>
+				<p class="intro">Connect your tools to Awesome Store. Create a key to use when setting up your webshop integration.</p>
+				<div class="demo-note"><strong>A safe place to try the full setup.</strong> This is a mock admin, with no sign-in required. Keys are managed only in this browser. Creation and revocation are simulated; the public demo API does not validate keys.</div>
+				<noscript><p class="error">Enable JavaScript to create and manage demo API keys.</p></noscript>
+				<p id="storage-error" class="error" role="alert" hidden></p>
+				<section class="panel" aria-labelledby="create-heading">
+					<div class="section-heading"><span class="step" aria-hidden="true">1</span><div><h2 id="create-heading">Create an API key</h2><p>Give it a name so you can recognize the integration later.</p></div></div>
+					<form id="create-key-form" novalidate>
+						<label for="key-name">Key name</label>
+						<p id="name-help" class="help">For example, “Clerk integration”. Up to 80 characters.</p>
+						<div class="create-row"><input id="key-name" name="name" maxlength="80" required autocomplete="off" aria-describedby="name-help name-error" placeholder="Clerk integration" /><button type="submit">Create API key</button></div>
+						<p id="name-error" class="error" role="alert" hidden></p>
+					</form>
+					<div class="permissions"><strong>Read-only access</strong><span>Products · Categories · Orders · Pages · Customers</span></div>
+				</section>
+				<section id="new-key-panel" class="panel key-result" aria-labelledby="new-key-heading" hidden>
+					<h2 id="new-key-heading" tabindex="-1">Your API key is ready</h2>
+					<p>Copy it now. The full key is shown once and is not saved in your browser’s key list.</p>
+					<label for="new-api-key">API key</label>
+					<div class="create-row"><input id="new-api-key" readonly spellcheck="false" autocomplete="off" /><button id="copy-key" type="button">Copy key</button></div>
+					<p id="copy-status" role="status" aria-live="polite"></p>
+					<p>In your integration, use this key as the <code>API_KEY</code> query parameter on every request.</p>
+					<div class="result-actions"><a id="test-request" data-url={sitePath("/api/v1/products/")} class="secondary" target="_blank" rel="noopener">Open products request <span aria-hidden="true">↗</span></a><a href={sitePath("/api/docs/#authentication")}>Read the Python setup guide</a><button id="dismiss-key" class="secondary" type="button">I’ve saved my key</button></div>
+				</section>
+				<section class="panel" aria-labelledby="keys-heading">
+					<div class="section-heading list-heading"><div><h2 id="keys-heading">Your keys</h2><p>Only key names, prefixes and dates are saved on this device.</p></div><span id="key-count" class="count">0 active</span></div>
+					<p id="keys-empty" class="empty">No API keys yet. Create your first key above to connect an integration.</p>
+					<ul id="key-list" aria-label="API keys"></ul>
+					<p id="action-status" role="status" aria-live="polite"></p>
+				</section>
+				<section class="next-step" aria-labelledby="next-heading"><span class="step" aria-hidden="true">2</span><div><h2 id="next-heading">Connect your integration</h2><p>Copy your API key into the integration’s credential field, then point it at the resource URLs in the <a href={sitePath("/api/docs/")}>API documentation</a>. All five resources are available with read-only GET requests.</p></div></section>
+			</main>
+		</div>
+		<dialog id="revoke-dialog" aria-labelledby="revoke-heading" aria-describedby="revoke-description"><form method="dialog"><h2 id="revoke-heading">Revoke this demo key?</h2><p id="revoke-description"></p><p>This marks the key as revoked in this browser. The static API will still accept requests with any key.</p><div class="dialog-actions"><button value="cancel" class="secondary" autofocus>Keep key</button><button value="confirm" class="danger">Revoke demo key</button></div></form></dialog>
+		<script src="../../scripts/admin-api-keys.ts"></script>
+	</body>
+</html>
+
+<style>
+	:global(*) { box-sizing: border-box; }
+	:global(body) { margin: 0; color: #17191d; background: #f8f7f4; font: 16px/1.55 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+	:global([hidden]) { display: none !important; }
+	:global(a) { color: #263b85; text-underline-offset: 3px; }
+	:global(button), :global(input) { font: inherit; }
+	:global(button), :global(.secondary) { min-height: 44px; padding: 10px 18px; border: 1px solid #3656be; border-radius: 4px; background: #3656be; color: white; font-weight: 650; cursor: pointer; }
+	:global(button:hover) { background: #263b85; }
+	:global(button:disabled) { opacity: .55; cursor: not-allowed; }
+	:global(:focus-visible) { outline: 3px solid #3656be; outline-offset: 4px; }
+	:global(input) { min-width: 0; width: 100%; min-height: 46px; padding: 10px 12px; border: 1px solid #9699a1; border-radius: 4px; background: white; color: #17191d; }
+	:global(input[aria-invalid="true"]) { border-color: #a62b26; }
+	:global(h1), :global(h2), :global(p) { margin-top: 0; }
+	:global(h1), :global(h2) { text-wrap: balance; }
+	:global(h2) { font-size: 1.1rem; margin-bottom: 6px; }
+	:global(p) { text-wrap: pretty; }
+	.skip { position: absolute; top: -100px; left: 16px; background: white; padding: 12px; }
+	.skip:focus { top: 8px; }
+	.topbar { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 76px; padding: 16px 32px; background: white; border-bottom: 1px solid #dfddd8; }
+	.brand { display: flex; align-items: center; gap: 10px; color: #17191d; font-weight: 750; text-decoration: none; }
+	.logo { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: #3656be; color: white; }
+	.admin-label { font-size: .8rem; color: #555b66; font-weight: 500; padding-left: 12px; border-left: 1px solid #dfddd8; }
+	.layout { display: grid; grid-template-columns: 240px minmax(0, 1fr); min-height: calc(100dvh - 76px); }
+	aside { padding: 32px 24px; border-right: 1px solid #dfddd8; background: white; }
+	.nav-label, .breadcrumb { color: #555b66; font-size: .85rem; }
+	nav { display: grid; gap: 8px; }
+	nav a { display: block; padding: 12px; border-radius: 4px; text-decoration: none; }
+	nav [aria-current] { background: #edf0fa; font-weight: 650; }
+	.environment { margin-top: 36px; font-size: .8rem; color: #555b66; }
+	.dot { display: inline-block; width: 7px; height: 7px; background: #3656be; border-radius: 50%; margin-right: 5px; }
+	main { width: 100%; max-width: 1120px; padding: 42px 48px 64px; }
+	h1 { font-size: clamp(1.8rem, 3vw, 2.3rem); margin-bottom: 10px; }
+	.intro { color: #555b66; max-width: 650px; }
+	.demo-note { background: #edf0fa; padding: 16px 20px; border: 1px solid #cbd3ef; border-radius: 4px; font-size: .875rem; margin: 24px 0; }
+	.demo-note strong { display: block; margin-bottom: 4px; }
+	.panel { background: white; border: 1px solid #dfddd8; border-radius: 6px; padding: 28px; margin-bottom: 24px; }
+	.section-heading, .next-step { display: flex; align-items: start; gap: 14px; }
+	.section-heading p { color: #555b66; font-size: .9rem; }
+	.step { flex: 0 0 28px; display: grid; place-items: center; width: 28px; height: 28px; border: 1px solid #cbd3ef; border-radius: 50%; color: #263b85; font-size: .85rem; }
+	label { font-weight: 650; font-size: .9rem; }
+	.help { font-size: .8rem; color: #555b66; margin: 4px 0 10px; }
+	.create-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; margin-top: 8px; }
+	.permissions { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 22px; padding-top: 18px; border-top: 1px solid #dfddd8; font-size: .8rem; color: #555b66; }
+	.permissions strong { color: #17191d; }
+	.key-result { border-color: #3656be; }
+	#new-api-key { font-family: ui-monospace, monospace; font-size: .9rem; }
+	.result-actions, .dialog-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; }
+	:global(.secondary) { display: inline-flex; align-items: center; justify-content: center; gap: 6px; background: white; color: #263b85; text-decoration: none; }
+	:global(.secondary:hover) { background: #edf0fa; }
+	.list-heading { justify-content: space-between; }
+	.count { flex-shrink: 0; color: #263b85; background: #edf0fa; border-radius: 4px; padding: 4px 8px; font-size: .8rem; font-variant-numeric: tabular-nums; }
+	.empty { padding: 28px 12px; margin: 0; text-align: center; color: #555b66; border: 1px dashed #c2c2c0; border-radius: 4px; }
+	#key-list { list-style: none; margin: 0; padding: 0; }
+	:global(.key-row) { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 16px; padding: 18px 0; border-top: 1px solid #dfddd8; }
+	:global(.key-row strong) { display: block; overflow-wrap: anywhere; }
+	:global(.key-meta) { font-size: .8rem; color: #555b66; overflow-wrap: anywhere; }
+	:global(.key-badge) { font-size: .8rem; color: #263b85; border: 1px solid #cbd3ef; border-radius: 4px; padding: 4px 8px; }
+	:global(.key-badge.revoked) { color: #555b66; border-color: #dfddd8; }
+	.next-step p { color: #555b66; font-size: .9rem; }
+	.error { color: #a62b26; margin-top: 10px; font-size: .9rem; }
+	#action-status:empty, #copy-status:empty { display: none; }
+	#action-status, #copy-status { margin: 12px 0 0; font-size: .875rem; }
+	dialog { max-width: 480px; width: calc(100% - 32px); padding: 28px; border: 1px solid #dfddd8; border-radius: 6px; color: #17191d; }
+	dialog::backdrop { background: rgb(23 25 29 / .4); }
+	.danger { background: #a62b26; border-color: #a62b26; }
+	.danger:hover { background: #7f201d; }
+	@media (max-width: 850px) { .layout { grid-template-columns: 190px minmax(0, 1fr); } main { padding: 32px 24px; } aside { padding: 28px 16px; } .panel { padding: 22px; } }
+	@media (max-width: 600px) { .topbar { padding: 16px; font-size: .85rem; } .brand { gap: 8px; } .admin-label { display: none; } .layout { display: block; } aside { padding: 16px; border-right: 0; border-bottom: 1px solid #dfddd8; } .nav-label, .environment { display: none; } nav { display: flex; flex-wrap: wrap; gap: 4px; } nav a { font-size: .85rem; padding: 10px; } main { padding: 24px 16px 40px; } .panel { padding: 20px; } .create-row { grid-template-columns: 1fr; } .list-heading { gap: 10px; } :global(.key-row) { grid-template-columns: minmax(0, 1fr) auto; } :global(.key-row button) { grid-column: 1 / -1; justify-self: start; } }
+</style>
