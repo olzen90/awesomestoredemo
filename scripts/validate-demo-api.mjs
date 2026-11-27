@@ -15,4 +15,17 @@ for (const resource of resources) {
 assert(docs.includes("Instructions for AI agents, including Ask:"));
 assert(docs.includes("Do not omit authentication"));
 assert(docs.includes("text/html"));
-console.log("Demo API validation passed: five raw JSON resources match feeds, documentation covers keys and response parsing.");
+assert(docs.includes("data-python-helper"), "Documentation must provide a Python helper");
+assert(!docs.includes("async function fetchShopData"), "Remove the obsolete JavaScript example");
+const decodeHtml = (value) => value.replace(/&(?:amp|lt|gt|quot|#39);/g, (entity) => ({ "&amp;": "&", "&lt;": "<", "&gt;": ">", "&quot;": '"', "&#39;": "'" })[entity]);
+const examples = [...docs.matchAll(/<code\b[^>]*data-response-example="([^"]+)"[^>]*>([\s\S]*?)<\/code>/g)];
+assert.equal(examples.length, resources.length, "Each resource needs a JSON response example");
+for (const [, resource, encoded] of examples) {
+	assert(resources.includes(resource));
+	const example = JSON.parse(decodeHtml(encoded));
+	const actual = JSON.parse(await readFile(new URL(`../dist/feeds/${resource}.json`, import.meta.url), "utf8"))[0];
+	assert.equal(example.length, 1);
+	assert.deepEqual(Object.keys(example[0]), Object.keys(actual), `${resource} example must show every response field`);
+	assert.equal(example[0].id, actual.id, `${resource} example must use a real record`);
+}
+console.log("Demo API validation passed: five raw JSON resources match feeds; Python documentation and response examples verified.");

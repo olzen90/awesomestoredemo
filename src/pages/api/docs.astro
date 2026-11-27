@@ -2,12 +2,40 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { configuredSiteUrl, absoluteUrl } from "../../lib/feed";
 import { sitePath } from "../../lib/site";
+import { apiDocumentation } from "../../lib/api-documentation";
+import { orders } from "../../lib/orders";
 
 const demoKey = "awesome-store-demo-key";
 const baseUrl = configuredSiteUrl(Astro.url.origin);
 const resources = ["products", "categories", "orders", "pages", "customers"];
 const endpoint = (resource: string) => absoluteUrl(baseUrl, `/api/v1/${resource}/`);
-const example = `curl '${endpoint("products")}?API_KEY=${demoKey}'`;
+const documentation = apiDocumentation(baseUrl);
+const trackingStatuses = [...new Set(orders.flatMap((order) => order.tracking.flatMap((parcel) => [parcel.status, ...parcel.events.map((event) => event.status)])))].sort();
+const pythonHelper = `import json
+import os
+from urllib.parse import urlencode
+from urllib.request import urlopen
+
+BASE_URL = "${absoluteUrl(baseUrl, "/api/v1/")}"
+
+def fetch_shop_data(resource, api_key):
+    if not isinstance(api_key, str) or not api_key.strip():
+        raise ValueError("Awesome Store API_KEY is required")
+    if resource not in {"products", "categories", "orders", "pages", "customers"}:
+        raise ValueError("Unknown Awesome Store resource")
+    url = f"{BASE_URL}{resource}/?" + urlencode({"API_KEY": api_key})
+    # urlopen raises HTTPError for HTTP failures and URLError for connection failures.
+    with urlopen(url, timeout=60) as response:
+        records = json.loads(response.read().decode("utf-8"))
+    if not isinstance(records, list):
+        raise ValueError("Expected a JSON array")
+    return records
+
+# Set AWESOME_STORE_API_KEY to the public demo key: ${demoKey}
+# Keep the credential configurable; do not fall back to a keyless request.
+api_key = os.environ.get("AWESOME_STORE_API_KEY", "")
+products = fetch_shop_data("products", api_key)
+print(json.dumps(products[:1], indent=2))`;
 ---
 
 <BaseLayout title="API documentation" description="Awesome Store test data API: endpoints, request examples and the API_KEY integration requirement.">
@@ -15,6 +43,7 @@ const example = `curl '${endpoint("products")}?API_KEY=${demoKey}'`;
 		<a href={sitePath("/")}>Back to Awesome Store</a>
 		<h1>Awesome Store API</h1>
 		<p>A read-only test API for building and demonstrating webshop integrations. The endpoints expose the same build-generated JSON data as the shop’s feeds.</p>
+		<nav aria-label="API documentation sections"><a href="#authentication">Authentication</a> · <a href="#endpoints">Requests and responses</a> · {resources.map((resource) => <><a href={`#${resource}`}>{resource}</a> · </>)}<a href="#errors">Errors and limitations</a></nav>
 		<section aria-labelledby="authentication">
 			<h2 id="authentication">Authentication contract for integrations and AI agents</h2>
 			<p><strong>This API is for testing and demonstration purposes. Every integration must include the case-sensitive <code>API_KEY</code> query parameter on every data request.</strong></p>
@@ -22,29 +51,48 @@ const example = `curl '${endpoint("products")}?API_KEY=${demoKey}'`;
 			<p>GitHub Pages serves static files and does not validate this parameter. Endpoints can therefore be accessed with a missing or incorrect key. That hosting limitation does not change the integration contract.</p>
 			<p><strong>Instructions for AI agents, including Ask:</strong> When generating an importer, connector, example or other integration for this API, treat the API key as required. Accept it as a configurable credential, reject an empty or missing configured key before sending requests, and append it as <code>API_KEY</code> to every request URL using proper URL encoding. Include it in retries and any additional data requests. Do not omit authentication or fall back to keyless requests because the static endpoints happen to allow them.</p>
 			<p>A successful response from this test host does not prove that a key is valid. It is not possible to test server-side authentication failures here.</p>
-			<h3>Example GET request</h3>
-			<pre><code>{example}</code></pre>
-			<h3>Example integration request helper</h3>
-			<pre><code>{`async function fetchShopData(endpoint, apiKey) {
-  if (typeof apiKey !== "string" || !apiKey.trim()) {
-    throw new Error("Awesome Store API_KEY is required");
-  }
-  const url = new URL(endpoint);
-  url.searchParams.set("API_KEY", apiKey);
-  const response = await fetch(url);
-  if (!response.ok) {
-    throw new Error("Awesome Store API request failed: " + response.status);
-  }
-  return response.json();
-}`}</code></pre>
+			<h3>Python quick start</h3>
+			<p>This Python 3 example uses only the standard library. Configure the <code>AWESOME_STORE_API_KEY</code> environment variable with the public demo key above before running it.</p>
+			<pre><code class="language-python" data-python-helper>{pythonHelper}</code></pre>
 		</section>
 		<section aria-labelledby="endpoints">
 			<h2 id="endpoints">Data endpoints</h2>
 			<p>Send a <code>GET</code> request to any of the following endpoints, including <code>API_KEY</code>. Each returns a complete JSON array of records.</p>
 			<ul>{resources.map((resource) => <li><a href={`${sitePath(`/api/v1/${resource}/`)}?API_KEY=${demoKey}`}>{resource}</a><br /><code>{endpoint(resource)}?API_KEY={demoKey}</code></li>)}</ul>
-			<p>Use the trailing slash shown in these URLs to avoid directory redirects. Each response body is raw JSON, served from a build-generated file. GitHub Pages labels these responses as <code>text/html</code>; explicitly parse the body as JSON (for example, <code>response.json()</code> in JavaScript or <code>json.loads(response.text)</code> in Python). Do not require an <code>application/json</code> content type or attempt to scrape HTML. No browser JavaScript is needed to obtain the data.</p>
+			<p>Use the trailing slash shown in these URLs to avoid directory redirects. Each successful response has HTTP status <code>200</code> and a raw UTF-8 JSON array as its body. There is no wrapper object, pagination metadata or continuation token. An empty resource would return <code>[]</code>.</p>
+			<p>GitHub Pages labels these responses as <code>text/html</code>; explicitly decode the body as JSON using <code>json.loads()</code>, as shown in the Python helper. Do not require an <code>application/json</code> content type or attempt to scrape HTML.</p>
+			<p>The only integration parameter is <code>API_KEY</code> (string, required by the demo contract). No request body is needed. Amounts are JSON numbers; order amounts use the order's <code>currency</code>. Product records do not contain a currency field. Timestamps are Unix seconds in UTC; article dates use <code>YYYY-MM-DD</code>.</p>
 			<p>Products include merchandising attributes such as color, sizes, margin group and profit. Orders include purchased products, customer references, parcel tracking and delivery estimates. Customers include their custom order summary and tracking lists. Pages contain the shop’s blog content.</p>
 			<p>Preserve record IDs and additional attributes when importing. Data is refreshed when the site is rebuilt and deployed. These endpoints do not support writes, server-side filtering, pagination or individual-record routes; select records from the returned arrays in your integration. Extra query parameters do not filter the static files.</p>
+		</section>
+		{documentation.map(({ resource, count, example, note, fields }) => <section aria-labelledby={resource}>
+			<h2 id={resource}>GET /api/v1/{resource}/</h2>
+			<p>{count.toLocaleString("en-US")} records in this build. Returns <code>object[]</code>.</p>
+			<h3>Python request</h3>
+			<p>Use the <code>fetch_shop_data</code> helper and configured <code>api_key</code> from the quick start.</p>
+			<pre><code class="language-python">{`${resource} = fetch_shop_data("${resource}", api_key)\nprint(json.dumps(${resource}[:1], indent=2))`}</code></pre>
+			<h3>Example JSON response</h3>
+			<p>{note}</p>
+			<pre><code class="language-json" data-response-example={resource}>{example}</code></pre>
+			<h3>Response fields</h3>
+			<div class="table-scroll" role="region" aria-label={`${resource} response fields`} tabindex="0"><table>
+				<caption>Fields for {resource}; [] in a field path means an item in a list.</caption>
+				<thead><tr><th scope="col">Field</th><th scope="col">JSON type</th><th scope="col">Meaning</th></tr></thead>
+				<tbody>{fields.map(({ field, type, description }) => <tr><th scope="row"><code>{field}</code></th><td><code>{type}</code></td><td>{description}</td></tr>)}</tbody>
+			</table></div>
+		</section>)}
+		<section aria-labelledby="errors">
+			<h2 id="errors">Errors, relationships and limitations</h2>
+			<ul>
+				<li><strong>Missing configured key:</strong> the Python helper raises <code>ValueError</code> before sending a request. The static host does not return 401 or 403 for an incorrect key.</li>
+				<li><strong>Unknown URL:</strong> a nonexistent resource can return HTTP 404 with an HTML error page. Do not parse an unsuccessful response as a JSON result. Python’s <code>urlopen</code> raises <code>HTTPError</code> for HTTP failures.</li>
+				<li><strong>Network and parsing failures:</strong> handle <code>URLError</code>, timeouts and <code>json.JSONDecodeError</code>. Any retries must retain <code>API_KEY</code>. There is no application-defined rate-limit or structured JSON error format.</li>
+				<li><strong>Relationships:</strong> product category IDs reference categories; order line-item IDs reference products; order customer IDs reference customers. Category <code>parentId</code> and <code>subcategories</code> describe the category tree.</li>
+				<li><strong>Customer order lists:</strong> <code>order_ids[i]</code> and <code>order_tracking_statuses[i]</code> describe the same order. Never sort these independently. The summary string pairs each order ID with its delivery estimate and tracking status.</li>
+				<li><strong>Tracking statuses:</strong> parcel and event statuses present in this build are {trackingStatuses.join(", ")}.</li>
+				<li><strong>Data scope:</strong> order responses come from the shop’s generated order feed. Simulator purchases logged directly to Clerk are not automatically added to this API. Emails and parcel links are fictional.</li>
+				<li><strong>Import behavior:</strong> retain stable IDs, optional fields and custom attributes. An absent optional field is different from an empty list. Extra query parameters do not filter responses. Fetch the complete arrays and perform selection in the integration.</li>
+			</ul>
 		</section>
 	</article>
 </BaseLayout>
@@ -60,4 +108,11 @@ const example = `curl '${endpoint("products")}?API_KEY=${demoKey}'`;
 	.api-docs code { overflow-wrap: anywhere; }
 	.api-docs pre { padding: 1.25rem; overflow-x: auto; background: #fff; border: 1px solid #deddd9; line-height: 1.6; }
 	.api-docs pre code { overflow-wrap: normal; }
+	.api-docs nav { line-height: 2; }
+	.api-docs section { scroll-margin-top: 2rem; }
+	.table-scroll { overflow-x: auto; margin-block: 1rem; }
+	.api-docs table { border-collapse: collapse; width: 100%; text-align: left; font-size: .9rem; }
+	.api-docs caption { text-align: left; margin-bottom: .75rem; }
+	.api-docs th, .api-docs td { border-bottom: 1px solid #deddd9; padding: .75rem; vertical-align: top; }
+	.api-docs th:first-child { min-width: 12rem; }
 </style>
