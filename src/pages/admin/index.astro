@@ -14,7 +14,7 @@ import { sitePath } from "../../lib/site";
 		<a class="skip" href="#main">Skip to API key settings</a>
 		<header class="topbar"><a class="brand" href={sitePath("/admin/")}><span class="logo" aria-hidden="true">A</span> Awesome Store <span class="admin-label">Admin</span></a><a href={sitePath("/")}>View store <span aria-hidden="true">↗</span></a></header>
 		<div class="layout">
-			<aside><p class="nav-label">Store settings</p><nav aria-label="Administration"><a aria-current="page" href={sitePath("/admin/")}>API keys</a><a href={sitePath("/api/docs/")}>API documentation <span aria-hidden="true">↗</span></a></nav><div class="environment"><span class="dot" aria-hidden="true"></span> Demo environment</div></aside>
+			<aside><p class="nav-label">Store settings</p><nav aria-label="Administration"><a aria-current="page" href={sitePath("/admin/")}>API keys</a><a href={sitePath("/api/docs/")}>API documentation <span aria-hidden="true">↗</span></a></nav></aside>
 			<main id="main">
 				<p class="breadcrumb">Settings / Developers</p>
 				<h1>API keys</h1>
@@ -26,8 +26,8 @@ import { sitePath } from "../../lib/site";
 					<div class="section-heading"><span class="step" aria-hidden="true">1</span><div><h2 id="create-heading">Create an API key</h2><p>Give it a name so you can recognize the integration later.</p></div></div>
 					<form id="create-key-form" novalidate>
 						<label for="key-name">Key name</label>
-						<p id="name-help" class="help">For example, “Clerk integration”. Up to 80 characters.</p>
-						<div class="create-row"><input id="key-name" name="name" maxlength="80" required autocomplete="off" aria-describedby="name-help name-error" placeholder="Clerk integration" /><button type="submit">Create API key</button></div>
+						<p id="name-help" class="help">For example, “Feed integration”. Up to 80 characters.</p>
+						<div class="create-row"><input id="key-name" name="name" maxlength="80" required autocomplete="off" aria-describedby="name-help name-error" placeholder="Feed integration" /><button type="submit">Create API key</button></div>
 						<p id="name-error" class="error" role="alert" hidden></p>
 					</form>
 					<div class="permissions"><strong>Read-only access</strong><span>Products · Categories · Orders · Pages · Customers</span></div>
@@ -83,8 +83,6 @@ import { sitePath } from "../../lib/site";
 	nav { display: grid; gap: 8px; }
 	nav a { display: block; padding: 12px; border-radius: 4px; text-decoration: none; }
 	nav [aria-current] { background: #edf0fa; font-weight: 650; }
-	.environment { margin-top: 36px; font-size: .8rem; color: #555b66; }
-	.dot { display: inline-block; width: 7px; height: 7px; background: #3656be; border-radius: 50%; margin-right: 5px; }
 	main { width: 100%; max-width: 1120px; padding: 42px 48px 64px; }
 	h1 { font-size: clamp(1.8rem, 3vw, 2.3rem); margin-bottom: 10px; }
 	.intro { color: #555b66; max-width: 650px; }
