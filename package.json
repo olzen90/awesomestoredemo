@@ -7,10 +7,10 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && node scripts/build-demo-api.mjs",
     "build:verify": "npm run build && npm run validate",
     "preview": "astro preview",
-    "validate": "node scripts/validate-storefront.mjs && node scripts/validate-customer-feed.mjs",
+    "validate": "node scripts/validate-storefront.mjs && node scripts/validate-customer-feed.mjs && node scripts/validate-demo-api.mjs",
     "astro": "astro"
   },
   "dependencies": {

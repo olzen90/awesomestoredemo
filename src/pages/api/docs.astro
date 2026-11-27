@@ -6,7 +6,7 @@ import { sitePath } from "../../lib/site";
 const demoKey = "awesome-store-demo-key";
 const baseUrl = configuredSiteUrl(Astro.url.origin);
 const resources = ["products", "categories", "orders", "pages", "customers"];
-const endpoint = (resource: string) => absoluteUrl(baseUrl, `/feeds/${resource}.json`);
+const endpoint = (resource: string) => absoluteUrl(baseUrl, `/api/v1/${resource}/`);
 const example = `curl '${endpoint("products")}?API_KEY=${demoKey}'`;
 ---
 
@@ -41,7 +41,8 @@ const example = `curl '${endpoint("products")}?API_KEY=${demoKey}'`;
 		<section aria-labelledby="endpoints">
 			<h2 id="endpoints">Data endpoints</h2>
 			<p>Send a <code>GET</code> request to any of the following endpoints, including <code>API_KEY</code>. Each returns a complete JSON array of records.</p>
-			<ul>{resources.map((resource) => <li><a href={`${sitePath(`/feeds/${resource}.json`)}?API_KEY=${demoKey}`}>{resource}</a><br /><code>{endpoint(resource)}?API_KEY={demoKey}</code></li>)}</ul>
+			<ul>{resources.map((resource) => <li><a href={`${sitePath(`/api/v1/${resource}/`)}?API_KEY=${demoKey}`}>{resource}</a><br /><code>{endpoint(resource)}?API_KEY={demoKey}</code></li>)}</ul>
+			<p>Use the trailing slash shown in these URLs to avoid directory redirects. Each response body is raw JSON, served from a build-generated file. GitHub Pages labels these responses as <code>text/html</code>; explicitly parse the body as JSON (for example, <code>response.json()</code> in JavaScript or <code>json.loads(response.text)</code> in Python). Do not require an <code>application/json</code> content type or attempt to scrape HTML. No browser JavaScript is needed to obtain the data.</p>
 			<p>Products include merchandising attributes such as color, sizes, margin group and profit. Orders include purchased products, customer references, parcel tracking and delivery estimates. Customers include their custom order summary and tracking lists. Pages contain the shop’s blog content.</p>
 			<p>Preserve record IDs and additional attributes when importing. Data is refreshed when the site is rebuilt and deployed. These endpoints do not support writes, server-side filtering, pagination or individual-record routes; select records from the returned arrays in your integration. Extra query parameters do not filter the static files.</p>
 		</section>

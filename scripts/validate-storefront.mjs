@@ -22,6 +22,8 @@ function readJson(relativePath) {
 }
 
 function collectHtmlFiles(directory) {
+	// Resource-style API responses contain JSON despite their hosting filename.
+	if (directory === path.join(dist, "api", "v1")) return [];
 	if (!fs.existsSync(directory)) return [];
 	return fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
 		const entryPath = path.join(directory, entry.name);
