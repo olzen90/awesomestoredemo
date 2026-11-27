@@ -11,11 +11,14 @@ const testRequest = document.querySelector<HTMLAnchorElement>("#test-request")!;
 const copyStatus = document.querySelector<HTMLElement>("#copy-status")!;
 const actionStatus = document.querySelector<HTMLElement>("#action-status")!;
 const dialog = document.querySelector<HTMLDialogElement>("#revoke-dialog")!;
+const deleteDialog = document.querySelector<HTMLDialogElement>("#delete-dialog")!;
 let keys: DemoApiKey[] = [];
 let ready = false;
 let revealedId: string | null = null;
 let revokeId: string | null = null;
 let revokeTrigger: HTMLButtonElement | null = null;
+let deleteId: string | null = null;
+let deleteTrigger: HTMLButtonElement | null = null;
 
 function hideToken() {
 	reveal.hidden = true;
@@ -38,7 +41,7 @@ function save(next: DemoApiKey[]) {
 		storageError.hidden = true;
 		return true;
 	} catch {
-		showStorageError("Your browser could not save this change. Allow local storage and try again. No key was created or revoked.");
+		showStorageError("Your browser could not save this change. Allow local storage and try again. No key was created, revoked or deleted.");
 		return false;
 	}
 }
@@ -61,6 +64,8 @@ function render() {
 		status.className = `key-badge${key.revokedAt ? " revoked" : ""}`;
 		status.textContent = key.revokedAt ? "Revoked" : "Active";
 		row.append(info, status);
+		const actions = document.createElement("div");
+		actions.className = "key-actions";
 		if (!key.revokedAt) {
 			const button = document.createElement("button");
 			button.type = "button";
@@ -74,8 +79,22 @@ function render() {
 				dialog.returnValue = "cancel";
 				dialog.showModal();
 			});
-			row.append(button);
+			actions.append(button);
 		}
+		const deleteButton = document.createElement("button");
+		deleteButton.type = "button";
+		deleteButton.className = "secondary";
+		deleteButton.textContent = "Delete";
+		deleteButton.setAttribute("aria-label", `Delete ${key.name}`);
+		deleteButton.addEventListener("click", () => {
+			deleteId = key.id;
+			deleteTrigger = deleteButton;
+			document.querySelector<HTMLElement>("#delete-description")!.textContent = `“${key.name}” will be permanently removed from this browser’s key list. This cannot be undone.`;
+			deleteDialog.returnValue = "cancel";
+			deleteDialog.showModal();
+		});
+		actions.append(deleteButton);
+		row.append(actions);
 		list.append(row);
 	}
 }
@@ -155,6 +174,19 @@ dialog.addEventListener("close", () => {
 		} else revokeTrigger?.focus();
 	} else revokeTrigger?.focus();
 	revokeId = null;
+});
+
+deleteDialog.addEventListener("close", () => {
+	if (deleteDialog.returnValue === "confirm" && deleteId) {
+		const key = keys.find((entry) => entry.id === deleteId);
+		if (key && save(keys.filter((entry) => entry.id !== deleteId))) {
+			if (revealedId === deleteId) hideToken();
+			render();
+			actionStatus.textContent = `“${key.name}” was deleted from this browser’s key list.`;
+			nameInput.focus();
+		} else deleteTrigger?.focus();
+	} else deleteTrigger?.focus();
+	deleteId = null;
 });
 
 window.addEventListener("storage", (event) => {

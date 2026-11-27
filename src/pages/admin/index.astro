@@ -51,6 +51,7 @@ import { sitePath } from "../../lib/site";
 			</main>
 		</div>
 		<dialog id="revoke-dialog" aria-labelledby="revoke-heading" aria-describedby="revoke-description"><form method="dialog"><h2 id="revoke-heading">Revoke this demo key?</h2><p id="revoke-description"></p><p>This marks the key as revoked in this browser. The static API will still accept requests with any key.</p><div class="dialog-actions"><button value="cancel" class="secondary" autofocus>Keep key</button><button value="confirm" class="danger">Revoke demo key</button></div></form></dialog>
+		<dialog id="delete-dialog" aria-labelledby="delete-heading" aria-describedby="delete-description"><form method="dialog"><h2 id="delete-heading">Delete this API key?</h2><p id="delete-description"></p><p>Deleting a key removes its saved details. Authentication on the static API remains simulated.</p><div class="dialog-actions"><button value="cancel" class="secondary" autofocus>Keep key</button><button value="confirm" class="danger">Delete API key</button></div></form></dialog>
 		<script src="../../scripts/admin-api-keys.ts"></script>
 	</body>
 </html>
@@ -108,6 +109,7 @@ import { sitePath } from "../../lib/site";
 	#key-list { list-style: none; margin: 0; padding: 0; }
 	:global(.key-row) { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 16px; padding: 18px 0; border-top: 1px solid #dfddd8; }
 	:global(.key-row strong) { display: block; overflow-wrap: anywhere; }
+	:global(.key-actions) { display: flex; flex-wrap: wrap; gap: 8px; }
 	:global(.key-meta) { font-size: .8rem; color: #555b66; overflow-wrap: anywhere; }
 	:global(.key-badge) { font-size: .8rem; color: #263b85; border: 1px solid #cbd3ef; border-radius: 4px; padding: 4px 8px; }
 	:global(.key-badge.revoked) { color: #555b66; border-color: #dfddd8; }
@@ -120,5 +122,5 @@ import { sitePath } from "../../lib/site";
 	.danger { background: #a62b26; border-color: #a62b26; }
 	.danger:hover { background: #7f201d; }
 	@media (max-width: 850px) { .layout { grid-template-columns: 190px minmax(0, 1fr); } main { padding: 32px 24px; } aside { padding: 28px 16px; } .panel { padding: 22px; } }
-	@media (max-width: 600px) { .topbar { padding: 16px; font-size: .85rem; } .brand { gap: 8px; } .admin-label { display: none; } .layout { display: block; } aside { padding: 16px; border-right: 0; border-bottom: 1px solid #dfddd8; } .nav-label, .environment { display: none; } nav { display: flex; flex-wrap: wrap; gap: 4px; } nav a { font-size: .85rem; padding: 10px; } main { padding: 24px 16px 40px; } .panel { padding: 20px; } .create-row { grid-template-columns: 1fr; } .list-heading { gap: 10px; } :global(.key-row) { grid-template-columns: minmax(0, 1fr) auto; } :global(.key-row button) { grid-column: 1 / -1; justify-self: start; } }
+	@media (max-width: 600px) { .topbar { padding: 16px; font-size: .85rem; } .brand { gap: 8px; } .admin-label { display: none; } .layout { display: block; } aside { padding: 16px; border-right: 0; border-bottom: 1px solid #dfddd8; } .nav-label { display: none; } nav { display: flex; flex-wrap: wrap; gap: 4px; } nav a { font-size: .85rem; padding: 10px; } main { padding: 24px 16px 40px; } .panel { padding: 20px; } .create-row { grid-template-columns: 1fr; } .list-heading { gap: 10px; } :global(.key-row) { grid-template-columns: minmax(0, 1fr) auto; } :global(.key-actions) { grid-column: 1 / -1; } }
 </style>

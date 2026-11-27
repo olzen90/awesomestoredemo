@@ -19,6 +19,7 @@ assert(docs.includes("/admin/"), "Documentation must link to the mock key admini
 const admin = await readFile(new URL("../dist/admin/index.html", import.meta.url), "utf8");
 assert(admin.includes('id="create-key-form"'));
 assert(admin.includes('id="revoke-dialog"'));
+assert(admin.includes('id="delete-dialog"'));
 assert(admin.includes("does not validate keys"));
 assert(docs.includes("data-python-helper"), "Documentation must provide a Python helper");
 assert(!docs.includes("async function fetchShopData"), "Remove the obsolete JavaScript example");
