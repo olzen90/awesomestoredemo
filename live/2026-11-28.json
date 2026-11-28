@@ -19,7 +19,119 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-28T00:09:48+01:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "thoughtful-gift",
+        "channel": "search",
+        "clicked_ids": [
+          10225
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "42596028087b",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "42596028087b",
+            "email": "jeanluc.picard.search-2026-11-28-248@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "42596028087b",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/kitchen-table",
+            "category": "401"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "42596028087b",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=common+field+carafe"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "42596028087b",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "common field carafe"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "42596028087b",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=carafe"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "42596028087b",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "carafe"
+          },
+          {
+            "api": "log/click",
+            "visitor": "42596028087b",
+            "product": 10225,
+            "n": 3,
+            "labels": [
+              "Omni-search"
+            ],
+            "source_api": "search/omni"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "42596028087b",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/dune-chalk-carafe-edition-2-10225",
+            "product": "10225"
+          },
+          {
+            "api": "log/product",
+            "visitor": "42596028087b",
+            "product": "10225"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-11-28T02:59:34.240342+01:00"
     },
     {
       "id": "demo-2026-11-28-0250",
@@ -30,7 +142,123 @@
       "mode": "organic",
       "channel": "organic",
       "scheduled_at": "2026-11-28T01:14:22+01:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "home-host",
+        "channel": "organic",
+        "clicked_ids": [],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "c4387cfd238e",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "c4387cfd238e",
+            "email": "hermione.granger.organic-2026-11-28-250@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "c4387cfd238e",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/kitchen-table",
+            "category": "401"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "c4387cfd238e",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/morrow-ink-serving-bowl-10220",
+            "product": "10220"
+          },
+          {
+            "api": "log/product",
+            "visitor": "c4387cfd238e",
+            "product": "10220"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "c4387cfd238e",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/grid-ink-cushion-10244",
+            "product": "10244"
+          },
+          {
+            "api": "log/product",
+            "visitor": "c4387cfd238e",
+            "product": "10244"
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "c4387cfd238e",
+            "email": "hermione.granger.organic-2026-11-28-250@example.com",
+            "products": [
+              {
+                "id": 10220,
+                "quantity": 1
+              },
+              {
+                "id": 10244,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "c4387cfd238e",
+            "url": "https://olzen90.github.io/awesomestoredemo/cart/"
+          },
+          {
+            "api": "log/sale",
+            "sale": "demo-2026-11-28-0250",
+            "visitor": "c4387cfd238e",
+            "customer": "demo-organic-2026-11-28-250",
+            "email": "hermione.granger.organic-2026-11-28-250@example.com",
+            "products": [
+              {
+                "id": 10220,
+                "price": 68,
+                "quantity": 1
+              },
+              {
+                "id": 10244,
+                "price": 87,
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "api": "log/cart/update",
+            "visitor": "c4387cfd238e",
+            "email": "hermione.granger.organic-2026-11-28-250@example.com",
+            "products": []
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "c4387cfd238e",
+            "url": "https://olzen90.github.io/awesomestoredemo/checkout/success/"
+          }
+        ],
+        "sale": {
+          "sale": "demo-2026-11-28-0250",
+          "visitor": "c4387cfd238e",
+          "customer": "demo-organic-2026-11-28-250",
+          "email": "hermione.granger.organic-2026-11-28-250@example.com",
+          "products": [
+            {
+              "id": 10220,
+              "price": 68,
+              "quantity": 1
+            },
+            {
+              "id": 10244,
+              "price": 87,
+              "quantity": 1
+            }
+          ]
+        },
+        "revenue": 155.0,
+        "estimated_profit": 79.08
+      },
+      "processed_at": "2026-11-28T02:59:34.240342+01:00"
     },
     {
       "id": "demo-2026-11-28-0208",
@@ -41,7 +269,27 @@
       "mode": "browse",
       "channel": "email",
       "scheduled_at": "2026-11-28T02:06:49+01:00",
-      "status": "in_progress"
+      "status": "needs_review",
+      "attempt_events": [
+        {
+          "api": "log/pageview",
+          "visitor": "56fb03945bc4",
+          "url": "https://olzen90.github.io/awesomestoredemo/"
+        },
+        {
+          "api": "log/email",
+          "visitor": "56fb03945bc4",
+          "email": "neo.email-2026-11-28-208@example.com"
+        },
+        {
+          "api": "log/pageview",
+          "visitor": "56fb03945bc4",
+          "url": "https://olzen90.github.io/awesomestoredemo/category/desk-essentials",
+          "category": "501"
+        }
+      ],
+      "error": "Email click did not return a tracking redirect",
+      "processed_at": "2026-11-28T02:59:34.240342+01:00"
     },
     {
       "id": "demo-2026-11-28-search-0013",
@@ -52,8 +300,88 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-28T02:13:21+01:00",
-      "status": "in_progress",
-      "search_volume": true
+      "status": "completed",
+      "search_volume": true,
+      "outcome": {
+        "profile": "home-host",
+        "channel": "search",
+        "clicked_ids": [
+          10270
+        ],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "07e658afce0f",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "07e658afce0f",
+            "email": "hermione.granger.search-2026-11-28-13@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "07e658afce0f",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/lighting-objects",
+            "category": "403"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "07e658afce0f",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=warm+white+desk+lamp"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "07e658afce0f",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "warm white desk lamp"
+          },
+          {
+            "api": "log/click",
+            "visitor": "07e658afce0f",
+            "product": 10270,
+            "n": 2,
+            "labels": [
+              "Omni-search"
+            ],
+            "source_api": "search/omni"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "07e658afce0f",
+            "url": "https://olzen90.github.io/awesomestoredemo/product/focus-warm-white-desk-lamp-10270",
+            "product": "10270"
+          },
+          {
+            "api": "log/product",
+            "visitor": "07e658afce0f",
+            "product": "10270"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-11-28T02:59:34.240342+01:00"
     },
     {
       "id": "demo-2026-11-28-0108",
@@ -64,7 +392,91 @@
       "mode": "browse",
       "channel": "search",
       "scheduled_at": "2026-11-28T02:16:37+01:00",
-      "status": "in_progress"
+      "status": "completed",
+      "outcome": {
+        "profile": "thoughtful-gift",
+        "channel": "search",
+        "clicked_ids": [],
+        "events": [
+          {
+            "api": "log/pageview",
+            "visitor": "89607e9265f5",
+            "url": "https://olzen90.github.io/awesomestoredemo/"
+          },
+          {
+            "api": "log/email",
+            "visitor": "89607e9265f5",
+            "email": "leia.organa.search-2026-11-28-108@example.com"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "89607e9265f5",
+            "url": "https://olzen90.github.io/awesomestoredemo/category/gifts-under-50",
+            "category": "801"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "89607e9265f5",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "sunscreen"
+          },
+          {
+            "api": "log/pageview",
+            "visitor": "89607e9265f5",
+            "url": "https://olzen90.github.io/awesomestoredemo/search?q=morrow+house+matchbox"
+          },
+          {
+            "api": "search/omni",
+            "content": "omni-search",
+            "searches": {
+              "products": {
+                "index": "products",
+                "limit": 12,
+                "facets": [
+                  "brand",
+                  "color"
+                ]
+              },
+              "categories": {
+                "index": "categories",
+                "limit": 3
+              },
+              "pages": {
+                "index": "pages",
+                "limit": 3
+              }
+            },
+            "visitor": "89607e9265f5",
+            "labels": [
+              "Omni-search"
+            ],
+            "query": "morrow house matchbox"
+          }
+        ],
+        "sale": null
+      },
+      "processed_at": "2026-11-28T02:59:34.240342+01:00"
     },
     {
       "id": "demo-2026-11-28-0017",
